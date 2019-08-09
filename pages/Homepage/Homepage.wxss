@@ -1,4 +1,7 @@
 /**Homepage.wxss**/
+.zt{
+  font-style:#ffffff;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -16,22 +19,32 @@
   color: #aaa;
 }
 
-.usermotto {
+.usermotto { 
   margin-top: 200px;
 }
+.explore{
+  width: 100%;
+  margin: auto;
+}
+.AnswerQuestions{
+  width: 100%;
+  margin: auto;
+}
 .ranking{
-  width: 40pt;
-  height: 40pt;
+  width: 40px;
+  height: 40px;
 }
 .More{
-  width: 40pt;
-  height: 40pt;
+  width: 40px;
+  height: 40px;
 }
 .trip{
-  width: 349pt;
-  height: 71pt;
+  width: 349px;
+  height: 71px;
+  align-items:center;
+
 }
 .Began{
-  width: 276pt;
-  height: 285pt;
+  width: 276px;
+  height: 285px;
 }
