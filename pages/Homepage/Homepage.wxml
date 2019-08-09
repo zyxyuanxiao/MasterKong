@@ -1,0 +1,24 @@
+<!--Homepage.wxml-->
+<view class="container">
+  <!--用户-->
+  <view class="account">
+  <image src='../../assets/images/Homepage/排行.png' mode='widthFix' class="ranking"></image>
+  <image src='../../assets/images/Homepage/更多.png' mode='widthFix'  class="More"></image>
+  </view>
+  <!--康师傅之旅-->
+  <view class="explore trip">
+  <image src='../../assets/images/Homepage/康师傅之旅.png' mode='widthFix'  class="trip"></image>
+  </view>
+  <!--开始挑战-->
+  <view class="AnswerQuestions Began">
+  <image src='../../assets/images/Homepage/开始挑战.png' mode='widthFix'  class="Began"></image>
+  
+  
+  </view>
+  <!--专题赛-->
+  <view class="Special">
+  
+  
+  </view>
+</view>
+
