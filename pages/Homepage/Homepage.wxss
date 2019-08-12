@@ -5,6 +5,11 @@
 .name{
   font-size:16px; 
 }
+.account{
+  margin: 14.53% 4% 4.19% 3.74%;
+  width: 92.26%;
+  height: 6.16%;
+}
 .level{
   font-size:12px;
 }
@@ -26,7 +31,6 @@
 .userinfo-nickname {
   color: #aaa;
 }
-
 .usermotto { 
   margin-top: 200px;
 }
@@ -41,18 +45,36 @@
   justify-content: center;
 }
 .ranking{
-  width: 10.66%;
-  height: 2.46%;
+  width: 10.67%;
+  height: 4.93%;
 }
 .More{
-  width: 10.66%;
-  height: 2.46%;
+  width: 10.67%;
+  height: 4.93%;
 }
 .trip{
-  width: 93.06%;
+  margin: 4.19% 0% 3.33% 0%;
+  width: 93.07%;
   height: 8.68%;
 }
 .Began{
+  margin: 4.19% 0% 3.33% 0%;
   width: 73.6%;
-  height: 35.09%;
+  height: 35.1%;
+}
+.HeadPortrait{
+  
+}
+.sorting{
+  width: 72.8%;
+  height: 125px;
+}
+.one{
+  background-color: #FFFFFF;
+}
+.two{
+  background-color: red;
+}
+.three{
+  background-color:thistle;
 }

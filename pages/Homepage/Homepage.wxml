@@ -2,6 +2,7 @@
 <view class="container">
   <!--用户-->
   <view class="account">
+  <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="HeadPortrait ranking"></image>
   <text class="zt name">炽热的天空</text>
   <text class="zt level">lv 23</text>
   <text class="zt Dan">行走的百科</text>
@@ -16,12 +17,29 @@
   <view class="AnswerQuestions"> 
   <image src='../../assets/images/Homepage/开始挑战@2x.png' mode='widthFix'  class="Began"></image>
   
-  
   </view>
   <!--专题赛-->
   <view class="Special">
-  
-  
+    <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block>
+      <swiper-item>
+        <view class="sorting one">
+        11111
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="sorting two">
+        2222
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="sorting three">
+          33333
+        </view>
+      </swiper-item>
+    </block>
+    </swiper>
   </view>
 </view>
 
