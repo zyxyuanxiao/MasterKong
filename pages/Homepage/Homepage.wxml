@@ -2,18 +2,18 @@
 <view class="container">
   <!--用户-->
   <view class="account">
-  <text class="zt">炽热的天空</text>
-  <text class="zt">lv 23</text>
-  <text class="zt">行走的百科</text>
+  <text class="zt name">炽热的天空</text>
+  <text class="zt level">lv 23</text>
+  <text class="zt Dan">行走的百科</text>
   <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="ranking"></image>
   <image src='../../assets/images/Homepage/更多@2x.png' mode='widthFix'  class="More"></image>
   </view>
   <!--康师傅之旅-->
-  <view class="explore trip">
+  <view class="explore">
   <image src='../../assets/images/Homepage/康师傅之旅@2x.png' mode='widthFix'  class="trip"></image>
   </view>
   <!--开始挑战-->
-  <view class="AnswerQuestions Began"> 
+  <view class="AnswerQuestions"> 
   <image src='../../assets/images/Homepage/开始挑战@2x.png' mode='widthFix'  class="Began"></image>
   
   

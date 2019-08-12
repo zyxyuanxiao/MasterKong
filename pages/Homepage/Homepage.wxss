@@ -1,13 +1,21 @@
 /**Homepage.wxss**/
 .zt{
-  font-style:#ffffff;
+  color: #FFFFFF;
 }
-.userinfo {
+.name{
+  font-size:16px; 
+}
+.level{
+  font-size:12px;
+}
+.Dan{
+  font-size:12px;
+}
+.userinfo {                                          
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
@@ -24,27 +32,27 @@
 }
 .explore{
   width: 100%;
-  margin: auto;
+  display:flex;
+  justify-content: center;
 }
 .AnswerQuestions{
   width: 100%;
-  margin: auto;
+  display:flex;
+  justify-content: center;
 }
 .ranking{
-  width: 40px;
-  height: 40px;
+  width: 10.66%;
+  height: 2.46%;
 }
 .More{
-  width: 40px;
-  height: 40px;
+  width: 10.66%;
+  height: 2.46%;
 }
 .trip{
-  width: 349px;
-  height: 71px;
-  align-items:center;
-
+  width: 93.06%;
+  height: 8.68%;
 }
 .Began{
-  width: 276px;
-  height: 285px;
+  width: 73.6%;
+  height: 35.09%;
 }
