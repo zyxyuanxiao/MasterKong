@@ -2,12 +2,43 @@
 <view class="container">
   <!--用户-->
   <view class="account">
-  <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="HeadPortrait ranking"></image>
-  <text class="zt name">炽热的天空</text>
-  <text class="zt level">lv 23</text>
-  <text class="zt Dan">行走的百科</text>
+  <view class="Head">
+     <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="HeadPortrait"></image>
+  </view>
+  <!-- 账户 -->
+  <view class="information">
+  <view class="jies">
+     <text class="zt name">炽热的天空</text>
+  </view>
+  <view class="distance"></view>
+  <view class="jies dengji">
+    <view class="dengjiOne">
+      <text class="zt level">lv 23</text>
+    </view>
+     <view class="baike">
+        <text class="zt Dan">行走的百科</text>
+     </view>
+  </view>
+  </view>
   <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="ranking"></image>
   <image src='../../assets/images/Homepage/更多@2x.png' mode='widthFix'  class="More"></image>
+
+  <!-- 排行 -->
+  <!-- <view>
+  <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="ranking"></image>
+    <view class="paihang">
+        <text class="zt Dan">排行</text>
+     </view>
+  </view> -->
+  
+  <!-- 更多 -->
+  <!-- <view>
+  <image src='../../assets/images/Homepage/更多@2x.png' mode='widthFix'  class="More"></image>
+    <view class="more">
+        <text class="zt Dan">更多</text>
+     </view>
+  </view> -->
+  
   </view>
   <!--康师傅之旅-->
   <view class="explore">
