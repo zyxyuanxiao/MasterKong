@@ -1,0 +1,28 @@
+/**index.wxss**/
+.container{
+  color: #FFFFFF;
+  margin-top: 4.86%;
+  /* height: 100px;
+  margin: 20rpx 10rpx 25rpx 10rpx;
+  padding: 20rpx 10rpx 25rpx 10rpx; */
+}
+.problem{
+  /* height: 75pt; */
+  margin-left: 4%;
+  margin-right: 4%;
+  font-size: 16px;
+  background: red;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+/* text{
+  margin-top: 0px;
+  padding-top: 0px;
+} */
+/* .container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 80rpx;
+} */
+
+

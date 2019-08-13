@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/knowledge/index",
     "pages/Moremenu/index",
     "pages/Homepage/index",
     "pages/index/index",

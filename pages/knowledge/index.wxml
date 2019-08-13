@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="problem">
+    <text>
+      夏天跑步经常腿抽筋，是因为缺少水分和糖分吗？
+    </text>
+  </view>
+  <view class="problem">
+    <text>
+      烘干的茄子是不是属于湿垃圾？
+    </text>
+  </view>
+  <view class="problem">
+    <text>
+      烘干的茄子是不是属于湿垃圾？
+    </text>
+  </view>
+  <view class="problem">
+    <text>
+      烘干的茄子是不是属于湿垃圾？
+    </text>
+  </view>
+  <view class="problem">
+    <text>
+      烘干的茄子是不是属于湿垃圾？
+    </text>
+  </view>
+  <view class="problem">
+    <text>
+      烘干的茄子是不是属于湿垃圾？
+    </text>
+  </view>
+  <view class="problem">
+    <text>
+      烘干的茄子是不是属于湿垃圾？
+    </text>
+  </view>
+
+</view>
