@@ -1,0 +1,199 @@
+/**Homepage.wxss**/
+.zt{
+  color: #FFFFFF;
+}
+.information{
+  margin-left: 5%;
+  width: 50%;
+  height: 50px;
+}
+.tupian .paihang{
+  border-radius: 40px;
+  background-color: #52525E;
+  margin-top: -5px;
+  position: relative;
+  top: -1px;
+}
+.tupian{
+  text-align: center; 
+  font-size:10px; 
+  padding-right: 5%;
+}
+.name{
+  align-items:flex-start;
+  display:flex;
+  font-size:16px; 
+}
+.dengjiOne{
+  font-size:12px;
+  margin-right: 8%;
+  line-height: 20px;
+}
+.baike{
+    padding: 0px 8px 0px 8px;
+    border-radius: 40px;
+    background-color: #EEB032;
+    line-height: 15px
+}
+.dengji{
+  height: 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.account{
+  margin: 4.53% 4% 4.19% 3.74%;
+  width: 92.26%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* height: 6.16%; */
+}
+.Head{
+  width: 14.33%;
+  height: 6.16%;
+}
+.HeadPortrait{
+  width: 50px;
+  height: 50px;
+}
+.Dan{
+  font-size:12px;
+}
+.userinfo {                                          
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+.usermotto { 
+  margin-top: 200px;
+}
+.explore{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+}
+.AnswerQuestions{
+  width: 100%;
+  display:flex;
+  justify-content: center;
+}
+.ranking{
+  /* width: 10.67%;
+  height: 4.93%; */
+  width: 40px;
+  height: 40px;
+  z-index: -1;
+}
+.More{
+  /* width: 10.67%;
+  height: 4.93%; */
+  width: 40px;
+  height: 40px;
+}
+.trip{
+  margin: 4.19% 0% 3.33% 0%;
+  width: 93.07%;
+  height: 8.68%;
+}
+.Began{
+  margin: 4.19% 0% 3.33% 0%;
+  width: 73.6%;
+  height: 35.1%;
+}
+.sorting{
+  width: 273px;
+  height: 125px;
+}
+
+
+
+.swiper-item{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+/* overflow:unset; */
+position: relative;
+height: 15.33%;
+border-radius: 9rpx;
+}
+.slide-image{
+box-shadow: 0px 0px 30rpx rgba(0, 0,0,.2);
+padding-left: 4%;
+z-index: 1;
+}
+.active {
+transform: scale(1.15);
+transition: all 0.2s ease-in 0s;
+z-index: 20;
+}
+.swiper-item .iTitle{
+color: #FFFFFF;
+font-size: 18px;
+position: absolute;
+left: 20pt;
+right: 20pt;
+top: 10pt;
+z-index: 999;
+}
+.swiper-item .iText{
+color: #FFFFFF;
+font-size: 12px;
+position: absolute;
+left: 20pt;
+right: 20pt;
+top: 38pt;
+z-index: 999;
+opacity: 0.5;
+}
+/* .Projectleft{
+  width: 4%;
+  height: 15.33%;
+} */
+.Special{
+  margin-top: 5.46%
+}
+.challenge{
+color: #FFFFFF;
+font-size: 14px;
+position: absolute;
+left: 20pt;
+right: 20pt;
+top: 75pt;
+z-index: 999;
+width: 52px;
+border: 1px solid #FFFFFF; 
+border-radius: 22px;  
+padding: 2px 2px 2px 10px;
+}
+.rectangular{
+font-size: 10px;
+position: absolute;
+width: 40pt;
+height: 20pt;
+right: 0;
+top: 0;
+z-index: 999;
+}
+.game{
+color: #FFFFFF;
+font-size: 10px;
+position: absolute;
+right: 3pt;
+top: 3pt;
+z-index: 999;
+opacity: 0.8;
+letter-spacing:2pt;
+}

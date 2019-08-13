@@ -8,11 +8,31 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),//11111
-    imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
+    imgUrls: [{
+        src: '../../assets/images/Homepage/专题1@2x.png',
+        theTitle: '标题01',
+        text: '风靡朋友圈的网红雪糕是否安全，隔夜茶是否健康？快来一起边答边学吧！',
+    }, {
+        src: '../../assets/images/Homepage/专题二@2x.png',
+        theTitle: '标题02',
+        text: '风靡朋友圈faffafaf的网红雪糕是否安全，隔夜茶是否健康？快来一起边答边学吧！',
+    }, {
+        src: '../../assets/images/Homepage/专题三@2x.png',
+        theTitle: '标题03',
+        text: '风靡朋友圈的网红雪糕是否安全，隔夜茶是否',
+    }, {
+        src: '../../assets/images/Homepage/专题4@2x.png',
+        theTitle: '标题04',
+        text: '风靡朋友圈的网红雪糕是否安全，隔夜茶是否',
+    }, {
+        src: '../../assets/images/Homepage/专题5@2x.png',
+        theTitle: '标题05',
+        text: '风靡朋友圈的网红雪糕是否安全，隔夜茶是否',
+    }, {
+        src: '../../assets/images/Homepage/专题6@2x.png',
+        theTitle: '标题06',
+        text: '风靡朋友圈的网红雪糕是否安全，隔夜茶是否',
+    },],
     indicatorDots: false,
     autoplay: false,
     interval: 5000,
