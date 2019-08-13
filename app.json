@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/Homepage/Homepage",
+    "pages/Moremenu/index",
+    "pages/Homepage/index",
     "pages/index/index",
     "pages/logs/logs"
   ],
