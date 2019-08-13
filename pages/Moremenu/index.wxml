@@ -1,0 +1,75 @@
+<!--index.wxml-->
+<view class="container">
+<view class="Allmenu">
+  <!--排行-->
+  <view  class="menu">
+      <view>
+        <image src='../../assets/images/Moremenu/排行@2x.png' mode='widthFix' class="moreImg"></image>
+      </view>
+      <view>
+        <text class="menuZT">排行</text>
+      </view>
+  </view>
+  
+  <!--通知-->
+   <view  class="menu">
+      <view>
+        <image src='../../assets/images/Moremenu/通知@2x.png' mode='widthFix' class="moreImgTwo"></image>
+      </view>
+      <view>
+        <text class="menuZT">通知</text>
+      </view>
+  </view>
+  
+  <!--奖品-->
+    <view  class="menu">
+      <view>
+        <image src='../../assets/images/Moremenu/奖品@2x.png' mode='widthFix' class="moreImgTwo"></image>
+      </view>
+      <view>
+        <text class="menuZT">奖品</text>
+      </view>
+  </view>
+
+  <!--知识-->
+  <view  class="menu">
+      <view>
+        <image src='../../assets/images/Moremenu/知识@2x.png' mode='widthFix' class="moreImg"></image>
+      </view>
+      <view>
+        <text class="menuZT">知识</text>
+      </view>
+  </view>
+ 
+  <!--道具商城-->
+  <view  class="menu">
+      <view>
+        <image src='../../assets/images/Moremenu/道具商城@2x.png' mode='widthFix' class="moreImgTwo"></image>
+      </view>
+      <view>
+        <text class="menuZT">道具商城</text>
+      </view>
+  </view>
+
+  <!--设置-->
+    <view  class="menu">
+      <view>
+        <image src='../../assets/images/Moremenu/设置@2x.png' mode='widthFix' class="moreImgTwo"></image>
+      </view>
+      <view>
+        <text class="menuZT">设置</text>
+      </view>
+  </view>
+   
+  <!--规则-->
+  <view  class="menu">
+      <view>
+        <image src='../../assets/images/Moremenu/规则@2x.png' mode='widthFix' class="moreImg"></image>
+      </view>
+      <view>
+        <text class="menuZT">规则</text>
+      </view>
+  </view>  
+
+</view>
+</view>
