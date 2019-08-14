@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/knowledge/index",
-    "pages/Moremenu/index",
     "pages/Homepage/index",
+    "pages/Moremenu/index",
     "pages/index/index",
     "pages/logs/logs"
   ],

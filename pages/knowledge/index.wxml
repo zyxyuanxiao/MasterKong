@@ -1,9 +1,9 @@
 <!--index.wxml-->
 <scroll-view class="container">
-  <view class="problem">
+  <view class="problem" bindtap="btn" data-statu="open" >
       夏天跑步经常腿抽筋，是因为缺少水分和糖分吗？
   </view>
-  <view class="problem">
+  <view class="problem" bindtap="btn"data-statu="open" >
       烘干的茄子是不是属于湿垃圾？
   </view>
   <view class="problem">
@@ -30,5 +30,25 @@
   <view class="problem">
       夏天跑步经常腿抽筋，是因为缺少水分和糖分吗？
   </view>
+
+  
+<!-- 遮罩层 -->
+<view class="drawer_screen" bindtap="btn" data-statu="close" wx:if="{{showModal}}"></view>  
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<!-- 弹出层 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+    <view class="problemTwo">
+    夏天跑步经常腿抽筋，是因为缺少水分和糖分吗？
+    </view>
+    <view class="answer">
+    不是
+    </view>
+    <view class="instructions">
+    夏季温度高，剧烈运动出汗较多会加速体内水分和盐分丢失，从而导致代谢物堆积，引发腿抽筋。所以夏天跑步时，应当及时补充淡盐水或运动型饮料。
+    </view>
+    <view bindtap="ok" class="ok">学习到了，分享给他人</view>
+</view>
+
   
 </scroll-view>
