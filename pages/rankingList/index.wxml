@@ -1,0 +1,100 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="ranking">
+    <view class="rankOne">
+      <view class="OnTheList">
+        月榜
+      </view>
+      <view class="TheTotalList">
+        总榜
+      </view>
+    </view>
+    </view>
+    <view class="list">
+
+      <view class="SingleOut">
+        <image src='../../assets/images/rankingList/排行1@2x.png' mode='widthFix' class="rankingImg"></image>
+        <view class="HeadPortraitView">
+          <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
+        </view>
+        <!-- 账户 -->
+        <view class="information">
+          <view class="name">
+              <text class="zt">炽热的天空</text>
+          </view>
+          <view class="dengji">
+            <view class="dengjiOne">
+                <text class="zt level">Lv 23</text>
+            </view>
+            <view class="baike">
+                <text class="zt Dan">行走百科</text>
+            </view>
+            <view class="score">
+                <text>145678</text>
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+      <view class="HorizontalLine"></view>
+
+      <view class="SingleOut">
+      <image src='../../assets/images/rankingList/排行2@2x.png' mode='widthFix' class="rankingImg"></image>
+      <view class="HeadPortraitView">
+          <image src='../../assets/images/knowledge/粉色知识背景@2x.png'  class="HeadPortrait"></image>
+        </view>
+
+        <!-- 账户 -->
+        <view class="information">
+          <view class="jies name">
+              <text class="zt">炽热的天空</text>
+          </view>
+          <view class="jies dengji">
+            <view class="dengjiOne">
+                <text class="zt level">Lv 23</text>
+            </view>
+            <view class="baike">
+                <text class="zt Dan">行走百科</text>
+            </view>
+            <view class="score">
+                <text>140000</text>
+            </view>
+          </view>
+        </view>
+
+      </view>
+
+      <view class="HorizontalLine"></view>
+
+      <view class="SingleOut">
+      <image src='../../assets/images/rankingList/排行3@2x.png' mode='widthFix' class="rankingImg"></image>
+      <view class="HeadPortraitView">
+          <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
+        </view>
+
+        <!-- 账户 -->
+        <view class="information">
+          <view class="jies name">
+              <text class="zt">炽热的天空</text>
+          </view>
+          <view class="jies dengji">
+            <view class="dengjiOne">
+                <text class="zt level">Lv 23</text>
+            </view>
+            <view class="baike">
+                <text class="zt Dan">行走百科</text>
+            </view>
+            <view class="score">
+                <text>19000</text>
+            </view>
+          </view>
+        </view>
+
+        </view>
+
+    </view>
+    <view class="MyRank">
+      
+    </view>
+</view>

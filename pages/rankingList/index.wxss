@@ -1,0 +1,110 @@
+/**index.wxss**/
+.container{
+  color: #FFFFFF;
+}
+.ranking{
+  width: 100%;
+  height: 4.93%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rankOne{
+  width: 53.33%;
+  height: 4.93%;
+  text-align: center;
+  line-height: 70rpx;
+  display: flex;
+  background:rgba(60,60,70,1);
+  border-radius:40px;
+  /* text-align: center;
+  line-height: 70rpx; */
+}
+.OnTheList{
+  width: 50%;
+  height: 100%;
+  background:rgba(31,204,102,1);
+  border-radius:40px;
+}
+.TheTotalList{
+  width: 50%;
+  height: 100%;
+}
+.list{
+  width: 92%;
+  height: 62.25%;
+  background:rgba(47,47,57,1);
+  border-radius:8px;
+  margin: 30rpx 4.4% 0rpx 3.6%;
+}
+.MyRank{
+  width: 100%;
+  height: 14.35%;
+  background:rgba(60,60,70,1);
+}
+.SingleOut{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+}
+.HorizontalLine{
+  width:690px;
+  height:1px;
+  background:rgba(38,38,45,1);
+}
+.list .rankingImg{
+  width:68rpx;
+  height:54rpx;
+  margin-top: 43rpx;
+  margin-left: 33rpx;
+  margin-right: 30rpx;
+}
+.HeadPortrait{
+  width:80rpx;
+  height:80rpx;
+  border-radius:18px;
+  margin-top: 30rpx;
+  margin-right: 30rpx;
+}
+.HeadPortraitView{
+  width: 80rpx;
+  height: 80rpx;
+}
+.name{
+  align-items:flex-start;
+  display:flex;
+  font-size:16px; 
+}
+.dengji{
+  height: 20px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.dengjiOne{
+  font-size:12px;
+  line-height: 20px;
+}
+.baike{
+    padding: 0px 8px 0px 8px;
+    border-radius: 40px;
+    background-color: #EEB032;
+    line-height: 15px
+}
+.Dan{
+  font-size:12px;
+}
+.information{
+  margin-top: 25rpx;
+  margin-left: 30rpx;
+}
+.dengjiOne .level{
+  margin-right: 30rpx;
+}
+.information .score{
+  font-size:14px;
+  font-family:PingFangSC-Medium;
+  color:rgba(238,176,50,1);
+  margin-left: 104rpx;
+}
