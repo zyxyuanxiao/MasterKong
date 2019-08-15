@@ -133,3 +133,27 @@
 .nowTime{
   margin-right: 0rpx;
 }
+.noticeTextOne{
+  font-size:32rpx;
+  font-family:PingFangSC-Medium;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  margin: 25rpx 20rpx 0rpx 30rpx;
+}
+.noticeTextTime{
+  font-size:24rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(141,140,140,1);
+  margin: 30rpx 0rpx 0rpx 30rpx;
+}
+.noticeTextTwo{
+  font-size:28rpx;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  margin: 70rpx 44rpx 30rpx 30rpx;
+}
+.noticeTheprize{
+  margin: 0rpx 23rpx 0rpx 37rpx;
+}
