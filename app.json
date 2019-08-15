@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/rankingList-two/index",
     "pages/rankingList/index",
     "pages/knowledge/index",
     "pages/Homepage/index",

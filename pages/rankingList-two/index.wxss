@@ -15,20 +15,18 @@
   text-align: center;
   line-height: 70rpx;
   display: flex;
-  background:rgba(60,60,70,1);
+  background:#3c3c46;
   border-radius:40px;
-  /* text-align: center;
-  line-height: 70rpx; */
 }
 .OnTheList{
   width: 50%;
   height: 100%;
-  background:rgba(31,204,102,1);
-  border-radius:40px;
 }
 .TheTotalList{
   width: 50%;
   height: 100%;
+  background:rgba(31,204,102,1);
+  border-radius:40px;
 }
 .list{
   width: 92%;
