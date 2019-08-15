@@ -1,9 +1,8 @@
 {
   "pages": [
+    "pages/rankingList/index",
     "pages/knowledge/index",
     "pages/Homepage/index",
-    "pages/rankingList/index",
-    "pages/index-two_Popup/index",
     "pages/notice/index",
     "pages/Moremenu/index",
     "pages/index/index",
