@@ -1,0 +1,10 @@
+<view class="setUp">
+  <view class="setUp-view">
+    声音
+    <switch checked bindchange="switch1Change" class="voiceSwitch"/>
+  </view>
+  <view class="setUp-view">
+    用户须知
+    <image src='../../assets/images/Homepage/箭头@2x.png' mode='widthFix' class="arrow"></image>
+  </view>
+</view>

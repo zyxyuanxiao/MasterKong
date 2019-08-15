@@ -44,94 +44,11 @@ Page({
         }
       })
     }
-  },//弹窗
-  btn: function () {
-    this.setData({
-      showModal: true
-    })
+  }, 
+  switch1Change: function (e) {
+    console.log('switch1 发生 change 事件，携带值为', e.detail.value)
   },
-
-  // 禁止屏幕滚动
-  preventTouchMove: function () {
-  },
-
-  // 弹出层里面的弹窗
-  ok: function () {
-    this.setData({
-      showModal: false
-    })
+  switch2Change: function (e) {
+    console.log('switch2 发生 change 事件，携带值为', e.detail.value)
   }
-  ,
-  powerDrawer: function (e) {
-
-    var currentStatu = e.currentTarget.dataset.statu;
-
-    this.util(currentStatu)
-
-  },
-
-  util: function (currentStatu) {
-
-    var animation = wx.createAnimation({
-
-      duration: 200,
-
-      timingFunction: "linear",
-
-      delay: 0
-
-    });
-
-    this.animation = animation;
-
-    animation.opacity(0).rotateX(-100).step();
-
-    this.setData({
-
-      animationData: animation.export()
-
-    })
-
-    setTimeout(function () {
-
-      animation.opacity(1).rotateX(0).step();
-
-      this.setData({
-
-        animationData: animation
-
-      })
-
-      if (currentStatu == "close") {
-
-        this.setData(
-
-          {
-
-            showModalStatus: false
-
-          }
-
-        );
-
-      }
-
-    }.bind(this), 200)
-
-    if (currentStatu == "open") {
-
-      this.setData(
-
-        {
-
-          showModalStatus: true
-
-        }
-
-      );
-
-    }
-
-  }
-
 })
