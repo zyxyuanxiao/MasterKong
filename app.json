@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/notice/index",
-    "pages/knowledge/index",
-    "pages/rankingList-two/index",
-    "pages/rankingList/index",
-    "pages/Homepage/index",
-    "pages/Moremenu/index",
+    "pages/SetUpThe/SetUpThe",
+    "pages/Moremenu/Moremenu",
+    "pages/Homepage/Homepage",
+    "pages/rankingList/rankingList",
+    "pages/rankingList-two/rankingList-two",
+    "pages/knowledge/knowledge",
+    "pages/notice/notice",
     "pages/index/index",
     "pages/logs/logs"
   ],
