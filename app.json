@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/knowledge/index",
-    "pages/Homepage/index",
+    "pages/notice/index",
     "pages/Moremenu/index",
+    "pages/knowledge/index",
+    "pages/index-two_Popup/index",
+    "pages/Homepage/index",
     "pages/index/index",
     "pages/logs/logs"
   ],
