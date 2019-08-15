@@ -157,3 +157,12 @@
 .noticeTheprize{
   margin: 0rpx 23rpx 0rpx 37rpx;
 }
+.ShutDown{
+  height: 50rpx;
+}
+.ShutDownImg{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 20px;
+}

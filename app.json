@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/notice/index",
     "pages/knowledge/index",
     "pages/rankingList-two/index",
     "pages/rankingList/index",
     "pages/Homepage/index",
-    "pages/notice/index",
     "pages/Moremenu/index",
     "pages/index/index",
     "pages/logs/logs"
