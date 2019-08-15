@@ -12,7 +12,21 @@
   margin-bottom: 15px;
   height: 35pt;
 }
-
+.bg{
+    width: 300px;
+    height: 420px;
+    position: fixed;
+    top: 40pt;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    margin: 0 auto;
+    border-radius:8rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+}
 
 /* 弹出层 */
 .modalDlg{
@@ -87,3 +101,8 @@
   overflow: hidden;  
 
 }  
+.ShutDownImg{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 780rpx 275rpx 0rpx 275rpx;
+}
