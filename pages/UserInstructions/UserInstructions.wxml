@@ -1,0 +1,8 @@
+<view class="UserInstructions">
+  <view class="title">
+    欢迎进入康师傅答题游戏！
+  </view>
+  <view class="IntroductionThe">
+    康师傅答题游戏是上海康师傅食品有限公司（一下简称“我们”） 运营的小程序应用，主要为您提供关于食品安全趣味知识的一款 游戏
+  </view>
+</view>

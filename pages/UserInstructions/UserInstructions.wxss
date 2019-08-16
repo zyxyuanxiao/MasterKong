@@ -1,0 +1,15 @@
+.UserInstructions{
+  color: #FFFFFF;
+}
+.title{
+  width:480rpx;
+  height:40rpx;
+  margin: 60rpx 240rpx 53rpx 30rpx;
+  font-size: 40rpx;
+}
+.IntroductionThe{
+  width:674rpx;
+  height:108rpx;
+  font-size: 24rpx;
+  margin: 0rpx 46rpx 0rpx 30rpx;
+}

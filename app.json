@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/UserInstructions/UserInstructions",
     "pages/SetUpThe/SetUpThe",
     "pages/Moremenu/Moremenu",
     "pages/Homepage/Homepage",

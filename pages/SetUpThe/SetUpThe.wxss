@@ -2,18 +2,31 @@
   color: #FFFFFF;
 }
 .arrow{
-  width: 30rpx;
+  width: 20rpx;
   height: 30rpx;
+  margin-left: 480rpx;
 }
 .setUp .setUp-view{
-  width: 92%;
-  height: 5.67%;
+  width: 690rpx;
+  height: 92rpx;
   background:rgba(47,47,55,1);
-  margin: 0px 4% 30rpx 4%;
+  margin-bottom: 30rpx;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
   font-size: 32rpx;
+  line-height: 92rpx;
+}
+.voice{
+  margin-top: 82rpx;
 }
 .voiceSwitch{
   zoom:.6;  
   position: absolute;
-  right: 30rpx;
+  right: 60rpx;
+}
+.voice-view{
+  margin-left: 30rpx;
+}
+.userInstructions-view{
+  margin-left: 30rpx;
 }
