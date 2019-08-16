@@ -4,42 +4,40 @@
 }
 .ranking{
   width: 100%;
-  height: 4.93%;
+  height: 80rpx;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .rankOne{
-  width: 53.33%;
-  height: 4.93%;
+  width: 400rpx;
+  height: 80rpx;
   text-align: center;
-  line-height: 70rpx;
+  line-height: 80rpx;
   display: flex;
   background:rgba(60,60,70,1);
-  border-radius:40px;
-  /* text-align: center;
-  line-height: 70rpx; */
+  border-radius:40rpx;
 }
 .OnTheList{
-  width: 50%;
-  height: 100%;
+  width: 200rpx;
+  height: 80rpx;
   background:rgba(31,204,102,1);
-  border-radius:40px;
+  border-radius:40rpx;
 }
 .TheTotalList{
   width: 50%;
   height: 100%;
 }
 .list{
-  width: 92%;
-  height: 62.25%;
+  width: 690rpx;
+  height: 1011rpx;
   background:rgba(47,47,57,1);
-  border-radius:8px;
-  margin: 30rpx 4.4% 0rpx 3.6%;
+  border-radius:8rpx;
+  margin: 30rpx 33rpx 0rpx 27rpx;
 }
 .MyRank{
-  width: 100%;
-  height: 14.35%;
+  width: 750rpx;
+  height: 233rpx;
   background:rgba(60,60,70,1);
 }
 .SingleOutMy{
@@ -149,7 +147,8 @@
   font-size:16px;
 }
 .MyRanking{
-  padding-top: 30rpx;
+  height: 92rpx;
+  /* padding-top: 30rpx; */
   display: flex;
 }
 .RankingScore{
@@ -176,7 +175,8 @@
   display: flex; 
 }
 .HorizontalLine{
-  width: 92%;
+  width: 690rpx;
   height: 1rpx;
+  margin: 0prx 30prx 0prx 30prx;
   background:rgba(75,75,86,1);
 }
