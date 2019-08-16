@@ -4,7 +4,7 @@
   <view class="account">
   <!--头像-->
   <view class="Head">
-     <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="HeadPortrait"></image>
+     <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
   </view>
 
   <!-- 账户 -->

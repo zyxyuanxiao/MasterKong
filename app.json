@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/Homepage/Homepage",
     "pages/UserInstructions/UserInstructions",
     "pages/SetUpThe/SetUpThe",
     "pages/Moremenu/Moremenu",
-    "pages/Homepage/Homepage",
     "pages/rankingList/rankingList",
     "pages/rankingList-two/rankingList-two",
     "pages/knowledge/knowledge",
