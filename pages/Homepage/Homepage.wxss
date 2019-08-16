@@ -156,7 +156,7 @@ right: 40rpx;
 top: 76rpx;
 z-index: 999;
 opacity: 0.5;
-
+ 
 
 font-size:24rpx;
 font-family:PingFangSC-Regular;
