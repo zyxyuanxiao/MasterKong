@@ -12,7 +12,7 @@
   background-color: #52525E;
   margin-top: -5rpx;
   position: relative;
-  top: -1rpx;
+  top: -10rpx;
 }
 .tupian{
   text-align: center; 
