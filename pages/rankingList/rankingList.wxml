@@ -28,7 +28,7 @@
                 <text class="level">Lv 23</text>
             </view>
             <view class="first">
-                <text class="Dan">行走百科</text>
+                <view class="Dan">行走百科</view>
             </view>
             <view class="score">
                 <text>145678</text>
@@ -55,7 +55,7 @@
                 <text class="level">Lv 23</text>
             </view>
             <view class="Second">
-                <text class="Dan">行走百科</text>
+                <view class="Dan">行走百科</view>
             </view>
             <view class="score">
                 <text>140000</text>
@@ -81,7 +81,7 @@
                 <text class="level">Lv 23</text>
             </view>
             <view class="third">
-                <text class="Dan">行走百科</text>
+                <view class="Dan">行走百科</view>
             </view>
             <view class="score">
                 <text>19000</text>
@@ -107,7 +107,7 @@
                 <text class="level">Lv 23</text>
             </view>
             <view class="third">
-                <text class="Dan">行走百科</text>
+                <view class="Dan">行走百科</view>
             </view>
             <view class="score">
                 <text class="RankingScore">19000</text>
@@ -135,7 +135,7 @@
                 <text class="level">Lv 23</text>
             </view>
             <view class="other">
-                <text class="Dan">行走百科</text>
+                <view class="Dan">行走百科</view>
             </view>
             <view class="score">
                 <text class="RankingScore">19000</text>
@@ -163,7 +163,7 @@
                 <text class="level">Lv 23</text>
             </view>
             <view class="other">
-                <text class="Dan">行走百科</text>
+                <view class="Dan">行走百科</view>
             </view>
             <view class="score">
                 <text class="RankingScore">19000</text>
@@ -190,7 +190,7 @@
                 <text class="level">Lv 23</text>
             </view>
             <view class="other">
-                <text class="Dan">行走百科</text>
+                <view class="Dan">行走百科</view>
             </view>
             <view class="score">
                 <text class="RankingScore">19000</text>
@@ -237,7 +237,7 @@
                 <text class="level">Lv 23</text>
             </view>
             <view class="first">
-                <text class="Dan">行走百科</text>
+                <view class="Dan">行走百科</view>
             </view>
             <view class="score">
                 <text>145678</text>

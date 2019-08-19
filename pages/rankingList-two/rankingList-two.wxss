@@ -66,6 +66,13 @@
   height:1rpx;
   background:rgba(38,38,45,1);
 }
+/* .SingleOutlase{
+  width: 690rpx;
+  height: 140rpx;
+  display: flex;
+  border-bottom: 0rpx solid #26262D;
+} */
+
 .rankingImg{
   width:68rpx;
   height:54rpx;
