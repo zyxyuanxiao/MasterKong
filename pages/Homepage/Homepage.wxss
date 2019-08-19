@@ -30,10 +30,16 @@
   line-height: 40rpx;
 }
 .baike{
-    padding: 0px 12rpx 0px 12rpx;
+    /* padding: 0px 12rpx 0px 12rpx;
     border-radius: 18rpx;
     background-color: #EEB032;
-    line-height: 30rpx;
+    line-height: 30rpx; */
+  width: 137rpx;
+  height: 36rpx;
+  border-radius: 18rpx;
+  background-color: #EEB032;
+  line-height: 36rpx;
+  text-align: center;
 }
 .dengji{
   height: 40rpx;
@@ -43,7 +49,8 @@
   justify-content: flex-start;
 }
 .account{
-  margin: 4.53% 26rpx 0% 30rpx;
+  /* margin: 4.53% 26rpx 0% 30rpx; */
+  margin: 40rpx 26rpx 0% 30rpx;
   width: 698rpx;
   display: flex;
   flex-direction: row;
@@ -56,7 +63,7 @@
 .HeadPortrait{
   width: 100rpx;
   height: 100rpx;
-  border-radius: 50rpx;
+  border-radius: 150rpx;
 }
 .Dan{
   font-size:24rpx;
@@ -87,13 +94,13 @@
   margin-bottom: 88rpx;
 }
 .ranking{
-  width: 40px;
-  height: 40px;
+  width: 80rpx;
+  height: 80rpx;
   z-index: -1;
 }
 .More{
-  width: 40px;
-  height: 40px;
+  width: 80rpx;
+  height: 80rpx;
 }
 .trip{
   width: 698rpx;

@@ -17,7 +17,7 @@
       <text class="zt level">Lv 23</text>
     </view>
      <view class="baike">
-        <text class="zt Dan">行走百科</text>
+        <view class="zt Dan">行走百科</view>
      </view>
   </view>
   </view>
