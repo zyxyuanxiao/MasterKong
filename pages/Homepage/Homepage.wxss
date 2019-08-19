@@ -170,7 +170,7 @@ z-index: 20;
 }
 .Special{
   height: 249rpx;
-  margin-bottom: 110rpx;
+  margin-bottom: 90rpx;
 }
 .challenge{
   color: #FFFFFF;
