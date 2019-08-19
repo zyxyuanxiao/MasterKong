@@ -44,13 +44,19 @@
   
 
 </view>
+
   <!--康师傅之旅-->
   <view class="explore">
     <image src='../../assets/images/Homepage/康师傅之旅@2x.png' mode='widthFix'  class="trip"></image>
   </view>
+
+
   <!--开始挑战-->
   <view class="AnswerQuestions"> 
-    <image src='../../assets/images/Homepage/开始挑战@2x.png' mode='widthFix'  class="Began"></image>
+    <!-- <image src='../../assets/images/Homepage/开始挑战@2x.png' mode='widthFix'  class="Began"></image> -->
+    <image src='../../assets/images/Homepage/动画圈圈@2x.png' mode='widthFix'  class="Began"></image>
+    <image src='../../assets/images/Homepage/圆形底板@2x.png' mode='widthFix'  class="Began"></image>
+    <image src='../../assets/images/Homepage/康师傅@2x.png' mode='widthFix'  class="Began"></image>
   </view>
 
 

@@ -87,11 +87,15 @@
   margin: 68rpx 0rpx 54rpx 0rpx;
 }
 .AnswerQuestions{
-  width: 100%;
+  /* width: 100%;
   display:flex;
   justify-content: center;
   height: 570rpx;
-  margin-bottom: 88rpx;
+  margin-bottom: 88rpx; */
+  width: 628rpx;
+  height: 628rpx;
+  margin-left: 65rpx;
+  margin-right: 57rpx;
 }
 .ranking{
   width: 80rpx;
@@ -109,6 +113,7 @@
 .Began{
   width: 552rpx;
   height: 570rpx;
+  position: absolute;
 }
 .sorting{
   width: 273px;
