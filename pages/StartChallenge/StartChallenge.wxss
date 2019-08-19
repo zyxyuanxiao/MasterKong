@@ -1,0 +1,147 @@
+/**StartChallenge.wxss**/
+.container{
+  color: #ffffff;
+}
+.oneTeam{
+  font-size:28rpx;
+  font-family:PingFangSC;
+  color:rgba(39,153,255,1);
+  height:28rpx;
+  width: 100%;
+  text-align: center;
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+}
+
+.twoTeam{
+  font-size:28rpx;
+  font-family:PingFangSC;
+  color:rgba(238,176,50,1);
+  height:28rpx;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.blueTeam{
+  display: flex;
+  margin-left: 30rpx;
+}
+.yellowTeam{
+  display: flex;
+  margin-left: 30rpx;
+}
+.blueTeam .people{
+  width:220rpx;
+  height:280rpx;
+  background:rgba(60,60,70,1);
+  border-radius:8rpx;
+  border:2rpx solid rgba(39,153,255,1);
+  margin-right: 15rpx;
+}
+.yellowTeam .people{
+  width:220rpx;
+  height:280rpx;
+  background:rgba(60,60,70,1);
+  border-radius:8rpx;
+  border:2rpx solid rgba(238,176,50,1);
+  margin-right: 15rpx;
+}
+.HeadPortrait{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 150rpx;
+  margin: 30rpx 68rpx 0rpx 72rpx;
+}
+.InviteFriendsImg{
+  width: 90rpx;
+  height: 89rpx;
+  margin: 86rpx 65rpx 0rpx 75rpx;
+}
+.nameview{
+  width: 100%；
+}
+.name{
+  font-size:28rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  margin-top: 15rpx;
+}
+.level{
+  font-size:24rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  margin-top: 10rpx;
+}
+.TheLabel{
+  font-size:24rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  width:137rpx;
+  height:36rpx;
+  background:rgba(238,121,50,1);
+  border-radius:18rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  margin-right: 41rpx;
+  margin-left: 42rpx;
+}
+.vs{
+  margin-top: 50rpx;
+  margin-bottom: 47rpx;
+  width: 100%;
+  height: 60rpx;
+  text-align: center;
+}
+.VsImage{
+  width: 72rpx;
+  height: 60rpx;
+}
+.InviteFriends{
+  font-size:24rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  opacity: 0.5;
+  margin-top: 43rpx;
+}
+.questionBank{
+  display: flex;
+  width: 690rpx;
+  height: 92rpx;
+  line-height:92rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 100rpx;
+}
+.startButton{
+  width:300rpx;
+  height:80rpx;
+  background:rgba(129,129,129,1);
+  border-radius:40rpx;
+  font-size:28rpx;
+}
+.startView{
+  margin-top: 60rpx;
+}
+.questionText{
+  font-size:32rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  margin-left: 30rpx;
+  margin-right: 402rpx;
+  width: 128rpx;
+}
+.questionAll{
+  font-size:32rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  width: 64rpx;
+  margin-right: 6rpx;
+}
+.questionImg{
+  width: 20rpx;
+  height: 30rpx;
+  margin: 31rpx 0rpx 31rpx 0rpx;
+}
