@@ -1,13 +1,13 @@
 {
   "pages": [
+    "pages/rankingList-two/rankingList-two",
+    "pages/rankingList/rankingList",
+    "pages/notice/notice",
     "pages/knowledge/knowledge",
     "pages/Homepage/Homepage",
-    "pages/rankingList/rankingList",
     "pages/Moremenu/Moremenu",
     "pages/SetUpThe/SetUpThe",
     "pages/UserInstructions/UserInstructions",
-    "pages/rankingList-two/rankingList-two",
-    "pages/notice/notice",
     "pages/index/index",
     "pages/logs/logs"
   ],

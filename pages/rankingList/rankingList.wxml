@@ -21,14 +21,14 @@
         <!-- 账户 -->
         <view class="information">
           <view class="name">
-              <text class="zt">炽热的天空</text>
+              <text>炽热的天空</text>
           </view>
           <view class="dengji">
             <view class="dengjiOne">
-                <text class="zt level">Lv 23</text>
+                <text class="level">Lv 23</text>
             </view>
             <view class="first">
-                <text class="zt Dan">行走百科</text>
+                <text class="Dan">行走百科</text>
             </view>
             <view class="score">
                 <text>145678</text>
@@ -36,7 +36,7 @@
           </view>
         </view>
       </view>
-      <view class="HorizontalLine"></view>
+      <!-- <view class="HorizontalLine"></view> -->
 
       <!--第二名-->
       <view class="SingleOut">
@@ -48,14 +48,14 @@
         <!-- 账户 -->
         <view class="information">
           <view class="jies name">
-              <text class="zt">炽热的天空</text>
+              <text>炽热的天空</text>
           </view>
           <view class="jies dengji">
             <view class="dengjiOne">
-                <text class="zt level">Lv 23</text>
+                <text class="level">Lv 23</text>
             </view>
             <view class="Second">
-                <text class="zt Dan">行走百科</text>
+                <text class="Dan">行走百科</text>
             </view>
             <view class="score">
                 <text>140000</text>
@@ -63,7 +63,7 @@
           </view>
         </view>
       </view>
-      <view class="HorizontalLine"></view>
+      <!-- <view class="HorizontalLine"></view> -->
       <!--第三名-->
       <view class="SingleOut">
       <image src='../../assets/images/rankingList/排行3@2x.png' mode='widthFix' class="rankingImg"></image>
@@ -74,14 +74,14 @@
         <!-- 账户 -->
         <view class="information">
           <view class="jies name">
-              <text class="zt">炽热的天空</text>
+              <text>炽热的天空</text>
           </view>
           <view class="jies dengji">
             <view class="dengjiOne">
-                <text class="zt level">Lv 23</text>
+                <text class="level">Lv 23</text>
             </view>
             <view class="third">
-                <text class="zt Dan">行走百科</text>
+                <text class="Dan">行走百科</text>
             </view>
             <view class="score">
                 <text>19000</text>
@@ -89,7 +89,7 @@
           </view>
         </view>
         </view>
-     <view class="HorizontalLine"></view>
+     <!-- <view class="HorizontalLine"></view> -->
       <!--第四名-->
       <view class="SingleOut">
       <view class="RankingNumber">4</view>
@@ -100,14 +100,14 @@
         <!-- 账户 -->
         <view class="information">
           <view class="jies name">
-              <text class="zt">炽热的天空</text>
+              <text>炽热的天空</text>
           </view>
           <view class="jies dengji">
             <view class="dengjiOne">
-                <text class="zt level">Lv 23</text>
+                <text class="level">Lv 23</text>
             </view>
             <view class="third">
-                <text class="zt Dan">行走百科</text>
+                <text class="Dan">行走百科</text>
             </view>
             <view class="score">
                 <text class="RankingScore">19000</text>
@@ -115,7 +115,7 @@
           </view>
         </view>
         </view>
-     <view class="HorizontalLine"></view>
+     <!-- <view class="HorizontalLine"></view> -->
 
 
     <!--其他-->
@@ -128,14 +128,14 @@
         <!-- 账户 -->
         <view class="information">
           <view class="jies name">
-              <text class="zt">炽热的天空</text>
+              <text>炽热的天空</text>
           </view>
           <view class="jies dengji">
             <view class="dengjiOne">
-                <text class="zt level">Lv 23</text>
+                <text class="level">Lv 23</text>
             </view>
             <view class="other">
-                <text class="zt Dan">行走百科</text>
+                <text class="Dan">行走百科</text>
             </view>
             <view class="score">
                 <text class="RankingScore">19000</text>
@@ -143,7 +143,7 @@
           </view>
         </view>
         </view>
-     <view class="HorizontalLine"></view>
+     <!-- <view class="HorizontalLine"></view> -->
 
     
     <!--其他-->
@@ -156,14 +156,14 @@
         <!-- 账户 -->
         <view class="information">
           <view class="jies name">
-              <text class="zt">炽热的天空</text>
+              <text>炽热的天空</text>
           </view>
           <view class="jies dengji">
             <view class="dengjiOne">
-                <text class="zt level">Lv 23</text>
+                <text class="level">Lv 23</text>
             </view>
             <view class="other">
-                <text class="zt Dan">行走百科</text>
+                <text class="Dan">行走百科</text>
             </view>
             <view class="score">
                 <text class="RankingScore">19000</text>
@@ -171,7 +171,7 @@
           </view>
         </view>
         </view>
-     <view class="HorizontalLine"></view>
+     <!-- <view class="HorizontalLine"></view> -->
 
     <!--其他-->
       <view class="SingleOut">
@@ -183,14 +183,14 @@
         <!-- 账户 -->
         <view class="information">
           <view class="jies name">
-              <text class="zt">炽热的天空</text>
+              <text>炽热的天空</text>
           </view>
           <view class="jies dengji">
             <view class="dengjiOne">
-                <text class="zt level">Lv 23</text>
+                <text class="level">Lv 23</text>
             </view>
             <view class="other">
-                <text class="zt Dan">行走百科</text>
+                <text class="Dan">行走百科</text>
             </view>
             <view class="score">
                 <text class="RankingScore">19000</text>
@@ -198,7 +198,7 @@
           </view>
         </view>
         </view>
-     <view class="HorizontalLine"></view>
+     <!-- <view class="HorizontalLine"></view> -->
 
 
 
@@ -214,7 +214,7 @@
       </view>
     </view>
 
-    <view class="HorizontalLine"></view>
+    <!-- <view class="HorizontalLine"></view> -->
 
     <!--用户-->
         <view class="SingleOutMy">
@@ -223,19 +223,21 @@
           <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
         </view>
         <!-- 账户 -->
+        
         <view class="information">
           <view class="name">
-              <text class="zt">炽热的天空</text>
+              <text>炽热的天空</text>
               <view class="score">
                 <text>得分</text>
               </view>
           </view>
+
           <view class="dengji">
             <view class="dengjiOne">
-                <text class="zt level">Lv 23</text>
+                <text class="level">Lv 23</text>
             </view>
             <view class="first">
-                <text class="zt Dan">行走百科</text>
+                <text class="Dan">行走百科</text>
             </view>
             <view class="score">
                 <text>145678</text>
@@ -243,5 +245,7 @@
           </view>
         </view>
       </view>
+      
     </view>
+
 </view>
