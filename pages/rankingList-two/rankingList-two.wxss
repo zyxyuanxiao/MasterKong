@@ -38,7 +38,7 @@
 }
 .MyRank{
   width: 750rpx;
-  height: 233rpx;
+  height: 240rpx;
   background:rgba(60,60,70,1);
   margin-bottom: 68rpx;
 }
@@ -60,6 +60,12 @@
   height: 140rpx;
   display: flex;
   border-bottom: 1rpx solid #26262D;
+}
+.SingleOut:last-child{
+  width: 690rpx;
+  height: 140rpx;
+  display: flex;
+  border-bottom: 0rpx solid #26262D;
 }
 .HorizontalLine{
   width:690rpx;

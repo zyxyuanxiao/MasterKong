@@ -10,6 +10,12 @@
   justify-content: center;
   font-size: 32rpx;
 }
+.SingleOut:last-child{
+  width: 690rpx;
+  height: 140rpx;
+  display: flex;
+  border-bottom: 0rpx solid #26262D;
+}
 .rankOne{
   width: 400rpx;
   height: 80rpx;
@@ -38,7 +44,7 @@
 }
 .MyRank{
   width: 750rpx;
-  height: 233rpx;
+  height: 240rpx;
   background:rgba(60,60,70,1);
   margin-bottom: 68rpx;
 }
