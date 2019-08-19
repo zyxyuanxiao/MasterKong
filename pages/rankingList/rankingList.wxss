@@ -41,20 +41,20 @@
   background:rgba(60,60,70,1);
 }
 .SingleOutMy{
-  width: 100%;
+  width: 750rpx;
   height: 140rpx;
   display: flex;
-  padding-left: 3.9%;
+  padding-left: 40rpx;
   margin-top: 30rpx;
 }
 .SingleOut{
-  width: 100%;
+  width: 690rpx;
   height: 140rpx;
   display: flex;
 }
 .HorizontalLine{
-  width:690px;
-  height:1px;
+  width:690rpx;
+  height:1rpx;
   background:rgba(38,38,45,1);
 }
 .rankingImg{

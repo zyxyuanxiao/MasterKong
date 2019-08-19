@@ -1,10 +1,11 @@
 <!--index.wxml-->
 <scroll-view class="container">
+
   <view class="problem" bindtap="btn" data-statu="open" >
     <view class="vImg">
       <image src='../../assets/images/notice/椭圆形@2x.png' mode='widthFix' class="moreImg"></image>
     </view>
-      <view>
+    <view>
       <view class="title">
         恭喜您获得第一名，快去领取奖品吧。
       </view> 
@@ -13,6 +14,7 @@
       </view> 
     </view> 
   </view>
+
   <view class="problem" bindtap="btn" data-statu="open" >
     <view class="vImg">
       <image src='../../assets/images/notice/椭圆形@2x.png' mode='widthFix' class="moreImg"></image>
@@ -26,6 +28,7 @@
       </view> 
     </view>
   </view>
+
   <view class="problem"  bindtap="btn" data-statu="open">
     <view class="vImg">
       

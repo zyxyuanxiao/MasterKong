@@ -1,25 +1,46 @@
 /**index.wxss**/
 .container{
   color: #FFFFFF;
-  margin-top: 3.02%;
+  margin-top: 42rpx;
 }
+
 .problem{
-  margin-left: 4%;
-  margin-right: 4%;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
   font-size: 32rpx;
-  background: #3C3C46;
-  padding: 15px;
-  margin-bottom: 15px;
-  height: 35pt;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  height: 88rpx;
+  background:rgba(60,60,70,1);
+  border-radius:8rpx;
 }
+
+/* .problem two{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  background:rgba(60,60,70,1);
+  border-radius:8rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  height: 35pt;
+} */
 
 .vImg{
   position: absolute;
   left: 40rpx;
+  line-height: 30rpx;
 }
 .titlePrize{
   font-size: 32rpx;
   margin-left: 30rpx;
+}
+.title{
+  font-size:32rpx;
+  color:rgba(255,255,255,1);
+}
+.time{
+  font-size:24rpx;
+  color:rgba(141,140,140,1);
 }
 .Prizetime{
   color: #8D8C8C;
@@ -31,6 +52,7 @@
 
 /* 弹出层 */
 .modalDlg{
+    background:rgba(47,47,55,1);
     background-size: 100% 100%;
     width: 690rpx;
     height: 1153rpx;
@@ -158,11 +180,12 @@
   margin: 0rpx 23rpx 0rpx 37rpx;
 }
 .ShutDown{
-  height: 50rpx;
+  height: 100rpx;
 }
 .ShutDownImg{
   width: 50rpx;
   height: 50rpx;
   position: absolute;
-  right: 20px;
+  right: 28rpx;
+  top: 28rpx;
 }
