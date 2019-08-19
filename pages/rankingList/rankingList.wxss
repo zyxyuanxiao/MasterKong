@@ -1,6 +1,7 @@
 /**index.wxss**/
 .container{
   color: #FFFFFF;
+  margin-top: 30rpx;
 }
 .ranking{
   width: 100%;

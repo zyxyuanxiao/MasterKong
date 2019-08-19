@@ -15,15 +15,6 @@
   border-radius:8rpx;
 }
 
-/* .problem two{
-  margin-left: 30rpx;
-  margin-right: 30rpx;
-  background:rgba(60,60,70,1);
-  border-radius:8rpx;
-  padding: 30rpx;
-  margin-bottom: 30rpx;
-  height: 35pt;
-} */
 
 .vImg{
   position: absolute;
