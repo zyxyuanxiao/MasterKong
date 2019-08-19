@@ -53,10 +53,12 @@
     <image src='../../assets/images/Homepage/开始挑战@2x.png' mode='widthFix'  class="Began"></image>
   </view>
 
+
   <!--专题赛-->
   <view class="Special">
+
   <!--swiper-->
-    <swiper next-margin="110rpx" current="0" >
+    <swiper next-margin="174rpx" current="0" >
         <block wx:for="{{imgUrls}}" wx:index="{{index}}">
           <swiper-item class="swiper-item">
             <!-- <view class="Projectleft"></view> -->
@@ -72,8 +74,10 @@
           </swiper-item>
       </block>
     </swiper>
-    
+
   </view>
+
+
 
 </view>
 
