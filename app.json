@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/questionBankChoice/questionBankChoice",
+    "pages/PKgame/PKgame",
     "pages/StartChallenge-three/StartChallenge-three",
     "pages/StartChallenge-two/StartChallenge-two",
     "pages/StartChallenge-Waiting/StartChallenge-Waiting",

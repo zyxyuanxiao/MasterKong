@@ -159,8 +159,8 @@ z-index: 20;
   z-index: 999;
   position: absolute;
   font-size:36rpx;
-  font-family:PingFangSC;
   color:rgba(255,255,255,1);
+  font-family:Microsoft YaHei; 
 }
 .swiper-item .iText{
   position: absolute;

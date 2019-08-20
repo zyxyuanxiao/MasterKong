@@ -1,20 +1,16 @@
 <!--index.wxml-->
-<scroll-view class="container">
+<view class="container">
   <view class="choose">
     已选择 3
   </view>
   <view class="problem" bindtap="btn" data-statu="open" >
-    <view class="vImg">
-      
-    </view>
-    <view>
       <view class="questionsTitle">
         食品安全专题赛
-      </view> 
+        <radio checked="true" class="choose-radio"></radio>
+      </view>
       <view class="questionsNumber">
         500道题
-      </view> 
-    </view> 
+      </view>
   </view>
 
   <view class="problem" bindtap="btn" data-statu="open" >
@@ -23,6 +19,7 @@
   <view>
         <view class="questionsTitle">
         食品安全专题赛
+        <radio checked="true" class="choose-radio"></radio>
       </view> 
       <view class="questionsNumber">
         500道题
@@ -37,6 +34,7 @@
     <view>
         <view class="questionsTitle">
         食品安全专题赛
+        <radio checked="true" class="choose-radio"></radio>
       </view> 
       <view class="questionsNumber">
         500道题
@@ -72,8 +70,13 @@
     </view>
   </view>
 
+<view class="saveView">
+<button class="saveButton">
+  保存
+</button>
+</view>
 
 
   
 
-</scroll-view>
+</view>
