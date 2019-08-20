@@ -1,0 +1,37 @@
+.RulesGame{
+  color: #FFFFFF;
+}
+.titleOne{
+  margin: 60rpx 0rpx 52rpx 30rpx;
+  font-size: 40rpx;
+}
+.secondary{
+  font-size:28rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+}
+.titleProject{
+  margin: 0rpx 0rpx 28rpx 30rpx;  
+  opacity: 0.9;
+}
+.titleTrophy{
+  margin: 53rpx 0rpx 28rpx 30rpx;  
+  opacity: 0.9;
+}
+.titleKong{
+  margin: 47rpx 0rpx 28rpx 30rpx;  
+  opacity: 0.9;
+}
+.titlePK{
+  margin: 53rpx 0rpx 28rpx 30rpx;  
+  opacity: 0.9;
+}
+/* 规则详情 */
+.IntroductionThe{
+  width:697rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  margin: 0rpx 47rpx 0rpx 30rpx;
+  opacity: 0.8;
+}

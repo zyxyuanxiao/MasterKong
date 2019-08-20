@@ -1,0 +1,33 @@
+<view class="RulesGame">
+  <view class="titleOne">
+    康师傅知识答题游戏规则
+  </view>
+  <!--专题赛-->
+  <view class="secondary titleProject">
+    专题赛
+  </view>
+  <view class="IntroductionThe">
+    每轮有15题，一道题15秒，答对进入下一题，答错直接挑战失败。 根据所得积分进行月榜和总榜的排名，每月会给排名第一的用户 发放奖品。
+  </view>
+  <!--锦标赛-->
+  <view class="secondary titleTrophy">
+    锦标赛
+  </view>
+  <view class="IntroductionThe">
+    每周六会有八点场、九点场两场锦标赛，需提前报名才能进行比 赛，错过八点场的可以参加九点场的比赛。根据参赛人数来决定 比赛的场数。每轮5道题目，每题15秒，答对的可以进入下一轮比 赛，答错直接比赛失败。最后胜利的用户所得积分将会一起记录 在月榜和总榜中。
+  </view>
+  <!--康师傅之旅-->
+  <view class="secondary titleKong">
+    康师傅之旅
+  </view>
+  <view class="IntroductionThe">
+    由简单到难的解锁方式比赛，解锁后才可以去解锁下一个。每轮 10道题，每题15秒，答对进入下一题，答错直接比赛失败。比赛 后的积分计算道总积分中。
+  </view>
+  <!--PK赛-->
+  <view class="secondary titlePK">
+    PK赛
+  </view>
+  <view class="IntroductionThe">
+    有随机匹配和邀请好友两种方式，可以选择一对一，二对二，三 对三。每轮10道题，每题15秒，答对的用户会得到积分，答错的 用户则不会有积分最后根据一组总积分来进行判定比赛输赢。
+  </view>
+</view>

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/RulesGame/RulesGame",
     "pages/StartChallenge/StartChallenge",
     "pages/Homepage/Homepage",
     "pages/rankingList/rankingList",
