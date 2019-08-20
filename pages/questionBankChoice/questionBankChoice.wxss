@@ -1,0 +1,42 @@
+.choose{
+  font-size:28rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  margin: 49rpx 0rpx 0rpx 30rpx;
+  opacity: 0.5;
+}
+.problem{
+  width:690rpx;
+  height:150rpx;
+  background:rgba(47,47,55,1);
+  border-radius:7rpx;
+  margin: 30rpx 30rpx 0rpx 30rpx;
+}
+/* 111 */
+.questionsTitle{
+  width:224rpx;
+  height:44rpx;
+  font-size:32rpx;
+  font-family:PingFangSC;
+  color:rgba(31,204,102,1);
+  margin: 0rpx 0rpx 22rpx 30rpx;
+  padding-top: 30rpx;
+}
+.questionsNumber{
+  width:92rpx;
+  height:24rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  opacity: 0.6;
+  margin:  0rpx 0rpx 30rpx 38rpx;
+}
+.questionsTitleTwo{
+  width:224rpx;
+  height:44rpx;
+  font-size:32rpx;
+  font-family:PingFangSC;
+  color:rgba(242,251,246,1);
+  margin: 0rpx 0rpx 22rpx 30rpx;
+  padding-top: 30rpx;
+}

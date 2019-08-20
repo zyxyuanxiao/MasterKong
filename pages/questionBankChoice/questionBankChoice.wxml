@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<scroll-view class="container">
+  <view class="choose">
+    已选择 3
+  </view>
+  <view class="problem" bindtap="btn" data-statu="open" >
+    <view class="vImg">
+      
+    </view>
+    <view>
+      <view class="questionsTitle">
+        食品安全专题赛
+      </view> 
+      <view class="questionsNumber">
+        500道题
+      </view> 
+    </view> 
+  </view>
+
+  <view class="problem" bindtap="btn" data-statu="open" >
+    <view class="vImg">
+    </view>
+  <view>
+        <view class="questionsTitle">
+        食品安全专题赛
+      </view> 
+      <view class="questionsNumber">
+        500道题
+      </view> 
+    </view>
+  </view>
+
+  <view class="problem"  bindtap="btn" data-statu="open">
+    <view class="vImg">
+      
+    </view>
+    <view>
+        <view class="questionsTitle">
+        食品安全专题赛
+      </view> 
+      <view class="questionsNumber">
+        500道题
+      </view> 
+    </view>
+  </view>
+
+  <view class="problem"  bindtap="btn" data-statu="open">
+    <view class="vImg">
+      
+    </view>
+    <view>
+        <view class="questionsTitleTwo">
+        食品安全专题赛
+      </view> 
+      <view class="questionsNumber">
+        500道题
+      </view> 
+    </view>
+  </view>
+
+<view class="problem"  bindtap="btn" data-statu="open">
+    <view class="vImg">
+      
+    </view>
+    <view>
+        <view class="questionsTitleTwo">
+        食品安全专题赛
+      </view> 
+      <view class="questionsNumber">
+        500道题
+      </view> 
+    </view>
+  </view>
+
+
+
+  
+
+</scroll-view>

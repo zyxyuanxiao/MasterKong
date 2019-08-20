@@ -107,6 +107,15 @@
   margin-top: 43rpx;
   margin-bottom: 29rpx;
 }
+.InviteWaiting{
+  font-size:24rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  opacity: 0.5;
+  margin-top: 55rpx;
+  margin-bottom: 29rpx;
+}
 .questionBank{
   display: flex;
   width: 690rpx;
@@ -147,7 +156,7 @@
 .questionImg{
   width: 20rpx;
   height: 30rpx;
-  margin: 32rpx 0rpx 31rpx 0rpx;
+  margin: 31rpx 0rpx 31rpx 0rpx;
 }
 .integralText{
   width:500rpx;
@@ -156,5 +165,10 @@
   font-family:PingFangSC;
   color:rgba(194,194,194,1);
   line-height:33px;
-  margin: 20rpx 124rpx 140rpx 141rpx;
+  margin: 20rpx 261rpx 140rpx 261rpx;
+}
+.InviteFriendsImgJoin{
+  width: 92rpx;
+  height: 116rpx;
+  margin: 47rpx 65rpx 0rpx 65rpx;
 }

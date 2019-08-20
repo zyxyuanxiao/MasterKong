@@ -1,7 +1,10 @@
 {
   "pages": [
+    "pages/questionBankChoice/questionBankChoice",
+    "pages/StartChallenge-three/StartChallenge-three",
+    "pages/StartChallenge-two/StartChallenge-two",
+    "pages/StartChallenge-Waiting/StartChallenge-Waiting",
     "pages/RulesGame/RulesGame",
-    "pages/StartChallenge/StartChallenge",
     "pages/Homepage/Homepage",
     "pages/rankingList/rankingList",
     "pages/UserInstructions/UserInstructions",
