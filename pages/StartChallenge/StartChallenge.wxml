@@ -54,4 +54,7 @@
     开始比赛
   </button>
 </view>
+<view class="integralText">
+  今日已获得1000积分，此次挑战不再增加积分s
+</view>
 </view>
