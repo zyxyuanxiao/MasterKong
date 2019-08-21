@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/AnswerQuestions/AnswerQuestions",
+    "pages/Homepage/Homepage",
     "pages/notice/notice",
     "pages/knowledge/knowledge",
     "pages/rankingList-two/rankingList-two",
@@ -7,7 +9,6 @@
     "pages/Moremenu/Moremenu",
     "pages/SetUpThe/SetUpThe",
     "pages/UserInstructions/UserInstructions",
-    "pages/Homepage/Homepage",
     "pages/RulesGame/RulesGame",
     "pages/StartChallenge-Waiting/StartChallenge-Waiting",
     "pages/StartChallenge-two/StartChallenge-two",

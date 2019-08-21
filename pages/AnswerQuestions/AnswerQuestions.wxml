@@ -1,0 +1,68 @@
+<!--pages/AnswerQuestions/AnswerQuestions.wxml-->
+<view class="AnswerQuestions">
+<!--PK的人--->
+  <view class="PKPerson">
+      <view  class="Blues">
+        <view class="BluesPerson">
+          <view class="score">2400</view>
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+          </view>
+        </view>
+        <view class="BluesPerson">
+          <view class="score">1800</view>
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+          </view>
+        </view>
+        <view class="BluesPerson">
+          <view class="score">9000</view>
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+          </view>
+        </view>
+      </view> 
+      <view class="Vs-view">
+        <image src='../../assets/images/StartChallenge/VS@2x.png' class="VsImage"></image>
+      </view>
+      <view class="yellow-view"> 
+      <view  class="yellow">
+        <view class="yellowPerson">
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题6@2x.png' ></image>
+          </view>
+          <view class="score">2400</view>
+        </view>
+        <view class="yellowPerson">
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题6@2x.png' ></image>
+          </view>
+          <view class="score">1800</view>
+        </view>
+        <view class="yellowPerson">
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+          </view>
+          <view class="score">900</view>
+        </view>
+      </view>
+      </view>
+  </view>
+<!--总得分最高的队伍获胜--->
+<view class="totalText">
+总得分最高的队伍获胜
+</view>
+<!--倒计时--->
+<view class="QuestionList">
+  <view class="textOne">
+线下PK赛
+  </view>
+  <view class="countdown">
+    <view class="number">3</view>
+  </view>
+  <view class="PleasePrepare">
+    请准备好
+  </view>
+</view>
+
+</view>
