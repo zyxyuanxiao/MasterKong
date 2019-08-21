@@ -2,10 +2,10 @@
 <view class="container">
     <view class="ranking">
     <view class="rankOne">
-      <view class="OnTheList">
+      <view bindtap="TheTotalListClick" class="{{isChecked?'OnTheList':'TheTotalList'}}">
         月榜
       </view>
-      <view class="TheTotalList">
+      <view  class="{{isCheckedTwo?'OnTheList':'TheTotalList'}}" bindtap="TotalListClick">
         总榜
       </view>
     </view>

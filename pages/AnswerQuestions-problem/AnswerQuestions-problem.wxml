@@ -1,0 +1,126 @@
+<!--pages/AnswerQuestions/AnswerQuestions.wxml-->
+<view class="AnswerQuestions">
+<!--PK的人--->
+  <view class="PKPerson">
+      <view  class="Blues">
+        <view class="BluesPerson">
+          <view class="score">2400</view>
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+          </view>
+        </view>
+        <view class="BluesPerson">
+          <view class="score">2400</view>
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+          </view>
+        </view>
+        <view class="BluesPerson">
+          <view class="score">2400</view>
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+          </view>
+        </view>
+      </view> 
+      <view class="Vs-view">
+
+      </view>
+      <view class="yellow-view"> 
+      <view  class="yellow">
+        <view class="yellowPerson">
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题5@2x.png' ></image>
+          </view>
+          <view class="score">2400</view>
+        </view>
+        <view class="yellowPerson">
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题5@2x.png' ></image>
+          </view>
+          <view class="score">2400</view>
+        </view>
+        <view class="yellowPerson">
+          <view class="Imgportrait">
+              <image src='../../assets/images/Homepage/专题5@2x.png' ></image>
+          </view>
+          <view class="score">2400</view>
+        </view>
+      </view>
+      </view>
+  </view> 
+<!--题目--->
+<view class="QuestionList">
+<!--题目比例--->
+  <view class="proportion">
+      <view class="nowProportion">1</view>
+      /5
+  </view>
+<!--倒计时--->
+  <view class="countdownSeconds">
+    <view class="number">
+      15S
+    </view>
+  </view>
+<!--消息图片--->
+  <view class="message">
+    <image src='../../assets/images/AnswerQuestions/快捷短语@2x.png' class="messageImg"></image>
+  </view>
+  
+<!--问题text--->
+  <view class="problemText">
+    “食源性疾病”指食品中致病因素进入人体引起的感染性、中毒性等疾病。以下举措不能预防食源性疾病的是：
+  </view>
+  
+<!--问题text--->
+  <view class="choose">
+    <view class="HaveChoice">
+      <view class="text">食物储存时保持洁净，生熟分开</view>
+    </view>
+    <!--左边一个人-->
+    <!-- <view class="Selected">
+    <view class="ImgportraitOne">
+        <image src='../../assets/images/Homepage/专题二@2x.png'></image>
+    </view>
+    <view class="text">使用冰箱长时间储藏食物</view>
+    <view class="ImgportraitTwo">
+        <image src='../../assets/images/Homepage/专题三@2x.png'></image>
+    </view>
+    </view> -->
+    <!--左边两个人-->
+    <view class="Selected">
+    <view class="ImgportraitOne">
+        <image src='../../assets/images/Homepage/专题二@2x.png'></image>
+    </view>
+    <view class="ImgportraitOneTwo">
+        <image src='../../assets/images/Homepage/专题二@2x.png'></image>
+    </view>
+    <view class="ImgportraitOneThree">
+        <image src='../../assets/images/Homepage/专题二@2x.png'></image>
+    </view>
+    <view class="text">使用冰箱长时间储藏食物</view>
+    <view class="ImgportraitTwo">
+        <image src='../../assets/images/Homepage/专题三@2x.png'></image>
+    </view>
+    <view class="ImgportraitTwoTwo">
+        <image src='../../assets/images/Homepage/专题三@2x.png'></image>
+    </view>
+    </view>
+
+    <view class="wrong">
+    <view class="text">煮熟食物</view>
+    <view class="ImgportraitTwo">
+        <image src='../../assets/images/Homepage/专题三@2x.png'></image>
+    </view>
+    </view>
+
+    <view class="HaveChoice">
+    <view class="text">安全健康的食材</view>
+    </view>
+
+  </view>
+  
+  
+
+</view>
+
+</view>

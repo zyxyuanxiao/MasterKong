@@ -1,6 +1,8 @@
 //index.js
 //获取应用实例
-Component({
+const app = getApp()
+
+Page({
   /**
    * 组件的属性列表
    */
@@ -12,7 +14,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    isChecked: true,
+    isCheckedTwo: false
   },
 
   /**
@@ -20,5 +23,18 @@ Component({
    */
   methods: {
 
+  },
+  TheTotalListClick: function (e) {
+    console.log('11111')
+    this.setData({
+      isChecked: true,
+      isCheckedTwo:false
+    })
+  },
+  TotalListClick: function (e) {
+    this.setData({
+      isChecked: false,
+      isCheckedTwo: true
+    })
   }
 })
