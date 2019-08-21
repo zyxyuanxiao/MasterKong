@@ -20,18 +20,7 @@ Page({
     })
   },
   onLoad: function () {
-    // 登录
-    wx.login({
-      success: res => {
-        var code = res.code;
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        get('/wx/user/' + config.appkey + '/login', { 'code': code, }).then(res => {
-          this.setData({
-            openId: res.openid
-          })
-        })
-      }
-    })
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -59,19 +48,68 @@ Page({
       })
     }
     that=this;
+    // 登录
+    wx.login({
+      success: res => {
+        var code = res.code;
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        get('/wx/user/' + config.appkey + '/login', { 'code': code, }).then(res => {
+          that.setData({
+            openId: res.openid
+          })
+          that.checkAuth();
+        })
+      }
+    })
+  },
+  checkAuth() {
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 获取用户信息去首页  
+          wx.getUserInfo({
+            lang: 'zh_CN',
+            success: function (res) {
+              var userInfo = res.userInfo;
+              setValue('userInfo', res.userInfo);
+              post('/wx/user/' + config.appkey + '/wxRegister', {
+                openid: that.data.openId,
+                // session_key: o,
+                name: userInfo.nickName,
+                avatarUrl: userInfo.avatarUrl,
+                gender: userInfo.gender, //性别 0：未知、1：男、2：女
+                province: userInfo.province,
+                city: userInfo.city,
+                country: userInfo.country
+              })
+                .then(res => {
+                  if (res.code === 0) {
+                    // if (gameId) {
+                    //   console.log(gameId)
+                    //   redirectTo(`/pages/`)
+                    // } else {
+                    console.log('去首页');
+                    redirectTo('/pages/Homepage/Homepage?aUserInfo=' + JSON.stringify(res.aUserInfo));
+                  }
+                })
+            },
+          })
+        }
+      }
+    })
   },
   getUserInfo: function(e) {
     console.log(e)
     var userInfo = e.detail.userInfo;
     app.globalData.userInfo = userInfo;
-    this.setData({
+    that.setData({
       userInfo: userInfo,
       hasUserInfo: true
     })
     setValue('userInfo', userInfo)
-    console.log(this.data.userInfo);
+    console.log(that.data.userInfo);
     post('/system/aUserInfo/wxRegister', {
-      openid: this.data.openId,
+      openid: that.data.openId,
       // session_key: o,
       name: userInfo.nickName,
       avatarUrl: userInfo.avatarUrl,
@@ -90,5 +128,6 @@ Page({
           redirectTo('/pages/Homepage/Homepage?aUserInfo=' + JSON.stringify(res.aUserInfo));
           }
       })
-  }
+  },
+
 })

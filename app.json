@@ -15,8 +15,7 @@
     "pages/knowledge/knowledge",
     "pages/notice/notice",
     "pages/rankingList-two/rankingList-two",
-    "pages/logs/logs",
-    "pages/aaaa"
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
