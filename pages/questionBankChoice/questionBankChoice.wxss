@@ -59,4 +59,5 @@
 .choose-radio{
   right: 60rpx;
   position: absolute;
+  /* transform:scale(0.7); */
 }

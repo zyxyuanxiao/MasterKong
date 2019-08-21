@@ -4,10 +4,9 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),//11111
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     imgUrls: [{
         src: '../../assets/images/Homepage/专题1@2x.png',
       theTitle: '学食品安全知识赢好礼',
