@@ -15,12 +15,12 @@
               <image src='../../assets/images/Homepage/专题6@2x.png'></image>
           </view>
         </view>
-        <!-- <view class="BluesPerson">
+        <view class="BluesPerson">
           <view class="score">2400</view>
           <view class="Imgportrait">
               <image src='../../assets/images/Homepage/专题6@2x.png'></image>
           </view>
-        </view> -->
+        </view>
       </view> 
       <view class="Vs-view">
 
@@ -39,12 +39,12 @@
           </view>
           <view class="score">2400</view>
         </view>
-        <!-- <view class="yellowPerson">
+        <view class="yellowPerson">
           <view class="Imgportrait">
               <image src='../../assets/images/Homepage/专题5@2x.png' ></image>
           </view>
           <view class="score">2400</view>
-        </view> -->
+        </view>
       </view>
       </view>
   </view> 
