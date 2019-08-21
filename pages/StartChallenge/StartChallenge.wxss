@@ -57,9 +57,6 @@
   height: 89rpx;
   margin: 86rpx 65rpx 0rpx 65rpx;
 }
-.nameview{
-  width: 100%；
-}
 .name{
   font-size:28rpx;
   font-family:PingFangSC;

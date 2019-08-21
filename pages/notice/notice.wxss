@@ -79,13 +79,6 @@
   font-size: 28rpx;
   margin: 60rpx 174rpx 0rpx 172rpx;
 }
-
-.TwoImg{
-  width: 600rpx;
-  height: 583rpx;
-  margin-left: 37rpx;
-  margin-right: 53rpx;
-}
 .textOne{
   font-size: 28rpx;
   font-family:PingFangSC-Regular;

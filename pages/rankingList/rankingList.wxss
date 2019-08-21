@@ -54,14 +54,7 @@
   height: 140rpx;
   display: flex;
   padding-left: 40rpx;
-  /* margin-top: 30rpx; */
 }
-/* .SingleOutMyTwo{
-  width: 750rpx;
-  height: 140rpx;
-  display: flex;
-  padding-left: 40rpx;
-} */
 .SingleOut{
   width: 690rpx;
   height: 140rpx;

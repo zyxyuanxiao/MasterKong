@@ -27,20 +27,6 @@
     flex-direction: column;
     align-items: center;
     color: #FFFFFF;
-
-     /* width: 600rpx;
-    height: 730rpx;
-    position: fixed;
-    top: 40pt;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    margin: 0 auto;
-    border-radius:8rpx;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #FFFFFF; */
 }
 
 /* 弹出层 */
