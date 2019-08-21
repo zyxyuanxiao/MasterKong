@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/rankingList/rankingList",
+    "pages/rankingList-two/rankingList-two",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/AnswerQuestions/AnswerQuestions",
     "pages/Homepage/Homepage",
     "pages/notice/notice",
     "pages/knowledge/knowledge",
-    "pages/rankingList-two/rankingList-two",
-    "pages/rankingList/rankingList",
     "pages/Moremenu/Moremenu",
     "pages/SetUpThe/SetUpThe",
     "pages/UserInstructions/UserInstructions",
