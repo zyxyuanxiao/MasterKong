@@ -4,27 +4,27 @@
   <view class="account">
   <!--头像-->
   <view class="Head">
-     <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+     <image src='{{wxuserInfo.avatarUrl}}' class="HeadPortrait"></image>
   </view>
 
   <!-- 账户 -->
   <view class="information">
   <view class="jies name">
-     <text class="zt">炽热的天空</text>
+     <text class="zt">{{wxuserInfo.nickName}}</text>
   </view>
   <view class="jies dengji">
     <view class="dengjiOne">
-      <text class="zt level">Lv 23</text>
+      <text class="zt level">Lv {{aUserInfo.levelno}}</text>
     </view>
      <view class="baike">
-        <view class="zt Dan">行走百科</view>
+        <view class="zt Dan">{{aUserInfo.levelname}}</view>
      </view>
   </view>
   </view>
 
   <!-- 排行 -->
   <view  class="tupian">
-    <view class="tupianOne">
+    <view class="tupianOne" bindtap="goRankView">
       <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="ranking"></image>
     </view>
     <view class="paihang">
@@ -33,7 +33,7 @@
   </view>
   
   <!-- 更多 -->
-  <view  class="tupian">
+  <view  class="tupian"  bindtap="moreMenuview">
     <view  class="tupiantwo">
       <image src='../../assets/images/Homepage/更多@2x.png' mode='widthFix'  class="More"></image>
     </view>

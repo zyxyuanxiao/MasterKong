@@ -5,6 +5,7 @@ import { get } from '../../utils/http'
 import { navTo, setValue, getValue, goPage } from '../../utils/common'
 import { Music } from '../../utils/music'
 const music = new Music()
+var that;
 Page({
   data: {
     imgUrls: [{
@@ -43,8 +44,24 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-    
+  onLoad: function (options) {
+    var aUserInfo = JSON.parse(options.aUserInfo);
+    const wxuserInfo = getValue('userInfo');
+
+    this.setData({
+      aUserInfo: aUserInfo,
+      wxuserInfo: wxuserInfo,
+    });
+    that = this;
   },
- 
+  goRankView: function () {
+    wx.navigateTo({
+      url: '/pages/rankingList/rankingList'
+    })
+  },
+  moreMenuview: function () {
+    wx.navigateTo({
+      url: '/pages/Moremenu/Moremenu'
+    })
+  }
 })

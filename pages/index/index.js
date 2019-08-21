@@ -57,6 +57,7 @@ Page({
           that.setData({
             openId: res.openid
           })
+          setValue('openId', res.openId);
           that.checkAuth();
         })
       }
@@ -72,27 +73,8 @@ Page({
             success: function (res) {
               var userInfo = res.userInfo;
               setValue('userInfo', res.userInfo);
-              post('/wx/user/' + config.appkey + '/wxRegister', {
-                openid: that.data.openId,
-                // session_key: o,
-                name: userInfo.nickName,
-                avatarUrl: userInfo.avatarUrl,
-                gender: userInfo.gender, //性别 0：未知、1：男、2：女
-                province: userInfo.province,
-                city: userInfo.city,
-                country: userInfo.country
-              })
-                .then(res => {
-                  if (res.code === 0) {
-                    // if (gameId) {
-                    //   console.log(gameId)
-                    //   redirectTo(`/pages/`)
-                    // } else {
-                    console.log('去首页');
-                    redirectTo('/pages/Homepage/Homepage?aUserInfo=' + JSON.stringify(res.aUserInfo));
-                  }
-                })
-            },
+              that.userlogin(userInfo);
+            }
           })
         }
       }
@@ -106,28 +88,30 @@ Page({
       userInfo: userInfo,
       hasUserInfo: true
     })
-    setValue('userInfo', userInfo)
+    setValue('userInfo', userInfo);
     console.log(that.data.userInfo);
-    post('/system/aUserInfo/wxRegister', {
+    this.userlogin(userInfo);
+  },
+  userlogin: function (userInfo){
+    post('/wx/user/' + config.appkey + '/wxRegister', {
       openid: that.data.openId,
       // session_key: o,
       name: userInfo.nickName,
       avatarUrl: userInfo.avatarUrl,
       gender: userInfo.gender, //性别 0：未知、1：男、2：女
       province: userInfo.province,
-      city:  userInfo.city,
+      city: userInfo.city,
       country: userInfo.country
-     })
+    })
       .then(res => {
         if (res.code === 0) {
           // if (gameId) {
           //   console.log(gameId)
           //   redirectTo(`/pages/`)
           // } else {
-            console.log('去首页');
+          console.log('去首页');
           redirectTo('/pages/Homepage/Homepage?aUserInfo=' + JSON.stringify(res.aUserInfo));
-          }
+        }
       })
   },
-
 })
