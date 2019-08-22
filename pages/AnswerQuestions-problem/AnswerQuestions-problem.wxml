@@ -48,6 +48,47 @@
       </view>
       </view>
   </view> 
+
+<!-- 蓝队弹窗 -->
+<view class="BluesPopupWindow">
+
+  <view class="PopupDetails">
+    <view class="Popuptext">你太厉害了！字数</view>
+    <view class="img">
+      <image src='../../assets/images/Homepage/专题6@2x.png' ></image>
+    </view>
+  </view>
+
+  <view class="PopupDetails">
+    <view class="Popuptext">你太厉害了！字数</view>
+    <view class="img">
+      <image src='../../assets/images/Homepage/专题6@2x.png' ></image>
+    </view>
+  </view>
+  
+</view>
+
+<!-- 黄队弹窗 -->
+<view class="yellowPopupWindow">
+
+  <view class="PopupDetails">
+    <view class="img">
+      <image src='../../assets/images/Homepage/专题5@2x.png' ></image>
+    </view>
+    <view class="Popuptext">111111 你太厉害了！</view>
+  </view>
+
+  <view class="PopupDetails">
+    <view class="img">
+      <image src='../../assets/images/Homepage/专题5@2x.png' ></image>
+    </view>
+    <view class="Popuptext">你太厉害了！</view>
+  </view>
+  
+
+</view>
+
+
 <!--题目--->
 <view class="QuestionList">
 <!--题目比例--->
@@ -63,7 +104,7 @@
   </view>
 <!--消息图片--->
   <view class="message">
-    <image src='../../assets/images/AnswerQuestions/快捷短语@2x.png' class="messageImg" bindtap="btn" data-statu="open"></image>
+    <image src='../../assets/images/AnswerQuestions/快捷短语@2x.png' id="messageImg" bindtap="btn" data-statu="open"></image>
   </view>
   
 <!--问题text--->
@@ -137,7 +178,6 @@
     <view  class="psOne">
       <view class="DetailsFive dt">不要走，我们决战到天荒地老～</view>
     </view>
-      
   </view>
 </view>
   
