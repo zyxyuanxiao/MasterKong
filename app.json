@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/rankingList/rankingList",
     "pages/rankingList-two/rankingList-two",
-    "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/AnswerQuestions/AnswerQuestions",
     "pages/Homepage/Homepage",
     "pages/notice/notice",
