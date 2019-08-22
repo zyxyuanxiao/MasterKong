@@ -1,0 +1,156 @@
+/**contestResults.wxss**/
+.container{
+  color: #ffffff;
+}
+.PKResults{
+  height: 267rpx;
+  width: 100%;
+  display: flex;
+}
+.blue{
+  height: 267rpx;
+  width: 50%;
+}
+.yellow{
+  height: 267rpx;
+  width: 50%;
+}
+.champion{
+  width: 117rpx;
+  height: 117rpx;
+  margin: 30rpx 0rpx 0px 107rpx;
+}
+.Btext{
+  width:112rpx;
+  height:28rpx;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(39,153,255,1);
+  margin-left: 114rpx;
+  margin-bottom: 10rpx;
+}
+.BTotalScore{
+  width:151rpx;
+  height:50rpx;
+  font-size:50rpx;
+  font-family:Microsoft YaHei;
+  color:rgba(238,176,50,1);
+  margin-left: 95rpx;
+  margin-bottom: 13rpx;
+}
+.Ytext{
+  width:112rpx;
+  height:28rpx;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(238,176,50,1);
+  margin-left: 144rpx;
+  margin-bottom: 10rpx;
+  margin-top: 155rpx; 
+}
+.YTotalScore{
+  width:151rpx;
+  height:50rpx;
+  font-size:50rpx;
+  font-family:Microsoft YaHei;
+  color:rgba(255,255,255,0.5);
+  margin-left: 95rpx;
+  margin-bottom: 13rpx;
+}
+
+.PKpersonnel{
+  display: flex;
+  height: 810rpx;
+}
+.BScore{
+  width: 100%;
+  text-align: center;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  color:rgba(238,176,50,1);
+  margin-top: 26rpx;
+}
+
+.YScore{
+  width: 100%;
+  text-align: center;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,0.5);
+  margin-top: 26rpx;
+}
+.name{
+  width:100%;
+  height:28rpx;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  margin-top: 10rpx;
+}
+/* 队伍 */
+.blueTeam{
+  margin-left: 60rpx;
+  width: 100%;
+  margin-top: 17rpx; 
+}
+.yellowTeam{
+  margin-left: 60rpx;
+  width: 100%;
+  margin-top:17rpx;  
+  /* padding-right: 30rpx;  */
+  /* margin: 17rpx 30rpx 0rpx 60rpx; */
+} 
+.blueTeam .people{
+  width:220rpx;
+  height:246rpx;
+  background:rgba(60,60,70,1);
+  border-radius:8rpx;
+  border:2rpx solid rgba(39,153,255,1);
+  margin-bottom: 15rpx;
+}
+.yellowTeam .people{
+  width:220rpx;
+  height:246rpx;
+  background:rgba(60,60,70,1);
+  border-radius:8rpx;
+  border:2rpx solid rgba(238,176,50,1);
+  margin-bottom: 15rpx;
+}
+.HeadPortrait{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 150rpx;
+  margin: 30rpx 68rpx 0rpx 72rpx;
+}
+.InviteFriendsImg{
+  width: 90rpx;
+  height: 89rpx;
+  margin: 86rpx 65rpx 0rpx 65rpx;
+}
+
+/* 操作 */
+.operation{
+  height: 100rpx;
+  width: 100%;
+}
+.returnImg{
+  width: 80rpx;
+  height: 80rpx;
+}
+.postersImg{
+  width: 80rpx;
+  height: 80rpx;
+}
+.WeChatImg{
+  width: 80rpx;
+  height: 80rpx;
+}
+.challenge{
+  width:300rpx;
+  height:100rpx;
+  background:rgba(31,204,102,1);
+  border-radius:50rpx;
+}

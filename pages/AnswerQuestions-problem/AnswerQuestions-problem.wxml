@@ -75,7 +75,7 @@
     <view class="img">
       <image src='../../assets/images/Homepage/专题5@2x.png' ></image>
     </view>
-    <view class="Popuptext">111111 你太厉害了！</view>
+    <view class="Popuptext">1111 你太厉害了！</view>
   </view>
 
   <view class="PopupDetails">
