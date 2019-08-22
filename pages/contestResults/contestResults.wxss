@@ -46,7 +46,7 @@
   font-family:PingFangSC;
   font-weight:500;
   color:rgba(238,176,50,1);
-  margin-left: 144rpx;
+  margin-left: 174rpx;
   margin-bottom: 10rpx;
   margin-top: 155rpx; 
 }
@@ -56,7 +56,7 @@
   font-size:50rpx;
   font-family:Microsoft YaHei;
   color:rgba(255,255,255,0.5);
-  margin-left: 95rpx;
+  margin-left: 125rpx;
   margin-bottom: 13rpx;
 }
 
@@ -118,6 +118,7 @@
   border-radius:8rpx;
   border:2rpx solid rgba(238,176,50,1);
   margin-bottom: 15rpx;
+  margin-left: 30rpx;
 }
 .HeadPortrait{
   width: 80rpx;
@@ -135,6 +136,7 @@
 .operation{
   height: 100rpx;
   width: 100%;
+  display: flex;
 }
 .returnImg{
   width: 80rpx;
@@ -153,4 +155,6 @@
   height:100rpx;
   background:rgba(31,204,102,1);
   border-radius:50rpx;
+  line-height: 100rpx;
+  text-align:  center;
 }

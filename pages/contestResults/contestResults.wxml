@@ -8,10 +8,8 @@
     <view class="BTotalScore">+6800</view>
   </view>
   <view class="yellow">
-    <view class="blue">
       <view class="Ytext">黄队</view>
       <view class="YTotalScore">+5600</view>
-    </view>
   </view>
 </view>
 
@@ -65,7 +63,7 @@
 <!-- 操作 -->
 <view class="operation">
   <image src='../../assets/images/contestResults/返回.png' class="returnImg"></image>
-  <button class="challenge">继续挑战</button>
+  <view class="challenge">继续挑战</view>
   <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"></image>
   <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
 </view>
