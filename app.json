@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/rankingList/rankingList",
     "pages/rankingList-two/rankingList-two",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
@@ -16,8 +17,7 @@
     "pages/StartChallenge-three/StartChallenge-three",
     "pages/PKgame/PKgame",
     "pages/questionBankChoice/questionBankChoice",
-    "pages/test/test",
-    "pages/index/index",
+    
     "pages/logs/logs"
   ],
   "window": {

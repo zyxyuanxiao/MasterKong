@@ -57,7 +57,7 @@ Page({
           that.setData({
             openId: res.openid
           })
-          setValue('openId', res.openId);
+          setValue('openId', res.openid);
           that.checkAuth();
         })
       }
