@@ -8,6 +8,7 @@
     <view class="BTotalScore">+6800</view>
   </view>
   <view class="yellow">
+      <image src='../../assets/images/contestResults/pk获胜队伍@22x.png' class="champion"></image>
       <view class="Ytext">黄队</view>
       <view class="YTotalScore">+5600</view>
   </view>

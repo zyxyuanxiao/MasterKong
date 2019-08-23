@@ -15,10 +15,15 @@
   height: 267rpx;
   width: 50%;
 }
-.champion{
+.blue .champion{
   width: 117rpx;
   height: 117rpx;
   margin: 30rpx 0rpx 0px 107rpx;
+}
+.yellow .champion{
+  width: 117rpx;
+  height: 117rpx;
+  margin: 30rpx 0rpx 0px 130rpx;
 }
 .Btext{
   width:112rpx;
@@ -48,7 +53,7 @@
   color:rgba(238,176,50,1);
   margin-left: 174rpx;
   margin-bottom: 10rpx;
-  margin-top: 155rpx; 
+  /* margin-top: 155rpx;  */
 }
 .YTotalScore{
   width:151rpx;
