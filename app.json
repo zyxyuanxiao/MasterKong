@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/contestResults/contestResults",
+    "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/rankingList/rankingList",
     "pages/rankingList-two/rankingList-two",
-    "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/AnswerQuestions/AnswerQuestions",
     "pages/Homepage/Homepage",
     "pages/notice/notice",
@@ -17,7 +17,8 @@
     "pages/StartChallenge-three/StartChallenge-three",
     "pages/PKgame/PKgame",
     "pages/questionBankChoice/questionBankChoice",
-    
+    "pages/test/test",
+    "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {

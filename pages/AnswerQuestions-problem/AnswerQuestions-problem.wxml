@@ -48,6 +48,47 @@
       </view>
       </view>
   </view> 
+
+<!-- 蓝队弹窗 -->
+<view class="BluesPopupWindow">
+
+  <view class="PopupDetails">
+    <view class="Popuptext">你太厉害了！字数</view>
+    <view class="img">
+      <image src='../../assets/images/Homepage/专题6@2x.png' ></image>
+    </view>
+  </view>
+
+  <view class="PopupDetails">
+    <view class="Popuptext">你太厉害了！字数</view>
+    <view class="img">
+      <image src='../../assets/images/Homepage/专题6@2x.png' ></image>
+    </view>
+  </view>
+  
+</view>
+
+<!-- 黄队弹窗 -->
+<view class="yellowPopupWindow">
+
+  <view class="PopupDetails">
+    <view class="img">
+      <image src='../../assets/images/Homepage/专题5@2x.png' ></image>
+    </view>
+    <view class="Popuptext">1111 你太厉害了！</view>
+  </view>
+
+  <view class="PopupDetails">
+    <view class="img">
+      <image src='../../assets/images/Homepage/专题5@2x.png' ></image>
+    </view>
+    <view class="Popuptext">你太厉害了！</view>
+  </view>
+  
+
+</view>
+
+
 <!--题目--->
 <view class="QuestionList">
 <!--题目比例--->
@@ -63,7 +104,7 @@
   </view>
 <!--消息图片--->
   <view class="message">
-    <image src='../../assets/images/AnswerQuestions/快捷短语@2x.png' class="messageImg"></image>
+    <image src='../../assets/images/AnswerQuestions/快捷短语@2x.png' id="messageImg" bindtap="btn" data-statu="open"></image>
   </view>
   
 <!--问题text--->
@@ -119,6 +160,26 @@
 
   </view>
   
+<!--弹窗-->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <view class="QuickPhrases">
+    快捷短语
+    <image src='../../assets/images/knowledge/x@2x.png' mode='widthFix' class="noticeTheprize"  bindtap="ok"></image>
+  </view>
+  <view class="phraseDetails">
+    <view class="psOne">
+      <view class="DetailsOne dt">你太厉害了！</view>
+      <view class="DetailsTwo dt">你弱爆了！</view>
+    </view>
+    <view  class="psOne">
+      <view class="DetailsThree dt">无敌了，还有谁！</view>
+      <view class="DetailsFour dt">无敌是多么寂寞！</view>
+    </view>
+    <view  class="psOne">
+      <view class="DetailsFive dt">不要走，我们决战到天荒地老～</view>
+    </view>
+  </view>
+</view>
   
 
 </view>
