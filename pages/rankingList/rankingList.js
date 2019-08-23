@@ -44,6 +44,7 @@ Page({
       isChecked: false,
       isCheckedTwo: true
     })
+    that.getAllCharts();
   },
   getTimespaceCharts: function () {
     const openId=getValue('openId');
@@ -55,5 +56,17 @@ Page({
       })
       }
     })
-  }
+  },
+  getAllCharts: function () {
+    const openId = getValue('openId');
+    get('/wx/charts/' + config.appkey + '/getAllCharts', { 'openId': openId, }).then(res => {
+      if (res.code == 0) {
+        
+        that.setData({
+          'chartsData': res.data,
+          'myChart': res.ownData,
+        })
+      }
+    })
+  },
 })
