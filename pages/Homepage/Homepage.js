@@ -78,5 +78,10 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  goStartChallenge: function () {
+    wx.navigateTo({
+      url: '/pages/StartChallengePre/StartChallengePre'
+    })
+  },
 })

@@ -1,0 +1,24 @@
+<view class="container">
+  <view class='offlinePK'>线下PK</view>
+  <view class='pkcontainer'>
+    <view class='randomMatching'>
+      <view class="randomMatchingbtn">
+        随机匹配
+      </view>
+    </view>
+    <view class='friendMatching'>
+      <view class="friendMatchingbtn">
+        好友对战
+      </view>
+    </view>
+  </view>
+  <view class='championship'>竞标赛</view>
+  <view class="championshipo">
+  </view>
+  <view class="championshipNear">
+  </view>
+  <view class="championshipSignup">
+  </view>
+  <view class="championshipNopre">
+  </view>
+</view>

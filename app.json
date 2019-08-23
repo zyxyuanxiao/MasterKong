@@ -11,6 +11,8 @@
     "pages/SetUpThe/SetUpThe",
     "pages/UserInstructions/UserInstructions",
     "pages/RulesGame/RulesGame",
+    "pages/StartChallenge/StartChallenge",
+	  "pages/StartChallengePre/StartChallengePre",
     "pages/StartChallenge-Waiting/StartChallenge-Waiting",
     "pages/StartChallenge-two/StartChallenge-two",
     "pages/StartChallenge-three/StartChallenge-three",

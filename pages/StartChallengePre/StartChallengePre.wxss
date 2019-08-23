@@ -1,0 +1,106 @@
+/* pages/StartChallengePre/StartChallengePre.wxss */
+.container{
+  width: 100%;
+  margin: 0 30rpx;
+}
+.offlinePK{
+width:80rpx;
+height:24rpx;
+font-size:24rpx;
+font-family:PingFangSC;
+font-weight:400;
+color:rgba(255,255,255,1);
+line-height:24rpx;
+margin-bottom: 30rpx;
+}
+.pkcontainer{
+  width:100%;
+  height: 180rpx;
+
+}
+.randomMatching{
+  width:330rpx;
+  height:180rpx;
+  background-color: blue;
+  float: left;
+}
+.randomMatchingbtn{
+ width:150rpx;
+ height:50rpx;
+ background:rgba(39,153,255,1);
+ border-radius:25rpx;
+ margin-top: 50rpx;
+ margin-left:133rpx;
+ /*字体*/
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height: 50rpx;
+  text-align: center;
+
+}
+.friendMatching{
+  width:330rpx;
+  height:180rpx;
+  background-color: blue;
+  float: left;
+  margin-left:30rpx; 
+ 
+}
+.friendMatchingbtn{
+ width:150rpx;
+ height:50rpx;
+ background:#CE493A;
+ border-radius:25rpx;
+ margin-top: 50rpx;
+ margin-left:133rpx;
+ /*字体*/
+ font-size:28rpx;
+ font-family:PingFangSC;
+ color:rgba(255,255,255,1);
+ font-weight:400;
+ line-height: 50rpx;
+ text-align: center;
+}
+.championship{
+width:72rpx;
+height:24rpx;
+font-size:24rpx;
+font-family:PingFangSC;
+font-weight:400;
+color:rgba(255,255,255,1);
+line-height:24rpx;
+margin-bottom: 50rpx;
+margin-top: 40rpx;
+}
+
+.championshipo{
+  width:690rpx;
+  height:160rpx;
+  background:linear-gradient(90deg,rgba(128,191,145,1) 0%,rgba(73,139,88,1) 100%);
+  border-radius:8rpx;
+  margin-bottom: 30rpx;
+}
+.championshipNear{
+  width:690rpx;
+  height:160rpx;
+  background:linear-gradient(90deg,rgba(229,145,75,1) 0%,rgba(218,95,46,1) 100%);
+  border-radius:8rpx;
+  margin-bottom: 30rpx;
+}
+
+.championshipSignup{
+  width:690rpx;
+  height:180rpx;
+  background:rgba(60,60,70,1);
+  border-radius:8rpx;
+  margin-bottom: 30rpx;
+}
+
+.championshipNopre{
+  width:690rpx;
+  height:180rpx;
+  background:rgba(60,60,70,1);
+  border-radius:8rpx;
+}
