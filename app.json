@@ -1,10 +1,11 @@
 {
   "pages": [
+    "pages/Homepage/Homepage",
+    "pages/test/test",
     "pages/contestResults/contestResults",
     "pages/rankingList/rankingList",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/AnswerQuestions/AnswerQuestions",
-    "pages/Homepage/Homepage",
     "pages/notice/notice",
     "pages/knowledge/knowledge",
     "pages/Moremenu/Moremenu",
@@ -18,7 +19,6 @@
     "pages/StartChallenge-three/StartChallenge-three",
     "pages/PKgame/PKgame",
     "pages/questionBankChoice/questionBankChoice",
-    "pages/test/test",
     "pages/index/index",
     "pages/logs/logs"
   ],

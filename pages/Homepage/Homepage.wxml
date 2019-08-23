@@ -53,10 +53,8 @@
 
   <!--开始挑战-->
   <view class="AnswerQuestions"> 
-    <!-- <image src='../../assets/images/Homepage/开始挑战@2x.png' mode='widthFix'  class="Began"></image> -->
     <image src='../../assets/images/Homepage/动画圈圈@2x.png' mode='widthFix'  class="Began"></image>
-    <image src='../../assets/images/Homepage/圆形底板@2x.png' mode='widthFix'  class="Began" bindtap="goStartChallengePre"></image>
-    <image src='../../assets/images/Homepage/康师傅@2x.png' mode='widthFix'  class="Began"></image>
+    <image src='../../assets/images/Homepage/圆形底板@2x.png' mode='widthFix'  class="BeganTwo" bindtap="goStartChallengePre"></image>
   </view>
 
 

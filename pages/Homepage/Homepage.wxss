@@ -94,8 +94,8 @@
   margin-bottom: 88rpx; */
   width: 628rpx;
   height: 628rpx;
-  margin-left: 65rpx;
-  margin-right: 57rpx;
+  margin-left: 61rpx;
+  margin-right: 61rpx;
 }
 .ranking{
   width: 80rpx;
@@ -109,11 +109,6 @@
 .trip{
   width: 698rpx;
   height: 141rpx;
-}
-.Began{
-  width: 552rpx;
-  height: 570rpx;
-  position: absolute;
 }
 .sorting{
   width: 273px;
@@ -176,6 +171,7 @@ z-index: 20;
 .Special{
   height: 249rpx;
   margin-bottom: 90rpx;
+  margin-top: 49rpx;
 }
 .challenge{
   color: #FFFFFF;
@@ -211,3 +207,79 @@ z-index: 999;
   opacity: 0.8;
   letter-spacing:1pt;
 }
+.BeganTwo{
+  width: 546rpx;
+  height: 568rpx;
+  margin: 18rpx 18rpx 0rpx 42rpx;
+  position: absolute;
+}
+
+/* 动态圆圈 */
+/* @keyframes warn {
+    0% {
+        transform: scale(0);
+        opacity: 0.0;
+    }
+    25% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    75% { 
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    80% { 
+        transform: scale(0.1);
+        opacity: 0.8;
+    }
+    90% { 
+        transform: scale(0.5);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.0;
+    }
+} */
+
+@keyframes warn {
+    0% {
+        transform: scale(0);
+        opacity: 0.0;
+    }
+    80% {
+        transform: scale(0.1);
+        opacity: 0.0;
+    }
+    90% {
+        transform: scale(0.8);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.0;
+    }
+}
+
+
+.Began{
+  width: 628rpx;
+  height: 628rpx;
+  position: absolute;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius:250px;
+  z-index: 1;
+  /* animation: warn 5s linear infinite; */
+  /* opacity: 0; */
+  /* -webkit-animation: warn 2s ease-out;
+  -moz-animation: warn 2s ease-out;
+  animation: warn 2s ease-out;
+  animation-iteration-count: infinite; */
+}
+
+
