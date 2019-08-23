@@ -1,9 +1,8 @@
 {
   "pages": [
     "pages/contestResults/contestResults",
-    "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/rankingList/rankingList",
-    "pages/rankingList-two/rankingList-two",
+    "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/AnswerQuestions/AnswerQuestions",
     "pages/Homepage/Homepage",
     "pages/notice/notice",
@@ -12,6 +11,8 @@
     "pages/SetUpThe/SetUpThe",
     "pages/UserInstructions/UserInstructions",
     "pages/RulesGame/RulesGame",
+    "pages/StartChallenge/StartChallenge",
+	  "pages/StartChallengePre/StartChallengePre",
     "pages/StartChallenge-Waiting/StartChallenge-Waiting",
     "pages/StartChallenge-two/StartChallenge-two",
     "pages/StartChallenge-three/StartChallenge-three",
