@@ -27,13 +27,13 @@
     <view class="tupianOne" bindtap="goRankView">
       <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="ranking"></image>
     </view>
-    <view class="paihang">
+    <view class="paihang" >
         <text class="zt">排行</text>
      </view>
   </view>
   
   <!-- 更多 -->
-  <view  class="tupian"  bindtap="moreMenuview">
+  <view  class="tupian" bindtap="moreMenuview">
     <view  class="tupiantwo">
       <image src='../../assets/images/Homepage/更多@2x.png' mode='widthFix'  class="More"></image>
     </view>
@@ -56,7 +56,7 @@
     <!-- <image src='../../assets/images/Homepage/开始挑战@2x.png' mode='widthFix'  class="Began"></image> -->
     <image src='../../assets/images/Homepage/动画圈圈@2x.png' mode='widthFix'  class="Began"></image>
     <image src='../../assets/images/Homepage/圆形底板@2x.png' mode='widthFix'  class="Began" bindtap="goStartChallengePre"></image>
-    <image src='../../assets/images/Homepage/康师傅@2x.png' mode='widthFix'  class="Began"></image>
+    <!-- <image src='../../assets/images/Homepage/康师傅@2x.png' mode='widthFix'  class="Began"></image> -->
   </view>
 
 

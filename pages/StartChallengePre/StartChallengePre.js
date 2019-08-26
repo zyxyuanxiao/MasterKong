@@ -62,5 +62,10 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  randomMatching: function () {
+    wx.navigateTo({
+      url: '/pages/PKgame/PKgame'
+    })
+  },
 })

@@ -64,7 +64,7 @@ Page({
       url: '/pages/Moremenu/Moremenu'
     })
   },
-  goStartChallenge: function () {
+  goStartChallengePre: function () {
     wx.navigateTo({
       url: '/pages/StartChallengePre/StartChallengePre'
     })

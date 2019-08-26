@@ -110,6 +110,7 @@ Page({
           //   redirectTo(`/pages/`)
           // } else {
           console.log('去首页');
+          setValue('aUserInfo', res.aUserInfo);
           redirectTo('/pages/Homepage/Homepage?aUserInfo=' + JSON.stringify(res.aUserInfo));
         }
       })

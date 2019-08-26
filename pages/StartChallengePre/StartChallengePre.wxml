@@ -2,7 +2,7 @@
   <view class='offlinePK'>线下PK</view>
   <view class='pkcontainer'>
     <view class='randomMatching'>
-      <view class="randomMatchingbtn">
+      <view class="randomMatchingbtn" bindtap="randomMatching">
         随机匹配
       </view>
     </view>
