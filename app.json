@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/SpecialGame/SpecialGame",
-    "pages/AnswerQuestions/AnswerQuestions",
+    "pages/SpecialGame-Two/SpecialGame-Two",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
+    "pages/AnswerQuestions/AnswerQuestions",
+    "pages/SpecialGame/SpecialGame",
     "pages/StartChallengePre/StartChallengePre",
     "pages/Homepage/Homepage",
     "pages/test/test",
