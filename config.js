@@ -11,7 +11,7 @@ export const config = {
 export const cmd = {
     // 随机匹配
     randomPK: 1,
-    // 进入游戏
+    // 邀请进入游戏
     join: 2,
     // 设置难度
     setDifficult: 3,

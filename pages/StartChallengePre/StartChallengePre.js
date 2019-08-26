@@ -65,7 +65,12 @@ Page({
   },
   randomMatching: function () {
     wx.navigateTo({
-      url: '/pages/PKgame/PKgame'
+      url: '/pages/PKgame/PKgame?cmd=1'
+    })
+  },
+  friendMatching: function () {
+    wx.navigateTo({
+      url: '/pages/StartChallenge/StartChallenge?cmd=2'
     })
   },
 })

@@ -29,9 +29,9 @@
 <view class="yellowTeam">
 <view class="people">
     <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
-    <view class="name">炙热的天空</view>
-    <view class="level">Lv 23</view>
-    <view class="TheLabel">行走百科</view>
+    <view class="name">{{enemyUser.name}}</view>
+    <view class="level">Lv {{enemyUser.levelno}}</view>
+    <view class="TheLabel">{{enemyUser.levelname}}</view>
 </view>
 <!-- <view class="people">
     <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>

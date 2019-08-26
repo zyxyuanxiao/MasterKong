@@ -71,7 +71,7 @@
   </view>
 
 <view class="saveView">
-<button class="saveButton">
+<button class="saveButton" bindtap="saveQuestionType">
   保存
 </button>
 </view>

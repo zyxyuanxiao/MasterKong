@@ -1,5 +1,5 @@
 import { post, get } from '../../utils/http'
-import { setValue, redirectTo, getValue, showToast, showModal } from '../../utils/common';
+import { setValue, redirectTo, getValue, showToast, showModal, navTo } from '../../utils/common';
 import util from '../../utils/util'
 import { config, cmd } from '../../config'
 var that;
@@ -66,6 +66,12 @@ Page({
         case cmd.setDifficult:
           // showToast('设置难度成功', 'success')
           break;
+        case cmd.robot:
+          that.setData({
+            enemyUser: data.enemyUser
+          })
+          navTo('/pages/AnswerQuestions/AnswerQuestions?cmd=7');
+          break;
         default:
           console.log('开始答题了')
           break;
@@ -100,40 +106,13 @@ Page({
       },
     })
   },
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  submitTo: function (e) {
-    let that = this;
-    var data = {
-      body: that.data.inputValue,
-    }
-    if (socketOpen) {
-      // 如果打开了socket就发送数据给服务器
-      this.sendSocketMessage(data)
-      this.data.allContentList.push({ is_my: { text: this.data.inputValue } });
-      this.setData({
-        allContentList: this.data.allContentList,
-        inputValue: ''
-      })
-
-      that.bottom()
-    }
-  },
-  bindKeyInput: function (e) {
-    this.setData({
-      inputValue: e.detail.value
-    })
-  },
   goback: function () {
     SocketTask.close(function (close) {
       console.log('关闭 WebSocket 连接。', close)
     });
   },
   onHide: function () {
-    SocketTask.close(function (close) {
-      console.log('关闭 WebSocket 连接。', close)
-    });
+
   },
   upimg: function () {
     var that = this;

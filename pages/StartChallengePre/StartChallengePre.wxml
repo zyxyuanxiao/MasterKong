@@ -10,7 +10,7 @@
       </view>
     </view>
     <view class='friendMatching'>
-      <view class="friendMatchingbtn">
+      <view class="friendMatchingbtn"  bindtap="friendMatching">
         好友对战
       </view>
       <view class="InviteFriends">
