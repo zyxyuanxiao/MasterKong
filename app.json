@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/SpecialGame/SpecialGame",
+    "pages/AnswerQuestions/AnswerQuestions",
+    "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/StartChallengePre/StartChallengePre",
     "pages/Homepage/Homepage",
     "pages/test/test",
     "pages/contestResults/contestResults",
     "pages/rankingList/rankingList",
-    "pages/AnswerQuestions-problem/AnswerQuestions-problem",
-    "pages/AnswerQuestions/AnswerQuestions",
     "pages/notice/notice",
     "pages/knowledge/knowledge",
     "pages/Moremenu/Moremenu",

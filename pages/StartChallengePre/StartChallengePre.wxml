@@ -32,8 +32,11 @@
      <view class="GameTime">
     20:10:52
     </view>
-    <view class="ClickEntry">
+    <!-- <view class="ClickEntry">
     点击参赛
+    </view> -->
+    <view class="ClickEntry">
+    进行中…
     </view>
   </view>
  

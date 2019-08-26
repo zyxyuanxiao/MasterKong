@@ -96,7 +96,6 @@
   height: 628rpx;
   margin-left: 61rpx;
   margin-right: 61rpx;
-  background-color: #FFFFFF;
 }
 .ranking{
   width: 80rpx;
