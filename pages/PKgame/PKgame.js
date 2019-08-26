@@ -1,7 +1,7 @@
 import { post, get } from '../../utils/http'
-import { setValue, redirectTo, getValue } from '../../utils/common';
+import { setValue, redirectTo, getValue, showToast, showModal } from '../../utils/common';
 import util from '../../utils/util'
-import { config } from '../../config'
+import { config, cmd } from '../../config'
 var that;
 var frameBuffer_Data, session, SocketTask;
 var app = getApp();
@@ -46,25 +46,29 @@ Page({
     })
     SocketTask.onMessage(onMessage => {
       console.log('监听WebSocket接受到服务器的消息事件。服务器返回的消息', JSON.parse(onMessage.data))
-      var onMessage_data = JSON.parse(onMessage.data)
-      if (onMessage_data.cmd == 1) {
-        that.setData({
-          link_list: text
-        })
-        console.log(text, text instanceof Array)
-        // 是否为数组
-        if (text instanceof Array) {
-          for (var i = 0; i < text.length; i++) {
-            text[i]
-          }
-        } else {
-
-        }
-        that.data.allContentList.push({ is_ai: true, text: onMessage_data.body });
-        that.setData({
-          allContentList: that.data.allContentList
-        })
-        that.bottom()
+      const data = JSON.parse(onMessage.data);
+      if (data.code === 1) {
+        showToast(data.msg)
+        return
+      }
+      console.log(data.cmd);
+      switch (data.cmd) {
+        case cmd.randomPK:
+          // this.createGame(data.data);
+          this.sendSocketMessage({ status: cmd.randomPK,data : ''});
+          break;
+        case cmd.join:
+          // this.joinGame(data.data.join);
+          break;
+        case cmd.start:
+          // this.startGame();
+          break;
+        case cmd.setDifficult:
+          // showToast('设置难度成功', 'success')
+          break;
+        default:
+          console.log('开始答题了')
+          break;
       }
     })
   },
@@ -80,7 +84,7 @@ Page({
     // 创建Socket
     const openId = getValue('openId');
     SocketTask = wx.connectSocket({
-      url: config.ws_url + "/wx/websocket/" + openId,
+      url: config.ws_url + "/wx/websocket/" + openId+"/1",
       data: 'data',
       header: {
         'content-type': 'application/json'

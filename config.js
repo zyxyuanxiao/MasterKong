@@ -9,8 +9,8 @@ export const config = {
 }
 
 export const cmd = {
-    // 创建房间
-    create: 1,
+    // 随机匹配
+    randomPK: 1,
     // 进入游戏
     join: 2,
     // 设置难度
@@ -21,6 +21,8 @@ export const cmd = {
     answer: 5,
     // 发送题目信息
     question: 6,
+    // 机器人对战
+    robot: 7,
     // 游戏结束
     end: 8,
     // 获取头像
