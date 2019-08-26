@@ -96,6 +96,7 @@
   height: 628rpx;
   margin-left: 61rpx;
   margin-right: 61rpx;
+  background-color: #FFFFFF;
 }
 .ranking{
   width: 80rpx;
@@ -274,8 +275,8 @@ z-index: 999;
   -moz-border-radius: 30px;
   border-radius:250px;
   z-index: 1;
-  /* animation: warn 5s linear infinite; */
-  /* opacity: 0; */
+  animation: warn 5s linear infinite;
+  opacity: 0; 
   /* -webkit-animation: warn 2s ease-out;
   -moz-animation: warn 2s ease-out;
   animation: warn 2s ease-out;
