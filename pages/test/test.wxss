@@ -1,0 +1,95 @@
+/* pages/test/test.wxss */
+
+.one{
+  width: 628rpx;
+  height: 628rpx;
+  margin-top: 800rpx;
+}
+.aaa{
+  width: 750rpx;
+  height: 1624rpx;
+  background: #ffffff;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+}
+.AnswerQuestions{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+}
+/* 产生动画（向外扩散变大）的圆圈  */
+.pulse {
+    position: absolute;
+    width: 300px; 
+    height: 300px;
+    border: 6px solid red;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius:250px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-animation: warn 3s ease-out;
+    -moz-animation: warn 3s ease-out;
+    animation: warn 3s ease-out;
+    animation-iteration-count: infinite;
+    /* -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite; */
+} 
+
+
+
+@keyframes warn {
+    0% {
+        transform: scale(0);
+        opacity: 0.0;
+    }
+    25% {
+        transform: scale(0);
+        opacity: 0.1;
+    }
+    50% {
+        transform: scale(0.1);
+        opacity: 0.3;
+    }
+    60% {
+        transform: scale(0.5);
+        opacity: 0.9;
+    }
+    75% { 
+        transform: scale(0.5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.0;
+    }
+}
+
+
+/* 产生动画（向外扩散变大）的图片  */
+.Began {
+    position: absolute;
+    width: 300px; 
+    height: 300px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius:250px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-animation: warn 2s ease-out;
+    -moz-animation: warn 2s ease-out;
+    animation: warn 2s ease-out;
+    animation-iteration-count: infinite;
+}
+.BeganTwo{
+  width: 220px;
+  height: 220px; 
+  margin-top: 60rpx;
+  margin-left: 70rpx;
+}
