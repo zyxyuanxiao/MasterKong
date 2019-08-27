@@ -1,0 +1,96 @@
+<!--pages/AnswerQuestions/SpecialGame-Two.wxml-->
+<view class="SpecialGame">
+   <!--用户-->
+  <view class="account">
+  <!--头像-->
+  <view class="Head">
+     <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+  </view>
+
+  <!-- 账户 -->
+  <view class="information">
+  <view class="name">
+     <text class="zt">炽热的天空</text>
+  </view>
+  <view class="dengji">
+    <view class="dengjiOne">
+      <text class="zt level">Lv 23</text>
+    </view>
+     <view class="baike">
+        <view class="zt Dan">行走百科</view>
+     </view>
+  </view>
+  </view>
+
+  <!-- 分数 -->
+  <view class="score">
+    <text class="scoreDetails">200</text>
+  </view>
+
+</view>
+  <!-- 加分 -->
+<view class="blank">
+  <view class="BonusPoints">
+    +200
+  </view>
+</view>
+
+<!--题目--->
+<view class="QuestionList">
+<!--题目比例--->
+  <view class="proportion">
+      <view class="nowProportion">1</view>
+      /5
+  </view>
+<!--食品安全专题赛--->
+<view class="safetyCompetition">
+    食品安全专题赛
+</view>
+<!--倒计时--->
+  <view class="countdownSeconds">
+    <view class="number">
+      15S
+    </view>
+  </view>
+  
+<!--问题text--->
+  <view class="problemText" bindtap="btn" data-statu="open"  >
+    “食源性疾病”指食品中致病因素进入人体引起的感染性、中毒性等疾病。以下举措不能预防食源性疾病的是：
+  </view>
+  
+<!--问题text--->
+  <view class="choose">
+    <view class="HaveChoice">
+      <view class="text">食物储存时保持洁净，生熟分开</view>
+    </view>
+    <view class="Selected">
+      <view class="text">使用冰箱长时间储藏食物</view>
+    </view>
+    <view class="HaveChoice">
+      <view class="text">煮熟食物</view>
+    </view>
+    <view class="wrong">
+      <view class="text">安全健康的食材</view>
+    </view>
+
+  </view>
+
+  </view>
+
+  <!-- 遮罩层 -->
+<view class="drawer_screen" bindtap="btn" data-statu="close" wx:if="{{showModal}}"></view>  
+
+<!-- 弹出层 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <view class="resurrectionText">
+  分享给好友可以复活一次
+  </view>
+  <view class="resurrectionCard">
+  每日只限分享一次获得一张复活卡～
+  </view>
+  <view class="buttonOne">
+  <view class="cancel" bindtap="ok">取消</view>
+  <view class="share" >分享</view>
+  </view>
+</view>
+</view>

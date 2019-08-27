@@ -1,11 +1,14 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/contestResults/contestResults",
-    "pages/rankingList/rankingList",
+    "pages/SpecialGame-Two/SpecialGame-Two",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/AnswerQuestions/AnswerQuestions",
+    "pages/SpecialGame/SpecialGame",
+    "pages/StartChallengePre/StartChallengePre",
     "pages/Homepage/Homepage",
+    "pages/test/test",
+    "pages/contestResults/contestResults",
+    "pages/rankingList/rankingList",
     "pages/notice/notice",
     "pages/knowledge/knowledge",
     "pages/Moremenu/Moremenu",
@@ -13,12 +16,12 @@
     "pages/UserInstructions/UserInstructions",
     "pages/RulesGame/RulesGame",
     "pages/StartChallenge/StartChallenge",
-	  "pages/StartChallengePre/StartChallengePre",
     "pages/StartChallenge-Waiting/StartChallenge-Waiting",
     "pages/StartChallenge-two/StartChallenge-two",
     "pages/StartChallenge-three/StartChallenge-three",
     "pages/PKgame/PKgame",
     "pages/questionBankChoice/questionBankChoice",
+    "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {

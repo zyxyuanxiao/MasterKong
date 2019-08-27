@@ -190,7 +190,7 @@ margin-top: 40rpx;
   margin-left: 30rpx;
 }
 .GameCSS{
-  display: flex;
+  display: flex;  
 }
 .GameCSS .dateGameTime{
   width:227rpx;
