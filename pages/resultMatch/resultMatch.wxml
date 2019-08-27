@@ -21,8 +21,31 @@
 <view class="operation">
   <image src='../../assets/images/contestResults/返回.png' class="returnImg"></image>
   <view class="challenge">继续挑战</view>
-  <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"></image>
+  <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"  bindtap="Btn" data-statu="open" ></image>
   <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
 </view>
+
+<!-- 分享海报 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <!-- <image src='../../assets/images/resultMatch/成功分享背景@2x.png' ></image> -->
+  <view class="SharePostersImg">
+    <view class="text">
+      我参加专题赛挑战成功， 食品安全专题！
+    </view>
+    <view class="textView">
+    <view class="textTwo">
+      扫码识别小程序 每天学习不停息
+    </view>
+    <view class="QrCode">
+
+    </view>
+    </view>
+    
+  </view>
+  <view class="SharePostersButton" bindtap="ok">
+  保存海报
+  </view>
+</view>
+
 
 </view>
