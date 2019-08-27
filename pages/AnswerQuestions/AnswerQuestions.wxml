@@ -1,68 +1,166 @@
 <!--pages/AnswerQuestions/AnswerQuestions.wxml-->
 <view class="AnswerQuestions">
-<!--PK的人--->
+  <!--PK的人--->
   <view class="PKPerson">
-      <view  class="Blues">
-        <view class="BluesPerson">
-          <view class="score">2400</view>
-          <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
-          </view>
+    <view class="Blues">
+      <view class="BluesPerson">
+        <view class="score">2400</view>
+        <view class="Imgportrait">
+          <image  class='avatarimg' src='{{matchIngSuccess.myUser.avatarurl}}'></image>
         </view>
-        <view class="BluesPerson">
-          <view class="score">1800</view>
-          <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
-          </view>
-        </view>
-        <view class="BluesPerson">
-          <view class="score">9000</view>
-          <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
-          </view>
-        </view>
-      </view> 
-      <view class="Vs-view">
-        <image src='../../assets/images/StartChallenge/VS@2x.png' class="VsImage"></image>
       </view>
-      <view class="yellow-view"> 
-      <view  class="yellow">
-        <view class="yellowPerson">
+      <block wx:for="{{matchIngSuccess.homeUserList}}">
+        <view class="BluesPerson">
+          <view class="score">1800</view>
           <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png' ></image>
+            <image class='avatarimg' src='{{item.avatarurl}}'></image>
           </view>
-          <view class="score">2400</view>
         </view>
-        <view class="yellowPerson">
+      </block>
+      <!-- <view class="BluesPerson">
+        <view class="score">9000</view>
+        <view class="Imgportrait">
+          <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+        </view>
+      </view> -->
+    </view>
+    <view class="Vs-view ">
+      <image src='../../assets/images/StartChallenge/VS@2x.png' class="VsImage  {{showView?'':'header_view_hide'}}"></image>
+    </view>
+    <view class="yellow-view">
+      <view class="yellow">
+        <block wx:for="{{matchIngSuccess.awayUserList}}">
+          <view class="yellowPerson">
+            <view class="Imgportrait">
+              <image src='{{item.avatarurl}}'></image>
+            </view>
+            <view class="score">2400</view>
+          </view>
+        </block>
+        <!-- <view class="yellowPerson">
           <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png' ></image>
+            <image src='../../assets/images/Homepage/专题6@2x.png'></image>
           </view>
           <view class="score">1800</view>
         </view>
         <view class="yellowPerson">
           <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+            <image src='../../assets/images/Homepage/专题6@2x.png'></image>
           </view>
           <view class="score">900</view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <!--总得分最高的队伍获胜--->
+  <view class="totalText {{!showView?'header_view_show':'header_view_hide'}}">
+    总得分最高的队伍获胜
+  </view>
+  <!--倒计时--->
+  <view class="QuestionList {{showView?'header_view_show':'header_view_hide'}}" >
+    <view class="textOne">
+      线下PK赛
+    </view>
+    <view class="countdown">
+      <view class="number">{{prepariCountdown}}</view>
+    </view>
+    <view class="PleasePrepare">
+      请准备好
+    </view>
+  </view>
+
+  <!--题目--->
+  <view class="QuestionList {{!showView?'header_view_show':'header_view_hide'}}" >
+    <!--题目比例--->
+    <view class="proportion">
+      <view class="nowProportion">1</view>
+      /5
+    </view>
+    <!--倒计时--->
+    <view class="countdownSeconds">
+      <view class="number">
+        15S
+      </view>
+    </view>
+    <!--消息图片--->
+    <view class="message">
+      <image src='../../assets/images/AnswerQuestions/快捷短语@2x.png' id="messageImg" bindtap="showMessageDialog" data-statu="open"></image>
+    </view>
+    <!--问题text--->
+    <view class="problemText">
+      “食源性疾病”指食品中致病因素进入人体引起的感染性、中毒性等疾病。以下举措不能预防食源性疾病的是：
+    </view>
+
+    <!--问题text--->
+    <view class="choose">
+      <view class="HaveChoice">
+        <view class="text">食物储存时保持洁净，生熟分开</view>
+      </view>
+      <!--左边一个人-->
+      <!-- <view class="Selected">
+    <view class="ImgportraitOne">
+        <image src='../../assets/images/Homepage/专题二@2x.png'></image>
+    </view>
+    <view class="text">使用冰箱长时间储藏食物</view>
+    <view class="ImgportraitTwo">
+        <image src='../../assets/images/Homepage/专题三@2x.png'></image>
+    </view>
+    </view> -->
+      <!--左边两个人-->
+      <view class="Selected">
+        <view class="ImgportraitOne">
+          <image src='../../assets/images/Homepage/专题二@2x.png'></image>
+        </view>
+        <view class="ImgportraitOneTwo">
+          <image src='../../assets/images/Homepage/专题二@2x.png'></image>
+        </view>
+        <view class="ImgportraitOneThree">
+          <image src='../../assets/images/Homepage/专题二@2x.png'></image>
+        </view>
+        <view class="text">使用冰箱长时间储藏食物</view>
+        <view class="ImgportraitTwo">
+          <image src='../../assets/images/Homepage/专题三@2x.png'></image>
+        </view>
+        <view class="ImgportraitTwoTwo">
+          <image src='../../assets/images/Homepage/专题三@2x.png'></image>
         </view>
       </view>
+
+      <view class="wrong">
+        <view class="text">煮熟食物</view>
+        <view class="ImgportraitTwo">
+          <image src='../../assets/images/Homepage/专题三@2x.png'></image>
+        </view>
       </view>
+
+      <view class="HaveChoice">
+        <view class="text">安全健康的食材</view>
+      </view>
+
+    </view>
+
+    <!--弹窗-->
+    <view class="modalDlg" wx:if="{{showModal}}">
+      <view class="QuickPhrases">
+        快捷短语
+        <image src='../../assets/images/knowledge/x@2x.png' mode='widthFix' class="noticeTheprize" bindtap="ok"></image>
+      </view>
+      <view class="phraseDetails">
+        <view class="psOne">
+          <view class="DetailsOne dt">你太厉害了！</view>
+          <view class="DetailsTwo dt">你弱爆了！</view>
+        </view>
+        <view class="psOne">
+          <view class="DetailsThree dt">无敌了，还有谁！</view>
+          <view class="DetailsFour dt">无敌是多么寂寞！</view>
+        </view>
+        <view class="psOne">
+          <view class="DetailsFive dt">不要走，我们决战到天荒地老～</view>
+        </view>
+      </view>
+    </view>
+
+
   </view>
-<!--总得分最高的队伍获胜--->
-<view class="totalText">
-总得分最高的队伍获胜
-</view>
-<!--倒计时--->
-<view class="QuestionList">
-  <view class="textOne">
-线下PK赛
-  </view>
-  <view class="countdown">
-    <view class="number">3</view>
-  </view>
-  <view class="PleasePrepare">
-    请准备好
-  </view>
-</view>
 
 </view>

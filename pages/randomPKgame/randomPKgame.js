@@ -29,32 +29,17 @@ Page({
         cmd: options.cmd,
       });
     }
-    if (options.checkQuestionType){
-      var checkQuestionType = options.checkQuestionType;
-      that.setData({
-        checkQuestionType: checkQuestionType,
-      });
-    }
-    if (options.roomId) {
-      that.setData({
-        roomId: options.roomId,
-      });
-    }
-    if (options.teammateUserFlag) {
-      that.setData({
-        teammateUserFlag: teammateUserFlag,
-      });
-    }
   },
+
   /**
-    * 生命周期函数--监听页面初次渲染完成
-    */
+   * 生命周期函数--监听页面初次渲染完成
+   */
   onReady: function () {
-    that = this;
+    var that = this;
     SocketTask.onOpen(res => {
       socketOpen = true;
       console.log('监听 WebSocket 连接打开事件。', res)
-    });
+    })
     SocketTask.onClose(onClose => {
       console.log('监听 WebSocket 连接关闭事件。', onClose)
       socketOpen = false;
@@ -63,56 +48,45 @@ Page({
     SocketTask.onError(onError => {
       console.log('监听 WebSocket 错误。错误信息', onError)
       socketOpen = false
-    });
+    })
     SocketTask.onMessage(onMessage => {
       console.log('监听WebSocket接受到服务器的消息事件。服务器返回的消息', JSON.parse(onMessage.data))
       const data = JSON.parse(onMessage.data);
       if (data.code === 1) {
-        showToast(data.msg);
+        showToast(data.msg)
         return
       }
-      if(data.cmd){
-        switch (data.cmd) {
-          case cmd.randomPK:
-            // this.createGame(data.data);
-            this.sendSocketMessage({ status: cmd.randomPK, data: '' });
-            break;
-          case cmd.join:
-            // this.joinGame(data.data.join);
-            this.sendSocketMessage({ status: cmd.join });
-            break;
-          case cmd.start:
-            // this.startGame();
-            break;
-          case cmd.setDifficult:
-            // showToast('设置难度成功', 'success')
-            break;
-          case cmd.robot:
-            that.setData({
-              enemyUser: data.enemyUser
-            })
-            // navTo('/pages/AnswerQuestions/AnswerQuestions?cmd=7');
-            break;
-          default:
-            console.log('开始答题了')
-            break;
-        }
+      console.log(data.cmd);
+      switch (data.cmd) {
+        case cmd.randomPK:
+          // this.createGame(data.data);
+          this.sendSocketMessage({ status: cmd.randomPK });
+          break;
+        case cmd.join:
+          // this.joinGame(data.data.join);
+          break;
+        case cmd.start:
+          // this.startGame();
+          break;
+        case cmd.setDifficult:
+          // showToast('设置难度成功', 'success')
+          break;
+        case cmd.robot:
+          navTo('/pages/AnswerQuestions/AnswerQuestions?cmd=7&matchIngSuccess=' + JSON.stringify(data.matchIngSuccess));
+          break;
+        default:
+          console.log('开始答题了')
+          break;
       }
-      //匹配成功
-      if (data.status === 2) {
-        that.setData({
-          roomId: data.matchIngSuccess.roomId
-        })
-      }
-    })
+    });
   },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function (e) {
     if (!socketOpen) {
-      this.webSocket();
-      
+      this.webSocket()
+      app.globalData.SocketTask = SocketTask;
     }
   },
   webSocket: function () {
@@ -177,6 +151,13 @@ Page({
     })
 
   },
+  // 获取hei的id节点然后屏幕焦点调转到这个节点  
+  bottom: function () {
+    var that = this;
+    this.setData({
+      scrollTop: 1000000
+    })
+  },
 
   //通过 WebSocket 连接发送数据，需要先 wx.connectSocket，并在 wx.onSocketOpen 回调之后才能发送。
   sendSocketMessage: function (msg) {
@@ -214,47 +195,8 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  /**
-       * 用户点击右上角分享
-       */
-  onShareAppMessage: function (options) {
-    var roomId = that.data.roomId;
-    var teammateUserFlag=false;
-    if(options.target.id){
-      teammateUserFlag=true;
-    }
-    var that = this;
-    var shareObj = {
-      title: "一起来答题吧！",
-      path: `pages/StartChallenge/StartChallenge?roomId=${roomId}&cmd=2&teammateUserFlag=${teammateUserFlag}`,
-      imageUrl: '',
-      success: function (res) {
-        console.log(res)
-        // 转发成功之后的回调
-        if (res.errMsg == 'shareAppMessage:ok') {
-          console.log('分享成功')
-        }
-      },
-      fail: function () {
-        // 转发失败之后的回调
-        if (res.errMsg == 'shareAppMessage:fail cancel') {
-          // 用户取消转发
-          // showToast('分享')
-        } else if (res.errMsg == 'shareAppMessage:fail') {
-          // 转发失败，其中 detail message 为详细失败信息
-        }
-      }
-    }
-    return shareObj;
-  }, 
-  selectQuestionBank: function () {
-    wx.navigateTo({
-      url: '/pages/questionBankChoice/questionBankChoice'
-    })
+  onShareAppMessage: function () {
+
   },
-  teammateUserFlag: function (flag) {
-    that.setData({
-      teammateUserFlag : flag
-    })
-  }
+
 })

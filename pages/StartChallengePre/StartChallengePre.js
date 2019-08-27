@@ -65,7 +65,7 @@ Page({
   },
   randomMatching: function () {
     wx.navigateTo({
-      url: '/pages/PKgame/PKgame?cmd=1'
+      url: '/pages/randomPKgame/randomPKgame?cmd=1'
     })
   },
   friendMatching: function () {
