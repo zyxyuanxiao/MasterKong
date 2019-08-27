@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/resultMatch/resultMatch",
     "pages/SpecialGame-Two/SpecialGame-Two",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/AnswerQuestions/AnswerQuestions",

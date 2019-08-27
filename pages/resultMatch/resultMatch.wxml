@@ -1,0 +1,28 @@
+<!--pages/resultMatch/resultMatch.wxml-->
+<view class="resultMatch">
+<!---头像-->
+<view class="HeadPortraitView">
+  <image src='../../assets/images/Homepage/timg (3).jpg' class="HeadPortrait" ></image>
+</view>
+<!---主体-->
+<view class="body">
+<view class="scoreView"></view>
+<view class="score">+6800</view>
+<!---奖杯-->
+<view>
+  <image src='../../assets/images/resultMatch/jiangbei@2x.png' class="trophy" ></image>
+  <view class="trophyTitle">食品安全专题赛</view>
+</view>
+
+</view>
+  <view  class="trophyResults ">胜利</view>
+
+<!-- 操作 -->
+<view class="operation">
+  <image src='../../assets/images/contestResults/返回.png' class="returnImg"></image>
+  <view class="challenge">继续挑战</view>
+  <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"></image>
+  <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
+</view>
+
+</view>

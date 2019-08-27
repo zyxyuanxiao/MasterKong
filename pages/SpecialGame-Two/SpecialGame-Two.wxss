@@ -230,7 +230,8 @@ page{
     border-radius:8rpx;
     display: flex;
     flex-direction: column;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    color: rebeccapurple;
 }
 .resurrectionText{
   width:396rpx;
