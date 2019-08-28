@@ -16,9 +16,9 @@
 .bg{
     z-index: 99999;
     width: 600rpx;
-    height: 820rpx;
+    height: 825rpx;
     position: fixed;
-    top: 40pt;
+    top: 72rpx;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -36,9 +36,6 @@
     width: 600rpx;
     height: 730rpx;
     position: fixed;
-    top: 40pt;
-    left: 0;
-    right: 0;
     z-index: 9999;
     margin: 0 auto;
     border-radius:8rpx;
@@ -67,7 +64,7 @@
 
 /* 弹出层里面的按钮 */
 .ok{
-  width: 344rpx;
+  width: 330rpx;
   height: 80rpx;
   border: 2rpx solid rgba(255,255,255,1);
   line-height: 80rpx;
@@ -77,6 +74,22 @@
   border-radius:50rpx;
   position: absolute;
   bottom: 60rpx;
+  left: 30rpx;
+}
+
+/* 弹出层里面的按钮海报 */
+.posters{
+  width: 188rpx;
+  height: 80rpx;
+  border: 2rpx solid rgba(255,255,255,1);
+  line-height: 80rpx;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 28rpx;
+  border-radius:50rpx;
+  position: absolute;
+  bottom: 60rpx;
+  right: 30rpx;
 }
 
 /* 弹出层里面的文字 */

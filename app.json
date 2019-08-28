@@ -1,5 +1,11 @@
 {
   "pages": [
+    "pages/ItemMall-two/ItemMall-two",
+    "pages/ItemMall/ItemMall",
+    "pages/notice/notice",
+    "pages/knowledge/knowledge",
+    "pages/rankingList/rankingList",
+    "pages/HealthMan/HealthMan",
     "pages/resultMatch-two/resultMatch-two",
     "pages/resultMatch/resultMatch",
     "pages/SpecialGame-Two/SpecialGame-Two",
@@ -10,9 +16,6 @@
     "pages/Homepage/Homepage",
     "pages/test/test",
     "pages/contestResults/contestResults",
-    "pages/rankingList/rankingList",
-    "pages/notice/notice",
-    "pages/knowledge/knowledge",
     "pages/Moremenu/Moremenu",
     "pages/SetUpThe/SetUpThe",
     "pages/UserInstructions/UserInstructions",

@@ -1,0 +1,37 @@
+/* pages/HealthMan/HealthMan.wxss */
+page{
+  color: #FFFFFF;
+}
+.Kongimg{
+  width: 300rpx;
+  height: 404rpx;
+  margin: 184rpx 281rpx 24rpx 232rpx;
+}
+.KongText{
+  width:250rpx;
+  height:70rpx;
+  font-size:50rpx;
+  font-family:PingFangSC;
+  font-weight:600;
+  color:rgba(31,204,102,1);
+  line-height:70rpx;
+  margin: 0rpx 243rpx 155rpx 257rpx;
+}
+.Kongbutton{
+  width:258rpx;
+  height:80rpx;
+  background:rgba(31,204,102,1);
+  border-radius:50rpx;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  line-height:80rpx;
+  text-align: center;
+  margin: 0rpx 246rpx 0rpx 246rpx;
+}
+.KongTangDynasty{
+  width: 579rpx;
+  height: 360rpx;
+  margin: 55rpx 77rpx 0rpx 94rpx;
+}

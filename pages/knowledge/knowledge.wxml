@@ -48,7 +48,8 @@
     <view class="instructions">
     夏季温度高，剧烈运动出汗较多会加速体内水分和盐分丢失，从而导致代谢物堆积，引发腿抽筋。所以夏天跑步时，应当及时补充淡盐水或运动型饮料。
     </view>
-    <view  class="ok">学习到了，分享给他人</view>
+    <view  class="ok">学到了，分享给他人</view>
+    <view  class="posters">生成海报</view>
     </view>
     <image src="../../assets/images/knowledge/x@2x.png" class="ShutDownImg" bindtap="ok" ></image>
 </view>
