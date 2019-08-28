@@ -10,7 +10,7 @@
 <view class="score">+6800</view>
 <!---奖杯-->
 <view>
-  <image src='../../assets/images/resultMatch/jiangbei@2x.png' class="trophy" ></image>
+  <image src='../../assets/images/resultMatch/shibai@2x.png' class="trophy" ></image>
   <view class="trophyTitle">食品安全专题赛</view>
 </view>
 
@@ -30,7 +30,8 @@
   <!-- <image src='../../assets/images/resultMatch/成功分享背景@2x.png' ></image> -->
   <view class="SharePostersImg">
     <view class="text">
-      我参加专题赛挑战成功， 食品安全专题！
+      我参加专题赛挑战 止步第三回合 
+      <view class="yellowText">你能坚持几回合？</view>
     </view>
     <view class="textView">
     <view class="textTwo">

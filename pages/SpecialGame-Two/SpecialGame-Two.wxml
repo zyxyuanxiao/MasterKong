@@ -81,7 +81,7 @@
 <view class="drawer_screen" bindtap="shareBtn" data-statu="close" wx:if="{{showModal}}"></view>  
 
 <!-- 分享复活弹出层 -->
-<view class="modalDlg" wx:if="{{showModal}}">
+<view class="modalDlg" wx:if="{{showModal}}"> 
   <view class="resurrectionText">
   分享给好友可以复活一次
   </view>
