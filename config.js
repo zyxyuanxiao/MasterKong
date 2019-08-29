@@ -23,8 +23,8 @@ export const cmd = {
     question: 6,
     // 机器人对战
     robot: 7,
-    // 游戏结束
-    end: 8,
+    // 机器人答题请求
+    robotreq: 8,
     // 获取头像
     getHeadImage: 20,
     // 匹配成功

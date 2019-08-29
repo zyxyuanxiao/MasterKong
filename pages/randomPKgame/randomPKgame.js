@@ -60,7 +60,7 @@ Page({
       switch (data.cmd) {
         case cmd.randomPK:
           // this.createGame(data.data);
-          this.sendSocketMessage({ status: cmd.randomPK });
+          this.sendSocketMessage({ cmd: cmd.randomPK });
           break;
         case cmd.join:
           // this.joinGame(data.data.join);

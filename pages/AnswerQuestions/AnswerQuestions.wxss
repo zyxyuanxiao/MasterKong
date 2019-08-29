@@ -73,7 +73,7 @@ page{
   /* margin-left: 10rpx; */
   border:2px solid rgba(255,255,255,1);
   line-height: 80rpx;
-  margin-left: -30rpx;
+  margin-right: -30rpx;
 }
 .yellowPerson .Imgportrait{
   width:80rpx;
@@ -126,6 +126,15 @@ page{
   margin-top: 8rpx;
   position: fixed;
 }
+.ImgportraitTwoThree{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+  border:2px solid #ffffff;
+  margin-left: 510rpx;
+  margin-top: 8rpx;
+  position: fixed;
+}
 .avatarimg{
   width:80rpx;
   height:80rpx;
@@ -165,6 +174,9 @@ page{
   box-shadow:0rpx 2rpx 10rpx 0rpx rgba(0,0,0,0.1);
   border-radius:20rpx;
   margin: 0rpx 32rpx 0rpx 30rpx;
+  margin-top: 90rpx;
+  color: rgba(51,51,51,1);
+
 }
 .textOne{
   width:100%;
