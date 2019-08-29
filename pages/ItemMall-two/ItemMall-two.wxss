@@ -150,7 +150,7 @@ page{
 .stepper .disabled{  
     color: #ccc;  
 }  
-/* 兑换按钮 */
+/* 兑换按钮绿色 */
 .ChangeButton{
   width:750rpx;
   height:90rpx;
@@ -163,4 +163,20 @@ page{
   position: fixed;
   bottom:0; 
 }
+/* 兑换按钮灰色 */
+.ChangeButton{
+  width:750rpx;
+  height:90rpx;
+  background:rgba(90,90,102,1);
+  font-size:32rpx;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  line-height:90rpx;
+  text-align: center;
+  position: fixed;
+  bottom:0; 
+}
+
+
+
 
