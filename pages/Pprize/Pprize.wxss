@@ -1,12 +1,18 @@
 /* pages/Pprize/Pprize.wxss */
 .Pprize{
   color: #ffffff;
+  padding-top: 40rpx; 
 }
 .prizePartition{
   width: 690rpx;
   height: 501rpx;
+  margin: 30rpx 30rpx 0rpx 30rpx;
+}
+.prizePartition view{
+  margin: 28rpx 0rpx 0rpx 29rpx;
 }
 .prizePartition image{
   width: 690rpx;
   height: 400rpx;
 }
+ 

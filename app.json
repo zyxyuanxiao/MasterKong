@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/Pprize/Pprize",
     "pages/PprizeDetail/PprizeDetail",
+    "pages/Pprize/Pprize",
     "pages/ItemMall-two/ItemMall-two",
     "pages/notice/notice",
     "pages/ItemMall/ItemMall",
