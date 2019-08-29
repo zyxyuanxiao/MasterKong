@@ -3,7 +3,7 @@
 <!--蓝队-->
 <view class="blueTeam">
 <view class="people">
-    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <image src='{{aUserInfo.avatarurl}}' class="HeadPortrait"></image>
     <view class="name">{{aUserInfo.name}}</view>
     <view class="level">Lv {{aUserInfo.levelno}}</view>
     <view class="TheLabel">{{aUserInfo.levelname}}</view>
@@ -28,7 +28,7 @@
 <!--黄队-->
 <view class="yellowTeam">
 <view class="people">
-    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <image src='{{enemyUser.avatarurl}}' class="HeadPortrait"></image>
     <view class="name">{{enemyUser.name}}</view>
     <view class="level">Lv {{enemyUser.levelno}}</view>
     <view class="TheLabel">{{enemyUser.levelname}}</view>

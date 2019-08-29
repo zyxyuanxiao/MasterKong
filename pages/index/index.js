@@ -97,7 +97,7 @@ Page({
       openid: that.data.openId,
       // session_key: o,
       name: userInfo.nickName,
-      avatarUrl: userInfo.avatarUrl,
+      avatarurl: userInfo.avatarUrl,
       gender: userInfo.gender, //性别 0：未知、1：男、2：女
       province: userInfo.province,
       city: userInfo.city,

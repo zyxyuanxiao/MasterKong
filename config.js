@@ -13,8 +13,8 @@ export const cmd = {
     randomPK: 1,
     // 邀请进入游戏
     join: 2,
-    // 设置难度
-    setDifficult: 3,
+    // 通知下一轮答题
+    setNextQuestion: 3,
     // 开始游戏
     start: 4,
     // 答题

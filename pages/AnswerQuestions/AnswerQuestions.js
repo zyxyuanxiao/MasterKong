@@ -1,15 +1,32 @@
 // pages/AnswerQuestions/AnswerQuestions.js
-import { post, get } from '../../utils/http'
-import { setValue, redirectTo, getValue, showToast, showModal, navTo, rnd } from '../../utils/common';
+import {
+  post,
+  get
+} from '../../utils/http'
+import {
+  setValue,
+  redirectTo,
+  getValue,
+  showToast,
+  showModal,
+  navTo,
+  rnd
+} from '../../utils/common';
 import util from '../../utils/util'
-import { config, cmd } from '../../config'
+import {
+  config,
+  cmd
+} from '../../config'
 var that;
 var frameBuffer_Data, session, SocketTask;
 var app = getApp();
-var choiceClass = ['HaveChoice', 'Selected','wrong'];
-var kClientAnswerDto={};
+var choiceClass = ['HaveChoice', 'Selected', 'wrong'];
+var kClientAnswerDto = {};
 var robotClientAnswerDto = {};
-kClientAnswerDto.score=0;
+//机器人回答
+var robotReq = {};
+var myselect = false;
+kClientAnswerDto.score = 0;
 Page({
 
   /**
@@ -20,21 +37,21 @@ Page({
     answerCountdown: 15,
     showView: true,
     showModal: false,
-    gamenumber:0,
+    gamenumber: 0,
     choiceClass: choiceClass,
     answerA: choiceClass[0],
-    answerB: choiceClass[0], 
+    answerB: choiceClass[0],
     answerC: choiceClass[0],
     answerD: choiceClass[0],
     kClientAnswerDto: kClientAnswerDto,
     robotClientAnswerDto: robotClientAnswerDto,
-    answeroption:['A','B','C','D'],
+    answeroption: ['A', 'B', 'C', 'D'],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
     that = this;
     if (options.cmd) {
@@ -43,7 +60,7 @@ Page({
       });
     }
     if (options.matchIngSuccess) {
-      var matchIngSuccess=JSON.parse(options.matchIngSuccess)
+      var matchIngSuccess = JSON.parse(options.matchIngSuccess)
       that.setData({
         matchIngSuccess: matchIngSuccess,
         question: matchIngSuccess.iusse,
@@ -52,7 +69,7 @@ Page({
     const aUserInfo = getValue('aUserInfo');
     kClientAnswerDto.openId = aUserInfo.openid;
     kClientAnswerDto.avatarurl = aUserInfo.avatarurl;
-    
+
     kClientAnswerDto.score = 0;
     that.setData({
       kClientAnswerDto: kClientAnswerDto,
@@ -69,7 +86,7 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
     SocketTask = app.globalData.SocketTask;
     SocketTask.onOpen(res => {
       socketOpen = true;
@@ -95,7 +112,9 @@ Page({
       switch (data.cmd) {
         case cmd.randomPK:
           // this.createGame(data.data);
-          this.sendSocketMessage({ status: cmd.randomPK });
+          this.sendSocketMessage({
+            status: cmd.randomPK
+          });
           break;
         case cmd.join:
           // this.joinGame(data.data.join);
@@ -103,8 +122,10 @@ Page({
         case cmd.start:
           // this.startGame();
           break;
-        case cmd.setDifficult:
+        case cmd.setNextQuestion:
           // showToast('设置难度成功', 'success')
+          //清楚上一轮数据
+          that.cleanOldData(data);
           break;
         case cmd.robot:
           that.setData({
@@ -113,9 +134,13 @@ Page({
           navTo('/pages/AnswerQuestions/AnswerQuestions?cmd=7');
           break;
         case cmd.robotreq:
-          var robotReq=data.robotReq;
-          that.changeSelectChooseClass(robotReq);
-         
+          robotReq = data.robotReq;
+
+          that.changeOtherScore(robotReq);
+          //自己选择后改变选项背景样式
+          if (myselect) {
+            that.changeSelectChooseClass(robotReq);
+          }
         default:
           console.log('开始答题了')
           break;
@@ -123,14 +148,14 @@ Page({
     });
 
     that.countdown();
-    
-    
+
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
     // wx.onSocketMessage(res => {
     //   const data = JSON.parse(res.data);
     //   if (data.status === 1) {
@@ -219,15 +244,15 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-    SocketTask.close(function (close) {
+  onUnload: function() {
+    SocketTask.close(function(close) {
       console.log('关闭 WebSocket 连接。', close)
     });
   },
@@ -235,33 +260,33 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
-  },//通过 WebSocket 连接发送数据，需要先 wx.connectSocket，并在 wx.onSocketOpen 回调之后才能发送。
-  sendSocketMessage: function (msg) {
+  }, //通过 WebSocket 连接发送数据，需要先 wx.connectSocket，并在 wx.onSocketOpen 回调之后才能发送。
+  sendSocketMessage: function(msg) {
     console.log('通过 WebSocket 连接发送数据', JSON.stringify(msg))
     SocketTask.send({
       data: JSON.stringify(msg)
-    }, function (res) {
+    }, function(res) {
       console.log('已发送', res)
     })
   },
   //准备倒计时
-   countdown: function () {
+  countdown: function() {
     var that = this
     var prepariCountdown = this.data.prepariCountdown
     if (prepariCountdown == 0) {
@@ -275,16 +300,16 @@ Page({
       that.answerCountdown();
       return
     }
-    var time = setTimeout(function () {
+    var time = setTimeout(function() {
       that.setData({
         prepariCountdown: prepariCountdown - 1,
       })
       that.countdown(that)
-    }, 1000)
+    }, 1000);
   },
   //答题倒计时
-  answerCountdown: function () {
-   that = this
+  answerCountdown: function() {
+    that = this
     var answerCountdown = this.data.answerCountdown
     if (answerCountdown == 0) {
       // that.setData({
@@ -293,38 +318,33 @@ Page({
       // that.setData({
       //   showView: false,
       // })
-
-
-    
-
-
       return
     }
     var answertime = rnd(10, 13);
-    if (answerCountdown == 15){
-      var delaytime = answerCountdown-answertime;
-      setTimeout(function () {
-        robotSelectChoose();
-      }, delaytime*1000);
+    if (answerCountdown == 15) {
+      var delaytime = answerCountdown - answertime;
+      setTimeout(function() {
+        that.robotSelectChoose(answertime);
+      }, delaytime * 1000);
     }
-    var time = setTimeout(function () {
+    var time = setTimeout(function() {
       that.setData({
         answerCountdown: answerCountdown - 1,
       })
       that.answerCountdown(that);
     }, 1000)
   },
-  showMessageDialog: function () {
+  showMessageDialog: function() {
     this.setData({
       showModal: true
     })
-  },  // 弹出层里面的弹窗
-  ok: function () {
+  }, // 弹出层里面的弹窗
+  ok: function() {
     this.setData({
       showModal: false
     })
   },
-  powerDrawer: function (e) {
+  powerDrawer: function(e) {
 
     var currentStatu = e.currentTarget.dataset.statu;
 
@@ -332,7 +352,7 @@ Page({
 
   },
 
-  util: function (currentStatu) {
+  util: function(currentStatu) {
 
     var animation = wx.createAnimation({
 
@@ -354,7 +374,7 @@ Page({
 
     })
 
-    setTimeout(function () {
+    setTimeout(function() {
 
       animation.opacity(1).rotateX(0).step();
 
@@ -395,25 +415,37 @@ Page({
     }
   },
   //选择选项触发事件 
-  selectChoose: function (e) {
-    var useranswer=e.currentTarget.dataset.answer;
+  selectChoose: function(e) {
+    var useranswer = e.currentTarget.dataset.answer;
     //局数
     var gamenumber = that.data.gamenumber
     kClientAnswerDto.gameCount = gamenumber;
-    kClientAnswerDto.answer=useranswer;
+    kClientAnswerDto.answer = useranswer;
     if (that.data.question[gamenumber].answer == useranswer) {
-      kClientAnswerDto.yes=true;
+      kClientAnswerDto.yes = true;
       kClientAnswerDto.score += (that.data.answerCountdown * (20));
-    }else{
-      kClientAnswerDto.yes =false;
+    } else {
+      kClientAnswerDto.yes = false;
     }
     that.setData({
       kClientAnswerDto: kClientAnswerDto
     });
-    that.changeSelectChooseClass(kClientAnswerDto);
+    myselect = true;
+    that.changeSelectChooseClass(kClientAnswerDto, true);
+    //机器人回答不为空
+    if (JSON.stringify(robotReq) != "{}") {
+      that.changeSelectChooseClass(robotReq, false);
+      robotReq = {}
+    }
+
+
+    //begin 判断是否全部答题完成
+    that.judgeAnswered();
   },
-  changeSelectChooseClass: function (e) {
-    var useranswer=e.answer;
+
+  //选择选项后改变自己的分数，颜色  自己的手机,
+  changeSelectChooseClass: function(e, ismyphone) {
+    var useranswer = e.answer;
     var gamenumber = that.data.gamenumber
     if (useranswer == 'A') {
       if (that.data.question[gamenumber].answer == useranswer) {
@@ -425,7 +457,7 @@ Page({
           answerA: choiceClass[2]
         });
       }
-      
+
     } else if (useranswer == 'B') {
       if (that.data.question[gamenumber].answer == useranswer) {
         that.setData({
@@ -457,28 +489,30 @@ Page({
         });
       }
     }
-    var currentopenId=e.openId;
+    var currentopenId = e.openId;
     var myUser = that.data.matchIngSuccess.myUser;
-    if (myUser != null && myUser.openid == currentopenId){
-      if (e.yes){
-        myUser.score=e.score;
+    if (myUser != null && myUser.openid == currentopenId) {
+      if (ismyphone) {
+        myUser.score += e.score;
       }
-      myUser.avatarifhidden=false;
+      myUser.useranswer = useranswer;
+      myUser.avatarifhidden = false;
       this.setData({
         ['matchIngSuccess.myUser']: myUser
       });
-      
+
       return;
     }
-    
-    var homeUserList=that.data.matchIngSuccess.homeUserList;
-    for (var i = 0; i < homeUserList.length;i++){
-      var homeUser=homeUserList[i];
-      if (homeUser.openid == currentopenId){
-        if (e.yes) {
-          homeUser.score = e.score;
+
+    var homeUserList = that.data.matchIngSuccess.homeUserList;
+    for (var i = 0; i < homeUserList.length; i++) {
+      var homeUser = homeUserList[i];
+      if (homeUser.openid == currentopenId) {
+        if (ismyphone) {
+          homeUser.score += e.score;
         }
         homeUser.avatarifhidden = false;
+        homeUser.useranswer = useranswer;
         homeUserList[i] = homeUser;
         this.setData({
           ['matchIngSuccess.homeUserList']: homeUserList
@@ -486,14 +520,15 @@ Page({
         return;
       }
     }
-    var awayUserList=that.data.matchIngSuccess.awayUserList;
+    var awayUserList = that.data.matchIngSuccess.awayUserList;
     for (var i = 0; i < awayUserList.length; i++) {
-      if (e.yes) {
-        awayUser.score = e.score;
-      }
       var awayUser = awayUserList[i];
       if (awayUser.openid == currentopenId) {
+        if (ismyphone) {
+          awayUser.score += e.score;
+        }
         awayUser.avatarifhidden = false;
+        awayUser.useranswer = useranswer;
         awayUserList[i] = awayUser;
         this.setData({
           ['matchIngSuccess.awayUserList']: awayUserList
@@ -502,29 +537,130 @@ Page({
       }
     }
   },
-  robotSelectChoose: function (answertime) {
-    var cmd=that.data.cmd;
-    if (cmd == config.cmd.robot){
+  //机器人选择事件
+  robotSelectChoose: function(answertime) {
+    if (that.data.cmd == cmd.robot) {
       var awayUserList = that.data.matchIngSuccess.awayUserList;
-      if (awayUserList && awayUserList.length>0){
-        var index=rnd(0,3);
-        var robot=awayUserList[0];
+      var gamenumber = that.data.gamenumber;
+      if (awayUserList && awayUserList.length > 0) {
+        var index = rnd(0, 3);
+        var robot = awayUserList[0];
         //选项
-        var answer=that.data.answeroption[index];
+        var answer = that.data.answeroption[index];
         if (that.data.question[gamenumber].answer == answer) {
-          robotClientAnswerDto.yes=true;
-        }else{
+          robotClientAnswerDto.yes = true;
+          robotClientAnswerDto.score += (answertime * (20));
+        } else {
           robotClientAnswerDto.yes = false;
         }
         robotClientAnswerDto.openId = robot.openid;
         robotClientAnswerDto.avatarurl = robot.avatarurl;
-        
-        robotClientAnswerDto.score += (answertime * (20));
+
+
         robotClientAnswerDto.gameCount = that.data.gamenumber;
         robotClientAnswerDto.answer = answer;
 
-        that.sendSocketMessage({ cmd: cmd.robotreq, kClientAnswerDto: robotClientAnswerDto,});
+        that.sendSocketMessage({
+          cmd: cmd.robotreq,
+          kClientAnswerDto: robotClientAnswerDto,
+        });
       }
     }
   },
+  //改变其他人的分数
+  changeOtherScore: function(e) {
+    var currentopenId = e.openId;
+    var myUser = that.data.matchIngSuccess.myUser;
+    if (myUser != null && myUser.openid == currentopenId) {
+      myUser.score += e.score;
+      that.setData({
+        ['matchIngSuccess.myUser']: myUser
+      });
+      return;
+    }
+    var homeUserList = that.data.matchIngSuccess.homeUserList;
+    for (var i = 0; i < homeUserList.length; i++) {
+      var homeUser = homeUserList[i];
+      if (homeUser.openid == currentopenId) {
+        homeUser.score += e.score;
+        homeUserList[i] = homeUser;
+        this.setData({
+          ['matchIngSuccess.homeUserList']: homeUserList
+        });
+        return;
+      }
+    }
+    var awayUserList = that.data.matchIngSuccess.awayUserList;
+    for (var i = 0; i < awayUserList.length; i++) {
+      var awayUser = awayUserList[i];
+      if (awayUser.openid == currentopenId) {
+        awayUser.score += e.score;
+        awayUserList[i] = awayUser;
+        this.setData({
+          ['matchIngSuccess.awayUserList']: awayUserList
+        });
+        return;
+      }
+    }
+  },
+  //判断是否全部回答完成
+  judgeAnswered: function() {
+    var answered = true;
+    var myUser = that.data.matchIngSuccess.myUser;
+    if (myUser != null && myUser.useranswer == '') {
+      answered = false;
+    }
+    var homeUserList = that.data.matchIngSuccess.homeUserList;
+    for (var i = 0; i < homeUserList.length; i++) {
+      var homeUser = homeUserList[i];
+      if (homeUser != null && homeUser.useranswer == '') {
+        answered = false;
+      }
+    }
+    var awayUserList = that.data.matchIngSuccess.awayUserList;
+    for (var i = 0; i < awayUserList.length; i++) {
+      var awayUser = awayUserList[i];
+      if (awayUser != null && awayUser.useranswer == '') {
+        answered = false;
+      }
+    }
+    that.sendcleanOldDataMessage(answered);
+  },
+  sendcleanOldDataMessage: function (answered){
+    if (answered) {
+      //   myUser.useranswer='';
+      //   for (var i = 0; i < homeUserList.length; i++) {
+      //     var homeUser = homeUserList[i];
+      //     if (homeUser != null && homeUser.useranswer == '') {
+      //       homeUser.useranswer = ''
+      //       awayUserList[i] = homeUser;
+      //     }
+      //   }
+      //   for (var i = 0; i < awayUserList.length; i++) {
+      //     var awayUser = awayUserList[i];
+      //     if (awayUser != null && awayUser.useranswer == '') {
+      //       awayUser.useranswer = ''
+      //       awayUserList[i] = awayUser;
+      //     }
+      //   }
+
+      that.sendSocketMessage({
+        cmd: cmd.setNextQuestion,
+        matchIngSuccess: that.data.matchIngSuccess,
+      });
+    }
+  },
+  //清楚历史数据
+  cleanOldData: function (data) {
+    that.setData({
+      // ['matchIngSuccess.myUser']: myUser,
+      matchIngSuccess: matchIngSuccess,
+      gamenumber: that.data.gamenumber+2,
+      answerA: choiceClass[0],
+      answerB: choiceClass[0],
+      answerC: choiceClass[0],
+      answerD: choiceClass[0],
+      answerCountdown: 15,
+    });
+  }
 })

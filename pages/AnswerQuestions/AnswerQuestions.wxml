@@ -75,8 +75,8 @@
   <view class="QuestionList" wx:if="{{!showView}}" hidden="{{showView}}">
     <!--题目比例--->
     <view class="proportion">
-      <view class="nowProportion">1</view>
-      /5
+      <view class="nowProportion">{{gamenumber +1}}</view>
+      /{{question.length}}
     </view>
     <!--倒计时--->
     <view class="countdownSeconds">
@@ -98,108 +98,108 @@
       <view class="{{answerA}}" bindtap="selectChoose" data-answer='A'>
       <!--左边3个人-->
       <!-- hidden="{{answerA ==choiceClass[0]}}" -->
-        <view class="ImgportraitOne" hidden="{{matchIngSuccess.myUser.avatarifhidden || answerA == choiceClass[0]}}">
+        <view class="ImgportraitOne" hidden="{{matchIngSuccess.myUser.useranswer !='A' || answerA == choiceClass[0]}}">
           <image src='{{matchIngSuccess.myUser.avatarurl}}'></image>
         </view>
         <block wx:for="{{matchIngSuccess.homeUserList}}" wx:for-index="idx" wx:for-item="item">
-          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.avatarifhidden || answerA == choiceClass[0]}}">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.avatarifhidden || answerA == choiceClass[0]}}">
+          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
         <view class="text">{{question[gamenumber].answerA}}</view>
         <!--右边3个人-->
         <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
-          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.avatarifhidden || answerA == choiceClass[0]}}">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.avatarifhidden || answerA == choiceClass[0]}}">
+          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.avatarifhidden || answerA == choiceClass[0]}}">
+          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
       </view>
       
       <view class="{{answerB}}" bindtap="selectChoose" data-answer='B'>
-        <view class="ImgportraitOne" hidden="{{matchIngSuccess.myUser.avatarifhidden || answerB == choiceClass[0] }}">
+        <view class="ImgportraitOne" hidden="{{matchIngSuccess.myUser.useranswer !='B' || answerB == choiceClass[0] }}">
           <image src='{{matchIngSuccess.myUser.avatarurl}}'></image>
         </view>
         <block wx:for="{{matchIngSuccess.homeUserList}}" wx:for-index="idx" wx:for-item="item">
-          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.avatarifhidden || answerB == choiceClass[0]}}">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.avatarifhidden || answerB == choiceClass[0]}}">
+          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
         <view class="text">{{question[gamenumber].answerB}}</view>
         <!--右边3个人-->
         <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
-          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.avatarifhidden || answerB == choiceClass[0]}}">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.avatarifhidden || answerB == choiceClass[0]}}">
+          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.avatarifhidden || answerB == choiceClass[0]}}">
+          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
       </view>
 
       <view class="{{answerC}}" bindtap="selectChoose" data-answer='C'>
-        <view class="ImgportraitOne" hidden="{{matchIngSuccess.myUser.avatarifhidden || answerC == choiceClass[0]}}">
+        <view class="ImgportraitOne" hidden="{{matchIngSuccess.myUser.useranswer !='C' || answerC == choiceClass[0]}}">
           <image src='{{matchIngSuccess.myUser.avatarurl}}'></image>
         </view>
         <block wx:for="{{matchIngSuccess.homeUserList}}" wx:for-index="idx" wx:for-item="item">
-          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.avatarifhidden || answerC == choiceClass[0]}}">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.avatarifhidden || answerC == choiceClass[0]}}">
+          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
         <view class="text">{{question[gamenumber].answerC}}</view>
         <!--右边3个人-->
         <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
-          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.avatarifhidden || answerC == choiceClass[0]}}">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.avatarifhidden || answerC == choiceClass[0]}}">
+          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.avatarifhidden || answerC == choiceClass[0]}}">
+          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
       </view>
 
       <view class="{{answerD}}" bindtap="selectChoose" data-answer='D'>
-        <view class="ImgportraitOne"  hidden="{{matchIngSuccess.myUser.avatarifhidden || answerD == choiceClass[0]}}">
+        <view class="ImgportraitOne"  hidden="{{matchIngSuccess.myUser.useranswer !='D' || answerD == choiceClass[0]}}">
           <image src='{{matchIngSuccess.myUser.avatarurl}}'></image>
         </view>
         <block wx:for="{{matchIngSuccess.homeUserList}}" wx:for-index="idx" wx:for-item="item">
-          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.avatarifhidden || answerD == choiceClass[0]}}">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.useranswer  !='D' || answerD == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.avatarifhidden || answerD == choiceClass[0]}}">
+          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.useranswer  !='D' || answerD == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
         <view class="text">{{question[gamenumber].answerD}}</view>
         <!--右边3个人-->
         <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
-          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.avatarifhidden || answerD == choiceClass[0]}}">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='D' || answerD == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.avatarifhidden || answerD == choiceClass[0]}}">
+          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.useranswer !='D' || answerD == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
-          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.avatarifhidden || answerD == choiceClass[0]}}">
+          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.useranswer !='D' || answerD == choiceClass[0]}}">
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
