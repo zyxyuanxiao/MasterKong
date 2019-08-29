@@ -63,7 +63,7 @@ Page({
       var matchIngSuccess = JSON.parse(options.matchIngSuccess)
       that.setData({
         matchIngSuccess: matchIngSuccess,
-        question: matchIngSuccess.iusse,
+        question: JSON.parse(options.uQuestions),
       });
     }
     const aUserInfo = getValue('aUserInfo');
@@ -140,6 +140,7 @@ Page({
           //自己选择后改变选项背景样式
           if (myselect) {
             that.changeSelectChooseClass(robotReq);
+            that.judgeAnswered();
           }
         default:
           console.log('开始答题了')
@@ -654,13 +655,14 @@ Page({
   cleanOldData: function (data) {
     that.setData({
       // ['matchIngSuccess.myUser']: myUser,
-      matchIngSuccess: matchIngSuccess,
-      gamenumber: that.data.gamenumber+2,
+      matchIngSuccess: data.matchIngSuccess,
+      gamenumber: that.data.gamenumber+1,
       answerA: choiceClass[0],
       answerB: choiceClass[0],
       answerC: choiceClass[0],
       answerD: choiceClass[0],
       answerCountdown: 15,
     });
+    
   }
 })

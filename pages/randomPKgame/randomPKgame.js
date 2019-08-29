@@ -72,7 +72,7 @@ Page({
           // showToast('设置难度成功', 'success')
           break;
         case cmd.robot:
-          navTo('/pages/AnswerQuestions/AnswerQuestions?cmd=7&matchIngSuccess=' + JSON.stringify(data.matchIngSuccess));
+          navTo('/pages/AnswerQuestions/AnswerQuestions?cmd=7&matchIngSuccess=' + JSON.stringify(data.matchIngSuccess) + '&uQuestions=' + JSON.stringify(data.uQuestions));
           break;
         default:
           console.log('开始答题了')
