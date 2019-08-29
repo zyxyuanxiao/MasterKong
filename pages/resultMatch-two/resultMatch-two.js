@@ -14,22 +14,14 @@ Page({
       showModal: true
     })
   },
-
   // 弹出层里面的弹窗
   ok: function () {
     this.setData({
       showModal: false
     })
   },
-
   // 禁止屏幕滚动
   preventTouchMove: function () {
-  },
-  // 分享弹窗关闭
-  cancelShare: function () {
-    this.setData({
-      showModal: false
-    })
   }
   ,
   powerDrawer: function (e) {

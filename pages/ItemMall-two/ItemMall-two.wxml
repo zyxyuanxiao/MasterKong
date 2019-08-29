@@ -33,6 +33,7 @@
       </view> 
     </view>
   </view>
+  <view class="FailureText">提交失败，请重试</view>
   <!--兑换按钮-->
   <view class="ChangeButton" bindtap="btn" data-statu="open" >兑换</view>
 
@@ -42,40 +43,25 @@
 <!-- 遮罩层 -->
 <view class="drawer_screen" bindtap="btn" data-statu="close" wx:if="{{showModal}}"></view> 
 <!-- 兑换弹窗 -->
-<view class="modalDlg" wx:if="{{showModal}}">
-  <view class="ShutDown">
-  <image src="../../assets/images/knowledge/x@2x.png" class="ShutDownImg" bindtap="ok" ></image>
+<!-- <view class="modalDlg" wx:if="{{showModal}}">
+  <view class="textone">确定要兑换吗？</view>
+  <view class="textTwo">
+  <view>复活卡 x2</view>
+  <view>消耗10000积分</view>
   </view>
-  <view class="titlePrize">
-    恭喜你获得一等奖
-  </view> 
-  <view class="Prizetime">
-    2019-05-18 04:09:33
-  </view> 
-  <view class="instructions">
-    <view class="insImg">
-        <view class="textOne">
-          我在玩答题游戏中获得了一等奖
-        </view>
-        <view class="textTwo">
-          奖品：iPhoneX一台
-        </view>
-        <view class="textThree">
-          <view class="season">
-            第一赛季
-          </view>
-          <image src='../../assets/images/notice/三角形@2x.png' mode='widthFix' class="ThreeImg"></image>
-           <view class="ranking">
-              第一名
-          </view>
-          <image src='../../assets/images/notice/三角形@2x.png' mode='widthFix' class="ThreeImg"></image>
-           <view class="nowTime">
-              2019/02/23
-          </view>
-        </view>
-    </view>
-    </view>
-    <view bindtap="ok" class="ok">分享喜悦</view>
+  <view class="buttonView">
+    <view bindtap="ok" class="cancelButton">取消</view>
+    <view class="DetermineButton">确定</view>
+  </view>
+</view> -->
+
+<!-- 兑换弹窗 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <view class="PictureExchange">
+     <image src="../../assets/images/ItemMall/dui gou@2x.png"></image>
+  </view>
+  <view class="ForSuccessful">兑换成功</view>
+  <view class="CheckProps">查看我的道具</view>
 </view>
 
 </view>

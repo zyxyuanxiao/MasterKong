@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/ItemMall-two/ItemMall-two",
-    "pages/ItemMall/ItemMall",
     "pages/notice/notice",
+    "pages/ItemMall/ItemMall",
     "pages/knowledge/knowledge",
     "pages/rankingList/rankingList",
     "pages/HealthMan/HealthMan",
