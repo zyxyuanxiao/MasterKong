@@ -10,7 +10,7 @@
           </view>
         </view>
         <view class="BluesPerson">
-          <view class="score">1800</view>
+          <view class="score">9000</view>
           <view class="Imgportrait">
               <image src='../../assets/images/Homepage/专题6@2x.png'></image>
           </view>

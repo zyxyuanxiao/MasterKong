@@ -13,17 +13,20 @@ page{
   font-family:PingFangSC;
   font-weight:500;
   color:rgba(255,255,255,1);
-  
 }
 .BluesPerson .score{
   font-size:48Rpx;
   font-family:PingFangSC;
   font-weight:500;
   color:rgba(255,255,255,1);
-  margin: 0rpx 0rpx 16rpx 30rpx;
+  margin: 0rpx 0rpx 0rpx 30rpx;
   line-height: 80rpx;
   width:140rpx;
   height:48rpx;
+}
+.BluesPerson .blank{
+  width: 30rpx;
+  height: 1000%;
 }
 .yellowPerson .score{
   font-size:48Rpx;
@@ -38,10 +41,11 @@ page{
   justify-content:flex-end;
 }
 .Blues{
-  width: 263rpx;
+  width: 300rpx;
   height: 336rpx;
 }
 .yellow{
+
   width: 295rpx;
   height: 336rpx;
 }
@@ -52,8 +56,6 @@ page{
   border-radius: 0px 100rpx 100rpx 0px;
   margin: 32rpx 0rpx 0rpx 0rpx;
   display: flex;
-  /* right: 0;
-  position: absolute; */
 }
 .yellowPerson{
   width:257rpx;
@@ -63,17 +65,15 @@ page{
   margin: 32rpx 0rpx 0rpx 0rpx;
   display: flex;
   margin-left: 40rpx;
-  /* right: 0;
-  position: absolute; */
 }
 .BluesPerson .Imgportrait{
   width:80rpx;
   height:80rpx;
   border-radius: 50rpx;
-  /* margin-left: 10rpx; */
   border:2px solid rgba(255,255,255,1);
   line-height: 80rpx;
-  margin-left: -30rpx;
+  /* float: right; */
+  /* margin-left: -30rpx; */
 }
 .yellowPerson .Imgportrait{
   width:80rpx;
