@@ -1,0 +1,12 @@
+/* pages/Pprize/Pprize.wxss */
+.Pprize{
+  color: #ffffff;
+}
+.prizePartition{
+  width: 690rpx;
+  height: 501rpx;
+}
+.prizePartition image{
+  width: 690rpx;
+  height: 400rpx;
+}
