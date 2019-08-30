@@ -49,7 +49,7 @@
 
 <!-- <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view> -->
 <!-- 弹出层 -->
-<!-- <view class="modalDlg" wx:if="{{showModal}}">
+<view class="modalDlg" wx:if="{{showModal}}">
   <view class="ShutDown">
   <image src="../../assets/images/knowledge/x@2x.png" class="ShutDownImg" bindtap="ok" ></image>
   </view>
@@ -83,10 +83,10 @@
     </view>
     </view>
     <view bindtap="ok" class="ok">分享喜悦</view>
-</view> -->
+</view>
 
 <!-- 弹出层 -->
-<view class="modalDlg" wx:if="{{showModal}}">
+<!-- <view class="modalDlg" wx:if="{{showModal}}">
   <view class="ShutDown">
   <image src="../../assets/images/knowledge/x@2x.png" class="ShutDownImg" bindtap="ok" ></image>
   </view>
@@ -100,7 +100,7 @@
     好友王婷昨天在锦标赛中一路过关斩将，在高手中 脱颖而出，拿下了天津区锦标赛的第一名。在这个 月的月榜中排名第一，有望拿到这个月的奖品。在 下场锦标赛中继续加油。
   </view>
   <image src='../../assets/images/notice/图文@2x.png' mode='widthFix' class="noticeTheprize"></image>
-</view>
+</view> -->
 
   
 </scroll-view>

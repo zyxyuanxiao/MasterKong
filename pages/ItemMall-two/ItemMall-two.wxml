@@ -1,0 +1,67 @@
+<!--pages/ItemMall-two/ItemMall-two.wxml-->
+<view>
+  <!--积分-->
+  <view class="integral">
+    <view class="currentIntegral">
+      <view class="currentIntegralNumber">14789</view>
+      <view class="currentIntegralText">当前积分</view>
+    </view>
+    <image src="../../assets/images/ItemMall/矩形@2x.png" class="divider"></image>
+    <view class="ConvertiblePoints">
+      <view class="ConvertiblePointsNumber">14789</view>
+      <view class="ConvertiblePointsText">可兑换积分</view>
+    </view>
+  </view>
+
+  <!--卡片详情-->
+  <view class="CardDetails">
+    <view class="img">
+      <image src="../../assets/images/ItemMall/复活卡橙色底@2x.png" class="card"></image>
+    </view>
+    <view class="Details">
+      <view class="name">复活卡</view>
+      <view class="introduce">可以在答错时使用便可复活一次</view>
+      <view class="number">10000<text class="DetailsIntegral">积分</text></view>
+      <!-- 主容器 -->  
+      <view class="stepper">  
+          <!-- 减号 -->  
+          <text class="{{minusStatus}}" bindtap="bindMinus">-</text>  
+          <!-- 数值 -->  
+          <input type="number" bindchange="bindManual" value="{{num}}" />  
+          <!-- 加号 -->  
+          <text class="normal" bindtap="bindPlus">+</text>  
+      </view> 
+    </view>
+  </view>
+  <view class="FailureText">提交失败，请重试</view>
+  <!--兑换按钮-->
+  <view class="ChangeButton" bindtap="btn" data-statu="open" >兑换</view>
+
+
+
+
+<!-- 遮罩层 -->
+<view class="drawer_screen" bindtap="btn" data-statu="close" wx:if="{{showModal}}"></view> 
+<!-- 兑换弹窗 -->
+<!-- <view class="modalDlg" wx:if="{{showModal}}">
+  <view class="textone">确定要兑换吗？</view>
+  <view class="textTwo">
+  <view>复活卡 x2</view>
+  <view>消耗10000积分</view>
+  </view>
+  <view class="buttonView">
+    <view bindtap="ok" class="cancelButton">取消</view>
+    <view class="DetermineButton">确定</view>
+  </view>
+</view> -->
+
+<!-- 兑换弹窗 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <view class="PictureExchange">
+     <image src="../../assets/images/ItemMall/dui gou@2x.png"></image>
+  </view>
+  <view class="ForSuccessful">兑换成功</view>
+  <view class="CheckProps">查看我的道具</view>
+</view>
+
+</view>

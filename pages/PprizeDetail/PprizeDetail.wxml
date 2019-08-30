@@ -1,0 +1,9 @@
+<!--pages/PprizeDetail/PprizeDetail.wxml-->
+<view>
+  <view class="title">第一期晚八点竞标赛奖品</view>
+  <view class="time">2019-12-22</view>
+  <view class="text">以下内容为图文混排，编辑自主编辑</view>
+  <image src="../../assets/images/Pprize/图片@2x.png"></image>
+  <view class="text">我的思想随着这些闪耀的绿叶而闪耀；我的心灵因了这日光的抚触而歌唱；我的生命因为偕了万物一同浮泛在空间的蔚蓝，时间的墨黑而感到欢快</view>
+  <view class="text">亲爱的朋友呀，当我静听着海涛时，我好几次在暮色深沉的黄昏里，在这个海岸上，感到你的伟大思想的沉默了。</view>
+</view>

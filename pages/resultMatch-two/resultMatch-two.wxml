@@ -1,0 +1,52 @@
+<!--pages/resultMatch/resultMatch.wxml-->
+<view class="resultMatch">
+<!---头像-->
+<view class="HeadPortraitView">
+  <image src='../../assets/images/Homepage/timg (3).jpg' class="HeadPortrait" ></image>
+</view>
+<!---主体-->
+<view class="body">
+<view class="scoreView"></view>
+<view class="score">+6800</view>
+<!---奖杯-->
+<view>
+  <image src='../../assets/images/resultMatch/shibai@2x.png' class="trophy" ></image>
+  <view class="trophyTitle">食品安全专题赛</view>
+</view>
+
+</view>
+  <view  class="trophyResults ">胜利</view>
+
+<!-- 操作 -->
+<view class="operation">
+  <image src='../../assets/images/contestResults/返回.png' class="returnImg"></image>
+  <view class="challenge">继续挑战</view>
+  <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"  bindtap="Btn" data-statu="open" ></image>
+  <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
+</view>
+
+<!-- 分享海报 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <!-- <image src='../../assets/images/resultMatch/成功分享背景@2x.png' ></image> -->
+  <view class="SharePostersImg">
+    <view class="text">
+      我参加专题赛挑战 止步第三回合 
+      <view class="yellowText">你能坚持几回合？</view>
+    </view>
+    <view class="textView">
+    <view class="textTwo">
+      扫码识别小程序 每天学习不停息
+    </view>
+    <view class="QrCode">
+      <image src='../../assets/images/resultMatch/小程序码120尺寸@2x.png' class="QrCodeImg" ></image>
+    </view>
+    </view>
+    
+  </view>
+  <view class="SharePostersButton" bindtap="ok">
+  保存海报
+  </view>
+</view>
+
+
+</view>

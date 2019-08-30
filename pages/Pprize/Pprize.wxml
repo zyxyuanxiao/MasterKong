@@ -1,0 +1,12 @@
+<!--pages/Pprize/Pprize.wxml-->
+<view class="Pprize">
+  <view class="prizePartition">
+    <image src="../../assets/images/Pprize/图片@2x.png"></image>
+    <view>第一期晚八点竞标赛奖品</view>
+  </view>
+  <view class="prizePartition">
+    <image src="../../assets/images/notice/图文@2x.png"></image>
+    <view>第一期晚八点竞标赛奖品</view>
+  </view>
+</view>
+  
