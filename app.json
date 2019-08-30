@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/MyDetails/MyDetails",
     "pages/AnswerQuestions/AnswerQuestions",
+    "pages/MyDetails/MyDetails",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/SetUpThe/SetUpThe",
     "pages/SpecialGame/SpecialGame",
