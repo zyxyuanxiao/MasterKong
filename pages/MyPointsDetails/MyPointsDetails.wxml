@@ -1,0 +1,38 @@
+<!--pages/MyPointsDetails/MyPointsDetails.wxml-->
+<button class="integralTotal">锦标赛积分：100000</button>
+
+<view class="SingleMatch">
+  <view class="GameScores">
+    <view class="date">2019-07-23</view>
+    <view class="score">+24000</view>
+  </view>
+  <view class="GameDetails">
+    <view class="GameDetailsV">
+      <view class="GameName">九点场锦标赛成功晋级</view>
+      <view class="Time">21:33:10</view>
+    </view>
+    <view class="score">+12000</view>
+  </view>
+  <view class="divider"></view>
+  <view class="GameDetails">
+    <view class="GameDetailsV">
+      <view class="GameName">九点场锦标赛成功晋级</view>
+      <view class="Time">21:33:10</view>
+    </view>
+    <view class="score">+12000</view>
+  </view>
+</view>
+
+<view class="SingleMatch">
+  <view class="GameScores">
+    <view class="date">2019-07-23</view>
+    <view class="score">+24000</view>
+  </view>
+  <view class="GameDetails">
+    <view class="GameDetailsV">
+      <view class="GameName">九点场锦标赛成功晋级</view>
+      <view class="Time">21:33:10</view>
+    </view>
+    <view class="score">+12000</view>
+  </view>
+</view>

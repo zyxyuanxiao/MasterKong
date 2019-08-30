@@ -1,0 +1,22 @@
+<!--pages/Achievement/Achievement.wxml-->
+<view class="AchievementImageBig">
+  <image src="../../assets/images/Achievement/黄3星@2x.png"></image>
+</view>
+<view class="slogan">知识能干</view>
+<view class="score">680000</view>
+<view class="nextLevel">
+<view class="HorizontalLine"></view>
+<view class="nextLevelText">距离下一等级还需 23500</view>
+<view class="HorizontalLine"></view>
+</view>
+<view class="upgraded">
+  <image src="../../assets/images/Achievement/黄1星@2x.png" class="medal"></image>
+  <image src="../../assets/images/Achievement/小箭头@2x.png" class="to"></image>
+  <image src="../../assets/images/Achievement/黄2星@2x.png"  class="medal"></image>
+  <image src="../../assets/images/Achievement/小箭头@2x.png" class="to"></image>
+  <image src="../../assets/images/Achievement/黄3星@2x.png" class="medal"></image>
+  <image src="../../assets/images/Achievement/小箭头@2x.png" class="to"></image>
+  <image src="../../assets/images/Achievement/灰4星备份@2x.png" class="medal"></image>
+  <image src="../../assets/images/Achievement/小箭头@2x.png" class="to"></image>
+  <image src="../../assets/images/Achievement/灰5星备份@2x.png" class="medal"></image>
+</view>
