@@ -72,6 +72,10 @@ Page({
           // showToast('设置难度成功', 'success')
           break;
         case cmd.robot:
+          that.setData({
+            awayUserList: data.matchIngSuccess.awayUserList,
+          });
+          
           navTo('/pages/AnswerQuestions/AnswerQuestions?cmd=7&matchIngSuccess=' + JSON.stringify(data.matchIngSuccess) + '&uQuestions=' + JSON.stringify(data.uQuestions));
           break;
         default:

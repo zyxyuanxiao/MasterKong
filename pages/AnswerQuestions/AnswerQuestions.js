@@ -21,12 +21,8 @@ var that;
 var frameBuffer_Data, session, SocketTask;
 var app = getApp();
 var choiceClass = ['HaveChoice', 'Selected', 'wrong'];
-var kClientAnswerDto = {};
-var robotClientAnswerDto = {};
 //机器人回答
 var robotReq = {};
-var myselect = false;
-kClientAnswerDto.score = 0;
 Page({
 
   /**
@@ -43,8 +39,9 @@ Page({
     answerB: choiceClass[0],
     answerC: choiceClass[0],
     answerD: choiceClass[0],
-    kClientAnswerDto: kClientAnswerDto,
-    robotClientAnswerDto: robotClientAnswerDto,
+    kClientAnswerDto: {},
+    robotClientAnswerDto: {score:0},
+    myselect:false,
     answeroption: ['A', 'B', 'C', 'D'],
   },
 
@@ -67,6 +64,8 @@ Page({
       });
     }
     const aUserInfo = getValue('aUserInfo');
+    const kClientAnswerDto = that.data.kClientAnswerDto;
+    kClientAnswerDto.score = 0;
     kClientAnswerDto.openId = aUserInfo.openid;
     kClientAnswerDto.avatarurl = aUserInfo.avatarurl;
 
@@ -135,13 +134,20 @@ Page({
           break;
         case cmd.robotreq:
           robotReq = data.robotReq;
-
           that.changeOtherScore(robotReq);
           //自己选择后改变选项背景样式
-          if (myselect) {
+          if (that.data.myselect) {
+            //改变机器人选择的样式
             that.changeSelectChooseClass(robotReq);
-            that.judgeAnswered();
+            robotReq = {};
+            // that.judgeAnswered();
           }
+          break;
+
+         case cmd.end:
+          SocketTask.close();
+          navTo('/pages/randompkresult/randompkresult?matchIngSuccess=' + JSON.stringify(data.matchIngSuccess));
+          break;
         default:
           console.log('开始答题了')
           break;
@@ -276,7 +282,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function() {
-
   }, //通过 WebSocket 连接发送数据，需要先 wx.connectSocket，并在 wx.onSocketOpen 回调之后才能发送。
   sendSocketMessage: function(msg) {
     console.log('通过 WebSocket 连接发送数据', JSON.stringify(msg))
@@ -312,13 +317,15 @@ Page({
   answerCountdown: function() {
     that = this
     var answerCountdown = this.data.answerCountdown
-    if (answerCountdown == 0) {
+    if (answerCountdown == 0 || that.judgeAnswered()) {
       // that.setData({
       //   answerCountdown: 15
       // })
       // that.setData({
       //   showView: false,
       // })
+      //如果双方都回答问题了,或者倒计时为0了进入下一环节
+      that.sendcleanOldDataMessage();
       return
     }
     var answertime = rnd(10, 13);
@@ -346,11 +353,8 @@ Page({
     })
   },
   powerDrawer: function(e) {
-
     var currentStatu = e.currentTarget.dataset.statu;
-
     this.util(currentStatu)
-
   },
 
   util: function(currentStatu) {
@@ -420,6 +424,7 @@ Page({
     var useranswer = e.currentTarget.dataset.answer;
     //局数
     var gamenumber = that.data.gamenumber
+    const kClientAnswerDto=that.data.kClientAnswerDto;
     kClientAnswerDto.gameCount = gamenumber;
     kClientAnswerDto.answer = useranswer;
     if (that.data.question[gamenumber].answer == useranswer) {
@@ -431,17 +436,17 @@ Page({
     that.setData({
       kClientAnswerDto: kClientAnswerDto
     });
-    myselect = true;
+    that.setData({
+      myselect: true
+    });
     that.changeSelectChooseClass(kClientAnswerDto, true);
     //机器人回答不为空
     if (JSON.stringify(robotReq) != "{}") {
       that.changeSelectChooseClass(robotReq, false);
       robotReq = {}
     }
-
-
     //begin 判断是否全部答题完成
-    that.judgeAnswered();
+    // that.judgeAnswered();
   },
 
   //选择选项后改变自己的分数，颜色  自己的手机,
@@ -458,7 +463,6 @@ Page({
           answerA: choiceClass[2]
         });
       }
-
     } else if (useranswer == 'B') {
       if (that.data.question[gamenumber].answer == useranswer) {
         that.setData({
@@ -504,7 +508,6 @@ Page({
 
       return;
     }
-
     var homeUserList = that.data.matchIngSuccess.homeUserList;
     for (var i = 0; i < homeUserList.length; i++) {
       var homeUser = homeUserList[i];
@@ -543,24 +546,28 @@ Page({
     if (that.data.cmd == cmd.robot) {
       var awayUserList = that.data.matchIngSuccess.awayUserList;
       var gamenumber = that.data.gamenumber;
+      const robotClientAnswerDto = that.data.robotClientAnswerDto;
       if (awayUserList && awayUserList.length > 0) {
         var index = rnd(0, 3);
         var robot = awayUserList[0];
         //选项
         var answer = that.data.answeroption[index];
         if (that.data.question[gamenumber].answer == answer) {
+          
           robotClientAnswerDto.yes = true;
-          robotClientAnswerDto.score += (answertime * (20));
+          robotClientAnswerDto.score = (answertime * (20));
         } else {
           robotClientAnswerDto.yes = false;
+          robotClientAnswerDto.score = 0;
         }
         robotClientAnswerDto.openId = robot.openid;
         robotClientAnswerDto.avatarurl = robot.avatarurl;
 
-
         robotClientAnswerDto.gameCount = that.data.gamenumber;
         robotClientAnswerDto.answer = answer;
-
+        that.setData({
+          robotClientAnswerDto: robotClientAnswerDto
+        });
         that.sendSocketMessage({
           cmd: cmd.robotreq,
           kClientAnswerDto: robotClientAnswerDto,
@@ -625,10 +632,11 @@ Page({
         answered = false;
       }
     }
-    that.sendcleanOldDataMessage(answered);
+    return answered;
   },
+  //发送清空答题数据请求,准备进入下一环节
   sendcleanOldDataMessage: function (answered){
-    if (answered) {
+    // if (answered) {
       //   myUser.useranswer='';
       //   for (var i = 0; i < homeUserList.length; i++) {
       //     var homeUser = homeUserList[i];
@@ -648,21 +656,29 @@ Page({
       that.sendSocketMessage({
         cmd: cmd.setNextQuestion,
         matchIngSuccess: that.data.matchIngSuccess,
+        gamenumber: that.data.gamenumber + 1,
       });
-    }
+    // }
   },
   //清楚历史数据
   cleanOldData: function (data) {
     that.setData({
       // ['matchIngSuccess.myUser']: myUser,
-      matchIngSuccess: data.matchIngSuccess,
-      gamenumber: that.data.gamenumber+1,
-      answerA: choiceClass[0],
-      answerB: choiceClass[0],
-      answerC: choiceClass[0],
-      answerD: choiceClass[0],
       answerCountdown: 15,
     });
-    
+    //下一轮答题开始
+    var time = setTimeout(function () {
+      that.setData({
+        // ['matchIngSuccess.myUser']: myUser,
+        matchIngSuccess: data.matchIngSuccess,
+        gamenumber: that.data.gamenumber + 1,
+        answerA: choiceClass[0],
+        answerB: choiceClass[0],
+        answerC: choiceClass[0],
+        answerD: choiceClass[0],
+        myselect: false,
+      });
+      that.answerCountdown(that);
+    }, 2500);
   }
 })

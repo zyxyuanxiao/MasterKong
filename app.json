@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/HealthMan/HealthMan",
     "pages/MyDetails/MyDetails",
     "pages/AnswerQuestions/AnswerQuestions",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
@@ -18,7 +19,6 @@
     "pages/StartChallenge-Waiting/StartChallenge-Waiting",
     "pages/ItemMall-two/ItemMall-two",
     "pages/StartChallengePre/StartChallengePre",
-    "pages/HealthMan/HealthMan",
     "pages/rankingList/rankingList",
     "pages/Pprize/Pprize",
     "pages/knowledge/knowledge",
@@ -31,7 +31,8 @@
     "pages/PKgame/PKgame",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/randomPKgame/randomPKgame"
+    "pages/randomPKgame/randomPKgame",
+    "pages/randompkresult/randompkresult"
   ],
   "window": {
     "backgroundTextStyle": "light",

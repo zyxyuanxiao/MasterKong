@@ -23,21 +23,56 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    ifYellowWin:false,
+    yellowScore:0,
+    ifBlueWin:false,
+    blueScore:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    that=this;
+    that = this;
     if (options.matchIngSuccess) {
       var matchIngSuccess = JSON.parse(options.matchIngSuccess)
       that.setData({
         matchIngSuccess: matchIngSuccess,
-        question: JSON.parse(options.uQuestions),
       });
     }
+    var blueScore=that.data.blueScore;
+    var ifBlueWin = that.data.ifBlueWin;
+    var yellowScore = that.data.yellowScore;
+    var ifYellowWin = that.data.ifYellowWin;
+    var myUser = that.data.matchIngSuccess.myUser;
+    if (myUser != null) {
+      blueScore += myUser.score;
+    }
+    var homeUserList = that.data.matchIngSuccess.homeUserList;
+    for (var i = 0; i < homeUserList.length; i++) {
+      var homeUser = homeUserList[i];
+      if (homeUser != null) {
+        blueScore += homeUser.score;
+      }
+    }
+    var awayUserList = that.data.matchIngSuccess.awayUserList;
+    for (var i = 0; i < awayUserList.length; i++) {
+      var awayUser = awayUserList[i];
+      if (awayUser != null) {
+        yellowScore += awayUser.score;
+      }
+    }
+    if (yellowScore > blueScore){
+      ifYellowWin=true;
+    } else if (yellowScore < blueScore){
+      ifBlueWin=true;
+    }
+    that.setData({
+      ifYellowWin: ifYellowWin,
+      yellowScore: yellowScore,
+      ifBlueWin: ifBlueWin,
+      blueScore: blueScore
+    });
   },
 
   /**
