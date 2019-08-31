@@ -1,0 +1,72 @@
+/* pages/Achievement/Achievement.wxss */
+.AchievementImageBig{
+  width: 730rpx;
+  height: 730rpx;
+  margin: 10rpx 10rpx 0rpx 10rpx;
+}
+.AchievementImageBig image{
+  width: 427rpx;
+  height: 461rpx;
+  margin: 133rpx 151rpx 88rpx 152rpx;
+}
+.slogan{
+  width:100%;
+  height:84rpx;
+  font-size:60rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(254,193,48,1);
+  text-align: center;
+  margin-top: -48rpx;
+  margin-top: 10rpx;
+}
+.score{
+  width:100%;
+  height:56rpx;
+  font-size:40rpx;
+  font-family:PingFangSC;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  opacity: 0.5;
+  margin-top: 10rpx;
+}
+.nextLevel{
+  width:100%;
+  height:33rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  margin-top: 166rpx;
+  display: flex;
+  padding-left: 159rpx;
+  padding-right: 159rpx; 
+}
+.nextLevelText{
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  opacity: 0.5;
+}
+.HorizontalLine{
+  height: 2rpx;
+  width: 60rpx;
+  background:rgba(255,255,255,1);
+  opacity:0.5;
+  margin-top: 16rpx;
+}
+.upgraded{
+  margin-top: 33rpx; 
+  padding-left: 33rpx;
+}
+.upgraded .medal{
+  width: 100rpx;
+  height: 103rpx;
+}
+.upgraded .to{
+  width: 9rpx;
+  height: 15rpx;
+  margin: 0rpx 20rpx 38rpx 20rpx;
+}
+

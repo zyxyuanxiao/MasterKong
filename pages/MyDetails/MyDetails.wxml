@@ -9,7 +9,7 @@
         <view class="label">行走百科</view>
       </view>
 
-      <progress percent="60" class="LevelProgressBar" border-radius="4rpx" backgroundColor='#000000' activeColor="#B1D93B" style="width:223rpx;height:8rpx;" />
+      <progress percent="60" class="LevelProgressBar" border-radius="4rpx" backgroundColor='#30683c' activeColor="#B1D93B" style="width:223rpx;height:8rpx;" />
       <view class="text">还差1244分到达下一等级</view>
     </view>
   </view>
@@ -26,3 +26,49 @@
     </view>
   </view>
 </view>
+<!-- 战绩 -->
+  <view class="record">
+    <view class="NumberChallenges">
+      <view class="Number">60</view>
+      <view class="Text">挑战次数</view>
+    </view>
+    <view class="NumberVictory">
+      <view class="Number">40</view>
+      <view class="Text">胜利次数</view>
+    </view>
+    <view class="InterestRates">
+      <view class="Number">66.6<view class="rate">%</view></view>
+      <view class="Text">胜利率</view>
+    </view>
+  </view>
+<!-- 菜单 -->
+  <view class="menu">
+    <view class="menuSingle">
+      <image src="../../assets/images/MyDetails/个人中心-成就@2x.png" class="MenuFigure"></image>
+      <view class="menuName">成就</view>
+    </view>
+    <view class="menuSingle">
+      <image src="../../assets/images/MyDetails/个人中心-我的积分@2x.png" class="MenuFigure"></image>
+      <view class="menuName">我的积分</view>
+    </view>
+    <view class="menuSingle">
+      <image src="../../assets/images/MyDetails/个人中心-错题集@2x.png" class="MenuFigure"></image>
+      <view class="menuName">错题集</view>
+    </view>
+    <view class="menuSingle">
+      <image src="../../assets/images/MyDetails/个人中心-赛后结果@2x.png" class="MenuFigure"></image>
+      <view class="menuName">赛后结果</view>
+    </view>
+    <view class="menuSingle">
+      <image src="../../assets/images/MyDetails/个人中心-我的道具@2x.png" class="MenuFigure"></image>
+      <view class="menuName">我的道具</view>
+    </view>
+    <view class="menuSingle">
+      <image src="../../assets/images/MyDetails/个人中心-收货地址@2x.png" class="MenuFigure"></image>
+      <view class="menuName">收货地址</view>
+    </view>
+    <view class="menuSingle">
+      <image src="../../assets/images/MyDetails/个人中心-已获奖品@2x.png" class="MenuFigure"></image>
+      <view class="menuName">已获奖品</view>
+    </view>
+  </view>

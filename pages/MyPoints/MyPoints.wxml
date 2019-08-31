@@ -1,0 +1,60 @@
+<!--pages/MyPoints/MyPoints.wxml-->
+<!-- 赛季积分 -->
+<view class="IntegralSeason">
+  <view class="ranking">
+    <view class="Text">赛季积分</view>
+    <view class="foundation">第 23 名</view>
+  </view>
+  <view class="IntegralNumber">
+    34000
+  </view>
+</view>
+<!-- 总积分 -->
+<view class="TotalScore">
+  <view class="Total">
+    <view class="Text">总积分</view>
+    <view class="foundation">第 20 名</view>
+  </view>
+  <view class="IntegralNumber">
+    6800000
+  </view>
+</view>
+
+<!-- 积分明细 -->
+<view class="IntegralSubsidiary">
+  <view class="Horizontal"></view>
+  <view class="HorizontalText">积分明细</view>
+  <view class="Horizontal"></view>
+</view>
+
+<!-- 比赛 -->
+<view class="TheGame">
+  <view class="gamesView">
+    <image src="../../assets/images/MyPoints/锦标赛积分@2x.png" ></image>
+    <view class="game">
+      <view class="gameText">锦标赛</view>
+      <view class="gameNumber">100000</view>
+    </view>
+  </view>
+  <view class="gamesView">
+    <image src="../../assets/images/MyPoints/PK赛积分@2x.png" ></image>
+    <view class="game">
+      <view class="gameText">PK赛</view>
+      <view class="gameNumber">40000</view>
+    </view>
+  </view>
+  <view class="gamesView">
+    <image src="../../assets/images/MyPoints/专题赛积分@2x.png" ></image>
+    <view class="game">
+      <view class="gameText">专题赛</view>
+      <view class="gameNumber">5000</view>
+    </view>
+  </view>
+  <view class="gamesView">
+    <image src="../../assets/images/MyPoints/康师傅之旅积分@2x.png" ></image>
+    <view class="game">
+      <view class="gameText">康师傅之旅</view>
+      <view class="gameNumber">678</view>
+    </view>
+  </view>
+</view>

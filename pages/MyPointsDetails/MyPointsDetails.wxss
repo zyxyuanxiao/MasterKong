@@ -1,0 +1,88 @@
+/* pages/MyPointsDetails/MyPointsDetails.wxss */
+.integralTotal{
+  width:690rpx;
+  height:90rpx;
+  background:rgba(249,109,57,1);
+  border-radius:46rpx;
+  font-size:32rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  margin-top: 60rpx;
+  margin-bottom: 30rpx;
+}
+.GameScores .score{
+  height:28rpx;
+  font-size:36rpx;
+  font-family:PingFangSC;
+  font-weight:600;
+  color:rgba(249,109,57,1);
+  margin: 31rpx 30rpx 0rpx 0rpx;
+  margin-left: 200rpx;
+  position: absolute;
+  right: 60rpx;
+}
+
+.SingleMatch{
+  width:690rpx;
+  background:rgba(47,47,55,1);
+  border-radius:8rpx;
+  margin: 30rpx 0rpx 0rpx 30rpx;
+  padding-bottom: 50rpx; 
+}
+.SingleMatch .GameScores{
+  width:100%;
+  height:89rpx;
+  background:rgba(60,60,70,1);
+  display: flex;
+}
+.GameScores .date{
+  width:170rpx;
+  height:28rpx;
+  font-size:29rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  margin: 31rpx 0rpx 0rpx 30rpx;
+}
+
+
+.GameDetails{
+  display: flex;
+  color:rgba(255,255,255,1);
+  height: 132rpx;
+}
+.GameDetails .GameDetailsV{
+  color:rgba(255,255,255,1);
+  margin: 30rpx 0rpx 30rpx 30rpx; 
+}
+.GameDetails .score{
+  margin-top: 30rpx;
+  position: absolute;
+  right: 60rpx;
+  height:28rpx;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+}
+.GameDetails .GameName{
+  height:28rpx;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+}
+
+.GameDetails .Time{
+  height:24rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  margin-top: 20rpx;
+  opacity: 0.5;
+}
+.divider{
+  width:660rpx;
+  height:1px;
+  background:rgba(60,60,70,1);
+  margin: 0rpx 0rpx 0rpx 30rpx;
+}

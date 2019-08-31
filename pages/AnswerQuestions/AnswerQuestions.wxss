@@ -70,16 +70,14 @@ page{
   width:80rpx;
   height:80rpx;
   border-radius: 50rpx;
-  border:2px solid rgba(255,255,255,1);
+  border:2rpx solid rgba(255,255,255,1);
   line-height: 80rpx;
-  /* float: right; */
-  /* margin-left: -30rpx; */
 }
 .yellowPerson .Imgportrait{
   width:80rpx;
   height:80rpx;
   border-radius: 50rpx;
-  border:2px solid #ffffff;
+  border:2rpx solid #ffffff;
   margin-left: -30rpx;
 }
 .ImgportraitOne{
