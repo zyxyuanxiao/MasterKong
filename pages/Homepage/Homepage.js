@@ -69,4 +69,11 @@ Page({
       url: '/pages/StartChallengePre/StartChallengePre'
     })
   },
+  //专题赛
+  goSpecialGame: function (e) {
+    // navTo('/pages/SpecialGame/SpecialGame?item=' + JSON.stringify(item))
+    var index=e.currentTarget.dataset.index;
+    navTo('/pages/SpecialGame/SpecialGame');
+    
+  }
 })

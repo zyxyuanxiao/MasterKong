@@ -425,6 +425,13 @@ Page({
   },
   //选择选项触发事件 
   selectChoose: function(e) {
+    //答过题不予再次点击
+    if (that.data.myselect) {
+      return;
+    }
+    that.setData({
+      myselect: true,
+    });
     var useranswer = e.currentTarget.dataset.answer;
     //局数
     var gamenumber = that.data.gamenumber

@@ -1,88 +1,169 @@
 <!--pages/SpecialGame/SpecialGame.wxml-->
 <view class="SpecialGame">
-   <!--用户-->
+  <!--用户-->
   <view class="account">
-  <!--头像-->
-  <view class="Head">
-     <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
-  </view>
-
-  <!-- 账户 -->
-  <view class="information">
-  <view class="name">
-     <text class="zt">炽热的天空</text>
-  </view>
-  <view class="dengji">
-    <view class="dengjiOne">
-      <text class="zt level">Lv 23</text>
+    <!--头像-->
+    <view class="Head">
+      <image src='{{aUserInfo.avatarurl}}' class="HeadPortrait"></image>
     </view>
-     <view class="baike">
-        <view class="zt Dan">行走百科</view>
-     </view>
-  </view>
-  </view>
 
-  <!-- 分数 -->
-  <!-- <view class="score">
-    <text class="scoreDetails">200</text>
-  </view> -->
-
-  </view>
-<!-- 专题赛 -->
-  <view class="titleTopic">
-      <image mode="aspectFill" class="rectangular" src="../../assets/images/Homepage/矩形@2x.png"  />
-      <view class="game">专题赛</view>
-      <view class="iTitle">学食品安全知识赢好礼</view>
-      <view class="iText">风靡朋友圈的网红雪糕是否安全，隔夜茶是否健康？快来一起边答边学吧！</view>
-  </view>
-<!--总成绩--->
-<view class="QuestionList">
-<!--倒计时--->
-<!-- <view class="blank"></view>
-  <view class="countdown">
-    <view class="number">3</view>
-  </view>
-  <view class="PleasePrepare">
-    请准备好
-  </view>
-</view> -->
-<!--开始挑战--->
-<view class="OverallResult">
-<view class="statisticalOne">
-  <view class="ChallengeReward">
-      <view class="challengeText">挑战成功奖励</view>
-      <view class="integral">800<text>积分</text></view>
+    <!-- 账户 -->
+    <view class="information">
+      <view class="name">
+        <text class="zt">{{aUserInfo.name}}</text>
+      </view>
+      <view class="dengji">
+        <view class="dengjiOne">
+          <text class="zt level">Lv {{aUserInfo.levelno}}</text>
+        </view>
+        <view class="baike">
+          <view class="zt Dan">{{aUserInfo.levelname}}</view>
+        </view>
+      </view>
     </view>
-    <view class="TotalChallenges">
-      <view class="challengeText">挑战总次数</view>
-      <view  class="integral">12<text>次</text></view>
+
+    <!-- 分数 -->
+    <view class="score" wx:if="{{starting}}">
+      <text class="scoreDetails">{{sumcount}}</text>
     </view>
-</view>
-<view class="statisticalTwo">
-  <view class="totalIntegral">
-    <view class="challengeText">获得总积分</view>
-    <view class="integral">3990<text>积分</text></view>
   </view>
-  <view class="HeSucceeds">
-    <view class="challengeText">挑战成功</view>
-    <view class="integral">10<text>次</text></view>
+  <!-- 加分 -->
+  <view class="blank" wx:if="{{starting}}">
+    <view class="BonusPoints">
+      <!-- +200 -->
+    </view>
   </view>
-</view>
-</view>
-<!--虚线-->
-<view class="DottedLine">
-<image src='../../assets/images/SpecialGame/xiantiao@2x.png' class="DottedLineImg"></image>
-</view>
-<!--开始挑战-->
-<view class="BeganChallenge">
-开始挑战
-</view>
-<!--剩余次数-->
-<view class="Numberchances">
-今日还剩2次机会
-</view>
 
+  <!-- 专题赛 -->
+  <view class="titleTopic" wx:if="{{!starting}}">
+    <image mode="aspectFill" class="rectangular" src="../../assets/images/Homepage/矩形@2x.png" />
+    <view class="game">专题赛</view>
+    <view class="iTitle">学食品安全知识赢好礼</view>
+    <view class="iText">风靡朋友圈的网红雪糕是否安全，隔夜茶是否健康？快来一起边答边学吧！</view>
+  </view>
+  <!--总成绩--->
+  <view class="QuestionList" wx:if="{{startspecial}}">
+    <!--开始挑战--->
+    <view class="OverallResult">
+      <view class="statisticalOne">
+        <view class="ChallengeReward">
+          <view class="challengeText">挑战成功奖励</view>
+          <view class="integral">800<text>积分</text>
+          </view>
+        </view>
+        <view class="TotalChallenges">
+          <view class="challengeText">挑战总次数</view>
+          <view class="integral">12<text>次</text>
+          </view>
+        </view>
+      </view>
+      <view class="statisticalTwo">
+        <view class="totalIntegral">
+          <view class="challengeText">获得总积分</view>
+          <view class="integral">3990<text>积分</text>
+          </view>
+        </view>
+        <view class="HeSucceeds">
+          <view class="challengeText">挑战成功</view>
+          <view class="integral">10<text>次</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--虚线-->
+    <view class="DottedLine">
+      <image src='../../assets/images/SpecialGame/xiantiao@2x.png' class="DottedLineImg"></image>
+    </view>
+    <!--开始挑战-->
+    <view class="BeganChallenge" bindtap="getready">
+      开始挑战
+    </view>
+    <!--剩余次数-->
+    <view class="Numberchances">
+      今日还剩2次机会
+    </view>
+  </view>
+  <view class="QuestionList" wx:if="{{getready}}">
+    <!--倒计时--->
+    <view class="blank"></view>
+    <view class="countdown">
+      <view class="prenumber">{{prepariCountdown}}</view>
+    </view>
+    <view class="PleasePrepare">
+      请准备好
+    </view>
+  </view>
+  <!--题目--->
+  <view class="startQuestionList" wx:if="{{starting}}">
+    <!--题目比例--->
+    <view class="proportion">
+      <view class="nowProportion">{{gamenumber +1 }}</view>
+      /{{questions.length}}
+    </view>
+    <!--食品安全专题赛--->
+    <view class="safetyCompetition">
+      食品安全专题赛
+    </view>
+    <!--倒计时--->
+    <view class="countdownSeconds">
+      <view class="answernumber">
+        {{answerCountdown}}S
+      </view>
+    </view>
 
-</view>
+    <!--问题text--->
+    <view class="problemText" bindtap="shareBtn" data-statu="open">
+       {{questions[gamenumber].question}}
+    </view>
 
+    <!--问题text--->
+    <view class="choose">
+      <view class="{{answerA}}" bindtap="selectChoose" data-answer='A'>
+        <view class="text" bindtap="exitBtn" data-statu="open">
+        {{questions[gamenumber].answerA}}</view>
+      </view>
+      <view class="{{answerB}}"  bindtap="selectChoose" data-answer='B'>
+        <view class="text">{{questions[gamenumber].answerB}}</view>
+      </view>
+      <view class="{{answerC}}"  bindtap="selectChoose" data-answer='C'>
+        <view class="text">{{questions[gamenumber].answerC}}</view>
+      </view>
+      <view class="{{answerD}}"  bindtap="selectChoose" data-answer='D'>
+        <view class="text">{{questions[gamenumber].answerD}}</view>
+      </view>
+
+    </view>
+
+  </view>
+
+  <!-- 遮罩层 -->
+  <view class="drawer_screen" bindtap="shareBtn" data-statu="close" wx:if="{{showModal}}"></view>
+
+  <!-- 分享复活弹出层 -->
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <view class="resurrectionText">
+      分享给好友可以复活一次
+    </view>
+    <view class="resurrectionCard">
+      每日只限分享一次获得一张复活卡～
+    </view>
+    <view class="buttonOne">
+      <view class="cancel" bindtap="ok">取消</view>
+      <view class="share">分享</view>
+    </view>
+  </view>
+
+  <!-- 退出弹出层 -->
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <view class="resurrectionText">
+      分享给好友可以复活一次
+    </view>
+    <view class="resurrectionCard">
+      每日只限分享一次获得一张复活卡～
+    </view>
+    <view class="buttonOne">
+      <view class="cancel" bindtap="cancelShare">取消</view>
+      <view class="share">分享</view>
+    </view>
+  </view>
 </view>

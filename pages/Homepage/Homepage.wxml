@@ -4,13 +4,13 @@
   <view class="account">
   <!--头像-->
   <view class="Head">
-     <image src='{{wxuserInfo.avatarUrl}}' class="HeadPortrait"></image>
+     <image src='{{aUserInfo.avatarurl}}' class="HeadPortrait"></image>
   </view>
 
   <!-- 账户 -->
   <view class="information">
   <view class="jies name">
-     <text class="zt">{{wxuserInfo.nickName}}</text>
+     <text class="zt">{{aUserInfo.name}}</text>
   </view>
   <view class="jies dengji">
     <view class="dengjiOne">
@@ -72,7 +72,7 @@
             <view class="game">专题赛</view>
             <view class="iTitle">{{item.theTitle}}</view>
             <view class="iText">{{item.text}}</view>
-            <view class="challenge">去挑战</view>
+            <view class="challenge" data-index="{{index}}" bindtap="goSpecialGame">去挑战</view>
             <!-- <button> default </button> -->
             </view>
           </swiper-item>
