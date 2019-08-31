@@ -36,9 +36,11 @@
       <block wx:if="{{awayUserList.length >0}}">
         <view class="level">Lv {{awayUserList[0].levelno}}</view>
       </block>
-      <view class="TheLabel">{{awayUserList[0].levelname}}</view>
-      </view>
-      <!-- <view class="people">
+      <block wx:if="{{awayUserList.length >0}}">
+        <view class="TheLabel">{{awayUserList[0].levelname}}</view>
+      </block>
+    </view>
+    <!-- <view class="people">
     <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
     <view class="name">炙热的天空</view>
     <view class="level">Lv 23</view>
@@ -50,6 +52,6 @@
     <view class="level">Lv 23</view>
     <view class="TheLabel">行走百科</view>
 </view> -->
-    </view>
-
   </view>
+
+</view>

@@ -122,7 +122,17 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  randomMatching: function () {
+    wx.reLaunch({
+      url: '/pages/randomPKgame/randomPKgame?cmd=1'
+    })
+  },
+  gohome: function () {
+    wx.reLaunch({
+      url: '/pages/StartChallengePre/StartChallengePre'
+    })
+  },
 })
 
 

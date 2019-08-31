@@ -1,5 +1,5 @@
 import { post, get } from '../../utils/http'
-import { setValue, redirectTo, getValue } from '../../utils/common';
+import { setValue, redirectTo, reLanchTo,getValue } from '../../utils/common';
 import util from '../../utils/util'
 import { config } from '../../config'
 //index.js
@@ -111,7 +111,7 @@ Page({
           // } else {
           console.log('去首页');
           setValue('aUserInfo', res.aUserInfo);
-          redirectTo('/pages/Homepage/Homepage?aUserInfo=' + JSON.stringify(res.aUserInfo));
+          reLanchTo('/pages/Homepage/Homepage');
         }
       })
   },

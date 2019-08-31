@@ -45,7 +45,7 @@ Page({
     })
   },
   onLoad: function (options) {
-    var aUserInfo = JSON.parse(options.aUserInfo);
+    var aUserInfo = getValue('aUserInfo');
     const wxuserInfo = getValue('userInfo');
 
     this.setData({

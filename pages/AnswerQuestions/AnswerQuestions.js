@@ -10,6 +10,7 @@ import {
   showToast,
   showModal,
   navTo,
+  reLanchTo,
   rnd
 } from '../../utils/common';
 import util from '../../utils/util'
@@ -87,6 +88,7 @@ Page({
    */
   onReady: function() {
     SocketTask = app.globalData.SocketTask;
+    var socketOpen = true;
     SocketTask.onOpen(res => {
       socketOpen = true;
       console.log('监听 WebSocket 连接打开事件。', res)
@@ -145,8 +147,10 @@ Page({
           break;
 
          case cmd.end:
-          SocketTask.close();
-          navTo('/pages/randompkresult/randompkresult?matchIngSuccess=' + JSON.stringify(data.matchIngSuccess));
+          SocketTask.close(function (close) {
+            console.log('关闭 WebSocket 连接。',    close)
+          });
+          reLanchTo('/pages/randompkresult/randompkresult?matchIngSuccess=' + JSON.stringify(data.matchIngSuccess));
           break;
         default:
           console.log('开始答题了')
@@ -429,9 +433,10 @@ Page({
     kClientAnswerDto.answer = useranswer;
     if (that.data.question[gamenumber].answer == useranswer) {
       kClientAnswerDto.yes = true;
-      kClientAnswerDto.score += (that.data.answerCountdown * (20));
+      kClientAnswerDto.score = (that.data.answerCountdown * (20));
     } else {
       kClientAnswerDto.yes = false;
+      kClientAnswerDto.score=0;
     }
     that.setData({
       kClientAnswerDto: kClientAnswerDto
@@ -662,10 +667,6 @@ Page({
   },
   //清楚历史数据
   cleanOldData: function (data) {
-    that.setData({
-      // ['matchIngSuccess.myUser']: myUser,
-      answerCountdown: 15,
-    });
     //下一轮答题开始
     var time = setTimeout(function () {
       that.setData({
@@ -677,6 +678,7 @@ Page({
         answerC: choiceClass[0],
         answerD: choiceClass[0],
         myselect: false,
+        answerCountdown: 15,
       });
       that.answerCountdown(that);
     }, 2500);
