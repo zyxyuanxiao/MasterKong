@@ -1,4 +1,5 @@
 <!--StartChallenge.wxml-->
+<page-container title="随机PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{false}}">
 <view class="container">
 <!--蓝队-->
 <view class="oneTeam">
@@ -64,3 +65,4 @@
   今日已获得1000积分，此次挑战不再增加积分
 </view>
 </view>
+</page-container>

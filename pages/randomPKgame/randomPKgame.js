@@ -1,5 +1,5 @@
 import { post, get } from '../../utils/http'
-import { setValue, redirectTo, getValue, showToast, showModal, navTo } from '../../utils/common';
+import { setValue, redirectTo, getValue, showToast, showModal, navTo, goPage } from '../../utils/common';
 import util from '../../utils/util'
 import { config, cmd } from '../../config'
 var that;
@@ -202,5 +202,10 @@ Page({
   onShareAppMessage: function () {
 
   },
-
+  /**导航返回 */
+  onBack() {
+    this.goback();
+    goPage(1,'/pages/StartChallengePre/StartChallengePre');
+      // this.selectComponent('#wait').clearTimer();
+  },
 })

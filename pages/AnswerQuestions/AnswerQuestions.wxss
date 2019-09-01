@@ -165,6 +165,16 @@ page{
   text-align: center;
   margin: 90rpx 0rpx 30rpx 0rpx;
 }
+
+.readyQuestionList{
+  width: 688rpx;
+  height: 900rpx;
+  background: rgba(255,255,255,1);
+  box-shadow: 0rpx 2rpx 10rpx 0rpx rgba(0,0,0,0.1);
+  border-radius: 20rpx;
+  margin: 0rpx 32rpx 0rpx 30rpx;
+}
+
 .QuestionList{
   width:688rpx;
   height:900rpx;
@@ -324,7 +334,7 @@ page{
 }
 
 
-/* µ¯³ö²ã */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 .modalDlg{
     width:750rpx;
     height:468rpx;
@@ -392,7 +402,7 @@ page{
   width:456rpx;
 }
 
-/* µ¯Ä» */ 
+/* ï¿½ï¿½Ä» */ 
 .BluesPopupWindow{
   position: fixed;
   font-size:24rpx;

@@ -256,5 +256,10 @@ Page({
     that.setData({
       teammateUserFlag : flag
     })
-  }
+  },
+   /**导航返回 */
+  onBack() {
+    this.goback();
+    goPage(1, '/pages/StartChallengePre/StartChallengePre');
+  },
 })

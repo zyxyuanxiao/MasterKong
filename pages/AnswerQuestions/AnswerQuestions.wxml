@@ -1,4 +1,5 @@
 <!--pages/AnswerQuestions/AnswerQuestions.wxml-->
+<page-container title="随机PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{false}}">
 <view class="AnswerQuestions">
   <!--PK的人--->
   <view class="PKPerson">
@@ -60,7 +61,7 @@
     总得分最高的队伍获胜
   </view>
   <!--倒计时--->
-  <view class="QuestionList" wx:if="{{showView}}" hidden="{{!showView}}">
+  <view class="readyQuestionList" wx:if="{{showView}}" hidden="{{!showView}}">
     <view class="textOne">
       线下PK赛
     </view>
@@ -229,3 +230,4 @@
     </view>
   </view>
 </view>
+</page-container>

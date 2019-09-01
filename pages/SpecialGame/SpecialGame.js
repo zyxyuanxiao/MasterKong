@@ -10,9 +10,10 @@ import {
   showModal,
   navTo,
   reLanchTo,
-  rnd
+  rnd,
+  goPage
 } from '../../utils/common';
-import util from '../../utils/util'
+import util from '../../utils/util1'
 import {
   config,
   cmd
@@ -39,6 +40,7 @@ Page({
     kClientAnswerDto: {},
     kClientAnswerArr: [],
     sumcount: 0,
+    winflag:true,
   },
 
   /**
@@ -169,6 +171,9 @@ Page({
     } else {
       kClientAnswerDto.yes = false;
       kClientAnswerDto.score = 0;
+      that.setData({
+        winflag: false,
+      });
     }
     var sumcount = that.data.sumcount;
     var kClientAnswerArr = that.data.kClientAnswerArr;
@@ -240,7 +245,7 @@ Page({
         that.answerCountdown(that);
       }, 2500);
     } else {
-      navTo('/pages/resultMatch/resultMatch');
+      navTo('/pages/resultMatch/resultMatch?winflag=' + that.data.winflag + '&sumcount=' + that.data.sumcount);
     }
   },
   //分享弹窗
@@ -302,5 +307,16 @@ Page({
         exitModal: true
       });
     }
-  }
+  },
+  /**导航返回 */
+  onBack() {
+    if (that.data.starting){
+      util.showModal('系统提示', '确定要退出比赛吗', true, '确定', function (res) {
+        !res.cancel && goPage()
+      })
+    }else{
+      goPage();
+    }
+  },
+
 })

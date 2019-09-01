@@ -1,4 +1,5 @@
 // pages/StartChallengePre/StartChallengePre.js
+import { goPage } from '../../utils/common';
 Page({
 
   /**
@@ -72,5 +73,9 @@ Page({
     wx.navigateTo({
       url: '/pages/StartChallenge/StartChallenge?cmd=2'
     })
+  },
+  /**导航返回 */
+  onBack() {
+    goPage();
   },
 })

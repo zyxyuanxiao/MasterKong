@@ -1,4 +1,5 @@
 <!--pages/SpecialGame/SpecialGame.wxml-->
+<page-container title="专题赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{false}}">
 <view class="SpecialGame">
   <!--用户-->
   <view class="account">
@@ -167,3 +168,4 @@
     </view>
   </view>
 </view>
+</page-container>

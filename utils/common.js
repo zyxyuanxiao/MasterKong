@@ -117,7 +117,7 @@ export function goPage(type, url) {
             reLanchTo(url)
             break
         default:
-            reLanchTo('/pages/index/index')
+        reLanchTo('/pages/Homepage/Homepage')
             break
     }
 }

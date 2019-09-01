@@ -1,4 +1,6 @@
 <!--StartChallenge.wxml-->
+<page-container title="随机PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{false}}">
+
 <view class="container">
   <!--蓝队-->
   <view class="blueTeam">
@@ -55,3 +57,4 @@
   </view>
 
 </view>
+</page-container>

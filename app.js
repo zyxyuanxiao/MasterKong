@@ -8,7 +8,8 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
+    // 获取顶部高度
+    this.getSystemInfo()
    
     // 获取用户信息
     wx.getSetting({
@@ -33,5 +34,16 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+   getSystemInfo() {
+    util.promisify(wx.getSystemInfo)().then(res => {
+      this.globalData.navHeight = res.statusBarHeight + 48
+      var model = res.model
+      // if (model.search('iPhone X') != -1) {
+      //   this.globalData.isIpx = true
+      // } else {
+      //   this.globalData.isIpx = false
+      // }
+    })
+  },
 })

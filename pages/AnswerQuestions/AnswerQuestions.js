@@ -158,7 +158,7 @@ Page({
       }
     });
 
-    that.countdown();
+    // that.countdown();
 
 
   },
@@ -689,5 +689,10 @@ Page({
       });
       that.answerCountdown(that);
     }, 2500);
-  }
+  },
+     /**导航返回 */
+  onBack() {
+    this.goback();
+    goPage(1, '/pages/StartChallengePre/StartChallengePre');
+  },
 })

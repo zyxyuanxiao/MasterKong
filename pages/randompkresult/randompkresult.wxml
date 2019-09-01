@@ -1,4 +1,5 @@
 <!--contestResults.wxml-->
+<page-container title="随机PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{false}}">
 <view class="container">
   <!-- 比赛结果 -->
   <view class="PKResults">
@@ -57,10 +58,11 @@
 
   <!-- 操作 -->
   <view class="operation">
-    <image src='../../assets/images/contestResults/返回.png' class="returnImg" bindtap="gohome "></image>
-    <view class="challenge" bindtap="randomMatching ">继续挑战</view>
+    <image src='../../assets/images/contestResults/返回.png' class="returnImg" bindtap="goStartChallengePre"></image>
+    <view class="challenge" bindtap="randomMatching">继续挑战</view>
     <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"></image>
     <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
   </view>
 
 </view>
+</page-container>
