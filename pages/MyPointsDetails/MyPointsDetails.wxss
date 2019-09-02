@@ -1,24 +1,51 @@
 /* pages/MyPointsDetails/MyPointsDetails.wxss */
+ 
+/* 锦标赛 */
+.integralTotal{
+  background:rgba(249,109,57,1);
+}
+.GameScores .score{
+  color:#f96d39;
+}
+/* PK赛 */
+.integralTotal{
+  background:rgba(243,59,66,1);
+}
+.GameScores .score{
+color:rgba(243,59,66,1);
+}
+/* 专题赛 */
+.integralTotal{
+  background:rgba(43,157,254,1);
+}
+.GameScores .score{
+  color:rgba(43,157,254,1);
+}
+/* 康师傅之旅 */
+.integralTotal{
+  background:rgba(55,183,183,1);
+}
+.GameScores .score{
+  color:rgba(55,183,183,1);
+}
+
 .integralTotal{
   width:690rpx;
   height:90rpx;
-  background:rgba(249,109,57,1);
   border-radius:46rpx;
   font-size:32rpx;
   font-family:PingFangSC;
   font-weight:500;
   color:rgba(255,255,255,1);
-  margin-top: 60rpx;
+  margin-top: 60rpx;  
   margin-bottom: 30rpx;
+  line-height: 90rpx;
 }
 .GameScores .score{
   height:28rpx;
   font-size:36rpx;
   font-family:PingFangSC;
   font-weight:600;
-  color:rgba(249,109,57,1);
-  margin: 31rpx 30rpx 0rpx 0rpx;
-  margin-left: 200rpx;
   position: absolute;
   right: 60rpx;
 }
