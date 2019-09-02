@@ -25,7 +25,6 @@ Page({
 
   },
   TheTotalListClick: function (e) {
-    console.log('11111')
     this.setData({
       isChecked: true,
       isCheckedTwo:false

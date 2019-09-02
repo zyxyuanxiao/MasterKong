@@ -1,4 +1,4 @@
-/* pages/WrongTopic/WrongTopic.wxss */
+/* pages/AfterRecord/AfterRecord.wxss */
 /* 切换框 */
 .SwitchBox{
   height: 72rpx;
@@ -34,42 +34,7 @@
 /* 问题View */
 .problemView{
   width:690rpx;
-  height:462rpx;
+  height:520rpx;
   background:rgba(47,47,55,1);
-  border-radius:8rpx;
-  margin: 30rpx 30rpx 30rpx 30rpx;
+  border-radius:0rpx 0rpx 8rpx 8rpx;
 }
-.problem{
-  width:612rpx;
-  height:150rpx;
-  font-size:36rpx;
-  font-family:PingFangSC;
-  font-weight:500;
-  color:rgba(255,255,255,1);
-  margin: 39rpx 39rpx 39rpx 39rpx;
-}
-.hr{
-  width:690rpx;
-  height:1rpx;
-  background:rgba(75,75,76,1);
-}
-.correctAnswer{
-  width:576rpx;
-  height:36rpx;
-  font-size:36rpx;
-  font-family:PingFangSC;
-  font-weight:500;
-  color:rgba(31,204,102,1);
-  margin: 39rpx 39rpx 39rpx 39rpx;
-}
-.parsing{
-  width:616rpx;
-  height:80rpx;
-  font-size:28rpx;
-  font-family:PingFangSC;
-  font-weight:400;
-  color:rgba(255,255,255,1);
-  margin: 39rpx 39rpx 0rpx 39rpx;
-  opacity: 0.5;
-}
-

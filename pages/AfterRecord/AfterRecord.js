@@ -1,4 +1,4 @@
-// pages/WrongTopic/WrongTopic.js
+// pages/AfterRecord/AfterRecord.js
 Page({
 
   /**

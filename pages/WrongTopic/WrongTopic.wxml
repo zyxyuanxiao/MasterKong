@@ -1,9 +1,9 @@
 <!--pages/WrongTopic/WrongTopic.wxml-->
 <view class="SwitchBox">
-  <view class="choose">
+  <view  bindtap="TheTotalListClick" class="{{isChecked?'choose':'NotChoose'}}">
     今日答错
   </view>
-  <view class="NotChoose">
+  <view class="{{isCheckedTwo?'choose':'NotChoose'}}" bindtap="TotalListClick">
     全部错题
   </view>
 </view>
@@ -12,6 +12,16 @@
   <view class="problem">
     “食源性疾病”指食品中致病因素进入 人体引起的感染性、中毒性等疾病。以 下举措不能预防食源性疾病的是：
   </view>
+  <view class="hr"></view>
+  <view class="correctAnswer">正确答案：使用冰箱长时间储藏食物</view>
+  <view class="parsing">解析：冰箱只能让食物在一定时间里保持新鲜，并 不能从根源上防止食源性疾病。</view>
+</view>
+
+<view class="problemView">
+  <view class="problem">
+    “食源性疾病”指食品中致病因素进入 人体引起的感染性、中毒性等疾病。以 下举措不能预防食源性疾病的是：
+  </view>
+  <view class="hr"></view>
   <view class="correctAnswer">正确答案：使用冰箱长时间储藏食物</view>
   <view class="parsing">解析：冰箱只能让食物在一定时间里保持新鲜，并 不能从根源上防止食源性疾病。</view>
 </view>
