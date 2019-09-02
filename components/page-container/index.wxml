@@ -9,7 +9,8 @@
     <!-- 这里放你的内容 -->
      <slot></slot>
   </view> 
-  <!--<image wx:if="{{showTopImg}}" class="img-top image" src="../../images/bg-t.png"></image>
+  <image wx:if="{{showTopImg}}" class="img-top image" src="../../images/myback.png"></image>
+  <!--
   <image wx:if="{{showBotImg&&!showBg2}}" class="img-bot image" src="../../images/bg-b.png"></image>
   <image wx:if="{{showBotImg&&showBg2}}" class="img-bot1 image" src="../../images/bg-b1.png"></image> -->
 </view>

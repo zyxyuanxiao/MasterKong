@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/HealthMan/HealthMan",
+    "pages/Homepage/Homepage",
     "pages/WrongTopic/WrongTopic",
     "pages/AfterRecord/AfterRecord",  
     "pages/MyPointsDetails/MyPointsDetails",
@@ -17,13 +19,13 @@
     "pages/ItemMall/ItemMall",
     "pages/questionBankChoice/questionBankChoice",
     "pages/UserInstructions/UserInstructions",
-    "pages/Homepage/Homepage",
+    
     "pages/contestResults/contestResults",
     "pages/StartChallenge-three/StartChallenge-three",
     "pages/StartChallenge-Waiting/StartChallenge-Waiting",
     "pages/ItemMall-two/ItemMall-two",
     "pages/StartChallengePre/StartChallengePre",
-    "pages/HealthMan/HealthMan",
+   
     "pages/rankingList/rankingList",
     "pages/Pprize/Pprize",
     "pages/knowledge/knowledge",

@@ -4,7 +4,7 @@
   <view class="account">
   <!--头像-->
   <view class="Head">
-     <image src='{{aUserInfo.avatarurl}}' class="HeadPortrait"></image>
+     <image src='{{aUserInfo.avatarurl}}' class="HeadPortrait" bindtap="goMyDetails"></image>
   </view>
 
   <!-- 账户 -->

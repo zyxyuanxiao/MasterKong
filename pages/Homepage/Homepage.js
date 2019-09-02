@@ -75,5 +75,8 @@ Page({
     var index=e.currentTarget.dataset.index;
     navTo('/pages/SpecialGame/SpecialGame');
     
+  },
+  goMyDetails: function (e) {
+    navTo('/pages/MyDetails/MyDetails');
   }
 })

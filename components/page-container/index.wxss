@@ -20,7 +20,7 @@
 .page-container .img-top {
   z-index: -2;
   top: 0;
-  height: 600rpx;
+  height: 675rpx;
 }
 
 .page-container .img-bot {
