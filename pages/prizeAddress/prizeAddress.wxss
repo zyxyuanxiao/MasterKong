@@ -1,0 +1,92 @@
+/* pages/prizeAddress/prizeAddress.wxss */
+.prizeAddress{
+  width: 690rpx;
+  height: 1100rpx;
+  background:rgba(47,47,55,1);
+  border-radius:8rpx;
+  margin: 75rpx 30rpx 0rpx 30rpx;
+}
+.prizeAddress image{
+  width: 690rpx;
+  height: 400rpx;  
+}
+.prizeAddress .ThePrize{
+  width:690rpx;
+  height:90rpx;
+  background:rgba(223,55,55,1);
+  font-size:32rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  line-height:90rpx;
+  padding-left: 29rpx;
+}
+.prizeAddress .AwardMade{
+  width:420rpx;
+  height:40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(238,176,50,1);
+  margin-left: 29rpx; 
+  margin-top: 35rpx;
+}
+.prizeAddress .AwardTime{
+  width:420rpx;
+  height:40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(238,176,50,1);
+  margin-left: 29rpx; 
+}
+.GetWay{
+  height:28rpx;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  margin: 71rpx 0rpx 20rpx 29rpx; 
+}
+.determine{
+  height:66rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(141,140,140,1);
+  margin-left: 29rpx; 
+}
+.addressText{
+  height:24rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(238,176,50,1);
+  margin: 65rpx 0rpx 61rpx 65rpx;
+}
+.goodsView{
+  display: flex;
+}
+.goodsView .AddressButton{
+  width:300rpx;
+  height:80rpx;
+  background:rgba(31,204,102,1);
+  border-radius:40rpx;
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  line-height:80rpx;
+  text-align: center;
+  margin-left: 29rpx;
+}
+.goodsView .postersImg{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 139rpx;
+}
+.goodsView .WeChatImg{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
+}

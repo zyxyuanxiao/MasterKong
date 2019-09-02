@@ -1,8 +1,10 @@
 {
   "pages": [
-    "pages/rankingList/rankingList",
-    "pages/rankingList-two/rankingList",
+    "pages/prizeAddress/prizeAddress",
+    "pages/Pprize/Pprize",
     "pages/prop/prop",
+    "pages/rankingList-two/rankingList",
+    "pages/rankingList/rankingList",
     "pages/HasPrize/HasPrize",
     "pages/MyDetails/MyDetails",
     "pages/WrongTopic/WrongTopic",
@@ -28,7 +30,6 @@
     "pages/ItemMall-two/ItemMall-two",
     "pages/StartChallengePre/StartChallengePre",
     "pages/HealthMan/HealthMan",
-    "pages/Pprize/Pprize",
     "pages/knowledge/knowledge",
     "pages/resultMatch-two/resultMatch-two",
     "pages/SpecialGame-Two/SpecialGame-Two",

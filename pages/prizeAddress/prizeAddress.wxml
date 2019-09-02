@@ -1,0 +1,15 @@
+<!--pages/prizeAddress/prizeAddress.wxml-->
+<view class="prizeAddress">
+    <image src="../../assets/images/notice/图文@2x.png"></image>
+    <view class="ThePrize">恭喜您获得 iphone x 一台</view>
+    <view class="AwardMade">获奖事由：2019年7月赛季第一名</view>
+    <view class="AwardTime">获奖时间：2019-07-20 15:33:12</view>
+    <view class="GetWay">领取方式：快递</view>
+    <view class="determine">请确认收货地址信息是否正确，我们会在20个工作日内邮寄 给你，发货后发消息通知你。</view>
+    <view class="addressText">您还没添加收货地址，请前去添加</view>
+    <view class="goodsView">
+      <view class="ShippingAddress" class="AddressButton">前往收货地址</view>
+      <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"></image>
+      <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
+    </view>
+</view>
