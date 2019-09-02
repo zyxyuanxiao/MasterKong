@@ -1,0 +1,60 @@
+<!--StartChallenge.wxml-->
+<page-container title="随机PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{false}}">
+
+<view class="container">
+  <!--蓝队-->
+  <view class="blueTeam">
+    <view class="people">
+      <image src='{{aUserInfo.avatarurl}}' class="HeadPortrait"></image>
+      <view class="name">{{aUserInfo.name}}</view>
+      <view class="level">Lv {{aUserInfo.levelno}}</view>
+      <view class="TheLabel">{{aUserInfo.levelname}}</view>
+    </view>
+    <!-- <view class="people">
+    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <view class="name">炙热的天空</view>
+    <view class="level">Lv 23</view>
+    <view class="TheLabel">行走百科</view>
+</view>
+<view class="people">
+    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <view class="name">炙热的天空</view>
+    <view class="level">Lv 23</view>
+    <view class="TheLabel">行走百科</view>
+</view> -->
+  </view>
+  <!--VS-->
+  <view class="vsView">
+    <view class="VS">VS</view>
+  </view>
+  <!--黄队-->
+  <view class="yellowTeam">
+    <view class="people">
+      <image src='{{awayUserList[0].avatarurl}}' class="HeadPortrait"></image>
+      <view class="name">{{awayUserList[0].name}}</view>
+      <block wx:if="{{awayUserList.length ==0}}">
+        <view class="level"></view>
+      </block>
+      <block wx:if="{{awayUserList.length >0}}">
+        <view class="level">Lv {{awayUserList[0].levelno}}</view>
+      </block>
+      <block wx:if="{{awayUserList.length >0}}">
+        <view class="TheLabel">{{awayUserList[0].levelname}}</view>
+      </block>
+    </view>
+    <!-- <view class="people">
+    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <view class="name">炙热的天空</view>
+    <view class="level">Lv 23</view>
+    <view class="TheLabel">行走百科</view>
+</view>
+<view class="people">
+    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <view class="name">炙热的天空</view>
+    <view class="level">Lv 23</view>
+    <view class="TheLabel">行走百科</view>
+</view> -->
+  </view>
+
+</view>
+</page-container>

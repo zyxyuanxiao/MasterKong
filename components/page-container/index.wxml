@@ -1,0 +1,16 @@
+<view class="page-container {{custom?'defind-container': ''}}">
+  <!-- 导航部分 -->
+  <view style="height: {{navH}}px;" class="header">
+    <image wx:if="{{showBack}}" bindtap="navBack" class="img" src="../../images/back-icon.png" mode="left"></image>
+    <view class="title {{textLeft?'text-left':''}}">{{title}}</view>
+  </view>
+  <!-- 内容部分 -->
+  <view class='page-content' style='height:calc(100vh - {{navH}}px)'>
+    <!-- 这里放你的内容 -->
+     <slot></slot>
+  </view> 
+  <image wx:if="{{showTopImg}}" class="img-top image" src="../../images/myback.png"></image>
+  <!--
+  <image wx:if="{{showBotImg&&!showBg2}}" class="img-bot image" src="../../images/bg-b.png"></image>
+  <image wx:if="{{showBotImg&&showBg2}}" class="img-bot1 image" src="../../images/bg-b1.png"></image> -->
+</view>

@@ -1,94 +1,96 @@
-<view class="container">
-  <view class='offlinePK'>线下PK</view>
-  <view class='pkcontainer'>
-    <view class='randomMatching'>
-      <view class="randomMatchingbtn">
-        随机匹配
+<page-container title="开始挑战" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{false}}">
+  <view class="container">
+    <view class='offlinePK'>线下PK</view>
+    <view class='pkcontainer'>
+      <view class='randomMatching'>
+        <view class="randomMatchingbtn" bindtap="randomMatching">
+          随机匹配
+        </view>
+        <view class="RandomBattle ">
+          随机跟网友对战
+        </view>
       </view>
-      <view class="RandomBattle ">
-        随机跟网友对战
+      <view class='friendMatching'>
+        <view class="friendMatchingbtn" bindtap="friendMatching">
+          好友对战
+        </view>
+        <view class="InviteFriends">
+          邀请好友作战
+        </view>
       </view>
     </view>
-    <view class='friendMatching'>
-      <view class="friendMatchingbtn">
-        好友对战
+    <view class='championship'>竞标赛</view>
+    <view class="championshipo">
+      <view class="gameNameView">
+        <view class="gameName">
+          八点标准锦标赛 即将开始
+        </view>
+        <view class="medal">
+          <image src='../../assets/images/StartChallengePre/标准赛标志@2x.png' class="medalImg"></image>
+        </view>
       </view>
-      <view class="InviteFriends">
-        邀请好友作战
-      </view>
-    </view>
-  </view>
-  <view class='championship'>竞标赛</view>
-  <view class="championshipo">
-  <view class="gameNameView">
-  <view class="gameName">
-  八点标准锦标赛 即将开始
-  </view>
-  <view class="medal">
-  <image src='../../assets/images/StartChallengePre/标准赛标志@2x.png' class="medalImg"></image>
-  </view>
-  </view>
-  <view class="GameC">
-     <view class="GameTime">
-    20:10:52
-    </view>
-    <!-- <view class="ClickEntry">
+      <view class="GameC">
+        <view class="GameTime">
+          20:10:52
+        </view>
+        <!-- <view class="ClickEntry">
     点击参赛
     </view> -->
-    <view class="ClickEntry">
-    进行中…
+        <view class="ClickEntry">
+          进行中…
+        </view>
+      </view>
+
+    </view>
+    <view class="championshipNear">
+      <view class="gameName">
+        郑州场锦标赛 即将开始
+      </view>
+      <view class="GameC">
+        <view class="GameTime">
+          16:12:55
+        </view>
+        <view class="ClickEntry">
+          点击参赛
+        </view>
+      </view>
+    </view>
+    <view class="championshipSignup">
+      <view class="gameNameView">
+        <view class="gameName">
+          九点标准竞标赛
+        </view>
+        <view class="medal">
+          <image src='../../assets/images/StartChallengePre/标准赛标志@2x.png' class="medalImg"></image>
+        </view>
+      </view>
+      <view class="instructions">
+        每周晚上8点，所有人可参加，奖励丰厚
+      </view>
+      <view class="GameCSS">
+        <view class="dateGameTime">
+          2019-12-23 20:00
+        </view>
+        <view class="ClickEntry">
+          点击参赛
+        </view>
+      </view>
+    </view>
+    <view class="championshipNopre">
+      <view class="gameName">
+        天津专场赛
+      </view>
+      <view class="instructions">
+        仅限天津区人员参与
+      </view>
+      <view class="GameCSN">
+        <view class="dateGameTime">
+          2019-12-23 20:00
+        </view>
+        <view class="ClickEntry">
+          无权限
+        </view>
+      </view>
     </view>
   </view>
- 
-  </view>
-  <view class="championshipNear">
-  <view class="gameName">
-  郑州场锦标赛 即将开始
-  </view>
-  <view class="GameC">
-     <view class="GameTime">
-    16:12:55
-    </view>
-    <view class="ClickEntry">
-    点击参赛
-    </view>
-  </view>
-  </view>
-  <view class="championshipSignup">
-  <view class="gameNameView">
-  <view class="gameName">
-  九点标准竞标赛
-  </view>
-  <view class="medal">
-  <image src='../../assets/images/StartChallengePre/标准赛标志@2x.png' class="medalImg"></image>
-  </view>
-  </view>
-  <view class="instructions">
-  每周晚上8点，所有人可参加，奖励丰厚
-  </view>
-  <view class="GameCSS">
-     <view class="dateGameTime">
-    2019-12-23 20:00
-    </view>
-    <view class="ClickEntry">
-    点击参赛
-    </view>
-  </view>
-  </view>
-  <view class="championshipNopre">
-  <view class="gameName">
-  天津专场赛
-  </view>
-<view class="instructions">
-  仅限天津区人员参与
-  </view>
-  <view class="GameCSN">
-     <view class="dateGameTime">
-    2019-12-23 20:00
-    </view>
-    <view class="ClickEntry">
-    无权限
-    </view>
-  </view>
-  </view>
-</view>
+</page-container>

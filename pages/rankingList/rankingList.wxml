@@ -1,251 +1,98 @@
 <!--index.wxml-->
 <view class="container">
-    <view class="ranking">
+  <view class="ranking">
     <view class="rankOne">
       <view bindtap="TheTotalListClick" class="{{isChecked?'OnTheList':'TheTotalList'}}">
         月榜
       </view>
-      <view  class="{{isCheckedTwo?'OnTheList':'TheTotalList'}}" bindtap="TotalListClick">
+      <view class="{{isCheckedTwo?'OnTheList':'TheTotalList'}}" bindtap="TotalListClick">
         总榜
       </view>
     </view>
-    </view>
-    <!--排行集合-->
-    <view class="list">
-      <!--第一名-->
-      <view class="SingleOut">
-        <image src='../../assets/images/rankingList/排行1@2x.png' mode='widthFix' class="rankingImg"></image>
-        <view class="HeadPortraitView">
-          <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
+  </view>
+  <!--排行集合-->
+  <scroll-view class="list">
+    <!--第一名-->
+    <view class="SingleOut" wx:for="{{chartsData}}" wx:for-index="idx" wx:for-item="item">
+      <image wx:if="{{idx ==0}}" src='../../assets/images/rankingList/排行1@2x.png' mode='widthFix' class="rankingImg"></image>
+
+      <image wx:if="{{idx ==1}}" src='../../assets/images/rankingList/排行2@2x.png' mode='widthFix' class="rankingImg"></image>
+
+      <image wx:if="{{idx ==2}}" src='../../assets/images/rankingList/排行3@2x.png' mode='widthFix' class="rankingImg"></image>
+
+      <view wx:if="{{idx >2}}" class="RankingNumber">{{idx+1}}</view>
+      <view class="HeadPortraitView">
+        <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
+      </view>
+      <!-- 账户 -->
+      <view class="information">
+        <view class="name">
+          <text>{{item.name}}</text>
         </view>
-        <!-- 账户 -->
-        <view class="information">
-          <view class="name">
-              <text>炽热的天空</text>
+        <view class="dengji">
+          <view class="dengjiOne">
+            <text class="level">Lv {{item.levelno}}</text>
           </view>
-          <view class="dengji">
-            <view class="dengjiOne">
-                <text class="level">Lv 23</text>
-            </view>
-            <view class="first">
-                <view class="Dan">行走百科</view>
-            </view>
-            <view class="score">
-                <text>145678</text>
-            </view>
+          <view class="first">
+            <view class="Dan">{{item.levelname}}</view>
+          </view>
+          <view class="score">
+            <text>{{item.score}}</text>
           </view>
         </view>
       </view>
-      <!-- <view class="HorizontalLine"></view> -->
-
-      <!--第二名-->
-      <view class="SingleOut">
-      <image src='../../assets/images/rankingList/排行2@2x.png' mode='widthFix' class="rankingImg"></image>
-      <view class="HeadPortraitView">
-          <image src='../../assets/images/knowledge/粉色知识背景@2x.png'  class="HeadPortrait"></image>
-        </view>
-
-        <!-- 账户 -->
-        <view class="information">
-          <view class="jies name">
-              <text>炽热的天空</text>
-          </view>
-          <view class="jies dengji">
-            <view class="dengjiOne">
-                <text class="level">Lv 23</text>
-            </view>
-            <view class="Second">
-                <view class="Dan">行走百科</view>
-            </view>
-            <view class="score">
-                <text>140000</text>
-            </view>
-          </view>
-        </view>
-      </view>
-      <!-- <view class="HorizontalLine"></view> -->
-      <!--第三名-->
-      <view class="SingleOut">
-      <image src='../../assets/images/rankingList/排行3@2x.png' mode='widthFix' class="rankingImg"></image>
-      <view class="HeadPortraitView">
-          <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
-        </view>
-
-        <!-- 账户 -->
-        <view class="information">
-          <view class="jies name">
-              <text>炽热的天空</text>
-          </view>
-          <view class="jies dengji">
-            <view class="dengjiOne">
-                <text class="level">Lv 23</text>
-            </view>
-            <view class="third">
-                <view class="Dan">行走百科</view>
-            </view>
-            <view class="score">
-                <text>19000</text>
-            </view>
-          </view>
-        </view>
-        </view>
-     <!-- <view class="HorizontalLine"></view> -->
-      <!--第四名-->
-      <view class="SingleOut">
-      <view class="RankingNumber">4</view>
-      <view class="HeadPortraitView">
-          <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
-        </view>
-
-        <!-- 账户 -->
-        <view class="information">
-          <view class="jies name">
-              <text>炽热的天空</text>
-          </view>
-          <view class="jies dengji">
-            <view class="dengjiOne">
-                <text class="level">Lv 23</text>
-            </view>
-            <view class="third">
-                <view class="Dan">行走百科</view>
-            </view>
-            <view class="score">
-                <text class="RankingScore">19000</text>
-            </view>
-          </view>
-        </view>
-        </view>
-     <!-- <view class="HorizontalLine"></view> -->
-
-
-    <!--其他-->
-      <view class="SingleOut">
-      <view class="RankingNumber">5</view>
-      <view class="HeadPortraitView">
-          <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
-        </view>
-
-        <!-- 账户 -->
-        <view class="information">
-          <view class="jies name">
-              <text>炽热的天空</text>
-          </view>
-          <view class="jies dengji">
-            <view class="dengjiOne">
-                <text class="level">Lv 23</text>
-            </view>
-            <view class="other">
-                <view class="Dan">行走百科</view>
-            </view>
-            <view class="score">
-                <text class="RankingScore">19000</text>
-            </view>
-          </view>
-        </view>
-        </view>
-     <!-- <view class="HorizontalLine"></view> -->
-
-    
-    <!--其他-->
-      <view class="SingleOut">
-      <view class="RankingNumber">6</view>
-      <view class="HeadPortraitView">
-          <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
-        </view>
-
-        <!-- 账户 -->
-        <view class="information">
-          <view class="jies name">
-              <text>炽热的天空</text>
-          </view>
-          <view class="jies dengji">
-            <view class="dengjiOne">
-                <text class="level">Lv 23</text>
-            </view>
-            <view class="other">
-                <view class="Dan">行走百科</view>
-            </view>
-            <view class="score">
-                <text class="RankingScore">19000</text>
-            </view>
-          </view>
-        </view>
-        </view>
-     <!-- <view class="HorizontalLine"></view> -->
-
-    <!--其他-->
-      <view class="SingleOut">
-      <view class="RankingNumber">7</view>
-      <view class="HeadPortraitView">
-          <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
-        </view>
-
-        <!-- 账户 -->
-        <view class="information">
-          <view class="jies name">
-              <text>炽热的天空</text>
-          </view>
-          <view class="jies dengji">
-            <view class="dengjiOne">
-                <text class="level">Lv 23</text>
-            </view>
-            <view class="other">
-                <view class="Dan">行走百科</view>
-            </view>
-            <view class="score">
-                <text class="RankingScore">19000</text>
-            </view>
-          </view>
-        </view>
-        </view>
-     <!-- <view class="HorizontalLine"></view> -->
-
-
-
-
     </view>
+  </scroll-view>
+    <!-- <view class="HorizontalLine"></view> -->
     <!--当前用户排行-->
     <view class="MyRank">
-    <view class="MyRanking">
-      <view class="MyRankingText">我的排行</view>
-      <view class="MyRankingShare">
-        <image src='../../assets/images/rankingList/分享排名@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
-        <view class="MyRankingShareText">分享排名</view>
+      <view class="MyRanking">
+        <view class="MyRankingText">我的排行</view>
+        <view class="MyRankingShare">
+          <image src='../../assets/images/rankingList/分享排名@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
+          <view class="MyRankingShareText">分享排名</view>
+        </view>
       </view>
-    </view>
 
-    <!-- <view class="HorizontalLine"></view> -->
+      <!-- <view class="HorizontalLine"></view> -->
 
-    <!--用户-->
-        <view class="SingleOutMy">
-        <image src='../../assets/images/rankingList/排行1@2x.png' mode='widthFix' class="rankingImg"></image>
+      <!--用户-->
+      <view class="SingleOutMy">
+      <image wx:if="{{myChart.ranking ==0}}" src='../../assets/images/rankingList/排行1@2x.png' mode='widthFix' class="rankingImg"></image>
+
+      <image wx:if="{{myChart.ranking ==1}}" src='../../assets/images/rankingList/排行2@2x.png' mode='widthFix' class="rankingImg"></image>
+
+      <image wx:if="{{myChart.ranking ==2}}" src='../../assets/images/rankingList/排行3@2x.png' mode='widthFix' class="rankingImg"></image>
+
+      <view wx:if="{{myChart.ranking >2}}" class="RankingNumber">{{myChart.ranking}}</view>
+      
         <view class="HeadPortraitView">
           <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
         </view>
         <!-- 账户 -->
-        
+
         <view class="information">
           <view class="name">
-              <text>炽热的天空</text>
-              <view class="score">
-                <text>得分</text>
-              </view>
+            <text>{{myChart.name}}</text>
+            <view class="score">
+              <text>得分</text>
+            </view>
           </view>
 
           <view class="dengji">
             <view class="dengjiOne">
-                <text class="level">Lv 23</text>
+              <text class="level">Lv {{myChart.levelno}}</text>
             </view>
             <view class="first">
-                <view class="Dan">行走百科</view>
+              <view class="Dan">{{myChart.levelname}}</view>
             </view>
             <view class="score">
-                <text>145678</text>
+              <text>{{myChart.score}}</text>
             </view>
           </view>
         </view>
       </view>
-      
+
     </view>
 
-</view>
+  </view>

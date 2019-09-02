@@ -130,7 +130,7 @@ page{
   border-radius: 250rpx;
   margin: 0rpx 244rpx 74rpx 244rpx;
 }
-.number{
+.prenumber{
   font-size:100rpx;
   font-weight:500;
   color:rgba(31,204,102,1);
@@ -203,22 +203,7 @@ page{
   font-weight:500;
 }
 
-.totalIntegral{
-  width:192rpx;
-  height:134rpx;
-  font-size:36rpx;
-  font-weight:500;
-  color:rgba(51,51,51,1);
-  line-height:50rpx;
-}
-.HeSucceeds{
-  width:144rpx;
-  height:134rpx;
-  font-size:36rpx;
-  font-weight:500;
-  color:rgba(51,51,51,1);
-  line-height:50rpx;
-}
+
 .integral text{
   font-size: 24rpx;
   font-family:PingFangSC;
@@ -258,4 +243,213 @@ page{
   display: block;
 }
 
+.choose{
+  position: fixed;
+  margin-top: 320rpx;
+}
+.HaveChoice{
+  font-family:Microsoft YaHei;
+  width:630rpx;
+  height:100rpx;
+  background:rgba(233,233,233,1);
+  border-radius:56rpx;
+  margin: 30rpx 29rpx 0rpx 29rpx;
+  font-size:36rpx;
+  color:rgba(51,51,51,1);
+  font-weight:550;
+  line-height: 100rpx;
+}
+.choose .text{
+  width:630rpx;
+  text-align: center;
+}
+
+.startQuestionList{
+  width:688rpx;
+  height:900rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 2rpx 10rpx 0rpx rgba(0,0,0,0.1);
+  border-radius:20rpx;
+  margin: 210rpx 32rpx 0rpx 30rpx;
+  margin-top: 90rpx;
+  color:rgba(51,51,51,1);
+}
+.startQuestionList image{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+}
+
+.proportion{
+  display: flex;
+  position: fixed;
+  margin: 30rpx 0rpx 0rpx 31rpx;
+  z-index: 99;
+}
+.blank{
+  height: 230rpx;
+}
+.nowProportion{
+  color:rgba(57,172,128,1);
+}
+.countdownSeconds{
+  width:160rpx;
+  height:160rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 2rpx 14rpx 0rpx rgba(0,0,0,0.5);
+  border:10rpx solid rgba(31,204,102,1);
+  border-radius: 150rpx;
+  margin: -80rpx 264rpx 00rpx 264rpx;
+  position:fixed;
+}
+.answernumber{
+  font-size:60rpx;
+  font-family:Microsoft YaHei;
+  color:rgba(51,51,51,1);
+  line-height: 160rpx;
+  text-align: center;
+}
+.message{
+  display: flex;
+  position: fixed;
+  margin: 34rpx 33rpx 0rpx 617rpx;
+  z-index: 99;
+}
+#messageImg{
+  width: 38rpx;
+  height: 31rpx;
+  border-radius: 0rpx;
+}
+.problemText{
+  width:614rpx;
+  height:160rpx;
+  font-size:36rpx;
+  font-family:Microsoft YaHei;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  position: fixed;
+  margin: 136rpx 40rpx 24rpx 34rpx;
+}
+.wrong{
+  font-family:Microsoft YaHei;
+  width:630rpx;
+  height:100rpx;
+  background:rgba(240,69,69,1);
+  border-radius:56rpx;
+  margin: 30rpx 29rpx 0rpx 29rpx;
+  font-size:36rpx;
+  color:rgba(255,255,255,1);
+  font-weight:500;
+  display: flex;
+  line-height: 100rpx;
+}
+.Selected{
+  font-family:Microsoft YaHei;
+  width:630rpx;
+  height:100rpx;
+  background:rgba(31,204,102,1);
+  border-radius:56rpx;
+  margin: 30rpx 29rpx 0rpx 29rpx;
+  font-size:36rpx;
+  color:rgba(255,255,255,1);
+  font-weight:500;
+  display: flex;
+  line-height: 100rpx;
+}
+.safetyCompetition{
+  display: flex;
+  position: fixed;
+  margin: 30rpx 0rpx 0rpx 490rpx;
+  z-index: 99;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(194,194,194,1);
+  line-height:33rpx;
+}
+.BonusPoints{
+  width:87rpx;
+  height:50rpx;
+  font-size:36rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  line-height:50rpx;
+  margin: 0rpx 33rpx 0rpx 630rpx;
+}
+/* 弹出层里面的文字 */
+.drawer_screen {
+  width: 100%;  
+  height: 100%;  
+  position: fixed;  
+  top: 0;  
+  left: 0;  
+  z-index: 1000;  
+  background: #26262D;
+  overflow: hidden;  
+  opacity: 0.5;
+} 
+/* 弹出层 */
+.modalDlg{
+    width:560rpx;
+    height:350rpx;
+    background:rgba(255,255,255,1);
+    position: fixed;
+    top: 555rpx;
+    left: 94rpx;
+    right: 96rpx;
+    z-index: 9999;
+    margin: 0 auto;
+    border-radius:8rpx;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+}
+.resurrectionText{
+  width:396rpx;
+  height:36rpx;
+  font-size:36rpx;
+  font-family:Microsoft YaHei;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  line-height:36rpx;
+  margin: 60rpx 82rpx 0rpx 82rpx;
+}
+.resurrectionCard{
+  width:384rpx;
+  height:24rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:24rpx;
+  margin: 30rpx 88rpx 60rpx 88rpx;
+}
+.buttonOne{
+  display: flex;
+}
+.cancel{
+  width:205rpx;
+  height:80rpx;
+  border-radius:40rpx;
+  border:2rpx solid rgba(129,129,129,1);
+  line-height: 80rpx;
+  text-align: center;
+  font-size:32rpx;
+  font-family:PingFangSC;
+  color:rgba(141,140,140,1);
+  margin-left: 60rpx;
+}
+.share{
+  width:205rpx;
+  height:80rpx;
+  background:rgba(31,204,102,1);
+  border-radius:40rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size:32rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  margin-left: 30rpx;
+}
 

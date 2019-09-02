@@ -36,7 +36,9 @@
     "pages/StartChallenge-two/StartChallenge-two",
     "pages/PKgame/PKgame",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/randomPKgame/randomPKgame",
+    "pages/randompkresult/randompkresult"
   ],
   "window": {
     "backgroundTextStyle": "light",

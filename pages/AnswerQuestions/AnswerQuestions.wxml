@@ -1,68 +1,233 @@
 <!--pages/AnswerQuestions/AnswerQuestions.wxml-->
-<view class="AnswerQuestions">
-<!--PK的人--->
+<page-container title="随机PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{false}}">
+<scroll-view class="AnswerQuestions">
+  <!--PK的人--->
   <view class="PKPerson">
-      <view  class="Blues">
-        <view class="BluesPerson">
-          <view class="score">2400</view>
-          <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
-          </view>
+    <view class="Blues">
+      <view class="BluesPerson">
+        <!-- <view class="score" wx:if="{{aUserInfo.openid == matchIngSuccess.myUser.openid}}">{{kClientAnswerDto.score}}</view> -->
+        <view class="score">{{matchIngSuccess.myUser.score}}</view>
+        <view class="Imgportrait">
+          <image class='avatarimg' src='{{matchIngSuccess.myUser.avatarurl}}'></image>
         </view>
-        <view class="BluesPerson">
-          <view class="score">9000</view>
-          <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
-          </view>
-        </view>
-        <view class="BluesPerson">
-          <view class="score">9000</view>
-          <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
-          </view>
-        </view>
-      </view> 
-      <view class="Vs-view">
-        <image src='../../assets/images/StartChallenge/VS@2x.png' class="VsImage"></image>
       </view>
-      <view class="yellow-view"> 
-      <view  class="yellow">
-        <view class="yellowPerson">
+      <block wx:for="{{matchIngSuccess.homeUserList}}">
+        <view class="BluesPerson">
+          <!-- <view class="score" wx:if="{{aUserInfo.openid == item.openid}}">{{kClientAnswerDto.score}}</view> -->
+           <view class="score">{{item.score}}</view>
           <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png' ></image>
+            <image class='avatarimg' src='{{item.avatarurl}}'></image>
           </view>
-          <view class="score">2400</view>
         </view>
-        <view class="yellowPerson">
+      </block>
+      <!-- <view class="BluesPerson">
+        <view class="score">9000</view>
+        <view class="Imgportrait">
+          <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+        </view>
+      </view> -->
+    </view>
+    <view class="Vs-view ">
+      <image src='../../assets/images/StartChallenge/VS@2x.png' class="VsImage" hidden="{{!showView}}"></image>
+    </view>
+    <view class="yellow-view">
+      <view class="yellow">
+        <block wx:for="{{matchIngSuccess.awayUserList}}">
+          <view class="yellowPerson">
+            <view class="Imgportrait">
+              <image src='{{item.avatarurl}}'></image>
+            </view>
+            <!-- <view class="score" wx:if="{{aUserInfo.openid == item.openid}}">{{kClientAnswerDto.score}}</view> -->
+            <view class="score">{{item.score}}</view>
+          </view>
+        </block>
+        <!-- <view class="yellowPerson">
           <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png' ></image>
+            <image src='../../assets/images/Homepage/专题6@2x.png'></image>
           </view>
           <view class="score">1800</view>
         </view>
         <view class="yellowPerson">
           <view class="Imgportrait">
-              <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+            <image src='../../assets/images/Homepage/专题6@2x.png'></image>
           </view>
           <view class="score">900</view>
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <!--总得分最高的队伍获胜--->
+  <view class="totalText" wx:if="{{showView}}" hidden="{{!showView}}">
+    总得分最高的队伍获胜
+  </view>
+  <!--倒计时--->
+  <view class="readyQuestionList" wx:if="{{showView}}" hidden="{{!showView}}">
+    <view class="textOne">
+      线下PK赛
+    </view>
+    <view class="countdown">
+      <view class="number">{{prepariCountdown}}</view>
+    </view>
+    <view class="PleasePrepare">
+      请准备好
+    </view>
+  </view>
+  <!--题目--->
+  <view class="QuestionList" wx:if="{{!showView}}" hidden="{{showView}}">
+    <!--题目比例--->
+    <view class="proportion">
+      <view class="nowProportion">{{gamenumber +1}}</view>
+      /{{questions.length}}
+    </view>
+    <!--倒计时--->
+    <view class="countdownSeconds">
+      <view class="number">
+        {{answerCountdown}}S
+      </view>
+    </view>
+    <!--消息图片--->
+    <view class="message">
+      <image src='../../assets/images/AnswerQuestions/快捷短语@2x.png' id="messageImg" bindtap="showMessageDialog" data-statu="open"></image>
+    </view>
+    <!--问题text--->
+    <view class="problemText">
+      {{questions[gamenumber].question}}
+    </view>
+
+    <!--问题text--->
+    <view class="choose">
+      <view class="{{answerA}}" bindtap="selectChoose" data-answer='A'>
+      <!--左边3个人-->
+      <!-- hidden="{{answerA ==choiceClass[0]}}" -->
+        <view class="ImgportraitOne" hidden="{{matchIngSuccess.myUser.useranswer !='A' || answerA == choiceClass[0]}}">
+          <image src='{{matchIngSuccess.myUser.avatarurl}}'></image>
+        </view>
+        <block wx:for="{{matchIngSuccess.homeUserList}}" wx:for-index="idx" wx:for-item="item">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+        </block>
+        <view class="text">{{questions[gamenumber].answerA}}</view>
+        <!--右边3个人-->
+        <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+        </block>
+      </view>
+      
+      <view class="{{answerB}}" bindtap="selectChoose" data-answer='B'>
+        <view class="ImgportraitOne" hidden="{{matchIngSuccess.myUser.useranswer !='B' || answerB == choiceClass[0] }}">
+          <image src='{{matchIngSuccess.myUser.avatarurl}}'></image>
+        </view>
+        <block wx:for="{{matchIngSuccess.homeUserList}}" wx:for-index="idx" wx:for-item="item">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+        </block>
+        <view class="text">{{questions[gamenumber].answerB}}</view>
+        <!--右边3个人-->
+        <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+        </block>
+      </view>
+
+      <view class="{{answerC}}" bindtap="selectChoose" data-answer='C'>
+        <view class="ImgportraitOne" hidden="{{matchIngSuccess.myUser.useranswer !='C' || answerC == choiceClass[0]}}">
+          <image src='{{matchIngSuccess.myUser.avatarurl}}'></image>
+        </view>
+        <block wx:for="{{matchIngSuccess.homeUserList}}" wx:for-index="idx" wx:for-item="item">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+        </block>
+        <view class="text">{{questions[gamenumber].answerC}}</view>
+        <!--右边3个人-->
+        <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+        </block>
+      </view>
+
+      <view class="{{answerD}}" bindtap="selectChoose" data-answer='D'>
+        <view class="ImgportraitOne"  hidden="{{matchIngSuccess.myUser.useranswer !='D' || answerD == choiceClass[0]}}">
+          <image src='{{matchIngSuccess.myUser.avatarurl}}'></image>
+        </view>
+        <block wx:for="{{matchIngSuccess.homeUserList}}" wx:for-index="idx" wx:for-item="item">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitOneTwo" hidden="{{item.useranswer  !='D' || answerD == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 1 }}" class="ImgportraitOneThree" hidden="{{item.useranswer  !='D' || answerD == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+        </block>
+        <view class="text">{{questions[gamenumber].answerD}}</view>
+        <!--右边3个人-->
+        <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
+          <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='D' || answerD == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 1 }}" class="ImgportraitTwoTwo" hidden="{{item.useranswer !='D' || answerD == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+          <view wx:if="{{idx == 2 }}" class="ImgportraitTwoThree" hidden="{{item.useranswer !='D' || answerD == choiceClass[0]}}">
+            <image src='{{item.avatarurl}}'></image>
+          </view>
+        </block>
+      </view>
+
+    </view>
+
+    <!--弹窗-->
+    <view class="modalDlg" wx:if="{{showModal}}">
+      <view class="QuickPhrases">
+        快捷短语
+        <image src='../../assets/images/knowledge/x@2x.png' mode='widthFix' class="noticeTheprize" bindtap="ok"></image>
+      </view>
+      <view class="phraseDetails">
+        <view class="psOne">
+          <view class="DetailsOne dt">你太厉害了！</view>
+          <view class="DetailsTwo dt">你弱爆了！</view>
+        </view>
+        <view class="psOne">
+          <view class="DetailsThree dt">无敌了，还有谁！</view>
+          <view class="DetailsFour dt">无敌是多么寂寞！</view>
+        </view>
+        <view class="psOne">
+          <view class="DetailsFive dt">不要走，我们决战到天荒地老～</view>
         </view>
       </view>
-      </view>
+    </view>
   </view>
-<!--总得分最高的队伍获胜--->
-<view class="totalText">
-总得分最高的队伍获胜
-</view>
-<!--倒计时--->
-<view class="QuestionList">
-  <view class="textOne">
-线下PK赛
-  </view>
-  <view class="countdown">
-    <view class="number">3</view>
-  </view>
-  <view class="PleasePrepare">
-    请准备好
-  </view>
-</view>
-
-</view>
+</scroll-view> 
+</page-container>

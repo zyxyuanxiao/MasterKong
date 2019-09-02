@@ -4,36 +4,36 @@
   <view class="account">
   <!--头像-->
   <view class="Head">
-     <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+     <image src='{{aUserInfo.avatarurl}}' class="HeadPortrait" bindtap="goMyDetails"></image>
   </view>
 
   <!-- 账户 -->
   <view class="information">
   <view class="jies name">
-     <text class="zt">炽热的天空</text>
+     <text class="zt">{{aUserInfo.name}}</text>
   </view>
   <view class="jies dengji">
     <view class="dengjiOne">
-      <text class="zt level">Lv 23</text>
+      <text class="zt level">Lv {{aUserInfo.levelno}}</text>
     </view>
      <view class="baike">
-        <view class="zt Dan">行走百科</view>
+        <view class="zt Dan">{{aUserInfo.levelname}}</view>
      </view>
   </view>
   </view>
 
   <!-- 排行 -->
   <view  class="tupian">
-    <view class="tupianOne">
+    <view class="tupianOne" bindtap="goRankView">
       <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="ranking"></image>
     </view>
-    <view class="paihang">
+    <view class="paihang" >
         <text class="zt">排行</text>
      </view>
   </view>
   
   <!-- 更多 -->
-  <view  class="tupian">
+  <view  class="tupian" bindtap="moreMenuview">
     <view  class="tupiantwo">
       <image src='../../assets/images/Homepage/更多@2x.png' mode='widthFix'  class="More"></image>
     </view>
@@ -72,7 +72,7 @@
             <view class="game">专题赛</view>
             <view class="iTitle">{{item.theTitle}}</view>
             <view class="iText">{{item.text}}</view>
-            <view class="challenge">去挑战</view>
+            <view class="challenge" data-index="{{index}}" bindtap="goSpecialGame">去挑战</view>
             <!-- <button> default </button> -->
             </view>
           </swiper-item>

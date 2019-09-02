@@ -5,9 +5,9 @@
     <view class="KongText">
       康师傅答人
     </view>
-    <view class="Kongbutton">
-      授权账户
-    </view>
+    <!-- <view class="Kongbutton"> -->
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" lang="zh_CN" class="Kongbutton" bindgetuserinfo="getUserInfo">授权账户</button>
+    <!-- </view> -->
     <!--康师傅唐诗-->
     <image src='../../assets/images/HealthMan/唐诗@2x.png' class="KongTangDynasty"></image>
 </view>
