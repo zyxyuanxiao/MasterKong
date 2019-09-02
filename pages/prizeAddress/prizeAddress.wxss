@@ -11,7 +11,7 @@
   height: 400rpx;  
 }
 .prizeAddress .ThePrize{
-  width:690rpx;
+  width:661rpx;
   height:90rpx;
   background:rgba(223,55,55,1);
   font-size:32rpx;
@@ -20,6 +20,11 @@
   color:rgba(255,255,255,1);
   line-height:90rpx;
   padding-left: 29rpx;
+  margin-top: -5rpx;
+}
+.addressText image{
+  width: 24rpx;
+  height: 24rpx;  
 }
 .prizeAddress .AwardMade{
   width:420rpx;
@@ -62,7 +67,7 @@
   font-family:PingFangSC;
   font-weight:400;
   color:rgba(238,176,50,1);
-  margin: 65rpx 0rpx 61rpx 65rpx;
+  margin: 65rpx 0rpx 61rpx 29rpx;
 }
 .goodsView{
   display: flex;

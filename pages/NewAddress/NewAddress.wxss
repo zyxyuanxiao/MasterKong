@@ -1,0 +1,8 @@
+/* pages/NewAddress/NewAddress.wxss */
+.Inputs{
+  width:690rpx;
+  height:371rpx;
+  background:rgba(47,47,55,1);
+  border-radius:8rpx;
+  margin: 60rpx 30rpx 34rpx 30rpx;
+}
