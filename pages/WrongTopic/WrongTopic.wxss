@@ -2,9 +2,11 @@
 /* 切换框 */
 .SwitchBox{
   height: 72rpx;
-  width: 690rpx;
-  margin: 40rpx 40rpx 0rpx 40rpx;
+  width: 100%;
+  margin-top: 40rpx;
+  padding-left: 30rpx;
   display: flex;
+  border-bottom: 1rpx solid rgba(75,75,76,1);
 }
 /* 选择 */
 .SwitchBox .choose{
@@ -28,16 +30,14 @@
   width: 345rpx;
   text-align: center;
   opacity: 0.5;
-  border-bottom: 3rpx solid rgba(31,204,102,1);
-  border-radius:2px;
 }
 /* 问题View */
 .problemView{
   width:690rpx;
-  height:462rpx;
   background:rgba(47,47,55,1);
   border-radius:8rpx;
-  margin: 30rpx 30rpx 30rpx 30rpx;
+  margin: 30rpx 30rpx 0rpx 30rpx;
+  padding: 39rpx 0rpx 39rpx 0rpx;
 }
 .problem{
   width:612rpx;
@@ -46,11 +46,11 @@
   font-family:PingFangSC;
   font-weight:500;
   color:rgba(255,255,255,1);
-  margin: 39rpx 39rpx 39rpx 39rpx;
+  margin: 0rpx 39rpx 39rpx 39rpx;
 }
 .hr{
   width:690rpx;
-  height:1rpx;
+  height:2rpx;
   background:rgba(75,75,76,1);
 }
 .correctAnswer{
@@ -69,7 +69,7 @@
   font-family:PingFangSC;
   font-weight:400;
   color:rgba(255,255,255,1);
-  margin: 39rpx 39rpx 0rpx 39rpx;
+  margin: 0rpx 39rpx 0rpx 39rpx;
   opacity: 0.5;
 }
 
