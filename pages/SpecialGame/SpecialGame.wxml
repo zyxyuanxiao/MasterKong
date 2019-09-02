@@ -113,7 +113,7 @@
     </view>
 
     <!--问题text--->
-    <view class="problemText" bindtap="shareBtn" data-statu="open">
+    <view class="problemText"  data-statu="open">
        {{questions[gamenumber].question}}
     </view>
 
@@ -149,7 +149,7 @@
       每日只限分享一次获得一张复活卡～
     </view>
     <view class="buttonOne">
-      <view class="cancel" bindtap="ok">取消</view>
+      <view class="cancel" bindtap="cancelBtn">取消</view>
       <view class="share">分享</view>
     </view>
   </view>
@@ -163,7 +163,7 @@
       每日只限分享一次获得一张复活卡～
     </view>
     <view class="buttonOne">
-      <view class="cancel" bindtap="cancelShare">取消</view>
+      <view class="cancel" bindtap="cancelShareBtn">取消</view>
       <view class="share">分享</view>
     </view>
   </view>

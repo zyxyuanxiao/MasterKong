@@ -1,5 +1,5 @@
 <!--contestResults.wxml-->
-<page-container title="随机PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{false}}">
+<page-container title="随机PK赛" binddefindBack="onBack" defindBack="{{false}}" showTopImg="{{false}}" showback="{{false}}">
 <view class="container">
   <!-- 比赛结果 -->
   <view class="PKResults">

@@ -1,6 +1,6 @@
 <!--pages/AnswerQuestions/AnswerQuestions.wxml-->
 <page-container title="随机PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{false}}">
-<view class="AnswerQuestions">
+<scroll-view class="AnswerQuestions">
   <!--PK的人--->
   <view class="PKPerson">
     <view class="Blues">
@@ -77,7 +77,7 @@
     <!--题目比例--->
     <view class="proportion">
       <view class="nowProportion">{{gamenumber +1}}</view>
-      /{{question.length}}
+      /{{questions.length}}
     </view>
     <!--倒计时--->
     <view class="countdownSeconds">
@@ -91,7 +91,7 @@
     </view>
     <!--问题text--->
     <view class="problemText">
-      {{question[gamenumber].question}}
+      {{questions[gamenumber].question}}
     </view>
 
     <!--问题text--->
@@ -110,7 +110,7 @@
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
-        <view class="text">{{question[gamenumber].answerA}}</view>
+        <view class="text">{{questions[gamenumber].answerA}}</view>
         <!--右边3个人-->
         <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
           <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='A' || answerA == choiceClass[0]}}">
@@ -137,7 +137,7 @@
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
-        <view class="text">{{question[gamenumber].answerB}}</view>
+        <view class="text">{{questions[gamenumber].answerB}}</view>
         <!--右边3个人-->
         <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
           <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='B' || answerB == choiceClass[0]}}">
@@ -164,7 +164,7 @@
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
-        <view class="text">{{question[gamenumber].answerC}}</view>
+        <view class="text">{{questions[gamenumber].answerC}}</view>
         <!--右边3个人-->
         <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
           <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='C' || answerC == choiceClass[0]}}">
@@ -191,7 +191,7 @@
             <image src='{{item.avatarurl}}'></image>
           </view>
         </block>
-        <view class="text">{{question[gamenumber].answerD}}</view>
+        <view class="text">{{questions[gamenumber].answerD}}</view>
         <!--右边3个人-->
         <block wx:for="{{matchIngSuccess.awayUserList}}" wx:for-index="idx" wx:for-item="item">
           <view wx:if="{{idx == 0 }}" class="ImgportraitTwo" hidden="{{item.useranswer !='D' || answerD == choiceClass[0]}}">
@@ -229,5 +229,5 @@
       </view>
     </view>
   </view>
-</view>
+</scroll-view> 
 </page-container>

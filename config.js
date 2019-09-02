@@ -27,6 +27,7 @@ export const cmd = {
     robotreq: 8,
   // 机器人答题请求
     end: 9,
+    continuegame:10,
     // 获取头像
     getHeadImage: 20,
     // 匹配成功

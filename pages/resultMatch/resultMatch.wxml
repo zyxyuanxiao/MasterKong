@@ -25,8 +25,9 @@
 
   <!-- 操作 -->
   <view class="operation">
-    <image src='../../assets/images/contestResults/返回.png' class="returnImg"></image>
-    <view class="challenge">继续挑战</view>
+    <image src='../../assets/images/contestResults/返回.png' class="returnImg"
+      bindtap="goHome"></image>
+    <view class="challenge" bindtap="goSpecialGame">继续挑战</view>
     <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg" bindtap="Btn" data-statu="open"></image>
     <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
   </view>

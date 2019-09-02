@@ -59,6 +59,11 @@ Page({
         questions: res.questions
       })
     });
+    if (options.cmd){
+      if (cmd.continuegame == options.cmd){
+        that.getready();
+      }
+    }
   },
 
   /**
@@ -140,6 +145,12 @@ Page({
     that = this
     var answerCountdown = this.data.answerCountdown
     if (answerCountdown == 0 || that.data.myselect) {
+      //失败
+        if(!that.data.winflag){
+        //分享弹框按钮显示
+        that.shareBtn();
+        return;
+      }
       that.cleanOldData();
       return
     }
@@ -226,6 +237,9 @@ Page({
         });
       }
     }
+    //选择正确答案
+    that.chooseTheRightAnswer();
+
   },
   //清楚历史数据
   cleanOldData: function() {
@@ -318,5 +332,34 @@ Page({
       goPage();
     }
   },
+  //选择正确答案
+  chooseTheRightAnswer: function () {
+    var gamenumber = that.data.gamenumber;
+    var rightanswer = that.data.questions[gamenumber].answer;
+    if (rightanswer == 'A') {
+      that.setData({
+        answerA: choiceClass[1]
+      });
+    } else if (rightanswer == 'B') {
+      that.setData({
+        answerB: choiceClass[1]
+      });
+    } else if (rightanswer == 'C') {
+      that.setData({
+        answerC: choiceClass[1]
+      });
+    } else if (rightanswer == 'D') {
+      that.setData({
+        answerD: choiceClass[1]
+      });
+    }
+  },
+  cancelShareBtn: function () {
+    navTo('/pages/resultMatch/resultMatch?winflag=' + that.data.winflag + '&sumcount=' + that.data.sumcount);
+  },
+  goSpecialGame: function () {
 
+  },
+  goHome: function() {
+  }
 })

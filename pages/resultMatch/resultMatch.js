@@ -10,6 +10,10 @@ import {
   rnd,
   goPage
 } from '../../utils/common';
+import {
+  config,
+  cmd
+} from '../../config';
 var that;
 Page({
   data: {
@@ -88,5 +92,15 @@ Page({
         }
       );
     }
-  }
+  },
+  goSpecialGame: function () {
+    wx.reLaunch({
+      url: '/pages/SpecialGame/SpecialGame?cmd=' + cmd.continuegame
+    })
+  },
+  goHome: function () {
+    wx.reLaunch({
+      url: '/pages/Homepage/Homepage'
+    })
+  },
 })

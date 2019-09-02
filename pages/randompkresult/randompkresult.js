@@ -128,7 +128,7 @@ Page({
       url: '/pages/randomPKgame/randomPKgame?cmd=1'
     })
   },
-  gohome: function () {
+  goStartChallengePre: function () {
     wx.reLaunch({
       url: '/pages/StartChallengePre/StartChallengePre'
     })

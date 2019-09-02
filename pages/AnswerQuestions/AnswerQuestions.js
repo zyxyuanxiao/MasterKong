@@ -11,7 +11,8 @@ import {
   showModal,
   navTo,
   reLanchTo,
-  rnd
+  rnd,
+  goPage 
 } from '../../utils/common';
 import util from '../../utils/util'
 import {
@@ -61,7 +62,7 @@ Page({
       var matchIngSuccess = JSON.parse(options.matchIngSuccess)
       that.setData({
         matchIngSuccess: matchIngSuccess,
-        question: JSON.parse(options.uQuestions),
+        questions: JSON.parse(options.uQuestions),
       });
     }
     const aUserInfo = getValue('aUserInfo');
@@ -142,7 +143,6 @@ Page({
             //改变机器人选择的样式
             that.changeSelectChooseClass(robotReq);
             robotReq = {};
-            // that.judgeAnswered();
           }
           break;
 
@@ -150,7 +150,11 @@ Page({
           SocketTask.close(function (close) {
             console.log('关闭 WebSocket 连接。',    close)
           });
-          reLanchTo('/pages/randompkresult/randompkresult?matchIngSuccess=' + JSON.stringify(data.matchIngSuccess));
+          var time = setTimeout(function () {
+            reLanchTo('/pages/randompkresult/randompkresult?matchIngSuccess=' + JSON.stringify(data.matchIngSuccess));
+            that.answerCountdown(that);
+          }, 2500);
+         
           break;
         default:
           console.log('开始答题了')
@@ -158,7 +162,7 @@ Page({
       }
     });
 
-    // that.countdown();
+     that.countdown();
 
 
   },
@@ -322,16 +326,13 @@ Page({
     that = this
     var answerCountdown = this.data.answerCountdown
     if (answerCountdown == 0 || that.judgeAnswered()) {
-      // that.setData({
-      //   answerCountdown: 15
-      // })
-      // that.setData({
-      //   showView: false,
-      // })
+      //选择正确答案
+      that.chooseTheRightAnswer();
       //如果双方都回答问题了,或者倒计时为0了进入下一环节
       that.sendcleanOldDataMessage();
       return
     }
+    return
     var answertime = rnd(10, 13);
     if (answerCountdown == 15) {
       var delaytime = answerCountdown - answertime;
@@ -438,7 +439,7 @@ Page({
     const kClientAnswerDto=that.data.kClientAnswerDto;
     kClientAnswerDto.gameCount = gamenumber;
     kClientAnswerDto.answer = useranswer;
-    if (that.data.question[gamenumber].answer == useranswer) {
+    if (that.data.questions[gamenumber].answer == useranswer) {
       kClientAnswerDto.yes = true;
       kClientAnswerDto.score = (that.data.answerCountdown * (20));
     } else {
@@ -455,6 +456,7 @@ Page({
     //机器人回答不为空
     if (JSON.stringify(robotReq) != "{}") {
       that.changeSelectChooseClass(robotReq, false);
+      
       robotReq = {}
     }
     //begin 判断是否全部答题完成
@@ -466,7 +468,7 @@ Page({
     var useranswer = e.answer;
     var gamenumber = that.data.gamenumber
     if (useranswer == 'A') {
-      if (that.data.question[gamenumber].answer == useranswer) {
+      if (that.data.questions[gamenumber].answer == useranswer) {
         that.setData({
           answerA: choiceClass[1]
         });
@@ -476,7 +478,7 @@ Page({
         });
       }
     } else if (useranswer == 'B') {
-      if (that.data.question[gamenumber].answer == useranswer) {
+      if (that.data.questions[gamenumber].answer == useranswer) {
         that.setData({
           answerB: choiceClass[1]
         });
@@ -486,7 +488,7 @@ Page({
         });
       }
     } else if (useranswer == 'C') {
-      if (that.data.question[gamenumber].answer == useranswer) {
+      if (that.data.questions[gamenumber].answer == useranswer) {
         that.setData({
           answerC: choiceClass[1]
         });
@@ -496,7 +498,7 @@ Page({
         });
       }
     } else if (useranswer == 'D') {
-      if (that.data.question[gamenumber].answer == useranswer) {
+      if (that.data.questions[gamenumber].answer == useranswer) {
         that.setData({
           answerD: choiceClass[1]
         });
@@ -564,7 +566,7 @@ Page({
         var robot = awayUserList[0];
         //选项
         var answer = that.data.answeroption[index];
-        if (that.data.question[gamenumber].answer == answer) {
+        if (that.data.questions[gamenumber].answer == answer) {
           
           robotClientAnswerDto.yes = true;
           robotClientAnswerDto.score = (answertime * (20));
@@ -690,9 +692,37 @@ Page({
       that.answerCountdown(that);
     }, 2500);
   },
+  goback: function () {
+    SocketTask.close(function (close) {
+      console.log('关闭 WebSocket 连接。', close)
+    });
+  },
      /**导航返回 */
   onBack() {
     this.goback();
     goPage(1, '/pages/StartChallengePre/StartChallengePre');
   },
+  //选择正确答案
+  chooseTheRightAnswer: function() {
+    var gamenumber = that.data.gamenumber;
+    var rightanswer=that.data.questions[gamenumber].answer;
+    if (rightanswer == 'A'){
+      that.setData({
+        answerA: choiceClass[1]
+      });
+    } else if (rightanswer == 'B') {
+      that.setData({
+        answerB: choiceClass[1]
+      });
+    } else if (rightanswer == 'C') {
+      that.setData({
+        answerC: choiceClass[1]
+      });
+    } else if (rightanswer == 'D') {
+      that.setData({
+        answerD: choiceClass[1]
+      });
+    }
+  }
+
 })
