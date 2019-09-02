@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/prop/prop",
+    "pages/rankingList/rankingList",
     "pages/rankingList-two/rankingList",
+    "pages/prop/prop",
     "pages/HasPrize/HasPrize",
     "pages/MyDetails/MyDetails",
     "pages/WrongTopic/WrongTopic",
