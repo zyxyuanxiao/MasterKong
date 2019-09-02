@@ -1,4 +1,20 @@
 // pages/resultMatch/resultMatch.js
+import {
+  setValue,
+  redirectTo,
+  getValue,
+  showToast,
+  showModal,
+  navTo,
+  reLanchTo,
+  rnd,
+  goPage
+} from '../../utils/common';
+import {
+  config,
+  cmd
+} from '../../config';
+var that;
 Page({
   data: {
     userInfo: {},
@@ -6,7 +22,16 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     showModal: false
   },
-  onLoad: function () {
+  onLoad: function (options) {
+    that=this;
+    that.setData({
+      winflag: options.winflag,
+      sumcount: options.sumcount,
+    });
+    const aUserInfo = getValue('aUserInfo');
+    this.setData({
+      aUserInfo: aUserInfo,
+    });
 
   },//分享弹窗
   Btn: function () {
@@ -67,5 +92,15 @@ Page({
         }
       );
     }
-  }
+  },
+  goSpecialGame: function () {
+    wx.reLaunch({
+      url: '/pages/SpecialGame/SpecialGame?cmd=' + cmd.continuegame
+    })
+  },
+  goHome: function () {
+    wx.reLaunch({
+      url: '/pages/Homepage/Homepage'
+    })
+  },
 })

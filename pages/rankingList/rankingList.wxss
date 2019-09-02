@@ -40,7 +40,7 @@
 
 .list{
   width: 690rpx;
-  height: 1011rpx;
+  /* height: 1011rpx; */
   background:rgba(47,47,57,1);
   border-radius:8rpx;
   margin: 30rpx 33rpx 0rpx 27rpx;

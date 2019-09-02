@@ -1,4 +1,5 @@
 // pages/StartChallengePre/StartChallengePre.js
+import { goPage } from '../../utils/common';
 Page({
 
   /**
@@ -62,5 +63,19 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  randomMatching: function () {
+    wx.navigateTo({
+      url: '/pages/randomPKgame/randomPKgame?cmd=1'
+    })
+  },
+  friendMatching: function () {
+    wx.navigateTo({
+      url: '/pages/StartChallenge/StartChallenge?cmd=2'
+    })
+  },
+  /**导航返回 */
+  onBack() {
+    goPage();
+  },
 })

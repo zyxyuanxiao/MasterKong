@@ -1,0 +1,19 @@
+<!--pages/prop/prop.wxml-->
+<view class="CardCollection ">
+  <view class="cardView">
+    <image src="../../assets/images/ItemMall/复活卡橙色底@2x.png" class="card"></image>
+    <view class="number">5 张</view>
+  </view>
+  <view class="cardView">
+    <image src="../../assets/images/ItemMall/复活卡橙色底@2x.png" class="card"></image>
+    <view class="number">5 张</view>
+  </view>
+  <view class="cardView">
+    <image src="../../assets/images/ItemMall/复活卡橙色底@2x.png" class="card"></image>
+    <view class="number">5 张</view>
+  </view>
+  <view class="cardView">
+    <image src="../../assets/images/ItemMall/复活卡橙色底@2x.png" class="card"></image>
+    <view class="Notnumber">0 张</view>
+  </view>
+</view>

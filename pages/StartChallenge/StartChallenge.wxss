@@ -38,6 +38,7 @@
   border:2rpx solid rgba(39,153,255,1);
   margin-right: 15rpx;
 }
+
 .yellowTeam .people{
   width:220rpx;
   height:280rpx;
@@ -55,6 +56,15 @@
 .InviteFriendsImg{
   width: 90rpx;
   height: 89rpx;
+  margin: 86rpx 65rpx 0rpx 65rpx;
+   z-index: -1;
+}
+.InviteFriendsbtn{
+  width: 90rpx;
+  height: 89rpx;
+  opacity: 0;
+  z-index: 2;
+  position: fixed;
   margin: 86rpx 65rpx 0rpx 65rpx;
 }
 .name{

@@ -117,7 +117,7 @@ export function goPage(type, url) {
             reLanchTo(url)
             break
         default:
-            reLanchTo('/pages/index/index')
+        reLanchTo('/pages/Homepage/Homepage')
             break
     }
 }
@@ -145,4 +145,8 @@ export function getMemberNo() {
             }
         })
     })
+}
+export function rnd(n, m) {
+  var random = Math.floor(Math.random() * (m - n + 1) + n);
+  return random;
 }

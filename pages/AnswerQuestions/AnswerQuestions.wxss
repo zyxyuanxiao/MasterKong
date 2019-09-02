@@ -26,7 +26,7 @@ page{
 }
 .BluesPerson .blank{
   width: 30rpx;
-  height: 1000%;
+  height: 100%;
 }
 .yellowPerson .score{
   font-size:48Rpx;
@@ -80,6 +80,64 @@ page{
   border:2rpx solid #ffffff;
   margin-left: -30rpx;
 }
+.ImgportraitOne{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+  border:2px solid #ffffff;
+  margin-left: -25rpx;
+  margin-top: 8rpx;
+  position: fixed;
+}
+.ImgportraitOneTwo{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+  border:2px solid #ffffff;
+  margin-top: 8rpx;
+  position: fixed;
+}
+.ImgportraitOneThree{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+  border:2px solid #ffffff;
+  margin-left: 30rpx;
+  margin-top: 8rpx;
+  position: fixed;
+}
+.ImgportraitTwo{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+  border:2px solid #ffffff;
+  margin-left: 570rpx;
+  margin-top: 8rpx;
+  position: fixed;
+}
+.ImgportraitTwoTwo{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+  border:2px solid #ffffff;
+  margin-left: 540rpx;
+  margin-top: 8rpx;
+  position: fixed;
+}
+.ImgportraitTwoThree{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+  border:2px solid #ffffff;
+  margin-left: 510rpx;
+  margin-top: 8rpx;
+  position: fixed;
+}
+.avatarimg{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+}
 .Imgportrait image{
   width:80rpx;
   height:80rpx;
@@ -107,6 +165,16 @@ page{
   text-align: center;
   margin: 90rpx 0rpx 30rpx 0rpx;
 }
+
+.readyQuestionList{
+  width: 688rpx;
+  height: 900rpx;
+  background: rgba(255,255,255,1);
+  box-shadow: 0rpx 2rpx 10rpx 0rpx rgba(0,0,0,0.1);
+  border-radius: 20rpx;
+  margin: 0rpx 32rpx 0rpx 30rpx;
+}
+
 .QuestionList{
   width:688rpx;
   height:900rpx;
@@ -114,6 +182,9 @@ page{
   box-shadow:0rpx 2rpx 10rpx 0rpx rgba(0,0,0,0.1);
   border-radius:20rpx;
   margin: 0rpx 32rpx 0rpx 30rpx;
+  margin-top: 90rpx;
+  color: rgba(51,51,51,1);
+
 }
 .textOne{
   width:100%;
@@ -147,4 +218,247 @@ page{
   font-weight:500;
   color:rgba(51,51,51,1);
   margin: 74rpx 220rpx 291rpx 228rpx;
+}
+
+.QuestionList image{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 50rpx;
+}
+
+.yellowPopupWindow image{
+  width:40rpx;
+  height:40rpx;
+  border-radius: 50rpx;
+}
+.BluesPopupWindow image{
+  width:40rpx;
+  height:40rpx;
+  border-radius: 50rpx;
+}
+.countdownSeconds{
+  width:160rpx;
+  height:160rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0rpx 2rpx 14rpx 0rpx rgba(0,0,0,0.5);
+  border:10rpx solid rgba(31,204,102,1);
+  border-radius: 150rpx;
+  margin: -80rpx 264rpx 00rpx 264rpx;
+  position:fixed;
+}
+.countdownSeconds .number{
+  font-size:60rpx;
+  font-family:Microsoft YaHei;
+  color:rgba(51,51,51,1);
+  line-height: 160rpx;
+  text-align: center;
+}
+/* .QuestionList{
+  color:rgba(51,51,51,1);
+} */
+.proportion{
+  display: flex;
+  position: fixed;
+  margin: 30rpx 0rpx 0rpx 31rpx;
+  z-index: 99;
+}
+.message{
+  display: flex;
+  position: fixed;
+  margin: 34rpx 33rpx 0rpx 617rpx;
+  z-index: 99;
+}
+.nowProportion{
+  color:rgba(57,172,128,1);
+}
+#messageImg{
+  width: 38rpx;
+  height: 31rpx;
+  border-radius: 0rpx;
+}
+.problemText{
+  width:614rpx;
+  height:160rpx;
+  font-size:36rpx;
+  font-family:Microsoft YaHei;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  position: fixed;
+  margin: 136rpx 40rpx 24rpx 34rpx;
+}
+.choose{
+  position: fixed;
+  margin-top: 320rpx;
+}
+.HaveChoice{
+  font-family:Microsoft YaHei;
+  width:630rpx;
+  height:100rpx;
+  background:rgba(233,233,233,1);
+  border-radius:56rpx;
+  margin: 30rpx 29rpx 0rpx 29rpx;
+  font-size:36rpx;
+  color:rgba(51,51,51,1);
+  font-weight:550;
+  line-height: 100rpx;
+}
+.Selected{
+  font-family:Microsoft YaHei;
+  width:630rpx;
+  height:100rpx;
+  background:rgba(31,204,102,1);
+  border-radius:56rpx;
+  margin: 30rpx 29rpx 0rpx 29rpx;
+  font-size:36rpx;
+  color:rgba(255,255,255,1);
+  font-weight:500;
+  display: flex;
+  line-height: 100rpx;
+}
+.wrong{
+  font-family:Microsoft YaHei;
+  width:630rpx;
+  height:100rpx;
+  background:rgba(240,69,69,1);
+  border-radius:56rpx;
+  margin: 30rpx 29rpx 0rpx 29rpx;
+  font-size:36rpx;
+  color:rgba(255,255,255,1);
+  font-weight:500;
+  display: flex;
+  line-height: 100rpx;
+}
+.choose .text{
+  width:630rpx;
+  text-align: center;
+}
+
+
+/* ������ */
+.modalDlg{
+    width:750rpx;
+    height:468rpx;
+    background:rgba(255,255,255,1);
+    background-size: 100% 100%;
+    position: fixed;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    margin: 0 auto;
+    flex-direction: column;
+    color:rgba(51,51,51,1);
+}
+.QuickPhrases{
+  width:750rpx;
+  height:80rpx;
+  background:rgba(31,204,102,1);
+  font-size:32rpx;
+  font-family:PingFangSC;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  line-height:80rpx;
+  padding-left: 30rpx;
+}
+.noticeTheprize{
+  width: 50rpx;
+  height: 50tpx;
+  margin-top: 15rpx;
+  position: fixed;
+  right: 28rpx; 
+}
+.phraseDetails{
+  width: 100%;
+  height: 388rpx;
+}
+.phraseDetails .dt{
+  background:rgba(233,233,233,1);
+  border-radius:44rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size:28rpx;
+  height:80rpx;
+  margin-left: 30rpx;
+}
+.psOne{
+   display: flex; 
+   margin-top: 30rpx;
+}
+
+.DetailsOne{
+  width:228rpx;
+}
+.DetailsTwo{
+  width:200rpx;
+}
+.DetailsThree{
+  width:289rpx;
+}
+.DetailsFour{
+  width:289rpx;
+}
+.DetailsFive{
+  width:456rpx;
+}
+
+/* ��Ļ */ 
+.BluesPopupWindow{
+  position: fixed;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  z-index: 999;
+}
+.yellowPopupWindow{
+  position: fixed;
+  right: 0;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  margin-top: 10rpx;
+  margin-right: 30rpx;
+  z-index: 999;
+}
+.Popuptext{
+  color:rgba(255,255,255,1);
+  text-align: center;
+} 
+.PopupDetails{
+  display: flex;
+  height:40rpx;
+  background:red;
+  /* background:rgba(0,0,0,0.5); */
+  border-radius:44rpx;
+  margin-top: 10rpx;
+  text-align: center;
+}
+.BluesPopupWindow .PopupDetails{
+  padding-left:30rpx;
+}
+.yellowPopupWindow .PopupDetails{
+  padding-right:30rpx;
+}
+.PopupDetails .img{
+  width:40rpx;
+  height:40rpx;
+  border:1rpx solid rgba(255,255,255,1);
+  border-radius: 50rpx;
+}
+.BluesPopupWindow .PopupDetails .img{
+  display: flex;
+  justify-content:flex-end; 
+  margin-left: 20rpx;
+}
+.yellowPopupWindow .PopupDetails .img{
+  margin-right: 20rpx;
+}
+
+.header_view_hide{
+  display: none;
+}
+.header_view_show{
+  display: block;
 }

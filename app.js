@@ -1,17 +1,16 @@
 //app.js
+import { post, get } from './utils/http'
+import util from './utils/util'
+import { config } from './config'
 App({
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+    // 获取顶部高度
+    this.getSystemInfo()
+   
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -35,5 +34,16 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+   getSystemInfo() {
+    util.promisify(wx.getSystemInfo)().then(res => {
+      this.globalData.navHeight = res.statusBarHeight + 48
+      var model = res.model
+      // if (model.search('iPhone X') != -1) {
+      //   this.globalData.isIpx = true
+      // } else {
+      //   this.globalData.isIpx = false
+      // }
+    })
+  },
 })

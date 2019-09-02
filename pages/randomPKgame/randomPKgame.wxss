@@ -1,0 +1,79 @@
+/**StartChallenge.wxss**/
+.container{
+  color: #ffffff;
+}
+.blueTeam{
+  display: flex;
+  justify-content: center;  
+  margin-top: 130rpx;
+}
+.yellowTeam{
+  display: flex;
+  justify-content: center;  
+  margin-bottom: 300rpx;
+}
+.blueTeam .people{
+  width:220rpx;
+  height:280rpx;
+  background:rgba(60,60,70,1);
+  border-radius:8rpx;
+  border:2rpx solid rgba(39,153,255,1);
+  margin-right: 15rpx;
+}
+.yellowTeam .people{
+  width:220rpx;
+  height:280rpx;
+  background:rgba(60,60,70,1);
+  border-radius:8rpx;
+  border:2rpx solid rgba(238,176,50,1);
+  margin-right: 15rpx;
+}
+.HeadPortrait{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 150rpx;
+  margin: 30rpx 68rpx 0rpx 72rpx;
+}
+.name{
+  font-size:28rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  margin-top: 15rpx;
+}
+.level{
+  font-size:24rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  margin-top: 10rpx;
+}
+.TheLabel{
+  font-size:24rpx;
+  font-family:PingFangSC;
+  color:rgba(255,255,255,1);
+  width:137rpx;
+  height:36rpx;
+  background:rgba(238,121,50,1);
+  border-radius:18rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  margin-right: 41rpx;
+  margin-left: 42rpx;
+}
+.vsView{
+  margin-top: 120rpx;
+  margin-bottom: 140rpx;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.VS{
+  font-size:120rpx;
+  font-family:HiraKakuStdN;
+  font-weight:normal;
+  color:rgba(255,255,255,1);
+  line-height:180rpx;
+}
