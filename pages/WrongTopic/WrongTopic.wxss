@@ -1,0 +1,38 @@
+/* pages/WrongTopic/WrongTopic.wxss */
+/* 切换框 */
+.SwitchBox{
+  height: 72rpx;
+  width: 690rpx;
+  margin: 40rpx 40rpx 0rpx 40rpx;
+  display: flex;
+}
+/* 选择 */
+.SwitchBox .choose{
+  text-align: center;
+  font-size:32rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(31,204,102,1);
+  line-height:72rpx;
+  width: 345rpx;
+  border-bottom: 3rpx solid rgba(31,204,102,1);
+  border-radius:2px;
+}
+/* 未选择 */
+.SwitchBox .NotChoose{
+  font-size:32rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  line-height:72rpx;
+  width: 345rpx;
+  text-align: center;
+  opacity: 0.5;
+  border-bottom: 3rpx solid rgba(31,204,102,1);
+  border-radius:2px;
+}
+/* 问题View */
+.problemView{
+
+}
+

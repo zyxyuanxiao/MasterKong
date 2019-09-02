@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/WrongTopic/WrongTopic",
     "pages/MyPointsDetails/MyPointsDetails",
     "pages/MyPoints/MyPoints",
     "pages/Achievement/Achievement",
