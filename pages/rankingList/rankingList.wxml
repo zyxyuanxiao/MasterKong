@@ -48,10 +48,14 @@
     <view class="MyRank">
       <view class="MyRanking">
         <view class="MyRankingText">我的排行</view>
-        <view class="MyRankingShare">
-          <image src='../../assets/images/rankingList/分享排名@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
-          <view class="MyRankingShareText">分享排名</view>
-        </view>
+      <view class="MyRankingShareOne">
+        <image src='../../assets/images/rankingList/发给好友@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
+        <view class="MyRankingShareText">发给好友</view>
+      </view>
+      <view class="MyRankingShare">
+        <image src='../../assets/images/rankingList/生成海报@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
+        <view class="MyRankingShareText">生成海报</view>
+      </view>
       </view>
 
       <!-- <view class="HorizontalLine"></view> -->

@@ -205,3 +205,8 @@
   margin: 0prx 30prx 0prx 30prx;
   background:rgba(75,75,86,1);
 }
+.MyRankingShareOne{
+  right: 273rpx;
+  position: absolute;
+  display: flex; 
+}
