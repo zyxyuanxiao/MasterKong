@@ -6,7 +6,6 @@
     "pages/NewAddress/NewAddress",
     "pages/Pprize/Pprize",
     "pages/prop/prop",
-    "pages/rankingList/rankingList",
     "pages/HasPrize/HasPrize",
     "pages/MyDetails/MyDetails",
     "pages/WrongTopic/WrongTopic",
