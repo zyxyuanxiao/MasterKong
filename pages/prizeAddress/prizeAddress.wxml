@@ -1,18 +1,67 @@
 <!--pages/prizeAddress/prizeAddress.wxml-->
 <view class="prizeAddress">
-    <image src="../../assets/images/notice/图文@2x.png"></image>
+    <image src="../../assets/images/notice/图文@2x.png" class="graphic"></image>
     <view class="ThePrize">恭喜您获得 iphone x 一台</view>
     <view class="AwardMade">获奖事由：2019年7月赛季第一名</view>
     <view class="AwardTime">获奖时间：2019-07-20 15:33:12</view>
+    <view class="hr"></view>
     <view class="GetWay">领取方式：快递</view>
     <view class="determine">请确认收货地址信息是否正确，我们会在20个工作日内邮寄 给你，发货后发消息通知你。</view>
+    <view class="hr"></view>
     <view class="addressText">
       <image src='../../assets/images/NewAddress/提示@2x.png' ></image>
       请确认地址是否无误，以免影响奖品寄送。</view>
     <!-- <view class="addressText">您还没添加收货地址，请前去添加</view> -->
     <view class="goodsView">
       <view class="ShippingAddress" class="AddressButton">前往收货地址</view>
-      <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"></image>
+      <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg" bindtap="btn" data-statu="open"></image>
       <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
     </view>
+  
+
+  
+  <!-- 分享海报 -->
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <view class="SharePostersImg">
+      <!-- <view class="text">
+        我参加专题赛挑战成功， 食品安全专题！
+      </view> -->
+    <view class="insImg">
+        <view class="textOne">
+          我在玩答题游戏中获得了一等奖
+        </view>
+        <view class="textTwo">
+          奖品：iPhoneX一台
+        </view>
+        <view class="textThree">
+          <view class="season">
+            第一赛季
+          </view>
+          <image src='../../assets/images/notice/三角形@2x.png' mode='widthFix' class="ThreeImg"></image>
+           <view class="ranking">
+              第一名
+          </view>
+          <image src='../../assets/images/notice/三角形@2x.png' mode='widthFix' class="ThreeImg"></image>
+           <view class="nowTime">
+              2019/02/23
+          </view>
+        </view>
+    </view>
+
+      <view class="textView">
+        <view class="textTwo">
+          扫码识别小程序 每天学习不停息
+        </view>
+        <view class="QrCode">
+          <image src='../../assets/images/resultMatch/小程序码120尺寸@2x.png' class="QrCodeImg"></image>
+        </view>
+      </view>
+
+    </view>
+    <view class="SharePostersButton" bindtap="ok">
+      保存海报
+    </view>
+  </view>
+  
+
 </view>

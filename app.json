@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/NewAddress/NewAddress",
     "pages/prizeAddress/prizeAddress",
+    "pages/notice/notice",
+    "pages/rankingList-two/rankingList",
+    "pages/NewAddress/NewAddress",
     "pages/Pprize/Pprize",
     "pages/prop/prop",
-    "pages/rankingList-two/rankingList",
     "pages/rankingList/rankingList",
     "pages/HasPrize/HasPrize",
     "pages/MyDetails/MyDetails",
@@ -19,7 +20,6 @@
     "pages/SpecialGame/SpecialGame",
     "pages/PprizeDetail/PprizeDetail",
     "pages/resultMatch/resultMatch",
-    "pages/notice/notice",
     "pages/Moremenu/Moremenu",
     "pages/ItemMall/ItemMall",
     "pages/questionBankChoice/questionBankChoice",
