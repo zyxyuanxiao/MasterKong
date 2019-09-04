@@ -62,5 +62,8 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  goMyDetails: function (e) {
+    navTo('/pages/MyDetails/MyDetails');
   }
 })

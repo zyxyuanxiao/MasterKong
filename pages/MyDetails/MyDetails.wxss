@@ -104,7 +104,7 @@
 /* 战绩 */
 .record{
   width: 100%;
-  height: 208rpx;
+  height: 288rpx;
   background:rgba(60,60,70,1);
   border-radius:80rpx 0rpx 0rpx 0rpx;
   margin-top: -135rpx;
@@ -129,6 +129,10 @@
   height: 116rpx;
   margin: 50rpx 0rpx 50rpx 0rpx;
 }
+.NumberVictory .Number{
+  display: flex;
+  margin: 8rpx 0rpx 0rpx 52rpx;
+}
 .InterestRates .Number{
   display: flex;
   margin: 8rpx 0rpx 0rpx 52rpx;
@@ -149,6 +153,11 @@
   font-family:PingFangSC;
   font-weight:400;
 }
+.record .Number .rate{
+  line-height: 110rpx;
+  font-size: 20rpx;
+}
+
 .InterestRates .Number .rate{
   line-height: 110rpx;
   font-size: 20rpx;
@@ -159,6 +168,8 @@
   display: flex;
   flex-wrap: wrap;
   border-radius:80rpx 0rpx 0rpx 0rpx;
+  margin-top: -80rpx;
+  background-color: #26262D;
 }
 .menuSingle{
   margin: 65rpx 65rpx 0rpx 75rpx;
