@@ -323,8 +323,7 @@ Page({
   },
   //答题倒计时
   answerCountdown: function() {
-    that = this
-    var answerCountdown = this.data.answerCountdown
+    var answerCountdown = that.data.answerCountdown
     if (answerCountdown == 0 || that.judgeAnswered()) {
       //选择正确答案
       that.chooseTheRightAnswer();
@@ -332,7 +331,6 @@ Page({
       that.sendcleanOldDataMessage();
       return
     }
-    return
     var answertime = rnd(10, 13);
     if (answerCountdown == 15) {
       var delaytime = answerCountdown - answertime;
@@ -514,6 +512,8 @@ Page({
       if (ismyphone) {
         myUser.score += e.score;
       }
+      myUser.questionId = that.data.questions[gamenumber].id;
+      myUser.yes=e.yes;
       myUser.useranswer = useranswer;
       myUser.avatarifhidden = false;
       this.setData({
@@ -529,6 +529,8 @@ Page({
         if (ismyphone) {
           homeUser.score += e.score;
         }
+        homeUser.questionId = that.data.questions[gamenumber].id;
+        homeUser.yes = e.yes;
         homeUser.avatarifhidden = false;
         homeUser.useranswer = useranswer;
         homeUserList[i] = homeUser;
@@ -545,6 +547,8 @@ Page({
         if (ismyphone) {
           awayUser.score += e.score;
         }
+        awayUser.questionId = that.data.questions[gamenumber].id;
+        awayUser.yes = e.yes;
         awayUser.avatarifhidden = false;
         awayUser.useranswer = useranswer;
         awayUserList[i] = awayUser;

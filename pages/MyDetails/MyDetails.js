@@ -92,4 +92,7 @@ Page({
   onBack() {
     goPage();
   },
+  goMyPointsDetails: function () {
+    navTo('/pages/MyPointsDetails/MyPointsDetails');
+  },
 })
