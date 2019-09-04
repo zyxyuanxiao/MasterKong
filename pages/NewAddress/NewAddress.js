@@ -1,13 +1,57 @@
 // pages/NewAddress/NewAddress.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    Numbertrue: false,
+    color:'#F04451',
+    province:'',
+    city:'',
+    area:'',
+    show:false
   },
-
+  // 手机号验证
+  blurPhone: function (e) {
+    var phone = e.detail.value;
+    let that = this;
+    var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+    if (phone.length <10){
+      this.setData({
+        ajxtrue: false,
+        color: "#F04451"
+      })
+    }else{
+      if (myreg.test(phone)){
+        this.setData({
+          ajxtrue: true,
+          color: "#FFFFFF"
+        })
+      }else{
+        this.setData({
+          ajxtrue: false,
+          color: "#F04451 "
+        })
+      }
+    }
+  },
+  // 表单提交
+  formSubmit(e) {
+    let that = this
+    let val = e.detail.value
+    let ajxtrue = this.data.ajxtrue
+    if (ajxtrue == true) {
+      //表单提交进行
+    } else {
+      wx.showToast({
+        title: '手机号有误',
+        icon: 'success',
+        duration: 2000
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -62,5 +106,22 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  sureSelectAreaListener: function (e) {
+    var that = this;
+    that.setData({
+      show: false,
+      province: e.detail.currentTarget.dataset.province,
+      city: e.detail.currentTarget.dataset.city,
+      area: e.detail.currentTarget.dataset.area
+    })
+  },
+  chooseAddress: function () {
+    console.log("xuanzedizhi")
+    var that = this;
+    that.setData({
+      show: true
+    })
   }
+  
 })
