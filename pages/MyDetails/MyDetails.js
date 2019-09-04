@@ -37,6 +37,15 @@ Page({
     this.setData({
       aUserInfo: aUserInfo,
     });
+
+    get('/wx/gameInfo/' + config.appkey + '/getUserScore', { 'openId': aUserInfo.openid, }).then(res => {
+      var bUserScoreVo = res.bUserScoreVo;
+      if (bUserScoreVo){
+        this.setData({
+          bUserScoreVo: bUserScoreVo,
+        });
+      }
+    })
     that = this;
   },
 
@@ -92,7 +101,10 @@ Page({
   onBack() {
     goPage();
   },
-  goMyPointsDetails: function () {
-    navTo('/pages/MyPointsDetails/MyPointsDetails');
+  goMyPoints: function () {
+    navTo('/pages/MyPoints/MyPoints?bUserScoreVo=' + JSON.stringify(that.data.bUserScoreVo));
+  }, 
+  goWrongTopic: function (e) {
+    navTo('/pages/WrongTopic/WrongTopic');
   },
 })

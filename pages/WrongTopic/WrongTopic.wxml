@@ -1,6 +1,6 @@
 <!--pages/WrongTopic/WrongTopic.wxml-->
 <view class="SwitchBox">
-  <view  bindtap="TheTotalListClick" class="{{isChecked?'choose':'NotChoose'}}">
+  <view bindtap="TheTotalListClick" class="{{isChecked?'choose':'NotChoose'}}">
     今日答错
   </view>
   <view class="{{isCheckedTwo?'choose':'NotChoose'}}" bindtap="TotalListClick">
@@ -8,20 +8,46 @@
   </view>
 </view>
 
-<view class="problemView">
-  <view class="problem">
-    “食源性疾病”指食品中致病因素进入 人体引起的感染性、中毒性等疾病。以 下举措不能预防食源性疾病的是：
+<block wx:if="{{isChecked}}">
+  <view class="problemView" wx:for="{{currentQ}}" wx:index="{{index}}">
+    <view class="problem">
+      {{item.question}}
+    </view>
+    <view class="hr"></view>
+    <block wx:if="{{item.answer == 'A'}}">
+      <view class="correctAnswer">正确答案：{{item.answerA}}</view>
+    </block>
+    <block wx:if="{{item.answer == 'B'}}">
+      <view class="correctAnswer">正确答案：{{item.answerB}}</view>
+    </block>
+    <block wx:if="{{item.answer == 'C'}}">
+      <view class="correctAnswer">正确答案：{{item.answerC}}</view>
+    </block>
+    <block wx:if="{{item.answer == 'D'}}">
+      <view class="correctAnswer">正确答案：{{item.answerD}}</view>
+    </block>
+    <view class="parsing">解析：{{item.answerDesc}}</view>
   </view>
-  <view class="hr"></view>
-  <view class="correctAnswer">正确答案：使用冰箱长时间储藏食物</view>
-  <view class="parsing">解析：冰箱只能让食物在一定时间里保持新鲜，并 不能从根源上防止食源性疾病。</view>
-</view>
+</block>
 
-<view class="problemView">
-  <view class="problem">
-    “食源性疾病”指食品中致病因素进入 人体引起的感染性、中毒性等疾病。以 下举措不能预防食源性疾病的是：
+<block wx:if="{{isCheckedTwo}}">
+   <view class="problemView" wx:for="{{allQuestion}}" wx:index="{{index}}">
+    <view class="problem">
+      {{item.question}}
+    </view>
+    <view class="hr"></view>
+    <block wx:if="{{item.answer == 'A'}}">
+      <view class="correctAnswer">正确答案：{{item.answerA}}</view>
+    </block>
+    <block wx:if="{{item.answer == 'B'}}">
+      <view class="correctAnswer">正确答案：{{item.answerB}}</view>
+    </block>
+    <block wx:if="{{item.answer == 'C'}}">
+      <view class="correctAnswer">正确答案：{{item.answerC}}</view>
+    </block>
+    <block wx:if="{{item.answer == 'D'}}">
+      <view class="correctAnswer">正确答案：{{item.answerD}}</view>
+    </block>
+    <view class="parsing">解析：{{item.answerDesc}}</view>
   </view>
-  <view class="hr"></view>
-  <view class="correctAnswer">正确答案：使用冰箱长时间储藏食物</view>
-  <view class="parsing">解析：冰箱只能让食物在一定时间里保持新鲜，并 不能从根源上防止食源性疾病。</view>
-</view>
+</block>

@@ -1,6 +1,16 @@
 <!--pages/MyPointsDetails/MyPointsDetails.wxml-->
-<button class="integralTotal">锦标赛积分：100000</button>
-
+<block wx:if="{{gameType == '1'}}">
+  <button class="integralTotal pk">PK赛积分：100000</button>
+</block>
+<block wx:if="{{gameType == '3'}}">
+  <button class="integralTotal championship">锦标赛积分：100000</button>
+</block>
+<block wx:if="{{gameType == '4'}}">
+  <button class="integralTotal special">专题赛积分：100000</button>
+</block>
+<block wx:if="{gameType == '5'}}">
+  <button class="integralTotal kmtour">康师傅之旅积分：100000</button>
+</block>
 <view class="SingleMatch">
   <view class="GameScores">
     <view class="date">2019-07-23</view>

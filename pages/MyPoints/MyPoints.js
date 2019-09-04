@@ -1,4 +1,25 @@
 // pages/MyPoints/MyPoints.js
+import {
+  post,
+  get
+} from '../../utils/http'
+import {
+  setValue,
+  redirectTo,
+  getValue,
+  showToast,
+  showModal,
+  navTo,
+  reLanchTo,
+  rnd,
+  goPage
+} from '../../utils/common';
+import util from '../../utils/util1'
+import {
+  config,
+  cmd
+} from '../../config'
+var that;
 Page({
 
   /**
@@ -12,7 +33,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    if (options.bUserScoreVo) {
+      this.setData({
+        bUserScoreVo: JSON.parse(options.bUserScoreVo),
+      });
+    }
+    that=this;
   },
 
   /**
@@ -62,5 +88,10 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  } ,
+  goMyPointsDetails: function (e) {
+    const gameType = e.currentTarget.dataset.gametype;
+    navTo('/pages/MyPointsDetails/MyPointsDetails?gameType=' + gameType);
+  },
+
 })

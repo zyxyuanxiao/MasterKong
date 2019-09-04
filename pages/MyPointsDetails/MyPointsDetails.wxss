@@ -1,28 +1,28 @@
 /* pages/MyPointsDetails/MyPointsDetails.wxss */
  
 /* 锦标赛 */
-.integralTotal{
+.championship{
   background:rgba(249,109,57,1);
 }
 .GameScores .score{
   color:#f96d39;
 }
 /* PK赛 */
-.integralTotal{
+.pk{
   background:rgba(243,59,66,1);
 }
 .GameScores .score{
 color:rgba(243,59,66,1);
 }
 /* 专题赛 */
-.integralTotal{
+.special{
   background:rgba(43,157,254,1);
 }
 .GameScores .score{
   color:rgba(43,157,254,1);
 }
 /* 康师傅之旅 */
-.integralTotal{
+.kmtour{
   background:rgba(55,183,183,1);
 }
 .GameScores .score{

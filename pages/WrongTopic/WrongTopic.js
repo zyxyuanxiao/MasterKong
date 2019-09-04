@@ -1,4 +1,25 @@
 // pages/WrongTopic/WrongTopic.js
+import {
+  post,
+  get
+} from '../../utils/http'
+import {
+  setValue,
+  redirectTo,
+  getValue,
+  showToast,
+  showModal,
+  navTo,
+  reLanchTo,
+  rnd,
+  goPage
+} from '../../utils/common';
+import util from '../../utils/util1'
+import {
+  config,
+  cmd
+} from '../../config'
+var that;
 Page({
 
   /**
@@ -13,7 +34,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    that=this;
+    that.getTodayQ();
   },
 
   /**
@@ -65,15 +87,41 @@ Page({
 
   },
   TheTotalListClick: function (e) {
-    this.setData({
+    that.setData({
       isChecked: true,
       isCheckedTwo: false
     })
+    if (!that.data.currentQ) {
+      that.getTodayQ();
+    }
   },
   TotalListClick: function (e) {
-    this.setData({
+    that.setData({
       isChecked: false,
       isCheckedTwo: true
     })
+    var aUserInfo = getValue('aUserInfo');
+    if (!that.data.allQuestion){
+      get('/wx/gameInfo/' + config.appkey + '/getWrongTopic', { 'openId': aUserInfo.openid, 'type': '2' }).then(res => {
+        var allQuestion = res.allQuestion;
+        if (allQuestion) {
+          this.setData({
+            allQuestion: allQuestion,
+          });
+        }
+      })
+    }
+  },
+  getTodayQ: function (e) {
+    var aUserInfo = getValue('aUserInfo');
+    get('/wx/gameInfo/' + config.appkey + '/getWrongTopic', { 'openId': aUserInfo.openid, 'type': '1' }).then(res => {
+      var currentQ = res.currentQ;
+      if (currentQ) {
+        this.setData({
+          currentQ: currentQ,
+          allQuestion:''
+        });
+      }
+    });
   }
 })

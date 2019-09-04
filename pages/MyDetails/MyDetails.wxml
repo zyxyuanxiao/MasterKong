@@ -21,26 +21,26 @@
         <view class="ranking">第 23 名</view>
       </view>
       <view class="TotalScore">
-        <view class="Integral">赛季积分</view>
-        <view class="Number">34000</view>
-        <view class="ranking">第 23 名</view>
+        <view class="Integral">总积分</view>
+        <view class="Number">{{bUserScoreVo.sumscore}}</view>
+        <view class="ranking">第 {{bUserScoreVo.rank}} 名</view>
       </view>
     </view>
   </view>
   <!-- 战绩 -->
   <view class="record">
     <view class="NumberChallenges">
-      <view class="Number">600</view>
+      <view class="Number">{{bUserScoreVo.totalnum}}</view>
       <view class="Text">总答题数</view>
     </view>
     <view class="NumberVictory">
-      <view class="Number">40
+      <view class="Number">{{bUserScoreVo.winquestionrate}}
         <view class="rate">%</view>
       </view>
       <view class="Text">答题正确率</view>
     </view>
     <view class="InterestRates">
-      <view class="Number">66.6
+      <view class="Number">{{bUserScoreVo.winpkrate}}
         <view class="rate">%</view>
       </view>
       <view class="Text">PK胜率</view>
@@ -52,11 +52,11 @@
       <image src="../../assets/images/MyDetails/个人中心-成就@2x.png" class="MenuFigure"></image>
       <view class="menuName">成就</view>
     </view>
-    <view class="menuSingle" bindtap="goMyPointsDetails">
+    <view class="menuSingle" bindtap="goMyPoints">
       <image src="../../assets/images/MyDetails/个人中心-我的积分@2x.png" class="MenuFigure"></image>
       <view class="menuName">我的积分</view>
     </view>
-    <view class="menuSingle">
+    <view class="menuSingle" bindtap="goWrongTopic">
       <image src="../../assets/images/MyDetails/个人中心-错题集@2x.png" class="MenuFigure"></image>
       <view class="menuName">错题集</view>
     </view>

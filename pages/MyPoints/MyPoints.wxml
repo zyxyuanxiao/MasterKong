@@ -13,10 +13,10 @@
 <view class="TotalScore">
   <view class="Total">
     <view class="Text">总积分</view>
-    <view class="foundation">第 20 名</view>
+    <view class="foundation">第 {{bUserScoreVo.rank}} 名</view>
   </view>
   <view class="IntegralNumber">
-    6800000
+    {{bUserScoreVo.sumscore}}
   </view>
 </view>
 
@@ -29,32 +29,32 @@
 
 <!-- 比赛 -->
 <view class="TheGame">
-  <view class="gamesView">
-    <image src="../../assets/images/MyPoints/锦标赛积分@2x.png" ></image>
-    <view class="game">
+  <view class="gamesView" data-gametype='3' bindtap="goMyPointsDetails">
+    <image src="../../assets/images/MyPoints/锦标赛积分@2x.png"></image>
+    <view class="game" >
       <view class="gameText">锦标赛</view>
-      <view class="gameNumber">100000</view>
+      <view class="gameNumber">{{bUserScoreVo.championshipScore}}</view>
     </view>
   </view>
-  <view class="gamesView">
-    <image src="../../assets/images/MyPoints/PK赛积分@2x.png" ></image>
+  <view class="gamesView" data-gametype='1' bindtap="goMyPointsDetails">
+    <image src="../../assets/images/MyPoints/PK赛积分@2x.png"></image>
     <view class="game">
       <view class="gameText">PK赛</view>
-      <view class="gameNumber">40000</view>
+      <view class="gameNumber">{{bUserScoreVo.pkscore}}</view>
     </view>
   </view>
-  <view class="gamesView">
-    <image src="../../assets/images/MyPoints/专题赛积分@2x.png" ></image>
+  <view class="gamesView" data-gametype='4' bindtap="goMyPointsDetails">
+    <image src="../../assets/images/MyPoints/专题赛积分@2x.png"></image>
     <view class="game">
       <view class="gameText">专题赛</view>
-      <view class="gameNumber">5000</view>
+      <view class="gameNumber">{{bUserScoreVo.specialscore}}</view>
     </view>
   </view>
-  <view class="gamesView">
-    <image src="../../assets/images/MyPoints/康师傅之旅积分@2x.png" ></image>
+  <view class="gamesView" data-gametype='5' bindtap="goMyPointsDetails">
+    <image src="../../assets/images/MyPoints/康师傅之旅积分@2x.png"></image>
     <view class="game">
       <view class="gameText">康师傅之旅</view>
-      <view class="gameNumber">678</view>
+      <view class="gameNumber">{{bUserScoreVo.kmtourscore}}</view>
     </view>
   </view>
 </view>

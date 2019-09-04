@@ -41,11 +41,12 @@
 }
 .problem{
   width:612rpx;
-  height:150rpx;
+  /* height:150rpx; */
   font-size:36rpx;
   font-family:PingFangSC;
   font-weight:500;
   color:rgba(255,255,255,1);
+  line-height: 50rpx;
   margin: 0rpx 39rpx 39rpx 39rpx;
 }
 .hr{
@@ -55,20 +56,22 @@
 }
 .correctAnswer{
   width:576rpx;
-  height:36rpx;
+  /* height:36rpx; */
   font-size:36rpx;
   font-family:PingFangSC;
   font-weight:500;
   color:rgba(31,204,102,1);
+  line-height: 36rpx;
   margin: 39rpx 39rpx 39rpx 39rpx;
 }
 .parsing{
   width:616rpx;
-  height:80rpx;
+  /* height:80rpx; */
   font-size:28rpx;
   font-family:PingFangSC;
   font-weight:400;
   color:rgba(255,255,255,1);
+  line-height: 40rpx;
   margin: 0rpx 39rpx 0rpx 39rpx;
   opacity: 0.5;
 }
