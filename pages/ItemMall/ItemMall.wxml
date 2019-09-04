@@ -1,40 +1,33 @@
 <!--pages/ItemMall/ItemMall.wxml-->
 <view class="ItemMall">
-<!--积分-->
+  <!--积分-->
   <view class="integral">
     <view class="currentIntegral">
-      <view class="currentIntegralNumber">14789</view>
+      <view class="currentIntegralNumber">{{bUserScoreVo.sumscore}}</view>
       <view class="currentIntegralText">当前积分</view>
     </view>
     <image src="../../assets/images/ItemMall/矩形@2x.png" class="divider"></image>
     <view class="ConvertiblePoints">
-      <view class="ConvertiblePointsNumber">14789</view>
+      <view class="ConvertiblePointsNumber">{{bUserScoreVo.canexchangscore}}</view>
       <view class="ConvertiblePointsText">可兑换积分</view>
     </view>
   </view>
   <view>
-  <!--兑换-->
-  <view class="exchange">
-    <view class="exchangeView">
-      <image src="../../assets/images/ItemMall/复活卡橙色底@2x.png" class="card"></image>
-      <view class="exchangeIntegral">5000积分 </view>
-      <view class="ChangeButtonY">兑换</view>
+    <!--兑换-->
+    <view class="exchange">
+      <block wx:for="{{bGoodList}}">
+        <view class="exchangeView">
+          <image src="../../assets/images/ItemMall/{{ item.code}}.png" class="card"></image>
+          <view class="exchangeIntegral">{{item.marketprice}}积分 </view>
+          <view class="ChangeButtonY" wx:if="{{item.exchangeType == '1'}}">兑换</view>
+        </view>
+      </block>
+      <view class="exchangeView">
+        <image src="../../assets/images/ItemMall/复活卡橙色底@2x.png" class="card"></image>
+        <view class="exchangeIntegral">5000积分 </view>
+        <view class="ChangeButtonN">兑换</view>
+      </view>
+
     </view>
-    <view class="exchangeView">
-      <image src="../../assets/images/ItemMall/复活卡橙色底@2x.png" class="card"></image>
-      <view class="exchangeIntegral">5000积分 </view>
-      <view class="ChangeButtonY">兑换</view>
-    </view>
-    <view class="exchangeView">
-      <image src="../../assets/images/ItemMall/复活卡橙色底@2x.png" class="card"></image>
-      <view class="exchangeIntegral">5000积分 </view>
-      <view class="ChangeButtonN">兑换</view>
-    </view>
-    <view class="exchangeView">
-      <image src="../../assets/images/ItemMall/复活卡橙色底@2x.png" class="card"></image>
-      <view class="exchangeIntegral">5000积分 </view>
-      <view class="ChangeButtonY">兑换</view>
-    </view>
-  </view>
   </view>
 </view>

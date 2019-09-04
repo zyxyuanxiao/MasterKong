@@ -42,7 +42,7 @@
   </view>
  
   <!--道具商城-->
-  <view  class="menu">
+  <view  class="menu" bindtap="goItemMall">
       <view>
         <image src='../../assets/images/Moremenu/道具商城@2x.png' mode='widthFix' class="moreImgTwo"></image>
       </view>

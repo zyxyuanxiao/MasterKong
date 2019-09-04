@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/HealthMan/HealthMan",
     "pages/KangPK/KangPK",
     "pages/MyDetails/MyDetails",
     "pages/PKgame/PKgame",
@@ -31,7 +32,7 @@
     "pages/StartChallenge-Waiting/StartChallenge-Waiting",
     "pages/ItemMall-two/ItemMall-two",
     "pages/StartChallengePre/StartChallengePre",
-    "pages/HealthMan/HealthMan",
+    
     "pages/knowledge/knowledge",
     "pages/resultMatch-two/resultMatch-two",
     "pages/SpecialGame-Two/SpecialGame-Two",
