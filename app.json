@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/MyDetails/MyDetails",
     "pages/KangPK/KangPK",
+    "pages/MyDetails/MyDetails",
     "pages/PKgame/PKgame",
     "pages/NewAddress/NewAddress",
     "pages/prizeAddress/prizeAddress",

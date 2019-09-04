@@ -1,1 +1,6 @@
 /* pages/KangPK/KangPK.wxss */
+.KangPKView{
+  width:750rpx;
+  height:1624rpx;
+  background:linear-gradient(181deg,rgba(128,191,145,1) 0%,rgba(73,139,88,1) 100%);
+}
