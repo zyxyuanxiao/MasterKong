@@ -1,0 +1,22 @@
+<!--pages/NewAddress/NewAddress.wxml-->
+<view class="AddressInputs">
+    <input type="text" placeholder="请输入正确的名字" class="UnderLine"></input>
+    <input type="number" name="phone" placeholder="请输入正确的联系方式" class="UnderLine"   maxlength="11" bindinput="blurPhone" style="color:{{color}}"></input>
+    <input type="text" placeholder="请输入收货省份" class="UnderLine" bindtap='chooseAddress' value="{{province == ''?'':province + '-' + city + '-' + area}}"></input>
+    <input type="text" placeholder="请输入收货详情地址" ></input>
+</view>
+  <image src="../../assets/images/NewAddress/地址@2x.png" class="AddressImg"></image>
+  <view class="prompt">
+  <image src='../../assets/images/NewAddress/提示@2x.png' class="promptImg"></image>
+  为了保证您的奖品被准确送达，请务必确认信息填写正确！
+  </view>
+
+  <!-- 地址弹出框 -->
+  <nyz_area_picker
+  show="{{show}}"
+  bind:sureSelectArea="sureSelectAreaListener"
+>
+</nyz_area_picker>
+
+
+  <view class="Truesave">保存</view>

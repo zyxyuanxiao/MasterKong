@@ -11,16 +11,18 @@
 <view class="problemView">
   <view class="date">2019-07-22</view>
   <view class="TextOne">恭喜你在食品安全专题赛中连胜6次，你的排名靠 前了3名。点击查看比赛排名。</view>
-  <view class="timeOne">19:12:45</view>
+  <view class="time">19:12:45</view>
+  <view class="hr"></view>
   <view class="TextTwo">恭喜你在食品安全专题赛中连胜6次。你的排名在 月榜里靠前了3名，在总榜里靠前了30名，继续保 持。点击查看比赛排名。</view>
-  <view class="timeTwo">12:33:11</view>
+  <view class="time">12:33:11</view>
 </view>
 
 <view class="problemView">
   <view class="date">2019-07-22</view>
   <view class="TextOne">恭喜你在食品安全专题赛中连胜6次，你的排名靠 前了3名。点击查看比赛排名。</view>
-  <view class="timeOne">19:12:45</view>
+  <view class="time">19:12:45</view>
+  <view class="hr"></view>
   <view class="TextTwo">恭喜你在食品安全专题赛中连胜6次。你的排名在 月榜里靠前了3名，在总榜里靠前了30名，继续保 持。点击查看比赛排名。</view>
-  <view class="timeTwo">12:33:11</view>
+  <view class="time">12:33:11</view>
 </view>
 

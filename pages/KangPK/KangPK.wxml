@@ -1,0 +1,9 @@
+<!--pages/KangPK/KangPK.wxml-->
+<view class="KangPKView">
+  <page-container title="PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{true}}">
+  <view class="body">
+      
+  </view>
+  </page-container>
+</view>
+

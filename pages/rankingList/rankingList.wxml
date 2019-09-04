@@ -48,10 +48,14 @@
     <view class="MyRank">
       <view class="MyRanking">
         <view class="MyRankingText">我的排行</view>
-        <view class="MyRankingShare">
-          <image src='../../assets/images/rankingList/分享排名@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
-          <view class="MyRankingShareText">分享排名</view>
-        </view>
+      <view class="MyRankingShareOne">
+        <image src='../../assets/images/rankingList/发给好友@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
+        <view class="MyRankingShareText">发给好友</view>
+      </view>
+      <view class="MyRankingShare">
+        <image src='../../assets/images/rankingList/生成海报@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
+        <view class="MyRankingShareText" bindtap="Btn" data-statu="open">生成海报</view>
+      </view>
       </view>
 
       <!-- <view class="HorizontalLine"></view> -->
@@ -94,5 +98,27 @@
       </view>
 
     </view>
+
+    <!-- 分享海报 -->
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <view class="SharePostersImg">
+      <view class="text">
+        我参加专题赛挑战成功， 食品安全专题！
+      </view>
+      <view class="textView">
+        <view class="textTwo">
+          扫码识别小程序 每天学习不停息
+        </view>
+        <view class="QrCode">
+          <image src='../../assets/images/resultMatch/小程序码120尺寸@2x.png' class="QrCodeImg"></image>
+        </view>
+      </view>
+
+    </view>
+    <view class="SharePostersButton" bindtap="ok">
+      保存海报
+    </view>
+  </view>
+
 
   </view>

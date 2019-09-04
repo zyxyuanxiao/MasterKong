@@ -1,0 +1,9 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "新增地址",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "nyz_area_picker": "../../../components/nyz_area_picker/nyz_area_picker"
+  }
+}
