@@ -12,8 +12,20 @@ Component({
             value: '标题'
         },
         showTopImg: {
-            type: Boolean,
-            value: true
+         type: Boolean,
+          value: true
+        },
+        Imgsrc: {
+          type: String,
+          value: '路径'
+        },
+        showTopImgPK: {
+         type: Boolean,
+          value: true
+        },
+        ImgsrcPK: {
+          type: String,
+          value: '路径'
         },
         showBotImg: {
             type: Boolean,

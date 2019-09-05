@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.page-container .image {
+.page-container image {
   z-index: -1;
   display: block;
   position: absolute;
@@ -17,11 +17,20 @@
   opacity: 1;
 }
 
-.page-container .img-top {
+.page-container .img-top-details {
   z-index: -2;
   top: 0;
   height: 675rpx;
 }
+/* 康师傅PK赛 */
+.page-container .img-top-PK {
+  z-index: -2;
+  top: 0;
+  height: 494rpx;
+  width: 396rpx;
+  margin: 0rpx 177rpx;
+}
+
 
 .page-container .img-bot {
   bottom: 0;
@@ -76,6 +85,6 @@
   text-align: left;
 }
 
-.defind-container .img-top {
+.defind-container .img-top-details {
   z-index: 1;
 }

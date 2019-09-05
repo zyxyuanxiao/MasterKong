@@ -1,5 +1,5 @@
 <!--pages/MyDetails/MyDetails.wxml-->
-<page-container title="我的" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{true}}">
+<page-container title="我的" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{true}}" >
   <view class="Head">
     <view class="myProfile">
       <image src="{{aUserInfo.avatarurl}}" class="HeadPortrait"></image>
