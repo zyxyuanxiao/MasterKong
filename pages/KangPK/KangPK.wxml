@@ -2,8 +2,9 @@
 <view class="KangPKView">
   <page-container title="PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImg="{{true}}">
   <view class="body">
-      
+      11111111  
   </view>
   </page-container>
 </view>
 
+   
