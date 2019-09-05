@@ -4,6 +4,10 @@ const app = getApp()
 import { get } from '../../utils/http'
 import { navTo, setValue, getValue, goPage } from '../../utils/common'
 import { Music } from '../../utils/music'
+import {
+  config,
+  cmd
+} from '../../config'
 const music = new Music()
 var that;
 Page({
@@ -52,6 +56,16 @@ Page({
       aUserInfo: aUserInfo,
       wxuserInfo: wxuserInfo,
     });
+    
+    get('/wx/question/' + config.appkey + '/getQuestionType', { }).then(res => {
+      var iuQuestionTypeList = res.iuQuestionTypeList;
+      if (iuQuestionTypeList) {
+        this.setData({
+          iuQuestionTypeList: iuQuestionTypeList,
+        });
+      }
+     
+    });
     that = this;
   },
   goRankView: function () {
@@ -72,8 +86,9 @@ Page({
   //专题赛
   goSpecialGame: function (e) {
     // navTo('/pages/SpecialGame/SpecialGame?item=' + JSON.stringify(item))
-    var index=e.currentTarget.dataset.index;
-    navTo('/pages/SpecialGame/SpecialGame');
+    var index = e.currentTarget.dataset.index;
+    var typeId=e.currentTarget.dataset.type;
+    navTo('/pages/SpecialGame/SpecialGame?typeId=' + typeId + "&iuQuestionType=" + JSON.stringify(that.data.iuQuestionTypeList[index]));
     
   },
   goMyDetails: function (e) {

@@ -41,6 +41,7 @@ Page({
     kClientAnswerArr: [],
     sumcount: 0,
     winflag:true,
+    BackgroundImg:'',
   },
 
   /**
@@ -51,9 +52,10 @@ Page({
     const aUserInfo = getValue('aUserInfo');
     this.setData({
       aUserInfo: aUserInfo,
+      typeId: options.typeId,
     });
     get('/wx/question/' + config.appkey + '/special', {
-      'questiontype': '',
+      'typeId': options.typeId,
     }).then(res => {
       that.setData({
         questions: res.questions
@@ -63,6 +65,12 @@ Page({
       if (cmd.continuegame == options.cmd){
         that.getready();
       }
+    }
+
+    if (options.iuQuestionType) {
+      that.setData({
+        iuQuestionType: JSON.parse(options.iuQuestionType)
+      })
     }
   },
 
@@ -173,9 +181,10 @@ Page({
     var useranswer = e.currentTarget.dataset.answer;
     //局数
     var gamenumber = that.data.gamenumber
-    const kClientAnswerDto = that.data.kClientAnswerDto;
-    kClientAnswerDto.gameCount = gamenumber;
-    kClientAnswerDto.answer = useranswer;
+    const kClientAnswerDto = {};
+    // kClientAnswerDto.gameCount = gamenumber;
+    kClientAnswerDto.questionId = that.data.questions[gamenumber].id;
+    kClientAnswerDto.useranswer = useranswer;
     if (that.data.questions[gamenumber].answer == useranswer) {
       kClientAnswerDto.yes = true;
       kClientAnswerDto.score = (that.data.answerCountdown * (20));
@@ -259,7 +268,8 @@ Page({
         that.answerCountdown(that);
       }, 2500);
     } else {
-      navTo('/pages/resultMatch/resultMatch?winflag=' + that.data.winflag + '&sumcount=' + that.data.sumcount);
+      that.saveSpecialGameInfo();
+      navTo('/pages/resultMatch/resultMatch?winflag=' + that.data.winflag + '&sumcount=' + that.data.sumcount + "&typeId=" + that.data.typeId);
     }
   },
   //分享弹窗
@@ -355,11 +365,26 @@ Page({
     }
   },
   cancelShareBtn: function () {
-    navTo('/pages/resultMatch/resultMatch?winflag=' + that.data.winflag + '&sumcount=' + that.data.sumcount);
+    that.saveSpecialGameInfo();
+    navTo('/pages/resultMatch/resultMatch?winflag=' + that.data.winflag + '&sumcount=' + that.data.sumcount + "&typeId=" + that.data.typeId);
   },
   goSpecialGame: function () {
 
   },
   goHome: function() {
-  }
+  },
+  //保存游戏数据
+  saveSpecialGameInfo: function() {
+    const aUserInfo = getValue('aUserInfo');
+    post('/wx/gameInfo/' + config.appkey + '/saveSpecialGameInfo', { openId: aUserInfo.openid,
+      winflag: that.data.winflag, sumcount: that.data.sumcount, gametype:'4',
+      answerResultList: that.data.kClientAnswerArr }).then(res => {
+      var bUserScoreVo = res.bUserScoreVo;
+      if (bUserScoreVo) {
+        this.setData({
+          bUserScoreVo: bUserScoreVo,
+        });
+      }
+    })
+  },
 })

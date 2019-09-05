@@ -36,11 +36,11 @@
   </view>
 
   <!-- 专题赛 -->
-  <view class="titleTopic" wx:if="{{!starting}}">
+  <view class="titleTopic" wx:if="{{!starting}}" style="background-image: url({{BackgroundImg}})">
     <image mode="aspectFill" class="rectangular" src="../../assets/images/Homepage/矩形@2x.png" />
     <view class="game">专题赛</view>
-    <view class="iTitle">学食品安全知识赢好礼</view>
-    <view class="iText">风靡朋友圈的网红雪糕是否安全，隔夜茶是否健康？快来一起边答边学吧！</view>
+    <view class="iTitle">{{iuQuestionType.desc1}}</view>
+    <view class="iText">{{iuQuestionType.desc2}}</view>
   </view>
   <!--总成绩--->
   <view class="QuestionList" wx:if="{{startspecial}}">

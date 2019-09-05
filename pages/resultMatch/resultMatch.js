@@ -31,6 +31,7 @@ Page({
     const aUserInfo = getValue('aUserInfo');
     this.setData({
       aUserInfo: aUserInfo,
+      typeId: options.typeId,
     });
 
   },//分享弹窗
@@ -95,7 +96,7 @@ Page({
   },
   goSpecialGame: function () {
     wx.reLaunch({
-      url: '/pages/SpecialGame/SpecialGame?cmd=' + cmd.continuegame
+      url: '/pages/SpecialGame/SpecialGame?cmd=' + cmd.continuegame + "&typeId=" + that.data.typeId
     })
   },
   goHome: function () {

@@ -63,16 +63,16 @@
 
   <!--swiper-->
     <swiper next-margin="174rpx" current="0" >
-        <block wx:for="{{imgUrls}}" wx:index="{{index}}">
+        <block wx:for="{{iuQuestionTypeList}}" wx:index="{{index}}">
           <swiper-item class="swiper-item">
             <!-- <view class="Projectleft"></view> -->
-            <image mode="aspectFill" src="{{item.src}}" width="72.8%" height="15.33%" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
+            <image mode="aspectFill" src="../../assets/images/Homepage/{{item.thumbs}}.png" width="72.8%" height="15.33%" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
             <view class="wz">
             <image mode="aspectFill" class="rectangular" src="../../assets/images/Homepage/矩形@2x.png"  />
             <view class="game">专题赛</view>
-            <view class="iTitle">{{item.theTitle}}</view>
-            <view class="iText">{{item.text}}</view>
-            <view class="challenge" data-index="{{index}}" bindtap="goSpecialGame">去挑战</view>
+            <view class="iTitle">{{item.desc1}}</view>
+            <view class="iText">{{item.desc2}}</view>
+            <view class="challenge" data-index="{{index}}" bindtap="goSpecialGame" data-type="{{item.id}}">去挑战</view>
             <!-- <button> default </button> -->
             </view>
           </swiper-item>
@@ -80,8 +80,6 @@
     </swiper>
 
   </view>
-
-
 
 </view>
 
