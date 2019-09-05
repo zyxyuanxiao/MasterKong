@@ -1,10 +1,12 @@
+var that;
 Page({
   data: {
     // input默认是1  
     num: 1,
     // 使用data数据对象设置样式名  
     minusStatus: 'disabled',
-    showModal: false
+    showModal: false,
+    exchangeSuccess:false,
   },
   /* 点击减号 */
   bindMinus: function () {
@@ -23,7 +25,11 @@ Page({
   },
   /* 点击加号 */
   bindPlus: function () {
+   
     var num = this.data.num;
+    if ((num+1) * this.data.good.marketprice > this.data.bUserScoreVo.canexchangscore){
+      return;
+    }
     // 不作过多考虑自增1  
     num++;
     // 只有大于一件的时候，才能normal状态，否则disable状态  
@@ -129,5 +135,18 @@ Page({
 
     }
 
+  },
+  onLoad :function(options){
+    that=this;
+    if (options.bUserScoreVo) {
+      that.setData({
+        bUserScoreVo: JSON.parse(options.bUserScoreVo),
+      });
+    }
+    if (options.good) {
+      that.setData({
+        good: JSON.parse(options.good),
+      });
+    }
   }
 })  

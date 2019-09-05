@@ -151,7 +151,7 @@ page{
     color: #ccc;  
 }  
 /* 兑换按钮绿色 */
-/* .ChangeButton{
+.ChangeButton{
   width:750rpx;
   height:90rpx;
   background:rgba(31,204,102,1);
@@ -162,9 +162,9 @@ page{
   text-align: center;
   position: fixed;
   bottom:0; 
-} */
+} 
 /* 兑换按钮灰色 */
-.ChangeButton{
+/* .ChangeButton{
   width:750rpx;
   height:90rpx;
   background:rgba(90,90,102,1);
@@ -175,7 +175,7 @@ page{
   text-align: center;
   position: fixed;
   bottom:0; 
-}
+} */
 
 
 /* 弹出层 */

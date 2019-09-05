@@ -26,7 +26,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    showGood:true,
   },
 
   /**
@@ -103,5 +103,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  goExchangeItem: function (e) {
+    var index = e.currentTarget.dataset.index;
+    wx.navigateTo({
+      url: '/pages/ItemMall-two/ItemMall-two?bUserScoreVo=' + JSON.stringify(that.data.bUserScoreVo) + "&good=" + JSON.stringify(that.data.bGoodList[index])
+    })
+  },
 })
