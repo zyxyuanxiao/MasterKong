@@ -1,6 +1,237 @@
 /* pages/KangPK/KangPK.wxss */
-.KangPKView{
-  width:750rpx;
-  height:1624rpx;
+page{
   background:linear-gradient(181deg,rgba(128,191,145,1) 0%,rgba(73,139,88,1) 100%);
 }
+.MyAccount{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 70rpx;
+}
+/* 各人信息 */
+.MyAccount{
+  display: flex;
+}
+.HeadPortrait{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
+  border-radius: 250rpx;
+}
+.specific{
+  margin-left: 29rpx;
+}
+.specific .name{
+  height:32rpx;
+  font-size:32rpx;
+  font-family:PingFangSC;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+}
+.specific .levelView{
+  display: flex;
+  margin-top: 14rpx;
+}
+.specific .level{
+  width:63rpx;
+  height:36rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height: 36rpx;
+}
+.specific .label{
+  width:137rpx;
+  height:36rpx;
+  background:rgba(238,121,50,1);
+  border-radius:18rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height: 36rpx;
+  text-align: center;
+  margin-left: 23rpx;
+}
+/* 倒计时 */
+.countdown{
+  width:100%;
+  height:120rpx;
+  font-size:120rpx;
+  font-family:Microsoft YaHei;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  line-height:120rpx;
+  margin: 87rpx 0rpx 37rpx 0rpx;
+  text-align: center;
+}
+.aboutBegin{
+  width:100%;
+  height:32rpx;
+  font-size:32rpx;
+  font-family:Microsoft YaHei;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  margin: 0rpx 0rpx 45rpx 0rpx;
+  text-align: center;
+}
+
+/* 比赛详细 */
+.gameDetail{
+  width:690rpx;
+  height:900rpx;
+  background:rgba(255,255,255,1);
+  border-radius:20rpx;
+  margin: 0rpx 30rpx 0rpx 30rpx;
+}
+.GameView{
+  display: flex;
+  flex-wrap: wrap;
+}
+.gameDetail .One{
+  width:216rpx;
+  height:145rpx;
+  font-size:36rpx;
+  font-family:Microsoft YaHei;
+  color:rgba(51,51,51,1);
+  margin: 70rpx 0rpx 0rpx 78rpx;
+}
+.gameDetail .number{
+  font-size: 60rpx;
+  font-weight: bold;
+  font-family:Microsoft YaHei;
+}
+.gameDetail .text{
+  font-size: 24rpx;
+}
+.gameDetail .Two{
+  width:216rpx;
+  height:134rpx;
+  font-size:36rpx;
+  color:rgba(51,51,51,1);
+  margin: 70rpx 0rpx 0rpx 158rpx;
+}
+.gameDetail .three{
+  width:144rpx;
+  height:134rpx;
+  font-size:36rpx;
+  color:rgba(51,51,51,1);
+  margin: 60rpx 0rpx 0rpx 78rpx;
+}
+.gameDetail .four{
+  width:144rpx;
+  height:134rpx;
+  font-size:36rpx;
+  color:rgba(51,51,51,1);
+  margin: 60rpx 0rpx 0rpx 224rpx;
+}
+.gameDetail .participate{
+  width:300rpx;
+  height:80rpx;
+  background:rgba(31,204,102,1);
+  border-radius:40rpx;
+  font-size:28rpx;
+  font-family:Microsoft YaHei;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 80rpx;
+  margin: 191rpx 195rpx 0rpx 195rpx;  
+}
+.gameDetail .red{
+  width:260rpx;
+  height:33rpx;
+  font-size:24rpx;
+  font-family:Me;
+  font-weight:400;
+  color:rgba(223,55,55,1);
+  margin: 40rpx 206rpx 0rpx 224rpx;
+}
+/* 弹出框 积分不够 */
+/* .modalDlg{
+  background:rgba(47,47,55,1);
+  background-size: 100% 100%;
+  width: 334rpx;
+  height: 80rpx;
+  position: fixed;
+  top: 796rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 0 auto;
+  border-radius:8rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color:rgba(255,255,255,1);
+} */
+/* 积分不够 */
+.modalDlg{
+  width:560rpx;
+  height:305rpx;
+  background:rgba(255,255,255,1);
+  background-size: 100% 100%;
+  position: fixed;
+  top: 796rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin: 0 auto;
+  border-radius:8rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color:rgba(255,255,255,1);
+}
+.modalDlg .text{
+  width:100%;
+  text-align: center;
+  height:32rpx;
+  font-size:36rpx;
+  font-family:Microsoft YaHei;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  margin-top: 50rpx;
+}
+.modalDlg .view{
+  display: flex;
+}
+.modalDlg .cancel{
+  width:205rpx;
+  height:83rpx;
+  border-radius:40rpx;
+  border:2rpx solid rgba(129,129,129,1);
+  font-size:32rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(141,140,140,1);
+  line-height:83rpx;
+  margin: 83rpx 30rpx 0rpx 60rpx;
+}
+.modalDlg .determine{
+  margin: 83rpx 60rpx 0rpx 0rpx;
+  width:205rpx;
+  height:83rpx;
+  background:rgba(31,204,102,1);
+  border-radius:40rpx;
+  font-size:32rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:83rpx;
+}
+/* 遮阳罩 */
+.drawer_screen {
+  width:750rpx;
+  height:1448rpx; 
+  position: absolute;  
+  left: 0;  
+  z-index: 1000;  
+  background:rgba(0,0,0,0.5);
+  overflow: hidden;  
+  bottom: 0;
+} 

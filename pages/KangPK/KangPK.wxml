@@ -1,11 +1,69 @@
 <!--pages/KangPK/KangPK.wxml-->
-<!-- <view class="KangPKView"> -->
-    <page-container title="PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" ImgsrcPK="../../images/锦标赛    标志@2x.png">
-    <view class="KangPKView">
-        11111111  
+<page-container title="PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" ImgsrcPK="../../images/锦标赛标志@2x.png">
+    <!-- 个人信息 -->
+    <view class="MyAccount">
+        <image src='../../assets/images/Homepage/专题5@2x.png' class="HeadPortrait"></image>
+        <view class="specific">
+          <view class="name">炙热的天空</view>
+          <view class="levelView">
+            <view class="level">Lv 23</view>
+            <view class="label">行走百科</view>
+          </view>
+        </view>
     </view>
-  </page-container>
-<!-- </view> -->
+  <!-- 倒计时 -->
+  <view class="countdown">
+    00:03:52
+  </view>
+  <!-- 即将开始 -->
+  <view class="aboutBegin">
+    八点标准竞标赛 即将开始
+  </view>
+  <!-- 比赛详细 -->
+  <view class="gameDetail">
+  <view class="GameView">
+    <view class="One">
+      挑战成功奖励
+      <text class="number">2000</text>
+      <text class="text">积分</text>
+    </view>
+    <view class="Two">
+      最大参赛人数
+      <text class="number">60</text>
+      <text>人</text>
+    </view>
+    <view class="three">
+      挑战回合 
+      <text class="number">5</text>
+      <text>回合</text>
+    </view>
+    <view class="four">
+      获胜人数  
+      <text class="number">8</text>
+      <text>人</text>     
+    </view>
+    </view>
+    <!-- 参加按钮 -->
+    <view class="participate"  bindtap='participateClick' data-statu="open">报名参加</view>
+    <view class="red">此次挑战将消耗900积分</view>
+  </view>
+
+  <!-- 弹出框 -->
+<!-- <view class="modalDlg" wx:if="{{showModal}}">
+无法挑战，积分不够
+</view> -->
+<!-- 遮罩层 -->
+<view class="drawer_screen" bindtap="btn" data-statu="close" wx:if="{{showModal}}"></view>  
+
+<!-- 积分不够 -->
+<view class="modalDlg" wx:if="{{showModal}}">
+  <view class="text">确定消耗300积分报名吗？</view>
+  <view class="view">
+    <view class="cancel"  bindtap="ok" >取消</view>
+    <view class="determine">确定</view>
+  </view>
+</view>
+</page-container>
 
 
    

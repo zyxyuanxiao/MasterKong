@@ -1,6 +1,6 @@
 {
   "navigationBarTextStyle": "white",
-  "navigationBarTitleText": "新增地址",
+  "navigationBarTitleText": "填写地址",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light",
   "usingComponents": {
