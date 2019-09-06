@@ -1,0 +1,6 @@
+<!--pages/TripMasterKong/SpecialGame-index/SpecialGame-index.wxml-->
+<page-container title="专题赛" binddefindBack="onBack" defindBack="{{true}}" >
+    <image src='../../../assets/images/Homepage/专题5@2x.png' class="HeadPortrait"></image>
+    <image src='../../../assets/images/Homepage/专题5@2x.png' class="HeadPortrait"></image>
+    <image src='../../../assets/images/Homepage/专题5@2x.png' class="HeadPortrait"></image>
+</page-container>

@@ -1,0 +1,183 @@
+/* pages/TripMasterKong/SpecialGame-two/SpecialGame-two.wxss */
+page{
+  width:750rpx;
+  height:1624rpx;
+  background:rgba(59,174,129,1);
+}
+/* 各人信息 */
+.MyAccount{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 70rpx;
+  display: flex;
+}
+.HeadPortrait{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
+  border-radius: 250rpx;
+}
+.specific{
+  margin-left: 29rpx;
+}
+.specific .name{
+  height:32rpx;
+  font-size:32rpx;
+  font-family:PingFangSC;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+}
+.specific .levelView{
+  display: flex;
+  margin-top: 14rpx;
+}
+.specific .level{
+  width:63rpx;
+  height:36rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height: 36rpx;
+}
+.specific .label{
+  width:137rpx;
+  height:36rpx;
+  background:rgba(238,121,50,1);
+  border-radius:18rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height: 36rpx;
+  text-align: center;
+  margin-left: 23rpx;
+}
+.scoreView{
+  width: 111rpx;
+  height:80rpx;
+  background:rgba(255,255,255,1);
+  border-radius:100px 0px 0px 100px;
+  float: right;
+  position: absolute;
+  right: 0rpx;
+  padding:0rpx 33rpx; 
+}
+.scoreView .scoreText{
+  height:80rpx;
+  font-size:48rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(31,204,102,1);
+  line-height:80rpx;
+  position: absolute;
+  right: 30rpx;
+}
+/* 站点 */
+.site .siteTitle{
+  width:376rpx;
+  height:60rpx;
+  font-size:60rpx;
+  font-family:Microsoft YaHei;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  margin: 89rpx 0rpx 0rpx 187rpx;
+}
+.site .siteText{
+  width:600rpx;
+  height:95rpx;
+  font-size:24rpx;
+  font-family:PingFangSC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  opacity: 0.5;
+  margin: 32rpx 0rpx 39rpx 75rpx;
+}
+
+
+/* 比赛详细 */
+.gameDetail{
+  width:690rpx;
+  height:900rpx;
+  background:rgba(255,255,255,1);
+  border-radius:20rpx;
+  margin: 0rpx 30rpx 0rpx 30rpx;
+}
+/* 显示隐藏 */
+.hide{
+ display: none;
+}
+.show{ 
+ display: block;
+}
+
+/* 比赛结果 */
+.resultMatch{
+  width:600rpx;
+  height:701rpx;
+  background:rgba(255,255,255,1);
+  border-radius:20rpx;
+  border:1rpx solid rgba(151,151,151,1);
+  margin: 166rpx 75rpx 0rpx 75rpx;
+}
+.resulText{
+  width:252rpx;
+  height:120rpx;
+  font-size:60rpx;
+  font-family:PingFangSC;
+  font-weight:600;
+  text-align: center;
+  margin: 46rpx 174rpx 60rpx 174rpx;
+}
+.resultMatch .imageSuccessful{
+  height: 225rpx;
+  width: 161rpx;
+  margin: 0rpx 220rpx 0rpx 219rpx;
+}
+.resultMatch .imageFailure{
+  height: 225rpx;
+  width: 136rpx;    
+  margin: 0rpx 232rpx 0rpx 232rpx;
+}
+.resulText .successful{
+  font-size: 36rpx;
+}
+.SuccessfulView .Congratulations .successful{
+  color:rgba(238,121,50,1);
+}
+.FailureView  .successful{
+  color:rgba(194,194,194,1);
+}
+.FailureView .Congratulations {
+  color:rgba(194,194,194,1);
+}
+.NumberView{
+  width: 100%;
+  height: 140rpx;
+  text-align: center;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(31,204,102,1);
+  margin-top: 30rpx;
+  margin-bottom: 36rpx;
+}
+.NumberView .jia{
+  font-size:24rpx;
+}
+.NumberView .Number{
+  font-size:100rpx;  
+  font-weight:600;
+}
+.nextStation{
+  font-size:28rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  line-height:80rpx;
+  width:300rpx;
+  height:80rpx;
+  background:rgba(31,204,102,1);
+  border-radius:40rpx;
+  text-align: center;
+  margin: -40rpx 225rpx 0rpx 225rpx;
+}
