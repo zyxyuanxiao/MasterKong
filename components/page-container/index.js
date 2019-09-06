@@ -13,7 +13,7 @@ Component({
         },
         showTopImg: {
          type: Boolean,
-          value: true
+          value: false
         },
         Imgsrc: {
           type: String,
@@ -21,7 +21,7 @@ Component({
         },
         showTopImgPK: {
          type: Boolean,
-          value: true
+          value: false
         },
         ImgsrcPK: {
           type: String,

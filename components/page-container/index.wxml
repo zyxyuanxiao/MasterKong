@@ -11,6 +11,6 @@
   </view>  
   <!-- <image wx:if="{{showTopImg}}" class="img-top image" src="../../images/myback.png"></image> -->
   <image wx:if="{{showTopImg}}" class="img-top-details image" src="../../images/myback.png"></image>
-  <image wx:if="{{showTopImgPK}}"  class="img-top-PK imagePK" src="{{ImgsrcPK}}"></image>
+  <image wx:if="{{showTopImgPK}}"  class="img-top-PK image" src="{{ImgsrcPK}}"></image>
 
 </view>

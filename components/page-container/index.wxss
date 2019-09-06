@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-.page-container image {
+.page-container .image {
   z-index: -1;
   display: block;
   position: absolute;
