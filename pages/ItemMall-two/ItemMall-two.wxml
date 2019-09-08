@@ -37,7 +37,9 @@
   </view>
   <view class="FailureText">提交失败，请重试</view>
   <!--兑换按钮-->
-  <view class="ChangeButton" bindtap="btn" data-statu="open">兑换</view>
+  <view class="ChangeButton" bindtap="btn" data-statu="open"
+  style="background:{{backgroundcolor }}"
+   >兑换</view>
 
   <!-- 遮罩层 -->
   <view class="drawer_screen" bindtap="btn" data-statu="close" wx:if="{{showModal}}"></view>
@@ -45,12 +47,12 @@
   <view class="modalDlg" wx:if="{{showModal}}">
     <view class="textone">确定要兑换吗？</view>
     <view class="textTwo">
-      <view>复活卡 x2</view>
-      <view>消耗10000积分</view>
+      <view>{{good.name}} x{{num}}</view>
+      <view>消耗{{good.marketprice}}积分</view>
     </view>
     <view class="buttonView">
-      <view bindtap="ok" class="cancelButton">取消</view>
-      <view class="DetermineButton">确定</view>
+      <view bindtap="cancel" class="cancelButton">取消</view>
+      <view class="DetermineButton" bindtap="exchangeGood" >确定</view>
     </view>
   </view>
 

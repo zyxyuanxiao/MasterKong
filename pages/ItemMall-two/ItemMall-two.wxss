@@ -154,7 +154,7 @@ page{
 .ChangeButton{
   width:750rpx;
   height:90rpx;
-  background:rgba(31,204,102,1);
+  /* background:rgba(31,204,102,1); */
   font-size:32rpx;
   font-weight:500;
   color:rgba(255,255,255,1);

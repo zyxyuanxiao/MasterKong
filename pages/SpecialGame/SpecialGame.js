@@ -56,6 +56,7 @@ Page({
     });
     get('/wx/question/' + config.appkey + '/special', {
       'typeId': options.typeId,
+       openId: aUserInfo.openid,
     }).then(res => {
       that.setData({
         questions: res.questions

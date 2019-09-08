@@ -1,3 +1,23 @@
+import {
+  post,
+  get
+} from '../../utils/http'
+import {
+  setValue,
+  redirectTo,
+  getValue,
+  showToast,
+  showModal,
+  navTo,
+  reLanchTo,
+  rnd,
+  goPage
+} from '../../utils/common';
+import util from '../../utils/util1'
+import {
+  config,
+  cmd
+} from '../../config'
 var that;
 Page({
   data: {
@@ -7,6 +27,7 @@ Page({
     minusStatus: 'disabled',
     showModal: false,
     exchangeSuccess:false,
+    backgroundcolor: 'rgba(31, 204, 102, 1)',
   },
   /* 点击减号 */
   bindMinus: function () {
@@ -59,7 +80,7 @@ Page({
   },
 
   // 弹出层里面的弹窗
-  ok: function () {
+  cancel: function () {
     this.setData({
       showModal: false
     })
@@ -147,6 +168,32 @@ Page({
       that.setData({
         good: JSON.parse(options.good),
       });
+    }
+  },
+  exchangeGood: function (options) {
+    var aUserInfo = getValue('aUserInfo');
+    if (that.data.num * this.data.good.marketprice <= this.data.good.canexchangscore){
+    var exchangedscore= that.data.num * this.data.good.marketprice;
+    get('/wx/gameShop/' + config.appkey + '/exchangeGood', {
+       openId: aUserInfo.openid,
+      exchangedscore: exchangedscore,
+      goodid: that.data.good.id,
+      num: that.data.num, }).then(res => {
+      var bUserScoreVo = res.bUserScoreVo;
+      if(res.code =='0'){
+        if (bUserScoreVo) {
+          that.setData({
+            bUserScoreVo: bUserScoreVo,
+            showModal: false
+          });
+        }
+        if (that.data.num * that.data.good.marketprice > that.data.good.canexchangscore){
+          that.setData({
+            backgroundcolor: 'rgba(90, 90, 102, 1)'
+          });
+        }
+      }
+    });
     }
   }
 })  
