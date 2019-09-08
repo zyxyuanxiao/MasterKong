@@ -2,13 +2,11 @@
 page{
   background:linear-gradient(181deg,rgba(128,191,145,1) 0%,rgba(73,139,88,1) 100%);
 }
+/* 各人信息 */
 .MyAccount{
   width: 100%;
   height: 80rpx;
   margin-top: 70rpx;
-}
-/* 各人信息 */
-.MyAccount{
   display: flex;
 }
 .HeadPortrait{
