@@ -40,7 +40,8 @@ Page({
     indicatorDots: false,
     autoplay: false,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    img_url: config.img_url,
   },
   //事件处理函数
   bindViewTap: function () {

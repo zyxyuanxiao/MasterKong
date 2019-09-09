@@ -1,7 +1,7 @@
 <!--pages/HealthMan/HealthMan.wxml-->
 <view>
     <!--康师傅图片-->
-    <image src='../../assets/images/HealthMan/康师傅@2x.png' class="Kongimg"></image>
+    <image src='{{img_url}}/assets/images/HealthMan/康师傅@2x.png' class="Kongimg"></image>
     <view class="KongText">
       康师傅答人
     </view>
@@ -9,5 +9,5 @@
       <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" lang="zh_CN" class="Kongbutton" bindgetuserinfo="getUserInfo">授权账户</button>
     <!-- </view> -->
     <!--康师傅唐诗-->
-    <image src='../../assets/images/HealthMan/唐诗@2x.png' class="KongTangDynasty"></image>
+    <image src='{{img_url}}/assets/images/HealthMan/唐诗@2x.png' class="KongTangDynasty"></image>
 </view>

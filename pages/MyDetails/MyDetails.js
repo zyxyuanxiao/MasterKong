@@ -26,7 +26,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    img_url: config.img_url,
   },
 
   /**

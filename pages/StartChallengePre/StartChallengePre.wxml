@@ -26,7 +26,7 @@
           八点标准锦标赛 即将开始
         </view>
         <view class="medal">
-          <image src='../../assets/images/StartChallengePre/标准赛标志@2x.png' class="medalImg"></image>
+          <image src='{{img_url}}/assets/images/StartChallengePre/标准赛标志@2x.png' class="medalImg"></image>
         </view>
       </view>
       <view class="GameC">
@@ -61,7 +61,7 @@
           九点标准竞标赛
         </view>
         <view class="medal">
-          <image src='../../assets/images/StartChallengePre/标准赛标志@2x.png' class="medalImg"></image>
+          <image src='{{img_url}}/assets/images/StartChallengePre/标准赛标志@2x.png' class="medalImg"></image>
         </view>
       </view>
       <view class="instructions">

@@ -25,7 +25,7 @@
   <!-- 排行 -->
   <view  class="tupian">
     <view class="tupianOne" bindtap="goRankView">
-      <image src='../../assets/images/Homepage/排行@2x.png' mode='widthFix' class="ranking"></image>
+      <image src='{{img_url}}/assets/images/Homepage/排行@2x.png' mode='widthFix' class="ranking"></image>
     </view>
     <view class="paihang" >
         <text class="zt">排行</text>
@@ -35,7 +35,7 @@
   <!-- 更多 -->
   <view  class="tupian" bindtap="moreMenuview">
     <view  class="tupiantwo">
-      <image src='../../assets/images/Homepage/更多@2x.png' mode='widthFix'  class="More"></image>
+      <image src='{{img_url}}/assets/images/Homepage/更多@2x.png' mode='widthFix'  class="More"></image>
     </view>
     <view class="paihang">
         <text class="zt">更多</text>
@@ -47,14 +47,14 @@
 
   <!--康师傅之旅-->
   <view class="explore" bindtap="goTripMasterKong">
-    <image src='../../assets/images/Homepage/康师傅之旅@2x.png' mode='widthFix'  class="trip"></image>
+    <image src='{{img_url}}/assets/images/Homepage/康师傅之旅@2x.png' mode='widthFix'  class="trip"></image>
   </view>
 
 
   <!--开始挑战-->
   <view class="AnswerQuestions"> 
-    <image src='../../assets/images/Homepage/动画圈圈@2x.png' mode='widthFix'  class="Began"></image>
-    <image src='../../assets/images/Homepage/圆形底板@2x.png' mode='widthFix'  class="BeganTwo" bindtap="goStartChallengePre"></image>
+    <image src='{{img_url}}/assets/images/Homepage/动画圈圈@2x.png' mode='widthFix'  class="Began"></image>
+    <image src='{{img_url}}/assets/images/Homepage/圆形底板@2x.png' mode='widthFix'  class="BeganTwo" bindtap="goStartChallengePre"></image>
   </view>
 
 
@@ -66,9 +66,9 @@
         <block wx:for="{{iuQuestionTypeList}}" wx:index="{{index}}">
           <swiper-item class="swiper-item">
             <!-- <view class="Projectleft"></view> -->
-            <image mode="aspectFill" src="../../assets/images/Homepage/{{item.thumbs}}.png" width="72.8%" height="15.33%" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
+            <image mode="aspectFill" src="{{img_url}}/assets/images/Homepage/{{item.thumbs}}.png" width="72.8%" height="15.33%" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
             <view class="wz">
-            <image mode="aspectFill" class="rectangular" src="../../assets/images/Homepage/矩形@2x.png"  />
+            <image mode="aspectFill" class="rectangular" src="{{img_url}}/assets/images/Homepage/矩形@2x.png"  />
             <view class="game">专题赛</view>
             <view class="iTitle">{{item.desc1}}</view>
             <view class="iText">{{item.desc2}}</view>

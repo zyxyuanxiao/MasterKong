@@ -28,6 +28,7 @@ Page({
     showModal: false,
     exchangeSuccess:false,
     backgroundcolor: 'rgba(31, 204, 102, 1)',
+    img_url: config.img_url,
   },
   /* 点击减号 */
   bindMinus: function () {

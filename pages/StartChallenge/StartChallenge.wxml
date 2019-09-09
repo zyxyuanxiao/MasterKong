@@ -7,25 +7,25 @@
 </view>
 <view class="blueTeam">
 <view class="people">
-    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <image src='{{img_url}}/assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
     <view class="name">{{aUserInfo.name}}</view>
     <view class="level">Lv {{aUserInfo.levelno}}</view>
     <view class="TheLabel">{{aUserInfo.levelname}}</view>
 </view>
 <view class="people">
   <button open-type="share" class="InviteFriendsbtn" id='teammateUser1'></button>
-  <image src='../../assets/images/StartChallenge/添加好友@2x.png' class="InviteFriendsImg"></image>
+  <image src='{{img_url}}/assets/images/StartChallenge/添加好友@2x.png' class="InviteFriendsImg"></image>
   <view class="InviteFriends">邀请好友</view>
 </view>
 <view class="people">
   <button open-type="share" class="InviteFriendsbtn" id='teammateUser2'></button>
-  <image src='../../assets/images/StartChallenge/添加好友@2x.png' class="InviteFriendsImg"></image>
+  <image src='{{img_url}}/assets/images/StartChallenge/添加好友@2x.png' class="InviteFriendsImg"></image>
   <view class="InviteFriends">邀请好友</view>
 </view>
 </view>
 <!--VS-->
 <view class="vs">
-  <image src='../../assets/images/StartChallenge/VS@2x.png' class="VsImage"></image>
+  <image src='{{img_url}}/assets/images/StartChallenge/VS@2x.png' class="VsImage"></image>
 </view>
 <!--黄队-->
 <view class="twoTeam">
@@ -34,18 +34,18 @@
 <view class="yellowTeam">
 <view class="people">
   <button open-type="share" class="InviteFriendsbtn"></button>
-  <image src='../../assets/images/StartChallenge/添加好友@2x.png' class="InviteFriendsImg"></image>
+  <image src='{{img_url}}/assets/images/StartChallenge/添加好友@2x.png' class="InviteFriendsImg"></image>
   <view class="InviteFriends">邀请好友</view>
 </view>
 <view class="people">
   <button open-type="share" class="InviteFriendsbtn"></button>
-<image  class="InviteFriendsImg" src='../../assets/images/StartChallenge/添加好友@2x.png'>
+<image  class="InviteFriendsImg" src='{{img_url}}/assets/images/StartChallenge/添加好友@2x.png'>
 </image>
   <view class="InviteFriends">邀请好友</view>
 </view>
 <view class="people">
   <button open-type="share" class="InviteFriendsbtn" ></button>
-  <image src='../../assets/images/StartChallenge/添加好友@2x.png' class="InviteFriendsImg"></image>
+  <image src='{{img_url}}/assets/images/StartChallenge/添加好友@2x.png' class="InviteFriendsImg"></image>
   <view class="InviteFriends">邀请好友</view>
 </view>
 </view>
@@ -53,7 +53,7 @@
 <view class="questionBank" bindtap="selectQuestionBank">
   <view class="questionText" >题库选择</view>
   <view class="questionAll">全部</view>
-  <image src='../../assets/images/StartChallenge/箭头@2x.png'  class="questionImg"></image>
+  <image src='{{img_url}}/assets/images/StartChallenge/箭头@2x.png'  class="questionImg"></image>
 </view>
 
 <view class="startView">

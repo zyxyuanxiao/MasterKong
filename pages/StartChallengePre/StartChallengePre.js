@@ -1,12 +1,13 @@
 // pages/StartChallengePre/StartChallengePre.js
 import { goPage } from '../../utils/common';
+import { config, cmd } from '../../config'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    img_url: config.img_url,
   },
 
   /**

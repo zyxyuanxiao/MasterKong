@@ -27,6 +27,7 @@ Page({
    */
   data: {
     showGood:true,
+    img_url: config.img_url,
   },
 
   /**

@@ -47,6 +47,7 @@ Page({
     kClientAnswerArr: [],
     sumcount: 0,
     winflag: true,
+    img_url: config.img_url,
   },
 
   /**

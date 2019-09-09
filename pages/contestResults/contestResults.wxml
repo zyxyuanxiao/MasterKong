@@ -3,12 +3,12 @@
 <!-- 比赛结果 -->
 <view class="PKResults">
   <view class="blue">
-    <image src='../../assets/images/contestResults/pk获胜队伍@2x.png' class="champion"></image>
+    <image src='{{img_url}}/assets/images/contestResults/pk获胜队伍@2x.png' class="champion"></image>
     <view class="Btext">蓝队获胜</view>
     <view class="BTotalScore">+6800</view>
   </view>
   <view class="yellow">
-      <image src='../../assets/images/contestResults/pk获胜队伍@22x.png' class="champion"></image>
+      <image src='{{img_url}}/assets/images/contestResults/pk获胜队伍@22x.png' class="champion"></image>
       <view class="Ytext">黄队</view>
       <view class="YTotalScore">+5600</view>
   </view>
@@ -19,19 +19,19 @@
 <view class="PKpersonnel">
 <view class="blueTeam">
 <view class="people">
-    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <image src='{{img_url}}/assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
     <view class="name">炙热的天空</view>
     <view class="BScore">2600</view>
 </view>
 
 <view class="people">
-    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <image src='{{img_url}}/assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
     <view class="name">强强大的</view>
     <view class="BScore">2200</view>
 </view>
 
 <view class="people">
-    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <image src='{{img_url}}/assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
     <view class="name">刘娜娜</view>
     <view class="BScore">得分2000</view>
 </view>
@@ -40,19 +40,19 @@
 
 <view class="yellowTeam">
 <view class="people">
-    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <image src='{{img_url}}/assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
     <view class="name">美杜莎的微笑</view>
     <view class="YScore">2400</view>
 </view>
 
 <view class="people">
-    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <image src='{{img_url}}/assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
     <view class="name">云朵</view>
     <view class="YScore">2200</view>
 </view>
 
 <view class="people">
-    <image src='../../assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
+    <image src='{{img_url}}/assets/images/Homepage/专题6@2x.png' class="HeadPortrait"></image>
     <view class="name">花花</view>
     <view class="YScore">1000</view>
 </view>
@@ -63,10 +63,10 @@
 
 <!-- 操作 -->
 <view class="operation">
-  <image src='../../assets/images/contestResults/返回.png' class="returnImg"></image>
+  <image src='{{img_url}}/assets/images/contestResults/返回.png' class="returnImg"></image>
   <view class="challenge">继续挑战</view>
-  <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"></image>
-  <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
+  <image src='{{img_url}}/assets/images/contestResults/生成海报@2x.png' class="postersImg"></image>
+  <image src='{{img_url}}/assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
 </view>
 
 </view>

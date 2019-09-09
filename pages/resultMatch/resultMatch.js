@@ -20,7 +20,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    showModal: false
+    showModal: false,
+    img_url: config.img_url,
   },
   onLoad: function (options) {
     that=this;

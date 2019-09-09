@@ -6,7 +6,7 @@
       <view class="currentIntegralNumber">{{bUserScoreVo.sumscore}}</view>
       <view class="currentIntegralText">当前积分</view>
     </view>
-    <image src="../../assets/images/ItemMall/矩形@2x.png" class="divider"></image>
+    <image src="{{img_url}}/assets/images/ItemMall/矩形@2x.png" class="divider"></image>
     <view class="ConvertiblePoints">
       <view class="ConvertiblePointsNumber">{{bUserScoreVo.canexchangscore}}</view>
       <view class="ConvertiblePointsText">可兑换积分</view>
@@ -16,7 +16,7 @@
   <!--卡片详情-->
   <view class="CardDetails">
     <view class="img">
-      <image src="../../assets/images/ItemMall/{{ good.code}}.png" class="card"></image>
+      <image src="{{img_url}}/assets/images/ItemMall/{{ good.code}}.png" class="card"></image>
     </view>
     <view class="Details">
       <view class="name">{{good.name}}</view>
@@ -59,7 +59,7 @@
   <!-- 兑换弹窗 -->
   <view class="modalDlg" wx:if="{{exchangeSuccess}}">
     <view class="PictureExchange">
-      <image src="../../assets/images/ItemMall/dui gou@2x.png"></image>
+      <image src="{{img_url}}/assets/images/ItemMall/dui gou@2x.png"></image>
     </view>
     <view class="ForSuccessful">兑换成功</view>
     <view class="CheckProps">查看我的道具</view>

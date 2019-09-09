@@ -23,12 +23,12 @@
       <!-- <view class="BluesPerson">
         <view class="score">9000</view>
         <view class="Imgportrait">
-          <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+          <image src='{{img_url}}/assets/images/Homepage/专题6@2x.png'></image>
         </view>
       </view> -->
     </view>
     <view class="Vs-view ">
-      <image src='../../assets/images/StartChallenge/VS@2x.png' class="VsImage" hidden="{{!showView}}"></image>
+      <image src='{{img_url}}/assets/images/StartChallenge/VS@2x.png' class="VsImage" hidden="{{!showView}}"></image>
     </view>
     <view class="yellow-view">
       <view class="yellow">
@@ -43,13 +43,13 @@
         </block>
         <!-- <view class="yellowPerson">
           <view class="Imgportrait">
-            <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+            <image src='{{img_url}}/assets/images/Homepage/专题6@2x.png'></image>
           </view>
           <view class="score">1800</view>
         </view>
         <view class="yellowPerson">
           <view class="Imgportrait">
-            <image src='../../assets/images/Homepage/专题6@2x.png'></image>
+            <image src='{{img_url}}/assets/images/Homepage/专题6@2x.png'></image>
           </view>
           <view class="score">900</view>
         </view> -->
@@ -87,7 +87,7 @@
     </view>
     <!--消息图片--->
     <view class="message">
-      <image src='../../assets/images/AnswerQuestions/快捷短语@2x.png' id="messageImg" bindtap="showMessageDialog" data-statu="open"></image>
+      <image src='{{img_url}}/assets/images/AnswerQuestions/快捷短语@2x.png' id="messageImg" bindtap="showMessageDialog" data-statu="open"></image>
     </view>
     <!--问题text--->
     <view class="problemText">
@@ -212,7 +212,7 @@
     <view class="modalDlg" wx:if="{{showModal}}">
       <view class="QuickPhrases">
         快捷短语
-        <image src='../../assets/images/knowledge/x@2x.png' mode='widthFix' class="noticeTheprize" bindtap="ok"></image>
+        <image src='{{img_url}}/assets/images/knowledge/x@2x.png' mode='widthFix' class="noticeTheprize" bindtap="ok"></image>
       </view>
       <view class="phraseDetails">
         <view class="psOne">

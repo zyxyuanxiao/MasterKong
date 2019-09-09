@@ -45,6 +45,7 @@ Page({
     robotClientAnswerDto: {score:0},
     myselect:false,
     answeroption: ['A', 'B', 'C', 'D'],
+    img_url: config.img_url,
   },
 
   /**

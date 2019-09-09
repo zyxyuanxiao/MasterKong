@@ -19,7 +19,8 @@ Page({
    */
   data: {
     isChecked: true,
-    isCheckedTwo: false
+    isCheckedTwo: false,
+    img_url: config.img_url,
   },
   onLoad: function () {
     that = this;

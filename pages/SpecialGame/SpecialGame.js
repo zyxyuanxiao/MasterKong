@@ -42,6 +42,7 @@ Page({
     sumcount: 0,
     winflag:true,
     BackgroundImg:'',
+    img_url: config.img_url,
   },
 
   /**

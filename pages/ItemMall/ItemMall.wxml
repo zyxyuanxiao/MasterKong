@@ -6,7 +6,7 @@
       <view class="currentIntegralNumber">{{bUserScoreVo.sumscore}}</view>
       <view class="currentIntegralText">当前积分</view>
     </view>
-    <image src="../../assets/images/ItemMall/矩形@2x.png" class="divider"></image>
+    <image src="{{img_url}}/assets/images/ItemMall/矩形@2x.png" class="divider"></image>
     <view class="ConvertiblePoints">
       <view class="ConvertiblePointsNumber">{{bUserScoreVo.canexchangscore}}</view>
       <view class="ConvertiblePointsText">可兑换积分</view>
@@ -17,7 +17,7 @@
   <view class="exchange">
     <block wx:for="{{bGoodList}}" wx:index="{{index}}">
       <view class="exchangeView">
-        <image src="../../assets/images/ItemMall/{{ item.code}}.png" class="card"></image>
+        <image src="{{img_url}}/assets/images/ItemMall/{{ item.code}}.png" class="card"></image>
         <view class="exchangeIntegral">{{item.marketprice}}积分 </view>
         <block wx:if="{{bUserScoreVo.canexchangscore >= item.marketprice}}">
           <view class="ChangeButtonY" wx:if="{{item.exchangeType == '1'}}" data-index="{{index}}"  bindtap="goExchangeItem">兑换</view>

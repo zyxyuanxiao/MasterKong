@@ -37,7 +37,7 @@
 
   <!-- 专题赛 -->
   <view class="titleTopic" wx:if="{{!starting}}" style="background-image: url({{BackgroundImg}})">
-    <image mode="aspectFill" class="rectangular" src="../../assets/images/Homepage/矩形@2x.png" />
+    <image mode="aspectFill" class="rectangular" src="{{img_url}}/assets/images/Homepage/矩形@2x.png" />
     <view class="game">专题赛</view>
     <view class="iTitle">{{iuQuestionType.desc1}}</view>
     <view class="iText">{{iuQuestionType.desc2}}</view>
@@ -73,7 +73,7 @@
     </view>
     <!--虚线-->
     <view class="DottedLine">
-      <image src='../../assets/images/SpecialGame/xiantiao@2x.png' class="DottedLineImg"></image>
+      <image src='{{img_url}}/assets/images/SpecialGame/xiantiao@2x.png' class="DottedLineImg"></image>
     </view>
     <!--开始挑战-->
     <view class="BeganChallenge" bindtap="getready">

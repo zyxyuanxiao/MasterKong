@@ -14,15 +14,15 @@
   <scroll-view class="list">
     <!--第一名-->
     <view class="SingleOut" wx:for="{{chartsData}}" wx:for-index="idx" wx:for-item="item">
-      <image wx:if="{{idx ==0}}" src='../../assets/images/rankingList/排行1@2x.png' mode='widthFix' class="rankingImg"></image>
+      <image wx:if="{{idx ==0}}" src='{{img_url}}/assets/images/rankingList/排行1@2x.png' mode='widthFix' class="rankingImg"></image>
 
-      <image wx:if="{{idx ==1}}" src='../../assets/images/rankingList/排行2@2x.png' mode='widthFix' class="rankingImg"></image>
+      <image wx:if="{{idx ==1}}" src='{{img_url}}/assets/images/rankingList/排行2@2x.png' mode='widthFix' class="rankingImg"></image>
 
-      <image wx:if="{{idx ==2}}" src='../../assets/images/rankingList/排行3@2x.png' mode='widthFix' class="rankingImg"></image>
+      <image wx:if="{{idx ==2}}" src='{{img_url}}/assets/images/rankingList/排行3@2x.png' mode='widthFix' class="rankingImg"></image>
 
       <view wx:if="{{idx >2}}" class="RankingNumber">{{idx+1}}</view>
       <view class="HeadPortraitView">
-        <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
+        <image src='{{img_url}}/assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
       </view>
       <!-- 账户 -->
       <view class="information">
@@ -49,11 +49,11 @@
       <view class="MyRanking">
         <view class="MyRankingText">我的排行</view>
       <view class="MyRankingShareOne">
-        <image src='../../assets/images/rankingList/发给好友@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
+        <image src='{{img_url}}/assets/images/rankingList/发给好友@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
         <view class="MyRankingShareText">发给好友</view>
       </view>
       <view class="MyRankingShare">
-        <image src='../../assets/images/rankingList/生成海报@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
+        <image src='{{img_url}}/assets/images/rankingList/生成海报@2x.png' mode='widthFix' class="MyRankingShareImg"></image>
         <view class="MyRankingShareText" bindtap="Btn" data-statu="open">生成海报</view>
       </view>
       </view>
@@ -62,16 +62,16 @@
 
       <!--用户-->
       <view class="SingleOutMy">
-      <image wx:if="{{myChart.ranking ==0}}" src='../../assets/images/rankingList/排行1@2x.png' mode='widthFix' class="rankingImg"></image>
+      <image wx:if="{{myChart.ranking ==0}}" src='{{img_url}}/assets/images/rankingList/排行1@2x.png' mode='widthFix' class="rankingImg"></image>
 
-      <image wx:if="{{myChart.ranking ==1}}" src='../../assets/images/rankingList/排行2@2x.png' mode='widthFix' class="rankingImg"></image>
+      <image wx:if="{{myChart.ranking ==1}}" src='{{img_url}}/assets/images/rankingList/排行2@2x.png' mode='widthFix' class="rankingImg"></image>
 
-      <image wx:if="{{myChart.ranking ==2}}" src='../../assets/images/rankingList/排行3@2x.png' mode='widthFix' class="rankingImg"></image>
+      <image wx:if="{{myChart.ranking ==2}}" src='{{img_url}}/assets/images/rankingList/排行3@2x.png' mode='widthFix' class="rankingImg"></image>
 
       <view wx:if="{{myChart.ranking >2}}" class="RankingNumber">{{myChart.ranking}}</view>
       
         <view class="HeadPortraitView">
-          <image src='../../assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
+          <image src='{{img_url}}/assets/images/knowledge/粉色知识背景@2x.png' class="HeadPortrait"></image>
         </view>
         <!-- 账户 -->
 
@@ -110,7 +110,7 @@
           扫码识别小程序 每天学习不停息
         </view>
         <view class="QrCode">
-          <image src='../../assets/images/resultMatch/小程序码120尺寸@2x.png' class="QrCodeImg"></image>
+          <image src='{{img_url}}/assets/images/resultMatch/小程序码120尺寸@2x.png' class="QrCodeImg"></image>
         </view>
       </view>
 

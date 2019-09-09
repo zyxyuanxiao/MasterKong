@@ -4,7 +4,7 @@
   <!--排行-->
   <view  class="menu">
       <view>
-        <image src='../../assets/images/Moremenu/排行@2x.png' mode='widthFix' class="moreImg"></image>
+        <image src='{{img_url}}/assets/images/Moremenu/排行@2x.png' mode='widthFix' class="moreImg"></image>
       </view>
       <view>
         <text class="menuZT">排行</text>
@@ -14,7 +14,7 @@
   <!--通知-->
    <view  class="menu">
       <view>
-        <image src='../../assets/images/Moremenu/通知@2x.png' mode='widthFix' class="moreImgTwo"></image>
+        <image src='{{img_url}}/assets/images/Moremenu/通知@2x.png' mode='widthFix' class="moreImgTwo"></image>
       </view>
       <view>
         <text class="menuZT">通知</text>
@@ -24,7 +24,7 @@
   <!--奖品-->
     <view  class="menu">
       <view>
-        <image src='../../assets/images/Moremenu/奖品@2x.png' mode='widthFix' class="moreImgTwo"></image>
+        <image src='{{img_url}}/assets/images/Moremenu/奖品@2x.png' mode='widthFix' class="moreImgTwo"></image>
       </view>
       <view>
         <text class="menuZT">奖品</text>
@@ -34,7 +34,7 @@
   <!--知识-->
   <view  class="menu">
       <view>
-        <image src='../../assets/images/Moremenu/知识@2x.png' mode='widthFix' class="moreImg"></image>
+        <image src='{{img_url}}/assets/images/Moremenu/知识@2x.png' mode='widthFix' class="moreImg"></image>
       </view>
       <view>
         <text class="menuZT">知识</text>
@@ -44,7 +44,7 @@
   <!--道具商城-->
   <view  class="menu" bindtap="goItemMall">
       <view>
-        <image src='../../assets/images/Moremenu/道具商城@2x.png' mode='widthFix' class="moreImgTwo"></image>
+        <image src='{{img_url}}/assets/images/Moremenu/道具商城@2x.png' mode='widthFix' class="moreImgTwo"></image>
       </view>
       <view>
         <text class="menuZT">道具商城</text>
@@ -54,7 +54,7 @@
   <!--设置-->
     <view  class="menu">
       <view>
-        <image src='../../assets/images/Moremenu/设置@2x.png' mode='widthFix' class="moreImgTwo"></image>
+        <image src='{{img_url}}/assets/images/Moremenu/设置@2x.png' mode='widthFix' class="moreImgTwo"></image>
       </view>
       <view>
         <text class="menuZT">设置</text>
@@ -64,7 +64,7 @@
   <!--规则-->
   <view  class="menu">
       <view>
-        <image src='../../assets/images/Moremenu/规则@2x.png' mode='widthFix' class="moreImg"></image>
+        <image src='{{img_url}}/assets/images/Moremenu/规则@2x.png' mode='widthFix' class="moreImg"></image>
       </view>
       <view>
         <text class="menuZT">规则</text>
