@@ -49,7 +49,7 @@
       <view class="statisticalOne">
         <view class="ChallengeReward">
           <view class="challengeText">挑战成功最高奖励</view>
-          <view class="integral">800<text>积分</text>
+          <view class="integral">600<text>积分</text>
           </view>
         </view>
         <view class="TotalChallenges">

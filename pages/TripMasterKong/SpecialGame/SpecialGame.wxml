@@ -1,116 +1,120 @@
 <!--pages/TripMasterKong/SpecialGame/SpecialGame.wxml-->
-<page-container title="专题赛" binddefindBack="onBack" defindBack="{{true}}" >
+<page-container title="专题赛" binddefindBack="onBack" defindBack="{{true}}">
   <!-- 个人信息 -->
-    <view class="MyAccount">
-        <image src='../../../assets/images/Homepage/专题5@2x.png' class="HeadPortrait"></image>
-        <view class="specific">
-          <view class="name">炙热的天空</view>
-          <view class="levelView">
-            <view class="level">Lv 23</view>
-            <view class="label">行走百科</view>
-          </view>
-        </view>
-    </view>
-<!-- 站点 -->
-<view class="site">
-  <view class="siteTitle">第2站 河北站</view>
-  <view  class="siteText">
-    <view  class="{{siteTextS?'show':'hide'}}">
-    天津站于2017年成立，地址位于河北路333号，荣获2017年度优秀站点，，这是相关简介，总最多可以显示三行    
+  <view class="MyAccount">
+    <image src='{{aUserInfo.avatarurl}}' class="HeadPortrait"></image>
+    <view class="specific">
+      <view class="name">{{aUserInfo.name}}</view>
+      <view class="levelView">
+        <view class="level">Lv {{aUserInfo.levelno}}</view>
+        <view class="label">{{aUserInfo.levelname}}</view>
+      </view>
+      <!-- 分数 -->
+      <view class="scoreView">
+        <text class="scoreText">{{sumcount}}</text>
+      </view>
     </view>
   </view>
-</view>
+  <!-- 站点 -->
+  <view class="site">
+    <view class="siteTitle">第2站 河北站</view>
+    <view class="siteText">
+      <view class="{{stationDesc?'show':'hide'}}">
+        天津站于2017年成立，地址位于河北路333号，荣获2017年度优秀站点，，这是相关简介，总最多可以显示三行
+      </view>
+    </view>
+  </view>
 
-<!-- 比赛详细 -->
+  <!-- 比赛详细 -->
   <view class="gameDetail">
-  <!-- 重新挑战 -->
-  <view class="{{challengeChecked?'show':'hide'}}">
-  <view class="GameView">
-    <view class="One">
-      挑战成功奖励
-      <text class="number">8000</text>
-      <text class="text">积分</text>
-    </view>
-    <view class="Two">
-      总题数 
-      <text class="number">30</text>
-      <text class="text">道</text>
-    </view>
-    <view class="three">
-      已得总积分 
-      <text class="number">5</text>
-      <text  class="text">积分</text>
-    </view>
-    <view class="four">
-      挑战次数  
-      <text class="number">8</text>
-      <text class="text">次</text>     
-    </view>
-    </view>
-    <!-- 参加按钮 -->
-    <view class="HrView">
-      <view class="hr"></view>
-    </view>
-    <view class="participate"  bindtap='participateClick' data-statu="open">重新挑战</view>
-    <view class="numberOpportunity">今日还剩2次机会</view>
-    <view class="red">此次挑战将消耗900积分</view>
+    <!-- 开始挑战 -->
+    <view class="{{startChallenge?'show':'hide'}}">
+      <view class="GameView">
+        <view class="One">
+          挑战成功奖励
+          <text class="number">3000</text>
+          <text class="text">积分</text>
+        </view>
+        <view class="Two">
+          总题数
+          <text class="number">10</text>
+          <text class="text">道</text>
+        </view>
+        <view class="three">
+          已得总积分
+          <text class="number">{{summaryGameRecordsVo.scorenum}}</text>
+          <text class="text">积分</text>
+        </view>
+        <view class="four">
+          挑战次数
+          <text class="number">{{summaryGameRecordsVo.gamenum}}</text>
+          <text class="text">次</text>
+        </view>
+      </view>
+      <!-- 参加按钮 -->
+      <view class="HrView">
+        <view class="hr"></view>
+      </view>
+      <view class="participate" bindtap="getready" data-statu="open">开始挑战</view>
+      <view class="numberOpportunity">今日还剩{{dailyGameRecordsVo.specialnumonline - dailyGameRecordsVo.specialnum}}次机会</view>
+      <!-- <view class="red">此次挑战将消耗900积分</view> -->
     </view>
 
-  <!-- 倒计时 -->
-  <view class="{{NumberChecked?'show':'hide'}}">
-    <view class="textOne">
-      线下PK赛
-    </view>
-    <view class="countdown">
-      <view class="number">3</view>
-    </view>
-    <view class="PleasePrepare">
-      请准备好
-    </view>
-  </view>
+    <!-- 倒计时 -->
+    <view wx:if="{{getready}}">
+      <view class="textOne">
 
-  <!-- 题目 -->
-  <view class="{{problemChecked?'show':'hide'}}">
-<!--题目比例--->
-  <view class="proportion">
-      <view class="nowProportion">1</view>
-      /5
-  </view>
-<!--倒计时--->
-  <view class="countdownSeconds">
-    <view class="number">
-      15S
+      </view>
+      <view class="countdown">
+        <view class="number">{{prepariCountdown}}</view>
+      </view>
+      <view class="PleasePrepare">
+        请准备好
+      </view>
     </view>
-  </view>
-<!--康师傅之旅--->
-  <view class="kongText">
-    康师傅之旅
-  </view>
-  
-<!--问题text--->
-  <view class="problemText">
-    “食源性疾病”指食品中致病因素进入人体引起的感染性、中毒性等疾病。以下举措不能预防食源性疾病的是：
-  </view>
-  
-<!--问题text--->
-  <view class="choose">
-    <view class="HaveChoice">
-      <view class="text">食物储存时保持洁净，生熟分开</view>
-    </view>
-    <view class="Selected">
-       <view class="text">使用冰箱长时间储藏食物</view>
-    </view>
-    <view class="wrong">
-       <view class="text">煮熟食物</view>
-    </view>
-    <view class="HaveChoice">
-       <view class="text">安全健康的食材</view>
-    </view>
-  </view>
 
-  
-  </view>
-  </view>
+    <!--题目--->
+    <view wx:if="{{starting}}">
+      <!--题目比例--->
+      <view class="proportion">
+        <view class="nowProportion">{{gamenumber +1 }}</view>
+        /{{questions.length}}
+      </view>
+      <!--倒计时--->
+      <view class="countdownSeconds">
+        <view class="number">
+          {{answerCountdown}}S
+        </view>
+      </view>
+      <!--康师傅之旅--->
+      <view class="kongText">
+        康师傅之旅
+      </view>
 
+      <!--问题text--->
+      <view class="problemText" data-statu="open">
+        {{questions[gamenumber].question}}
+      </view>
+
+      <!--问题text--->
+      <view class="choose">
+        <view class="{{answerA}}" bindtap="selectChoose" data-answer='A'>
+          <view class="text" bindtap="exitBtn" data-statu="open">
+            {{questions[gamenumber].answerA}}</view>
+        </view>
+        <view class="{{answerB}}" bindtap="selectChoose" data-answer='B'>
+          <view class="text">{{questions[gamenumber].answerB}}</view>
+        </view>
+        <view class="{{answerC}}" bindtap="selectChoose" data-answer='C'>
+          <view class="text">{{questions[gamenumber].answerC}}</view>
+        </view>
+        <view class="{{answerD}}" bindtap="selectChoose" data-answer='D'>
+          <view class="text">{{questions[gamenumber].answerD}}</view>
+        </view>
+
+      </view>
+
+    </view>
+  </view>
 
 </page-container>

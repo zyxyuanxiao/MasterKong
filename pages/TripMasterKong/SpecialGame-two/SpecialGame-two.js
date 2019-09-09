@@ -1,4 +1,19 @@
-// pages/TripMasterKong/SpecialGame-two/SpecialGame-two.js
+import {
+  setValue,
+  redirectTo,
+  getValue,
+  showToast,
+  showModal,
+  navTo,
+  reLanchTo,
+  rnd,
+  goPage
+} from '../../../utils/common';
+import {
+  config,
+  cmd
+} from '../../../config';
+var that;
 Page({
 
   /**
@@ -12,7 +27,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    that = this;
+    that.setData({
+      winflag: options.winflag,
+      sumcount: options.sumcount,
+    });
+    const aUserInfo = getValue('aUserInfo');
+    this.setData({
+      aUserInfo: aUserInfo,
+    });
   },
 
   /**
@@ -62,5 +85,20 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  goTripGame: function () {
+    wx.reLaunch({
+      url: '/pages/TripMasterKong/SpecialGame/SpecialGame?cmd=' + cmd.continuegame
+    })
+  },
+  goHome: function () {
+    wx.reLaunch({
+      url: '/pages/Homepage/Homepage'
+    })
+  },
+  goNextGame: function () {
+    wx.reLaunch({
+      url: '/pages/TripMasterKong/SpecialGame/SpecialGame?cmd=' + cmd.continuegame
+    })
   }
 })

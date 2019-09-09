@@ -93,3 +93,24 @@
 .ALineOfTwo .UnlockSite{
   padding-right: 120rpx;
 }
+
+.scoreView{
+  width: 111rpx;
+  height:80rpx;
+  background:rgba(255,255,255,1);
+  border-radius:100px 0px 0px 100px;
+  float: right;
+  position: absolute;
+  right: 0rpx;
+  padding:0rpx 33rpx; 
+}
+.scoreView .scoreText{
+  height:80rpx;
+  font-size:48rpx;
+  font-family:PingFangSC;
+  font-weight:500;
+  color:rgba(31,204,102,1);
+  line-height:80rpx;
+  position: absolute;
+  right: 30rpx;
+}

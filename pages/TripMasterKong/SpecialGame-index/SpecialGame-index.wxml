@@ -3,7 +3,7 @@
   <view class="HeadView">
   <!-- 一行一个的 -->
     <view class="ALineOfOneTop">
-       <view class="UnlockSite" >
+       <view class="UnlockSite" bindtap="goTripSpecialGame">
         <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
           <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
           <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>

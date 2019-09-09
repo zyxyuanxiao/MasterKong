@@ -1,51 +1,50 @@
 <!--pages/TripMasterKong/SpecialGame-two/SpecialGame-two.wxml-->
-<page-container title="专题赛" binddefindBack="onBack" defindBack="{{true}}" >
+<page-container title="专题赛" binddefindBack="onBack" defindBack="{{true}}">
   <!-- 个人信息 -->
-    <view class="MyAccount">
-        <image src='../../../assets/images/Homepage/专题5@2x.png' class="HeadPortrait"></image>
-        <view class="specific">
-          <view class="name">炙热的天空</view>
-          <view class="levelView">
-            <view class="level">Lv 23</view>
-            <view class="label">行走百科</view>
-          </view>
-        </view>
+  <view class="MyAccount">
+    <image src='{{aUserInfo.avatarurl}}' class="HeadPortrait"></image>
+    <view class="specific">
+      <view class="name">{{aUserInfo.name}}</view>
+      <view class="levelView">
+        <view class="level">Lv {{aUserInfo.levelno}}</view>
+        <view class="label">{{aUserInfo.levelname}}</view>
+      </view>
       <!-- 分数 -->
-        <view class="scoreView">
-          <text class="scoreText">200</text>
-        </view>
+      <view class="scoreView">
+        <text class="scoreText">{{sumcount}}</text>
+      </view>
     </view>
-<!-- 站点 -->
-<view class="site">
-  <view class="siteTitle">第2站 河北站</view>
-</view>
+  </view>
+  <!-- 站点 -->
+  <view class="site">
+    <view class="siteTitle">第2站 河北站</view>
+  </view>
 
 
-<!-- 比赛结果 -->
-<view class="resultMatch">
-  <view wx:if="{{Isboolean==1}}"  class="SuccessfulView">
-    <view class="resulText">
-      <view class="Congratulations">恭喜你</view>
-      <view class="successful">天津站挑战成功</view>    
+  <!-- 比赛结果 -->
+  <view class="resultMatch">
+    <view wx:if="{{winflag == 'true'}}" class="SuccessfulView">
+      <view class="resulText">
+        <view class="Congratulations">恭喜你</view>
+        <view class="successful">天津站挑战成功</view>
+      </view>
+      <image src="../../../assets/images/TripMasterKong/成功@2x.png" class="imageSuccessful"></image>
     </view>
-    <image src="../../../assets/images/TripMasterKong/成功@2x.png" class="imageSuccessful"></image>
-  </view>
-  <view  wx:elif="{{Isboolean==2}}" class="FailureView">
-    <view class="resulText">
-      <view class="Congratulations">再接再厉</view>
-      <view class="successful">天津站挑战失败</view>    
+    <view wx:if="{{winflag == 'false'}}" class="FailureView">
+      <view class="resulText">
+        <view class="Congratulations">再接再厉</view>
+        <view class="successful">天津站挑战失败</view>
+      </view>
+      <image src="../../../assets/images/TripMasterKong/失败@2x.png" class="imageFailure"></image>
     </view>
-    <image src="../../../assets/images/TripMasterKong/失败@2x.png" class="imageFailure"></image>
-  </view>
-  
-  <view class="NumberView">
-    <text class="jia">+</text>
-    <text class="Number">3000</text>
-  </view>
-</view>
 
-<view class="nextStation" wx:if="{{Isboolean==1}}">挑战下一站</view>
-<view class="nextStation"  wx:elif="{{Isboolean==2}}">重新挑战</view>
+    <view class="NumberView">
+      <text class="jia">+</text>
+      <text class="Number">{{sumcount}}</text>
+    </view>
+  </view>
+
+  <view class="nextStation" wx:if="{{winflag == 'true'}}" bindtap="goNextGame">挑战下一站</view>
+  <view class="nextStation" wx:if="{{winflag == 'false'}}" bindtap="goTripGame">重新挑战</view>
 
 </page-container>
-

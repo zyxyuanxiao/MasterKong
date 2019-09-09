@@ -1,4 +1,25 @@
 // pages/TripMasterKong/SpecialGame-index/SpecialGame-index.js
+import {
+  post,
+  get
+} from '../../../utils/http'
+import {
+  setValue,
+  redirectTo,
+  getValue,
+  showToast,
+  showModal,
+  navTo,
+  reLanchTo,
+  rnd,
+  goPage
+} from '../../../utils/common';
+import util from '../../../utils/util1'
+import {
+  config,
+  cmd
+} from '../../../config'
+var that;
 Page({
 
   /**
@@ -62,5 +83,8 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  goTripSpecialGame: function () {
+    navTo("/pages/TripMasterKong/SpecialGame/SpecialGame");
+  },
 })
