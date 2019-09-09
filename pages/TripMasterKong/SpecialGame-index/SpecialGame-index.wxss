@@ -59,7 +59,8 @@
   z-index: 4;
   margin: 15rpx 0rpx 0rpx 63rpx;
 }
-.UnlockSite .UnlockSiteText{
+/* 已解锁 */
+.UnlockSiteText{
   width:108rpx;
   height:50rpx;
   font-size:36rpx;
@@ -72,6 +73,7 @@
   z-index: 3;
   margin: 10rpx 0rpx 0rpx 31rpx; 
 }
+/*未解锁 */
 .NoUnlockSiteText{
   width:108rpx;
   height:50rpx;
@@ -85,6 +87,20 @@
   z-index: 3;
   margin: 10rpx 0rpx 0rpx 31rpx; 
 }
+/* 当前站点 */
+.NowUnlockSiteText{
+  width:126rpx;
+  height:50rpx;
+  font-size:36rpx;
+  font-family:PingFangSC;
+  font-weight:600;
+  color:rgba(51,51,51,1);
+  line-height:50rpx;
+  text-align: center;
+  position: absolute;
+  z-index: 3;
+  margin: 10rpx 18rpx 0rpx 15rpx; 
+}
 
 .ALineOfTwo{
   display: flex;
@@ -97,4 +113,11 @@
 }
 .ALineOfOne{
   margin: 0rpx 0rpx 82rpx 290rpx;
+}
+.arrow{
+  width: 16rpx;
+  height: 16rpx;
+  position: absolute;
+  z-index: 3;
+  margin: 16rpx 0rpx 0rpx 2rpx;
 }
