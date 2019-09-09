@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/TripMasterKong/SpecialGame-index/SpecialGame-index",
-    "pages/TripMasterKong/SpecialGame-two/SpecialGame-two",
     "pages/TripMasterKong/SpecialGame/SpecialGame",
+    "pages/TripMasterKong/SpecialGame-two/SpecialGame-two",
     "pages/AnswerQuestions/AnswerQuestions",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/PKgame/PKgame",
