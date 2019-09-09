@@ -33,8 +33,85 @@
      <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
         </view>
     </view>
-  
+
+  <!-- 一行一个的 -->
+    <view class="ALineOfOne">
+       <view class="UnlockSite" >
+        <view class="NowUnlockSiteText">
+        北京站
+         <image src="../../../assets/images/TripMasterKong/ico／箭头 黑色@2x.png" class="arrow"></image>
+        </view>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
+    </view>
+    </view>
+
+  <!-- 一行两个的 -->
+    <view class="ALineOfTwo">
+        <!-- 第一个 -->
+       <view class="UnlockSite" >
+        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
+        </view>
+        <!-- 第二个 -->
+         <view class="UnlockSite" >
+        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
+        </view>
+    </view>
+
+
+  <!-- 一行一个的 -->
+    <view class="ALineOfOne">
+       <view class="UnlockSite" >
+        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
+        </view>
+    </view>
+
+
   </view>
   <view class="TailView">
+    <!-- 一行两个的 -->
+    <view class="ALineOfTwo">
+        <!-- 第一个 -->
+       <view class="UnlockSite" >
+        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
+        </view>
+        <!-- 第二个 -->
+         <view class="UnlockSite" >
+        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
+        </view>
+    </view>
+    <!-- 一行一个的 -->
+    <view class="ALineOfOne">
+       <view class="UnlockSite" >
+        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
+          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
+        </view>
+    </view>
+
   </view>
 </page-container>
