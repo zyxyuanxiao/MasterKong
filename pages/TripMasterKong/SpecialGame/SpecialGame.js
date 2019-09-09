@@ -171,6 +171,11 @@ Page({
     that = this
     var answerCountdown = this.data.answerCountdown
     if (answerCountdown == 0 || that.data.myselect) {
+      if (answerCountdown == 0){
+        that.setData({
+          winflag: false,
+        });
+      }
       //失败
       if (!that.data.winflag) {
         //分享弹框按钮显示

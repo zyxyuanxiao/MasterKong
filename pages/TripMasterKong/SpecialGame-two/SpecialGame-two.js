@@ -20,7 +20,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    Isboolean: 2
+    Isboolean: 2,
+    img_url: config.img_url,
   },
 
   /**

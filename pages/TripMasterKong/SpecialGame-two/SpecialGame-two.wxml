@@ -9,11 +9,12 @@
         <view class="level">Lv {{aUserInfo.levelno}}</view>
         <view class="label">{{aUserInfo.levelname}}</view>
       </view>
-      <!-- 分数 -->
+     
+    </view>
+     <!-- 分数 -->
       <view class="scoreView">
         <text class="scoreText">{{sumcount}}</text>
       </view>
-    </view>
   </view>
   <!-- 站点 -->
   <view class="site">
@@ -28,14 +29,14 @@
         <view class="Congratulations">恭喜你</view>
         <view class="successful">天津站挑战成功</view>
       </view>
-      <image src="../../../assets/images/TripMasterKong/成功@2x.png" class="imageSuccessful"></image>
+      <image src="{{img_url}} /assets/images/TripMasterKong/成功@2x.png" class="imageSuccessful"></image>
     </view>
     <view wx:if="{{winflag == 'false'}}" class="FailureView">
       <view class="resulText">
         <view class="Congratulations">再接再厉</view>
         <view class="successful">天津站挑战失败</view>
       </view>
-      <image src="../../../assets/images/TripMasterKong/失败@2x.png" class="imageFailure"></image>
+      <image src="{{img_url}}/assets/images/TripMasterKong/失败@2x.png" class="imageFailure"></image>
     </view>
 
     <view class="NumberView">

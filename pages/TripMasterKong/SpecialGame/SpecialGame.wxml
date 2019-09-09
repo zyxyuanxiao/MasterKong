@@ -9,10 +9,10 @@
         <view class="level">Lv {{aUserInfo.levelno}}</view>
         <view class="label">{{aUserInfo.levelname}}</view>
       </view>
-      <!-- 分数 -->
-      <view class="scoreView"  wx:if="{{starting}}">
-        <text class="scoreText">{{sumcount}}</text>
-      </view>
+    </view>
+    <!-- 分数 -->
+    <view class="scoreView" wx:if="{{starting}}">
+      <text class="scoreText">{{sumcount}}</text>
     </view>
   </view>
   <!-- 站点 -->
