@@ -93,5 +93,8 @@ Page({
   },
   goMyDetails: function (e) {
     navTo('/pages/MyDetails/MyDetails');
-  }
+  },
+  goTripMasterKong: function (e) {
+    navTo('/pages/TripMasterKong/SpecialGame-index/SpecialGame-index');
+  },
 })

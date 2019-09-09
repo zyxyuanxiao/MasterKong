@@ -46,7 +46,7 @@
 </view>
 
   <!--康师傅之旅-->
-  <view class="explore">
+  <view class="explore" bindtap="goTripMasterKong">
     <image src='../../assets/images/Homepage/康师傅之旅@2x.png' mode='widthFix'  class="trip"></image>
   </view>
 
