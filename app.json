@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/AnswerQuestions/AnswerQuestions",
     "pages/TripMasterKong/SpecialGame-index/SpecialGame-index",
     "pages/TripMasterKong/SpecialGame/SpecialGame",
     "pages/TripMasterKong/SpecialGame-two/SpecialGame-two",
-    "pages/AnswerQuestions/AnswerQuestions",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/PKgame/PKgame",
     "pages/contestResults/contestResults",
