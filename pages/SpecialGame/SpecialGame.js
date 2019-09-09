@@ -58,9 +58,15 @@ Page({
       'typeId': options.typeId,
        openId: aUserInfo.openid,
     }).then(res => {
+      if(res.code == 0){
       that.setData({
-        questions: res.questions
+        questions: res.questions,
+        dailyGameRecordsVo: res.dailyGameRecordsVo,
+        summaryGameRecordsVo: res.summaryGameRecordsVo,
       })
+      }else{
+
+      }
     });
     if (options.cmd){
       if (cmd.continuegame == options.cmd){
@@ -379,7 +385,10 @@ Page({
     const aUserInfo = getValue('aUserInfo');
     post('/wx/gameInfo/' + config.appkey + '/saveSpecialGameInfo', { openId: aUserInfo.openid,
       winflag: that.data.winflag, sumcount: that.data.sumcount, gametype:'4',
-      answerResultList: that.data.kClientAnswerArr }).then(res => {
+      answerResultList: that.data.kClientAnswerArr,
+      summaryGameRecordsVo: that.data.summaryGameRecordsVo,
+      dailyGameRecordsVo: that.data.dailyGameRecordsVo }).then(res => {
+        
       var bUserScoreVo = res.bUserScoreVo;
       if (bUserScoreVo) {
         this.setData({

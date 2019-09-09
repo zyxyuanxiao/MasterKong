@@ -48,25 +48,25 @@
     <view class="OverallResult">
       <view class="statisticalOne">
         <view class="ChallengeReward">
-          <view class="challengeText">挑战成功奖励</view>
+          <view class="challengeText">挑战成功最高奖励</view>
           <view class="integral">800<text>积分</text>
           </view>
         </view>
         <view class="TotalChallenges">
           <view class="challengeText">挑战总次数</view>
-          <view class="integral">12<text>次</text>
+          <view class="integral">{{summaryGameRecordsVo.gamenum}}<text>次</text>
           </view>
         </view>
       </view>
       <view class="statisticalTwo">
         <view class="totalIntegral">
           <view class="challengeText">获得总积分</view>
-          <view class="integral">3990<text>积分</text>
+          <view class="integral">{{summaryGameRecordsVo.scorenum}}<text>积分</text>
           </view>
         </view>
         <view class="HeSucceeds">
           <view class="challengeText">挑战成功</view>
-          <view class="integral">10<text>次</text>
+          <view class="integral">{{summaryGameRecordsVo.gamewinnum}}<text>次</text>
           </view>
         </view>
       </view>
@@ -81,7 +81,7 @@
     </view>
     <!--剩余次数-->
     <view class="Numberchances">
-      今日还剩2次机会
+      今日还剩{{dailyGameRecordsVo.specialnumonline - dailyGameRecordsVo.specialnum}}次机会
     </view>
   </view>
   <view class="QuestionList" wx:if="{{getready}}">

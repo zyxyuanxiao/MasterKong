@@ -1,8 +1,12 @@
 {
   "pages": [
-    "pages/TripMasterKong/SpecialGame-index/SpecialGame-index",
-    "pages/TripMasterKong/SpecialGame-two/SpecialGame-two",
-    "pages/TripMasterKong/SpecialGame/SpecialGame",
+            "pages/HealthMan/HealthMan",
+            "pages/TripMasterKong/SpecialGame-index/SpecialGame-index",
+        
+        "pages/TripMasterKong/SpecialGame-two/SpecialGame-two",
+        
+        "pages/TripMasterKong/SpecialGame/SpecialGame",
+
     "pages/AnswerQuestions/AnswerQuestions",
     "pages/AnswerQuestions-problem/AnswerQuestions-problem",
     "pages/PKgame/PKgame",
@@ -34,7 +38,6 @@
     "pages/StartChallenge-Waiting/StartChallenge-Waiting",
     "pages/ItemMall-two/ItemMall-two",
     "pages/StartChallengePre/StartChallengePre",
-    "pages/HealthMan/HealthMan",
     "pages/knowledge/knowledge",
     "pages/resultMatch-two/resultMatch-two",
     "pages/SpecialGame-Two/SpecialGame-Two",

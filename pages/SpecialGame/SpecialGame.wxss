@@ -223,7 +223,7 @@ page{
   margin-right: 195rpx;
 }
 .Numberchances{
-  width:185rpx;
+  width:200rpx;
   height:33rpx;
   font-size:24rpx;
   font-family:PingFangSC;
