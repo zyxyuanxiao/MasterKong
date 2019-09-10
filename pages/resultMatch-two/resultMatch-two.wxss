@@ -40,9 +40,9 @@ page{
 
 .trophy{
   width: 466rpx;
-  height: 527rpx;
-  margin-left: 134rpx;
-  margin-right: 150rpx;
+  height: 466rpx;
+  margin-left: 142rpx;
+  margin-right: 142rpx;
 }
 
 .trophyTitle{

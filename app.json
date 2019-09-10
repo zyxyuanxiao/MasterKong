@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/KangPK/KangPK",
-    "pages/KangPK-two/KangPK-two",
-    "pages/KangPK-three/KangPK-three",
-    "pages/KangPKMatching/KangPKMatching",
+    "pages/resultMatch/resultMatch",
     "pages/resultMatch-two/resultMatch-two",
+    "pages/KangPK-three/KangPK-three",
+    "pages/KangPK-two/KangPK-two",
+    "pages/KangPK/KangPK",
+    "pages/KangPKMatching/KangPKMatching",
     "pages/AnswerQuestions/AnswerQuestions",
     "pages/contestResults/contestResults",
     "pages/PKgame/PKgame",
@@ -28,7 +29,6 @@
     "pages/SetUpThe/SetUpThe",
     "pages/SpecialGame/SpecialGame",
     "pages/PprizeDetail/PprizeDetail",
-    "pages/resultMatch/resultMatch",
     "pages/Moremenu/Moremenu",
     "pages/ItemMall/ItemMall",
     "pages/questionBankChoice/questionBankChoice",
