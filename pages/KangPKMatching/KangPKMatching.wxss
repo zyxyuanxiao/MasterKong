@@ -1,7 +1,8 @@
-/**StartChallenge.wxss**/
-.container{
-  color: #ffffff;
+/* pages/KangPKMatching/KangPKMatching.wxss */
+page{
+  background:linear-gradient(181deg,rgba(128,191,145,1) 0%,rgba(73,139,88,1) 100%);
 }
+
 .blueTeam{
   display: flex;
   justify-content: center;  
@@ -15,17 +16,15 @@
 .blueTeam .people{
   width:220rpx;
   height:280rpx;
-  background:rgba(60,60,70,1);
   border-radius:8rpx;
-  border:2rpx solid rgba(39,153,255,1);
+  border:2rpx solid rgba(255,255,255,0.5);
   margin-right: 15rpx;
 }
 .yellowTeam .people{
   width:220rpx;
   height:280rpx;
-  background:rgba(60,60,70,1);
   border-radius:8rpx;
-  border:2rpx solid rgba(238,176,50,1);
+  border:2rpx solid rgba(255,255,255,0.5);
   margin-right: 15rpx;
 }
 .HeadPortrait{
@@ -76,9 +75,4 @@
   font-weight:normal;
   color:rgba(255,255,255,1);
   line-height:180rpx;
-}
-
-.vs{
-  width: 195rpx;
-  height: 120rpx;
 }
