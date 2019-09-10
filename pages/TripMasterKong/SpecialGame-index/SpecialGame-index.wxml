@@ -1,116 +1,149 @@
 <!--pages/TripMasterKong/SpecialGame-index/SpecialGame-index.wxml-->
-<page-container title="专题赛" binddefindBack="onBack" defindBack="{{true}}" >
+<page-container title="康师傅之旅" binddefindBack="onBack" defindBack="{{true}}">
   <view class="HeadView">
-  <!-- 一行一个的 -->
+    <!-- 一行一个的 -->
     <view class="ALineOfOneTop">
-       <view class="UnlockSite" bindtap="goTripSpecialGame">
-        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
-     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
-        </view>
-    </view>
-  
-  </view>
-  <view class="MiddleView">
-    <!-- 一行两个的 -->
-    <view class="ALineOfTwo">
-        <!-- 第一个 -->
-       <view class="UnlockSite" >
-        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
-     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
-        </view>
-        <!-- 第二个 -->
-         <view class="UnlockSite" >
-        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
-     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
-        </view>
-    </view>
+      <view class="UnlockSite" bindtap="goTripSpecialGame">
+        <view class="UnlockSiteText">{{topStation.optioncatename}}</view>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat"></image>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
 
-  <!-- 一行一个的 -->
-    <view class="ALineOfOne">
-       <view class="UnlockSite" >
-        <view class="NowUnlockSiteText">
-        北京站
-         <image src="../../../assets/images/TripMasterKong/ico／箭头 黑色@2x.png" class="arrow"></image>
-        </view>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
-     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
+      </view>
     </view>
-    </view>
-
-  <!-- 一行两个的 -->
-    <view class="ALineOfTwo">
-        <!-- 第一个 -->
-       <view class="UnlockSite" >
-        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
-     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
-        </view>
-        <!-- 第二个 -->
-         <view class="UnlockSite" >
-        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
-     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
-        </view>
-    </view>
-
-
-  <!-- 一行一个的 -->
-    <view class="ALineOfOne">
-       <view class="UnlockSite" >
-        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
-     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
-        </view>
-    </view>
-
 
   </view>
+  <block wx:for="{{stationNodesList}}" wx:for-index="nodeindex" wx:for-item="nodeitem">
+    <view class="MiddleView">
+      <!-- 一行两个的 -->
+      <view class="ALineOfTwo">
+        <!-- 第一个 -->
+
+        <view class="UnlockSite" wx:if="{{nodeitem.length >0}}">
+          <view class="{{travelgamesort >=nodeitem[0].sort?'UnlockSiteText':'NoUnlockSiteText'}}">{{nodeitem[0].optioncatename}}</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{travelgamesort >=nodeitem[0].sort}}"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat" wx:else></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{travelgamesort < nodeitem[0].sort}}"></image>
+        </view>
+
+        <view class="UnlockSite" wx:else>
+          <view class="NoUnlockSiteText">未解锁</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock"></image>
+        </view>
+        <!-- 第二个 -->
+        <view class="UnlockSite" wx:if="{{nodeitem.length >1}}">
+          <view class="{{travelgamesort >=nodeitem[1].sort ?'UnlockSiteText':'NoUnlockSiteText'}}">{{nodeitem[1].optioncatename}}</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{travelgamesort >=nodeitem[1].sort}}"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat" wx:else></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{travelgamesort <nodeitem[1].sort}}"></image>
+        </view>
+
+        <view class="UnlockSite" wx:else>
+          <view class="NoUnlockSiteText">未解锁</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock"></image>
+        </view>
+      </view>
+      <!-- 一行一个的 -->
+      <view class="ALineOfOne">
+        <view class="UnlockSite" wx:if="{{nodeitem.length >2}}">
+          <view class="{{travelgamesort >=nodeitem[2].sort ?'UnlockSiteText':'NoUnlockSiteText'}}">{{nodeitem[2].optioncatename}}</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{travelgamesort >=nodeitem[2].sort}}"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat" wx:else></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{travelgamesort <nodeitem[2].sort}}"></image>
+        </view>
+
+        <view class="UnlockSite" wx:else>
+          <view class="NoUnlockSiteText">未解锁</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock"></image>
+        </view>
+      </view>
+
+      <!-- 一行两个的 -->
+      <view class="ALineOfTwo">
+        <!-- 第一个 -->
+        <view class="UnlockSite" wx:if="{{nodeitem.length >3}}">
+          <view class="{{travelgamesort >=nodeitem[3].sort?'UnlockSiteText':'NoUnlockSiteText'}}">{{nodeitem[3].optioncatename}}</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{travelgamesort >=nodeitem[3].sort}}"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat" wx:else></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{travelgamesort < nodeitem[3].sort}}"></image>
+        </view>
+
+        <view class="UnlockSite" wx:else>
+          <view class="NoUnlockSiteText">未解锁</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock"></image>
+        </view>
+        <!-- 第二个 -->
+        <view class="UnlockSite" wx:if="{{nodeitem.length >4}}">
+          <view class="{{travelgamesort >=nodeitem[4].sort ?'UnlockSiteText':'NoUnlockSiteText'}}">{{nodeitem[4].optioncatename}}</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{travelgamesort >=nodeitem[4].sort}}"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat" wx:else></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{travelgamesort <nodeitem[4].sort}}"></image>
+        </view>
+
+        <view class="UnlockSite" wx:else>
+          <view class="NoUnlockSiteText">未解锁</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock"></image>
+        </view>
+      </view>
+      <!-- 一行一个的 -->
+      <view class="ALineOfOne">
+        <view class="UnlockSite" wx:if="{{nodeitem.length >5}}">
+          <view class="{{travelgamesort >=nodeitem[5].sort ?'UnlockSiteText':'NoUnlockSiteText'}}">{{nodeitem[5].optioncatename}}</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{travelgamesort >=nodeitem[5].sort}}"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat" wx:else></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{travelgamesort <nodeitem[5].sort}}"></image>
+        </view>
+
+        <view class="UnlockSite" wx:else>
+          <view class="NoUnlockSiteText">未解锁</view>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+          <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock"></image>
+        </view>
+      </view>
+    </view>
+  </block>
   <view class="TailView">
     <!-- 一行两个的 -->
     <view class="ALineOfTwo">
-        <!-- 第一个 -->
-       <view class="UnlockSite" >
-        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
-     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
-        </view>
-        <!-- 第二个 -->
-         <view class="UnlockSite" >
-        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
-     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
-        </view>
+      <!-- 第一个 -->
+      <view class="UnlockSite">
+        <view class="NoUnlockSiteText">未解锁</view>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat"></image>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock"></image>
+      </view>
+      <!-- 第二个 -->
+      <view class="UnlockSite">
+        <view class="NoUnlockSiteText">未解锁</view>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat"></image>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock"></image>
+      </view>
     </view>
     <!-- 一行一个的 -->
     <view class="ALineOfOne">
-       <view class="UnlockSite" >
-        <view class="{{Site?'UnlockSiteText':'NoUnlockSiteText'}}">北京站</view>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉@2x.png" class="UnlockChat" wx:if="{{Site==true}}"></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png"class="NotUnlockchat" wx:else ></image>
-          <image src="../../../assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
-     <image src="../../../assets/images/TripMasterKong/ico／锁@2x.png" class="lock" wx:if="{{Site==false}}"></image>
-        </view>
+      <view class="UnlockSite">
+        <view class="NoUnlockSiteText">未解锁</view>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位图钉_禁用@2x.png" class="NotUnlockchat"></image>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／定位点@2x.png" class="point"></image>
+        <image src="{{img_url}}/assets/images/TripMasterKong/ico／锁@2x.png" class="lock"></image>
+      </view>
     </view>
 
   </view>
