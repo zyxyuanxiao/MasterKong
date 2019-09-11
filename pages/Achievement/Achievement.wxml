@@ -1,4 +1,5 @@
 <!--pages/Achievement/Achievement.wxml-->
+<page-container title="成就" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" >
 <view class="AchievementImageBig">
   <image src="{{img_url}}/assets/images/Achievement/黄3星@2x.png"></image>
 </view>
@@ -20,3 +21,4 @@
   <image src="{{img_url}}/assets/images/Achievement/小箭头@2x.png" class="to"></image>
   <image src="{{img_url}}/assets/images/Achievement/灰5星备份@2x.png" class="medal"></image>
 </view>
+</page-container>

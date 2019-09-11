@@ -1,7 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTextStyle": "white",
-  "navigationBarTitleText": "成就",
-  "backgroundColor": "#eeeeee",
-  "backgroundTextStyle": "light"
+  "navigationStyle": "custom",
+  "disableScroll": true,
+  "usingComponents": {
+    "page-container": "../../../components/page-container/index"
+  }
 }

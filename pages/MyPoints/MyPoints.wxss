@@ -43,7 +43,7 @@
   margin-top: 41rpx;
 }
 .ranking{
-  margin: 40rpx 0rpx 0rpx 60rpx;
+  margin: 30rpx 0rpx 0rpx 60rpx;
 }
 .Total{
   margin: 40rpx 0rpx 0rpx 60rpx;

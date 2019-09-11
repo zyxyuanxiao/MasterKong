@@ -120,12 +120,5 @@ Page({
           reLanchTo('/pages/Homepage/Homepage');
         }
       })
-  },
-  /**导航返回 */
-  onBack() {
-    goPage();
-  },
-  goMyPointsDetails: function () {
-    navTo('/pages/MyPointsDetails/MyPointsDetails');
-  },
+  }
 })

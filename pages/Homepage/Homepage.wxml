@@ -1,4 +1,5 @@
-<!--Homepage.wxml-->
+  <!--Homepage.wxml-->
+<page-container title="康师傅答题" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" showBack="{{false}}" >
 <view class="container">
   <!--用户-->
   <view class="account">
@@ -83,3 +84,4 @@
 
 </view>
 
+</page-container>

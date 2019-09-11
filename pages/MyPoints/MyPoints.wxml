@@ -1,5 +1,6 @@
 <!--pages/MyPoints/MyPoints.wxml-->
 <!-- 赛季积分 -->
+<page-container title="我的积分" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" >
 <view class="IntegralSeason">
   <view class="ranking">
     <view class="Text">赛季积分</view>
@@ -58,3 +59,4 @@
     </view>
   </view>
 </view>
+</page-container>

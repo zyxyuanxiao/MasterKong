@@ -1,9 +1,7 @@
 {
-  "navigationBarTextStyle": "white",
-  "navigationBarTitleText": "填写地址",
-  "backgroundColor": "#eeeeee",
-  "backgroundTextStyle": "light",
+  "navigationStyle": "custom",
+  "disableScroll": true,
   "usingComponents": {
-    "nyz_area_picker": "../../../components/nyz_area_picker/nyz_area_picker"
+    "page-container": "../../../components/page-container/index"
   }
 }

@@ -728,6 +728,13 @@ Page({
         answerD: choiceClass[1]
       });
     }
-  }
+  },
+  /**导航返回 */
+  onBack() {
+    goPage();
+  },
+  goMyPointsDetails: function () {
+    navTo('/pages/MyPointsDetails/MyPointsDetails');
+  },
 
 })

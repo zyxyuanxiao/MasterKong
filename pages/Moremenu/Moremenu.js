@@ -32,6 +32,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var aUserInfo = getValue('aUserInfo');
+    this.setData({
+      aUserInfo: aUserInfo,
+    });
+    that = this;
 
   },
 
@@ -85,5 +90,12 @@ Page({
   },
   goItemMall: function (e) {
     navTo('/pages/ItemMall/ItemMall');
+  },
+  /**导航返回 */
+  onBack() {
+    goPage();
+  },
+  goMyPointsDetails: function () {
+    navTo('/pages/MyPointsDetails/MyPointsDetails');
   },
 })

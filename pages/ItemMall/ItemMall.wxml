@@ -1,4 +1,5 @@
 <!--pages/ItemMall/ItemMall.wxml-->
+<page-container title="道具商城" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" >
 <view class="ItemMall">
   <!--积分-->
   <view class="integral">
@@ -29,3 +30,4 @@
     </block>
   </view>
 </view>
+</page-container>

@@ -1,4 +1,5 @@
 <!--pages/AfterRecord/AfterRecord.wxml-->
+<page-container title="赛后记录" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" >
 <view class="SwitchBox">
   <view  bindtap="TheTotalListClick" class="{{isChecked?'choose':'NotChoose'}}">
     专题赛
@@ -25,4 +26,7 @@
   <view class="TextTwo">恭喜你在食品安全专题赛中连胜6次。你的排名在 月榜里靠前了3名，在总榜里靠前了30名，继续保 持。点击查看比赛排名。</view>
   <view class="time">12:33:11</view>
 </view>
+
+
+</page-container>
 
