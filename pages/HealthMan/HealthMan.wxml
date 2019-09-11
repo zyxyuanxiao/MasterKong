@@ -1,5 +1,6 @@
 <!--pages/HealthMan/HealthMan.wxml-->
-<view>
+<page-container title="康识答人" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" showBack="{{false}}">
+<view class="HealthMan">
     <!--康师傅图片-->
     <image src='../../assets/images/HealthMan/康师傅@2x.png' class="Kongimg"></image>
     <view class="KongText">
@@ -11,3 +12,4 @@
     <!--康师傅唐诗-->
     <image src='../../assets/images/HealthMan/唐诗@2x.png' class="KongTangDynasty"></image>
 </view>
+</page-container>
