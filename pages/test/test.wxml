@@ -1,15 +1,7 @@
 <!--pages/test/test.wxml-->
-<view class="aaa">
-
-<!-- <view class="container">
-    <view class="pulse"></view>
-</view> -->
-
-  <!--开始挑战-->
-<view class="AnswerQuestions"> 
-  <image src='../../assets/images/Homepage/动画圈圈@2x.png' mode='widthFix'  class="Began"></image>
-  <image src='../../assets/images/Homepage/圆形底板@2x.png' mode='widthFix'  class="BeganTwo"></image>
-</view>
-
-
-</view>
+<!-- canvas.wxml -->
+<canvas style="width: 300px; height: 200px;" canvas-id="firstCanvas"></canvas>
+<!-- 当使用绝对定位时，文档流后边的 canvas 的显示层级高于前边的 canvas -->
+<canvas style="width: 400px; height: 500px;" canvas-id="secondCanvas"></canvas>
+<!-- 因为 canvas-id 与前一个 canvas 重复，该 canvas 不会显示，并会发送一个错误事件到 AppService -->
+<canvas style="width: 400px; height: 500px;" canvas-id="secondCanvas" binderror="canvasIdErrorCallback"></canvas>
