@@ -1,7 +1,9 @@
 export const config = {
-  api_url: 'https://tsapzdt.masterkong.com.cn',
+  // api_url: 'https://tsapzdt.masterkong.com.cn',
+  api_url: 'https://localhost',
   appkey: 'wx6cfd12d2f181d642',
-  ws_url: 'wss://tsapzdt.masterkong.com.cn',
+  // ws_url: 'wss://tsapzdt.masterkong.com.cn',
+  ws_url: 'wss://localhost',
   img_url: 'https://tsapzdt.masterkong.com.cn/img',
     matching_ws_url: 'wss://api.flyun1688.com:9508',
     main_bg: 'https://api.flyun1688.com/static/mp3/main_bg.mp3',
