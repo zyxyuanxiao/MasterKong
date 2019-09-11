@@ -1,0 +1,143 @@
+<!--pages/KangPK-two/KangPK-two.wxml-->
+<page-container title="八点竞标赛" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" ImgsrcPK="../../images/锦标赛标志@2x.png">
+<!-- PK的人 -->
+<view class="PKPerson">
+    <!-- 篮队 -->
+    <view class="Blues">
+      <view class="BluesPerson">
+        <view class="score">0</view>
+        <view class="Imgportrait">
+          <image class='avatarimg' src='../../assets/images/Homepage/专题5@2x.png'></image>
+        </view>
+      </view>
+    </view>
+    <!-- vs -->
+    <view class="VsText">VS</view>
+    <!-- 黄队 -->
+    <view class="yellow">
+        <view class="yellowPerson">
+          <view class="Imgportrait">
+            <image src='../../assets/images/Homepage/专题5@2x.png' class='avatarimg'></image>
+          </view>
+          <view class="score">0</view>
+        </view>
+    </view>
+  </view>
+
+  <!-- 剩余人数 -->
+<view class="numberRemaining">
+  剩余<text>56</text>人
+</view>
+
+<!-- 答题模块 -->
+<view class="QuestionList"  >
+  <!--倒计时--->
+  <view wx:if="{{getready}}">
+      <view class="blank">第一回合</view>
+      <view class="countdown">
+        <view class="prenumber">3</view>
+      </view>
+      <view class="PleasePrepare">
+        请准备好
+      </view>
+    </view>
+
+    <!-- 问题集合 -->
+    <view  wx:if="{{problemList}}" class="problemList">
+      <!--题目比例--->
+    <view class="proportion">
+      <view class="nowProportion">1</view>
+      /5
+    </view>
+    <!--食品安全专题赛--->
+    <view class="safetyCompetition">
+      食品安全专题赛
+    </view>
+    <!--倒计时--->
+    <view class="countdownSeconds">
+      <view class="number">
+        15S
+      </view>
+    </view>
+
+    <!--问题text--->
+    <view class="problemText" bindtap="shareBtn" data-statu="open">
+      “食源性疾病”指食品中致病因素进入人体引起的感染性、中毒性等疾病。以下举措不能预防食源性疾病的是：
+    </view>
+
+    <!--问题text--->
+    <view class="choose">
+      <view class="HaveChoice">
+        <view class="text" bindtap="exitBtn" data-statu="open">食物储存时保持洁净，生熟分开</view>
+      </view>
+      <view class="Selected">
+        <view class="text">使用冰箱长时间储藏食物</view>
+      </view>
+      <view class="HaveChoice">
+        <view class="text">煮熟食物</view>
+      </view>
+      <view class="wrong">
+        <view class="text">安全健康的食材</view>
+      </view>
+    </view>
+    </view>
+  <!-- 结束成功 -->
+  <view wx:if="{{endSuccessful}}">
+    <view class="endText">第一回合结束</view>
+    <view class="endNumberSuccessful">+<text>3000</text></view>
+    <view class="NextEndText">恭喜你成功晋级下一回合</view>
+    <view class="WaitingText">等待其他玩家中</view>
+  </view>
+  <!-- 结束失败 -->
+  <view wx:if="{{endFailure}}">
+    <view class="endText">第一回合结束</view>
+    <view class="endNumberFailure">+<text>2400</text></view>
+    <view class="FailureextEndText">挑战失败，再接再厉</view>
+    <view class="WithdrawalCompetition">退出比赛</view>
+  </view>
+<!-- 集合人们 -->
+<view wx:if="{{people}}">
+  <view class="peopleText">最后一回合</view>
+  <!-- <view class="peopleMiddleText">等待其他选手完成上一回合比赛</view> -->
+  <view class="peopleMiddle">
+    <view class="countdown">
+          <view class="prenumber">3</view>
+    </view>  
+  </view>
+  <view class="peopleList">
+    <view class="peopleListView">
+      <image src="../../assets/images/Homepage/timg (3).jpg"></image>
+    </view>
+    <view class="peopleListView">
+      <image src="../../assets/images/Homepage/timg (3).jpg"></image>
+    </view>
+    <view class="peopleListView">
+      <image src="../../assets/images/Homepage/timg (3).jpg"></image>
+    </view>
+    <view class="peopleListView">
+      <image src="../../assets/images/Homepage/timg (3).jpg"></image>
+    </view>
+    <view class="peopleListView">
+      <image src="../../assets/images/Homepage/timg (3).jpg"></image>
+    </view>
+    <view class="peopleListView">
+      <image src="../../assets/images/Homepage/timg (3).jpg"></image>
+    </view>
+    <view class="peopleListView">
+      <view class="peopleListImgView">
+
+      </view>
+      <view class="WaitingBottom">等待...</view>
+    </view>
+  </view>
+</view>
+
+
+
+
+  </view>
+
+</page-container>
+
+
+   

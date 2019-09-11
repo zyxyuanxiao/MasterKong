@@ -1,6 +1,6 @@
-<!--pages/resultMatch/resultMatch.wxml-->
-<page-container title="专题赛" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}">
-<view class="resultMatch">
+<!--pages/KangPK-three/KangPK-three.wxml-->
+<page-container title="八点竞标赛" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}">
+
 <!---头像-->
 <view class="HeadPortraitView">
   <image src='../../assets/images/Homepage/timg (3).jpg' class="HeadPortrait" ></image>
@@ -11,12 +11,12 @@
 <view class="score">+6800</view>
 <!---奖杯-->
 <view>
-  <image src='../../assets/images/resultMatch/shibai@2x.png' class="trophy" ></image>
-  <view class="trophyTitle">食品安全专题赛</view>
+  <image src='../../assets/images/contestResults/pk获胜队伍@2x.png' class="trophy" ></image>
+  <view class="trophyTitle">八点竞标赛</view>
 </view>
 
 </view>
-  <view  class="trophyResults ">胜利</view>
+  <view  class="trophyResults ">第八名</view>
 
 <!-- 操作 -->
 <view class="operation">
@@ -47,9 +47,6 @@
   <view class="SharePostersButton" bindtap="ok">
   保存海报
   </view>
-</view>
-
-
 </view>
 
 
