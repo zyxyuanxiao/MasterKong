@@ -89,7 +89,8 @@ Page({
     // navTo('/pages/SpecialGame/SpecialGame?item=' + JSON.stringify(item))
     var index = e.currentTarget.dataset.index;
     var typeId=e.currentTarget.dataset.type;
-    navTo('/pages/SpecialGame/SpecialGame?typeId=' + typeId + "&iuQuestionType=" + JSON.stringify(that.data.iuQuestionTypeList[index]));
+    var thumbs = e.currentTarget.dataset.thumbs;
+    navTo('/pages/SpecialGame/SpecialGame?typeId=' + typeId + "&iuQuestionType=" + JSON.stringify(that.data.iuQuestionTypeList[index]) + "&thumbs=" + thumbs);
     
   },
   goMyDetails: function (e) {

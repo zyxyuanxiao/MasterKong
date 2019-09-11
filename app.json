@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/TripMasterKong/SpecialGame-index/SpecialGame-index",
+        "pages/HealthMan/HealthMan",
+        "pages/TripMasterKong/SpecialGame-index/SpecialGame-index",
     "pages/TripMasterKong/SpecialGame/SpecialGame",
     "pages/TripMasterKong/SpecialGame-two/SpecialGame-two",
     "pages/contestResults/contestResults",
@@ -21,7 +22,6 @@
     "pages/AnswerQuestions/AnswerQuestions",
     "pages/Achievement/Achievement",
     "pages/AfterRecord/AfterRecord",   
-    "pages/HealthMan/HealthMan",
     "pages/test/test",
 
     

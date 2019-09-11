@@ -54,6 +54,7 @@ Page({
     this.setData({
       aUserInfo: aUserInfo,
       typeId: options.typeId,
+      thumbs: options.thumbs,
     });
     get('/wx/question/' + config.appkey + '/special', {
       'typeId': options.typeId,

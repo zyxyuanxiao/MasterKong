@@ -5,7 +5,7 @@
   <view class="PKResults">
     <view class="blue">
       <block wx:if="{{ifBlueWin==true}}">
-        <image src='../../assets/images/contestResults/pk获胜队伍@2x.png' class="champion"></image>
+        <image src='{{img_url}}assets/images/contestResults/pk获胜队伍@2x.png' class="champion"></image>
         <view class="Btext">蓝队获胜</view>
       </block>
       <block wx:elif="{{ifBlueWin==false}}">
@@ -16,7 +16,7 @@
     </view>
     <view class="yellow">
       <block wx:if="{{ifYellowWin==true}}">
-        <image src='../../assets/images/contestResults/pk获胜队伍@2x.png' class="champion"></image>
+        <image src='{{img_url}}assets/images/contestResults/pk获胜队伍@2x.png' class="champion"></image>
         <view class="Ytext">黄队获胜</view>
       </block>
       <block wx:elif="{{ifYellowWin==false}}">
@@ -58,10 +58,10 @@
 
   <!-- 操作 -->
   <view class="operation">
-    <image src='../../assets/images/contestResults/返回.png' class="returnImg" bindtap="goStartChallengePre"></image>
+    <image src='{{img_url}}assets/images/contestResults/返回.png' class="returnImg" bindtap="goStartChallengePre"></image>
     <view class="challenge" bindtap="randomMatching">继续挑战</view>
-    <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"></image>
-    <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
+    <image src='{{img_url}}assets/images/contestResults/生成海报@2x.png' class="postersImg"></image>
+    <image src='{{img_url}}assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
   </view>
 
 </view>

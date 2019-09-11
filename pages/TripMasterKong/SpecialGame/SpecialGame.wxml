@@ -1,5 +1,5 @@
 <!--pages/TripMasterKong/SpecialGame/SpecialGame.wxml-->
-<page-container title="专题赛" binddefindBack="onBack" defindBack="{{true}}">
+<page-container title="康师傅之旅" binddefindBack="onBack" defindBack="{{true}}">
   <!-- 个人信息 -->
   <view class="MyAccount">
     <image src='{{aUserInfo.avatarurl}}' class="HeadPortrait"></image>
@@ -17,7 +17,7 @@
   </view>
   <!-- 站点 -->
   <view class="site">
-    <view class="siteTitle">第2站 河北站</view>
+    <view class="siteTitle">第{{station.sort}}站 {{station.optioncatename}}</view>
     <view class="siteText">
       <view class="{{stationDesc?'show':'hide'}}">
         天津站于2017年成立，地址位于河北路333号，荣获2017年度优秀站点，，这是相关简介，总最多可以显示三行
@@ -32,12 +32,12 @@
       <view class="GameView">
         <view class="One">
           挑战成功奖励
-          <text class="number">3000</text>
+          <text class="number">1500</text>
           <text class="text">积分</text>
         </view>
         <view class="Two">
           总题数
-          <text class="number">10</text>
+          <text class="number">5</text>
           <text class="text">道</text>
         </view>
         <view class="three">
@@ -55,7 +55,7 @@
       <view class="HrView">
         <view class="hr"></view>
       </view>
-      <view class="participate" bindtap="getready" data-statu="open">开始挑战</view>
+      <view class="participate" bindtap="getready" data-statu="open" disabled>开始挑战</view>
       <view class="numberOpportunity">今日还剩{{dailyGameRecordsVo.specialnumonline - dailyGameRecordsVo.specialnum}}次机会</view>
       <!-- <view class="red">此次挑战将消耗900积分</view> -->
     </view>

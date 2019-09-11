@@ -59,11 +59,12 @@ Page({
     that.setData({
       aUserInfo: aUserInfo,
     });
-    if (options.summaryGameRecordsVo){
+    if (options.station) {
       that.setData({
-        summaryGameRecordsVo: JSON.parse(options.summaryGameRecordsVo),
+        station: JSON.parse(options.station),
       });
     }
+    
     get('/wx/question/' + config.appkey + '/station', {
       openId: aUserInfo.openid,
     }).then(res => {
@@ -140,7 +141,7 @@ Page({
   },
   /**导航返回 */
   onBack() {
-    goPage();
+    goPage(1,"/pages/TripMasterKong/SpecialGame-index/SpecialGame-index");
   },
   goMyPointsDetails: function () {
     navTo('/pages/MyPointsDetails/MyPointsDetails');
@@ -187,7 +188,7 @@ Page({
         //分享弹框按钮显示
         // that.shareBtn();
         that.saveSpecialGameInfo();
-        navTo('/pages/TripMasterKong/SpecialGame-two/SpecialGame-two?winflag=' + that.data.winflag + '&sumcount=' + that.data.sumcount );
+        navTo('/pages/TripMasterKong/SpecialGame-two/SpecialGame-two?winflag=' + that.data.winflag + '&sumcount=' + that.data.sumcount + "&station=" + JSON.stringify(that.data.station) );
         return;
       }
       that.cleanOldData();
@@ -300,7 +301,7 @@ Page({
       }, 2500);
     } else {
       that.saveSpecialGameInfo();
-      navTo('/pages/TripMasterKong/SpecialGame-two/SpecialGame-two?winflag=' + that.data.winflag + '&sumcount=' + that.data.sumcount);
+      navTo('/pages/TripMasterKong/SpecialGame-two/SpecialGame-two?winflag=' + that.data.winflag + '&sumcount=' + that.data.sumcount + "&station=" + JSON.stringify(that.data.station));
     }
   },//保存游戏数据
   saveSpecialGameInfo: function () {

@@ -36,7 +36,7 @@
   </view>
 
   <!-- 专题赛 -->
-  <view class="titleTopic" wx:if="{{!starting}}" style="background-image: url({{BackgroundImg}})">
+  <view class="titleTopic" wx:if="{{!starting}}" style="background-image: url({{img_url}}/assets/images/Homepage/{{thumbs}}.png)">
     <image mode="aspectFill" class="rectangular" src="{{img_url}}/assets/images/Homepage/矩形@2x.png" />
     <view class="game">专题赛</view>
     <view class="iTitle">{{iuQuestionType.desc1}}</view>

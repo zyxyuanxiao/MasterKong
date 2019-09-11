@@ -73,7 +73,7 @@
             <view class="game">专题赛</view>
             <view class="iTitle">{{item.desc1}}</view>
             <view class="iText">{{item.desc2}}</view>
-            <view class="challenge" data-index="{{index}}" bindtap="goSpecialGame" data-type="{{item.id}}">去挑战</view>
+            <view class="challenge" data-index="{{index}}" bindtap="goSpecialGame" data-type="{{item.id}}" data-thumbs="{{item.thumbs}}">去挑战</view>
             <!-- <button> default </button> -->
             </view>
           </swiper-item>

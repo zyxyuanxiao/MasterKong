@@ -26,7 +26,8 @@ Page({
     ifYellowWin:false,
     yellowScore:0,
     ifBlueWin:false,
-    blueScore:0
+    blueScore:0,
+    img_url: config.img_url,
   },
 
   /**

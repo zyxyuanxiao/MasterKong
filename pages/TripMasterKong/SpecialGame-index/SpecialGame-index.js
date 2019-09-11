@@ -104,13 +104,18 @@ Page({
 
   },
   goTripSpecialGame: function(e) {
+    var station;
     if(e.currentTarget.dataset.type){
-      e.currentTarget.dataset.nodeindex;
-      e.currentTarget.dataset.index;
+      station=that.data.topStation
     }else{
-
+      var nodeindex=e.currentTarget.dataset.nodeindex;
+      var index=e.currentTarget.dataset.index;
+      station = that.data.stationNodesList[nodeindex][index];
     }
-
-    navTo("/pages/TripMasterKong/SpecialGame/SpecialGame?summaryGameRecordsVo=" + JSON.stringify(that.data.summaryGameRecordsVo));
+    navTo("/pages/TripMasterKong/SpecialGame/SpecialGame?summaryGameRecordsVo=" + JSON.stringify(that.data.summaryGameRecordsVo) + "&station=" + JSON.stringify(station));
+    
   },
+  onBack: function (e) {
+    goPage();
+  }
 })

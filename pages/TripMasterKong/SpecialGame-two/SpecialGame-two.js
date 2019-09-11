@@ -34,9 +34,14 @@ Page({
       sumcount: options.sumcount,
     });
     const aUserInfo = getValue('aUserInfo');
-    this.setData({
+    that.setData({
       aUserInfo: aUserInfo,
     });
+    if (options.station) {
+      that.setData({
+        station: JSON.parse(options.station),
+      });
+    }
   },
 
   /**
@@ -89,7 +94,7 @@ Page({
   },
   goTripGame: function () {
     wx.reLaunch({
-      url: '/pages/TripMasterKong/SpecialGame/SpecialGame?cmd=' + cmd.continuegame
+      url: '/pages/TripMasterKong/SpecialGame/SpecialGame?cmd=' + cmd.continuegame + "&station=" + JSON.stringify(that.data.station)
     })
   },
   goHome: function () {
@@ -98,8 +103,10 @@ Page({
     })
   },
   goNextGame: function () {
-    wx.reLaunch({
-      url: '/pages/TripMasterKong/SpecialGame/SpecialGame?cmd=' + cmd.continuegame
-    })
-  }
+    goPage(1, "/pages/TripMasterKong/SpecialGame-index/SpecialGame-index");
+  },
+  /**导航返回 */
+  onBack() {
+    goPage();
+  },
 })
