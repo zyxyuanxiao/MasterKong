@@ -1,6 +1,6 @@
 export const config = {
   api_url: 'https://tsapzdt.masterkong.com.cn',
-  appkey: 'wx0876548ed23bebbf',
+  appkey: 'wx6cfd12d2f181d642',
   ws_url: 'wss://tsapzdt.masterkong.com.cn',
   img_url: 'https://tsapzdt.masterkong.com.cn/img',
     matching_ws_url: 'wss://api.flyun1688.com:9508',

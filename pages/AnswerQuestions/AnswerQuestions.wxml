@@ -27,7 +27,7 @@
         </view>
       </view> -->
     </view>
-    <view class="Vs-view ">
+    <view class="Vs-view">
       <image src='{{img_url}}/assets/images/StartChallenge/VS@2x.png' class="VsImage" hidden="{{!showView}}"></image>
     </view>
     <view class="yellow-view">
