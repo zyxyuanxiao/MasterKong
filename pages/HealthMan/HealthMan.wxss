@@ -2,20 +2,28 @@
 page{
   color: #FFFFFF;
 }
+.Kong-View{
+  width:590rpx;
+  height:590rpx;
+  background:rgba(34,34,41,1);
+  border-radius: 500rpx;
+  margin: 131rpx 80rpx 0rpx 80rpx;
+}
 .Kongimg{
   width: 300rpx;
   height: 404rpx;
-  margin: 184rpx 281rpx 24rpx 232rpx;
+  margin: 53rpx 145rpx 0rpx 145rpx;
 }
 .KongText{
-  width:250rpx;
+  width:100%;
   height:70rpx;
   font-size:50rpx;
   font-family:PingFangSC;
   font-weight:600;
   color:rgba(31,204,102,1);
   line-height:70rpx;
-  margin: 0rpx 243rpx 155rpx 257rpx;
+  margin-top: 24rpx;
+  text-align: center;
 }
 .Kongbutton{
   width:258rpx;
@@ -28,10 +36,10 @@ page{
   color:rgba(255,255,255,1);
   line-height:80rpx;
   text-align: center;
-  margin: 0rpx 246rpx 0rpx 246rpx;
+  margin: 116rpx 246rpx 0rpx 246rpx;
 }
 .KongTangDynasty{
   width: 579rpx;
   height: 360rpx;
-  margin: 55rpx 77rpx 0rpx 94rpx;
+  margin: 55rpx 85.5rpx 128rpx 85.5rpx;
 }
