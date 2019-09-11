@@ -1,8 +1,8 @@
 export const config = {
-  api_url: 'http://localhost:443',
+  api_url: 'https://tsapzdt.masterkong.com.cn',
   appkey: 'wx0876548ed23bebbf',
-  ws_url: 'ws://localhost:443',
-  img_url: 'http://localhost:443/img',
+  ws_url: 'wss://tsapzdt.masterkong.com.cn',
+  img_url: 'https://tsapzdt.masterkong.com.cn/img',
     matching_ws_url: 'wss://api.flyun1688.com:9508',
     main_bg: 'https://api.flyun1688.com/static/mp3/main_bg.mp3',
     dati_bg: 'https://api.flyun1688.com/static/mp3/dati_bg.mp3',
