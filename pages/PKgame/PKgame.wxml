@@ -23,7 +23,7 @@
 </view>
 <!--VS-->
 <view class="vsView">
-  <view class="VS">VS</view>
+   <image src='{{img_url}}/assets/images/KangPKMatching/VS@2x.png' class="vs"></image>
 </view>
 <!--黄队-->
 <view class="yellowTeam">

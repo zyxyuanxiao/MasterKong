@@ -59,6 +59,11 @@ Page({
     that.setData({
       aUserInfo: aUserInfo,
     });
+    if (options.summaryGameRecordsVo){
+      that.setData({
+        summaryGameRecordsVo: JSON.parse(options.summaryGameRecordsVo),
+      });
+    }
     get('/wx/question/' + config.appkey + '/station', {
       openId: aUserInfo.openid,
     }).then(res => {

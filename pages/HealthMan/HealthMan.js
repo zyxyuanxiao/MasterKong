@@ -1,5 +1,5 @@
 import { post, get } from '../../utils/http'
-import { setValue, redirectTo, reLanchTo,getValue } from '../../utils/common';
+import { setValue, redirectTo, reLanchTo, getValue, showToast, showModal, navTo, rnd, goPage } from '../../utils/common';
 import util from '../../utils/util'
 import { config } from '../../config'
 //index.js
@@ -21,6 +21,11 @@ Page({
     })
   },
   onLoad: function () {
+    // 导航栏
+    var aUserInfo = getValue('aUserInfo');
+    this.setData({
+      aUserInfo: aUserInfo,
+    });
 
     if (app.globalData.userInfo) {
       this.setData({
@@ -115,5 +120,12 @@ Page({
           reLanchTo('/pages/Homepage/Homepage');
         }
       })
+  },
+  /**导航返回 */
+  onBack() {
+    goPage();
+  },
+  goMyPointsDetails: function () {
+    navTo('/pages/MyPointsDetails/MyPointsDetails');
   },
 })
