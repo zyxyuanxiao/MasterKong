@@ -1,8 +1,8 @@
 {
   "pages": [
-    "pages/test/test",
     "pages/HealthMan/HealthMan",
-
+    "pages/test/test",
+    
     
     "pages/resultMatch/resultMatch",
     "pages/resultMatch-two/resultMatch-two",
