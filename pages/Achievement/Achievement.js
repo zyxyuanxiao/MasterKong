@@ -1,11 +1,32 @@
 // pages/Achievement/Achievement.js
+import {
+  post,
+  get
+} from '../../utils/http'
+import {
+  setValue,
+  redirectTo,
+  getValue,
+  showToast,
+  showModal,
+  navTo,
+  reLanchTo,
+  rnd,
+  goPage
+} from '../../utils/common';
+import util from '../../utils/util1'
+import {
+  config,
+  cmd
+} from '../../config'
+var that;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    img_url: config.img_url,
   },
 
   /**
