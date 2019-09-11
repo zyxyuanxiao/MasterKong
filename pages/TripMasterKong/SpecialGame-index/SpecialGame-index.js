@@ -103,7 +103,14 @@ Page({
   onShareAppMessage: function() {
 
   },
-  goTripSpecialGame: function() {
-    navTo("/pages/TripMasterKong/SpecialGame/SpecialGame");
+  goTripSpecialGame: function(e) {
+    if(e.currentTarget.dataset.type){
+      e.currentTarget.dataset.nodeindex;
+      e.currentTarget.dataset.index;
+    }else{
+
+    }
+
+    navTo("/pages/TripMasterKong/SpecialGame/SpecialGame?summaryGameRecordsVo=" + JSON.stringify(that.data.summaryGameRecordsVo));
   },
 })
