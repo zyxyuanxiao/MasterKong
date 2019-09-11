@@ -33,6 +33,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var aUserInfo = getValue('aUserInfo');
+    this.setData({
+      aUserInfo: aUserInfo,
+    });
     if (options.gameType) {
       this.setData({
         gameType: options.gameType
@@ -89,5 +93,12 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  /**导航返回 */
+  onBack() {
+    goPage();
+  },
+  goMyPointsDetails: function () {
+    navTo('/pages/MyPointsDetails/MyPointsDetails');
+  },
 })

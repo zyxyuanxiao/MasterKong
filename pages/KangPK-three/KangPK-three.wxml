@@ -3,7 +3,7 @@
 
 <!---头像-->
 <view class="HeadPortraitView">
-  <image src='../../assets/images/Homepage/timg (3).jpg' class="HeadPortrait" ></image>
+  <image src='{{img_url}}/assets/images/Homepage/timg (3).jpg' class="HeadPortrait" ></image>
 </view>
 <!---主体-->
 <view class="body">
@@ -11,7 +11,7 @@
 <view class="score">+6800</view>
 <!---奖杯-->
 <view>
-  <image src='../../assets/images/contestResults/pk获胜队伍@2x.png' class="trophy" ></image>
+  <image src='{{img_url}}/assets/images/contestResults/pk获胜队伍@2x.png' class="trophy" ></image>
   <view class="trophyTitle">八点竞标赛</view>
 </view>
 
@@ -20,15 +20,15 @@
 
 <!-- 操作 -->
 <view class="operation">
-  <image src='../../assets/images/contestResults/返回.png' class="returnImg"></image>
+  <image src='{{img_url}}/assets/images/contestResults/返回.png' class="returnImg"></image>
   <view class="challenge">继续挑战</view>
-  <image src='../../assets/images/contestResults/生成海报@2x.png' class="postersImg"  bindtap="Btn" data-statu="open" ></image>
-  <image src='../../assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
+  <image src='{{img_url}}/assets/images/contestResults/生成海报@2x.png' class="postersImg"  bindtap="Btn" data-statu="open" ></image>
+  <image src='{{img_url}}/assets/images/contestResults/邀请微信好友@2x.png' class="WeChatImg"></image>
 </view>
 
 <!-- 分享海报 -->
 <view class="modalDlg" wx:if="{{showModal}}">
-  <!-- <image src='../../assets/images/resultMatch/成功分享背景@2x.png' ></image> -->
+  <!-- <image src='{{img_url}}/assets/images/resultMatch/成功分享背景@2x.png' ></image> -->
   <view class="SharePostersImg">
     <view class="text">
       我参加专题赛挑战 止步第三回合 
@@ -39,7 +39,7 @@
       扫码识别小程序 每天学习不停息
     </view>
     <view class="QrCode">
-      <image src='../../assets/images/resultMatch/小程序码120尺寸@2x.png' class="QrCodeImg" ></image>
+      <image src='{{img_url}}/assets/images/resultMatch/小程序码120尺寸@2x.png' class="QrCodeImg" ></image>
     </view>
     </view>
     

@@ -1,24 +1,8 @@
 // pages/Achievement/Achievement.js
-import {
-  post,
-  get
-} from '../../utils/http'
-import {
-  setValue,
-  redirectTo,
-  getValue,
-  showToast,
-  showModal,
-  navTo,
-  reLanchTo,
-  rnd,
-  goPage
-} from '../../utils/common';
+import {post,get} from '../../utils/http'
+import {setValue,redirectTo,getValue,showToast,showModal,navTo,reLanchTo,rnd,goPage} from '../../utils/common';
 import util from '../../utils/util1'
-import {
-  config,
-  cmd
-} from '../../config'
+import {config,cmd} from '../../config'
 var that;
 Page({
 
@@ -33,7 +17,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var aUserInfo = getValue('aUserInfo');
+    this.setData({
+      aUserInfo: aUserInfo,
+    });
+    that = this;
   },
 
   /**
@@ -83,5 +71,12 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  /**导航返回 */
+  onBack() {
+    goPage();
+  },
+  goMyPointsDetails: function () {
+    navTo('/pages/MyPointsDetails/MyPointsDetails');
+  },
 })

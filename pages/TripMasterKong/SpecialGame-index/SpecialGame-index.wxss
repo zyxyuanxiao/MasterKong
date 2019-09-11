@@ -5,13 +5,18 @@
   /* padding-top: 324rpx;
   padding-left: 290rpx; */
   background-size: 100% 100%;
-  background-image:'';
+  background-image: url('https://tsapzdt.masterkong.com.cn/img/assets/images/TripMasterKong/ico／top@2x.png');
 }
 .MiddleView{
   width: 750rpx;
   height: 800rpx;
   background-size: 100% 100%;
-  background-image: '';
+  background-image: url('https://tsapzdt.masterkong.com.cn/img/assets/images/TripMasterKong/ico／mid@2x.png');
+}.TailView{
+  width: 750rpx;
+  height: 500rpx;  
+  background-size: 100% 100%;
+  background-image: url('https://tsapzdt.masterkong.com.cn/img/assets/images/TripMasterKong/ico／bottom@2x.png');
 }
 .ALineOfOneTop{
   padding-top: 344rpx;

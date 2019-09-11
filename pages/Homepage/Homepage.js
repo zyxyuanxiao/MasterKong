@@ -98,4 +98,11 @@ Page({
   goTripMasterKong: function (e) {
     navTo('/pages/TripMasterKong/SpecialGame-index/SpecialGame-index');
   },
+  /**导航返回 */
+  onBack() {
+    goPage();
+  },
+  goMyPointsDetails: function () {
+    navTo('/pages/MyPointsDetails/MyPointsDetails');
+  },
 })

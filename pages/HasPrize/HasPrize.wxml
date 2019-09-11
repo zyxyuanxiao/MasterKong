@@ -1,4 +1,5 @@
 <!--pages/HasPrize/HasPrize.wxml-->
+<page-container title="已获奖品" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" >
 <view class="Numprize">
   共获得 2 奖品
 </view>
@@ -14,4 +15,5 @@
     <view class="Award">竞标赛一等奖</view>
     <view class="date">2019-12-22 20:00</view>
 </view>
+</page-container>
 

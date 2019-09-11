@@ -111,4 +111,11 @@ Page({
       url: '/pages/ItemMall-two/ItemMall-two?bUserScoreVo=' + JSON.stringify(that.data.bUserScoreVo) + "&good=" + JSON.stringify(that.data.bGoodList[index])
     })
   },
+  /**导航返回 */
+  onBack() {
+    goPage();
+  },
+  goMyPointsDetails: function () {
+    navTo('/pages/MyPointsDetails/MyPointsDetails');
+  },
 })

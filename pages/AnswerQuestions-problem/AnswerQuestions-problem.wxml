@@ -1,4 +1,5 @@
 <!--pages/AnswerQuestions/AnswerQuestions.wxml-->
+<page-container title="PK赛" binddefindBack="onBack" defindBack="{{true}}" showTopImgPK="{{true}}" >
 <view class="AnswerQuestions">
 <!--PK的人--->
   <view class="PKPerson">
@@ -185,3 +186,4 @@
 </view>
 
 </view>
+</page-container>

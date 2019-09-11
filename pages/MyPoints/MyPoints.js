@@ -33,6 +33,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var aUserInfo = getValue('aUserInfo');
+    this.setData({
+      aUserInfo: aUserInfo,
+    });
     if (options.bUserScoreVo) {
       this.setData({
         bUserScoreVo: JSON.parse(options.bUserScoreVo),
@@ -92,6 +96,13 @@ Page({
   goMyPointsDetails: function (e) {
     const gameType = e.currentTarget.dataset.gametype;
     navTo('/pages/MyPointsDetails/MyPointsDetails?gameType=' + gameType);
+  },
+  /**导航返回 */
+  onBack() {
+    goPage();
+  },
+  goMyPointsDetails: function () {
+    navTo('/pages/MyPointsDetails/MyPointsDetails');
   },
 
 })

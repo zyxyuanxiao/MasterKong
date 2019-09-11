@@ -1,7 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTextStyle": "white",
-  "navigationBarTitleText": "道具商城",
-  "backgroundColor": "#eeeeee",
-  "backgroundTextStyle": "light"
+  "navigationStyle": "custom",
+  "disableScroll": true,
+  "usingComponents": {
+    "page-container": "../../../components/page-container/index"
+  }
 }
